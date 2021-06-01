@@ -1,30 +1,21 @@
 package DAO;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import DTO.Users;
+
 public class LoginDAO {
-
-	private Connection conn;
-
-	private PreparedStatement pstmt;
-
-	private ResultSet rs;
+	 Connection conn = null;
+	 PreparedStatement pstmt = null;
+	 ResultSet rs = null;
+	 
 
 	public LoginDAO() {
 
 		try {
 
-			String dbURL = "jdbc:mysql://localhost:3308/leedb";
-
-			String dbID = "root";
-
-			String dbPassword = "0640";
-
-			Class.forName("com.mysql.jdbc.Driver");
-
-			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
+			conn = DBConnection.getConnection();
 
 		} catch (Exception e) {
 
@@ -38,52 +29,11 @@ public class LoginDAO {
 
 	// 로그인을 시도하는 함수****
 
-	public int login(String userID, String userPassword) {
+	public int login(String userid, String password) {
 
-		String SQL = "SELECT pw FROM users WHERE userID = ?";
-
-		try {
-
-			pstmt = conn.prepareStatement(SQL);
-
-			// sql인젝션 같은 해킹기법을 방어하는것... pstmt을 이용해 하나의 문장을 미리 준비해서(물음표사용)
-
-			// 물음표해당하는 내용을 유저아이디로, 매개변수로 이용.. 1)존재하는지 2)비밀번호무엇인지
-
-			pstmt.setString(1, userID);
-
-			// rs:result set 에 결과보관
-
-			rs = pstmt.executeQuery();
-
-			// 결과가 존재한다면 실행
-
-			if (rs.next()) {
-
-				// 패스워드 일치한다면 실행
-
-				if (rs.getString(1).equals(userPassword)) {
-
-					return 1; // 라긴 성공
-
-				} else
-
-					return 0; // 비밀번호 불일치
-
-			}
-
-			return -1; // 아이디가 없음 오류
-
-
-
-		} catch (Exception e) {
-
-			e.printStackTrace();
-
-		}
-
-		return -2; // 데이터베이스 오류를 의미
-
+		System.out.println(userid);
+		System.out.println(password);
+		return 0;
 	}
 
 

@@ -8,35 +8,47 @@ import java.sql.Statement;
 
 public class DBConnection {
 
-   public static Connection getConnection(String driver) {
-      String DName="com.mysql.jdbc.Driver";
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static final String Db_url = "jdbc:mysql://localhost:3306/codelearner?useSSL=false";
+	static final String USERNAME = "root"; // 계정 이름
+	static final String PASSWORD = "1234"; // 비밀 번호
 
-      Connection conn=null;
-      Statement stmt=null;
-      ResultSet rs=null;
-      String url="jdbc:mysql://localhost:3308/leedb";
-      String user="root";
-      String password="0640";
-      try {
-		conn=DriverManager.getConnection(url, user, password);
-	} catch (SQLException e1) {
-		// TODO Auto-generated catch block
-		e1.printStackTrace();
+	static {
+		// 드라이버 로딩
+		try {
+			Class.forName(JDBC_DRIVER);
+		} catch (ClassNotFoundException e) {
+			System.out.println("드라이버 로딩 실패");
+			e.printStackTrace();
+		}
+
 	}
-      
-      
-      try {
-         Class.forName(driver);
-         conn=DriverManager.getConnection(url,user,password);
-      } catch (ClassNotFoundException e) {
-         System.out.println("드라이버 로딩 실패"); //alt+shift+z : try catch 문 자동완성
-      } catch (SQLException e) {
-         System.out.println("db 접속 오류");
-      } catch (Exception e) {
-         System.out.println("알 수 없는 오류");
-      }
-      
-      return conn;
-   }
-   
+
+	public static Connection getConnection() throws SQLException {
+		Connection conn = DriverManager.getConnection(Db_url, USERNAME, PASSWORD); // 연결 생성
+		return conn;
+	}
+
+	public static void dbClose(ResultSet rs, Statement stmt) throws SQLException {
+		if (rs != null)
+			rs.close();
+		if (stmt != null)
+			stmt.close();
+	}
+
+	public static void dbClose(Statement stmt, Connection conn) { 
+		if (stmt != null)
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		if (conn != null)
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+	}
+
 }
