@@ -14,6 +14,7 @@ public class Comments {
 		this.u_code = u_code;
 		this.p_code = p_code;
 		this.cm_text = cm_text;
+		
 	}
 
 	//getter, setter
