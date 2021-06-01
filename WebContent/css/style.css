@@ -79,6 +79,9 @@ h5 {
 h6 {
      font-size: 13px
 }
+h10 {
+     font-size: 30px
+}
 
 *,
 *::after,
@@ -221,9 +224,9 @@ button {
      display: inline-block;
      background: #6dcff6;
      color: #fff;
-     max-width: 215px;
-     height: 61px;
-     line-height: 61px;
+     max-width: 100px;
+     height: 40px;
+     line-height: 40px;
      width: 100%;
      font-size: 17px;
      text-align: center;
@@ -298,9 +301,9 @@ header
 
 .header {
      width: 100%;
-     background: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+     background:#CBE092;
      height: 106px;
-     padding: 37px 30px;
+     padding: 20px 30px;
      position: absolute;
      z-index: 999;
      box-shadow: 3px 0 13px rgba(30, 30, 30, 0.90);
@@ -318,7 +321,7 @@ menu section
 
 .navigation.navbar-dark .navbar-nav .nav-link {
      padding: 0px 30px;
-     color: #fff;
+     color: #000000;
      font-size: 17px;
      line-height: 20px;
      font-weight: 400;
@@ -326,7 +329,7 @@ menu section
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
-     color: #fff;
+     color: #ffffff;
 }
 
 .navigation.navbar-dark .navbar-nav .active>.nav-link,
@@ -349,7 +352,7 @@ ul.email {
 }
 
 ul.email li {
-     padding: 0px 35px;
+     padding: 0px 20px;
 }
 
 ul.email li:nth-child(2) {
@@ -357,12 +360,12 @@ ul.email li:nth-child(2) {
 }
 
 ul.email li a {
-     font-size: 17px;
-     color: #fff;
+     font-size: 19px;
+     color: #000000;
 }
 
 ul.email li i {
-     color: #fff;
+     color: #000000;
      font-size: 19px;
 }
 
@@ -370,7 +373,7 @@ ul.email li i {
 /** banner_main **/
 
 #top_section {
-     background-image: url('../images/banner.jpg');
+     background-image: url('../images/green.jpg');
      background-size: cover;
      background-repeat: no-repeat;
      padding-top: 120px;
@@ -386,7 +389,7 @@ ul.email li i {
 }
 
 #myCarousel .carousel-indicators .active {
-     background: #0e0b01;
+     background: #CBE092;
 }
 
 #myCarousel .carousel-indicators li {
@@ -512,7 +515,7 @@ ul.email li i {
      top: 109%;
      opacity: 1;
      font-size: 33px;
-     color: #000000;
+     color: #CBE092;
      box-shadow: 3px 0 36px rgba(30, 30, 30, 0.2);
 }
 
