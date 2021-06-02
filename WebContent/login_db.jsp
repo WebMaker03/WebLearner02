@@ -10,14 +10,5 @@
 </head>
 <body>
 
-  <%
-   	String userid = request.getParameter("inputId");
-    String password = request.getParameter("pw");
-    
-  	LoginDAO lo = new LoginDAO();
-  	lo.login(userid, password);
-    
-  
-  %>
 </body>
 </html>
