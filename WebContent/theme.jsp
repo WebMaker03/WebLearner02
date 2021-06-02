@@ -1,3 +1,4 @@
+<%@page import="DTO.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,13 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <!--  start header -->
-      <jsp:include page="header2.jsp"></jsp:include>
-	  <!--  end header -->
-
+    <%
+      
+      	 Users user=(Users)session.getAttribute("session_user");
+         if(user==null){%>
+      		<jsp:include page="header.jsp"></jsp:include>
+      		
+      	<%}else{
+      		%> <jsp:include page="header2.jsp"></jsp:include><%
+      	}
+      %>
   <!-- portfolio -->
       <div class="portfolio">
-         <div class="container">
+         <div class="container" style="margin-top:40px">
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage text_align_left">

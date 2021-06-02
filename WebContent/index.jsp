@@ -46,8 +46,8 @@
       	}
       %>
       <!-- start slider section -->
-      <div id="top_section" class=" banner_main">
-         <div class="container">
+      <div id="top_section" class="banner_main">
+         <div class="container" style="margin-top:80px">
             <div class="row">
                <div class="col-md-12">
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
