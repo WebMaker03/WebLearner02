@@ -58,7 +58,7 @@
                   </div>
                   <div class="col-md-2 d_none">
                      <ul class="email text_align_right">
-                        <li> <a href="index.jsp"> Logout </a></li>
+                        <li> <a href="logout.jsp"> Logout </a></li>
                       <!--   <li> <a href="Javascript:void(0)"> <i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"> </i></a> </li> -->
                        
                      </ul>
