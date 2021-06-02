@@ -99,6 +99,9 @@
          </div>
       </div>
       <!-- end slider section -->
+     
+
+      <jsp:include page="footer.jsp"></jsp:include>
       
       <!-- end footer -->
       <!-- Javascript files-->

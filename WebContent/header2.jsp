@@ -43,7 +43,7 @@
                                  <a class="nav-link" href="about.html">사이트 소개</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="we_do.html">테마별 챌린지</a>
+                                 <a class="nav-link" href="theme.jsp">테마별 챌린지</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="portfolio.html">전체 게시판 </a>
