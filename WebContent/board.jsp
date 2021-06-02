@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@page import="DAO.LoginDAO"%>
- <%request.setCharacterEncoding("UTF-8"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+  <!--  start header -->
+      <jsp:include page="header.jsp"></jsp:include>
+	  <!--  end header -->
+전체
 
 </body>
 </html>

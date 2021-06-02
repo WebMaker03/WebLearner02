@@ -4,20 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-	  <link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
       <link rel="stylesheet" href="css/style.css">
       <!-- responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- awesome fontfamily -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	 <title>Header Page</title>
+<title>Insert title here</title>
 </head>
 <body>
-
- <!-- header -->
+      <!-- header -->
       <header>
          <div class="header">
             <div class="container-fluid">
@@ -26,7 +24,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="index.jsp"><img src="images/code.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -38,21 +36,15 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="index.jsp">Home</a>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="about.jsp">사이트 소개</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="about.html">About</a>
+                                 <a class="nav-link" href="theme.jsp">테마별 챌린지</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="we_do.html">What we do</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="portfolio.html">Portfolio </a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">Contact Us</a>
-                              </li>
+                                 <a class="nav-link" href="board.jsp">전체 게시판</a>
+                             </li>
                            </ul>
                         </div>
                      </nav>
@@ -69,5 +61,6 @@
          </div>
       </header>
       <!-- end header -->
+
 </body>
 </html>
