@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body {
-    background: #E1EBEC;
+    background: #DDE6D6;
     font-family: 'Poppins', sans-serif
 }
 
@@ -59,11 +59,20 @@ h6.mt-3 {
 h2.heading {
     font-weight: bold
 }
-
+.sign-up{
+	 border: #CBE092 solid 3px;
+	 border-radius: 10px;
+	 padding:30px;
+	 width:600px;
+	 background:#EFF7E0;
+		
+	 
+}
 .form-control {
-    border: none;
-    border-radius: 0px;
-    border-bottom: 1px solid #F2F2F2
+    border: 10px;
+    border-radius: 10px;
+    border-bottom: 1px solid #F2F2F2;
+    width: 500px;
 }
 
 .form-control::placeholder {
@@ -72,6 +81,24 @@ h2.heading {
 }
 
 .form-control:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #F2F2F2
+}
+
+.form-control_input {
+    border:  #CBE092 solid 3px;
+    border-radius: 3px;
+    border-bottom: 1px solid #F2F2F2;
+    width: 300px;
+    margin:10px;
+}
+
+.form-control_input::placeholder {
+    font-size: 13px;
+    color: #C2C2CC
+}
+
+.form-control_input:focus {
     box-shadow: none;
     border-bottom: 1px solid #F2F2F2
 }
@@ -156,16 +183,66 @@ p.exist span {
     }
 
     .rcol {
-        padding: 60px 180px 60px 60px
+        padding: 60px 180px 60px 60px;
+    
     }
 }
 
 @media screen and (max-width: 420px) {
     .rcol {
-        padding: 60px 50px 60px 50px
+        padding: 60px 50px 60px 50px;
+      
     }
 
     .footer {
         margin-top: 140px
     }
+}
+
+
+.container_join {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  
+}
+
+@media (min-width: 576px) {
+  .container_join {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container_join {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container_join {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container_join {
+    max-width: 1140px;
+  }
+}
+
+.info{
+	margin-right:10px;
+}
+
+div#signupbtn{
+		margin-left: 200px;
+}
+.signupbtn{
+	width:150px;
+	height:40px;
+	
 }

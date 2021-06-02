@@ -264,6 +264,7 @@ button {
 
 .container {
      max-width: 1170px;
+  
 }
 
 
@@ -572,6 +573,14 @@ ul.email li i {
 
 
 /** end about **/
+
+/**mypage
+**/
+.mypage {
+     padding-top: 90px;
+     padding-bottom: 90px;
+     background: #fff;
+}
 
 
 /** portfolio **/

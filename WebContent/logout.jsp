@@ -15,6 +15,8 @@
         	concole.log("로그아웃 되었습니다.");
       </script><%
        response.sendRedirect("index.jsp");
+      }else{
+    	  response.sendRedirect("index.jsp");
       }
    
    
