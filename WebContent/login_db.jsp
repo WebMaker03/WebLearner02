@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-   test
+   <!--  db가져와서 ID체크 PW체크 -->
 </body>
 </html>
