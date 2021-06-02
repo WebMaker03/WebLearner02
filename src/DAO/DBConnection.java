@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class DBConnection {
 
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-	static final String Db_url = "jdbc:mysql://localhost:3306/codelearner2?useSSL=false";
+	static final String Db_url = "jdbc:mysql://localhost:3308/codelearner2?useSSL=false";
 	static final String USERNAME = "root"; // 계정 이름
 	static final String PASSWORD = "1234"; // 비밀 번호
 

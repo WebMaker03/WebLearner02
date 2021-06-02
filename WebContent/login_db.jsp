@@ -11,26 +11,28 @@
 
   <%
   	if(request.getParameter("userid")!=null){
-   	String userid = request.getParameter("userid");
-    String userpw = request.getParameter("userpw");
-    user.setId(userid);
-    user.setPw(userpw);
-    LoginDAO lo = new LoginDAO();
-  	boolean flag=lo.login(user);
-  	if(flag){
-  		session.setAttribute("session_user", user);
-  		%>
-  		<script>
-  		alert('로그인에 성공하셨습니다.');
-  		location.href="index.jsp";
-  		</script><%
-  	}else{
-  		%> <script>
-  			alert('로그인 실패');
-  			location.href="login.jsp";
-  			</script>
-  			<%
-  	 }
+  		
+	   	String userid = request.getParameter("userid");
+	    String userpw = request.getParameter("userpw");
+	    user.setId(userid);
+	    user.setPw(userpw);
+	    LoginDAO lo = new LoginDAO();
+	    
+	  	boolean flag=lo.login(user);
+	  	if(flag){
+	  		session.setAttribute("session_user", user);
+	  		%>
+	  		<script>
+	  		alert('로그인 성공하셨습니다.');
+	  		location.href="index.jsp";
+	  		</script><%
+	  	}else{
+	  		%> <script>
+	  			alert('로그인 실패');
+	  			location.href="login.jsp";
+	  			</script>
+	  			<%
+	  	 }
   	}
   %>
 </body>

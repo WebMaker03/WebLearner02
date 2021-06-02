@@ -32,7 +32,7 @@ public class LoginDAO {
 	
 	public boolean login(Users user) {
 		
-		String sql ="select * from users where id=?";
+		String sql ="select * from users where userid=?";
 		try {
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1,user.getId());
