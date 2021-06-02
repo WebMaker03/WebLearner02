@@ -2,6 +2,7 @@ package DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import DTO.Users;
 
@@ -27,13 +28,28 @@ public class LoginDAO {
 
 
 
-	// 로그인을 시도하는 함수****
-
-	public int login(String userid, String password) {
-
-		System.out.println(userid);
-		System.out.println(password);
-		return 0;
+	
+	
+	public boolean login(Users user) {
+		
+		String sql ="select * from users where id=?";
+		try {
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1,user.getId());
+			rs=pstmt.executeQuery();
+			while(rs.next()) {
+				System.out.println("testing");
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+		
+	
+		
 	}
 
 

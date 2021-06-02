@@ -21,8 +21,8 @@
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin" method="post" action="login_db.jsp">
                 <span id="reauth-email" class="reauth-email"></span>
-                <input type="text" id="inputId" class="form-control" placeholder="ID" required autofocus>
-                <input type="password" id="pw" class="form-control" placeholder="Password" required>
+                <input type="text" id="inputId" name="userid" class="form-control" placeholder="ID" required autofocus>
+                <input type="password" id="pw" name="userpw" class="form-control" placeholder="Password" required>
                 <div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me

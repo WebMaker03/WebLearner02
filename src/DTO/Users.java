@@ -2,18 +2,22 @@ package DTO;
 
 public class Users {
 	private int u_code;
-	private String id;
-	private String pw;
+	private String userid;
+	private String userpw;
 	private String u_name;
 	private int age;
 	private int point;
 	
 	public Users() {;}
 	
+	public Users(String userid, String userpw) {
+		this.userid =userid;
+		this.userpw=userpw;
+	}
 	public Users(int u_code, String id, String pw, String u_name, int age, int point) {
 		this.u_code = u_code;
-		this.id = id;
-		this.pw = pw;
+		this.userid = id;
+		this.userpw = pw;
 		this.u_name = u_name;
 		this.age = age;
 		this.point = point;
@@ -27,16 +31,16 @@ public class Users {
 		this.u_code = u_code;
 	}
 	public String getId() {
-		return id;
+		return userid;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setId(String userid) {
+		this.userid = userid;
 	}
 	public String getPw() {
-		return pw;
+		return userpw;
 	}
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setPw(String userpw) {
+		this.userpw = userpw;
 	}
 	public String getU_name() {
 		return u_name;
