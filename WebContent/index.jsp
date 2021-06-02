@@ -1,3 +1,4 @@
+<%@page import="DTO.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -33,9 +34,17 @@
          <div class="loader"><img src="images/loading.gif" alt="" /></div>
       </div>
       <!-- end loader -->
-      <!--  start header -->
-      <jsp:include page="header.jsp"></jsp:include>
-	  <!--  end header -->
+      
+       <%
+      
+      	 Users user=(Users)session.getAttribute("session_user");
+         if(user==null){%>
+      		<jsp:include page="header.jsp"></jsp:include>
+      		
+      	<%}else{
+      		%> <jsp:include page="header2.jsp"></jsp:include><%
+      	}
+      %>
       <!-- start slider section -->
       <div id="top_section" class=" banner_main">
          <div class="container">
@@ -45,7 +54,6 @@
                      <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
-                       
                        
                      </ol>
                      
