@@ -2,7 +2,7 @@
 File Name: responsive.css 
 ---------------------------------------------------------------------*/
 
-@media (min-width: 1200px) and (max-width: 1320px) {
+@media (min-width:1200px) and (max-width: 1320px) {
     ul.email li {
         padding: 0px 31px;
     }

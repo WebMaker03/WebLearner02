@@ -26,7 +26,8 @@
 								style="width: 120px;">ID</span>
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
-							placeholder="ID를 입력하세요" aria-describedby="InputArea" required id="id">
+							placeholder="ID를 입력하세요" aria-describedby="InputArea" required name="id">
+					 <input type="button" class="Idcheckbtn" style="margin-left:6px; text-align:center;" value="중복확인 ">
 					</div>
 				</div>
 				<!--  PW -->
@@ -38,7 +39,7 @@
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
 							placeholder="비밀번호를 입력하세요" aria-describedby="passwordArea"
-							required id="pw1">
+							required name="pw1">
 					</div>
 				</div>
 				<!--  PW2 -->
@@ -50,7 +51,7 @@
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
 							placeholder="비밀번호를 입력하세요" aria-describedby="passwordCheckArea"
-							required id="pw2">
+							required name="pw2">
 					</div>
 				</div>
 
@@ -61,7 +62,7 @@
 							<span class="input-group-text" id="nameArea" style="width: 120px;">이름</span>
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
-								placeholder="이름을 입력하세요" aria-describedby="nameArea" required id="userName">
+								placeholder="이름을 입력하세요" aria-describedby="nameArea" required name="userName">
 					</div>
 				</div>
 
@@ -73,7 +74,7 @@
 								style="width: 120px;">이메일</span>
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
-							placeholder="이메일을 입력하세요" aria-describedby="passwordArea" required id="userEmail">
+							placeholder="이메일을 입력하세요" aria-describedby="passwordArea" required name="userEmail">
 					</div>
 				</div>
 				<!--  GENDER -->
