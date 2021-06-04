@@ -33,7 +33,7 @@
 
 	<section id="team">
 
-		<div class="container" style="margin-top: 80px">
+		<div class="container" style="margin-top: 150px">
 			<div class="section-header" id="service">
 				<h3>Meet Our Service</h3>
 				<hr>

@@ -65,7 +65,6 @@
                                     <h1>자기개발  <br>챌린지 </h1>
                                     <p>Codelearner<br>안녕하세요 챌린지에 오신걸 환ㄴ영합니다!!!!!!!!!!!!!!!!!!
                                     </p>
-                                    <a class="read_more" href="login.html">로그인 </a><a class="read_more" href="회원가입.html">회원가입 </a>
                                  </div>
                               </div>
                            </div>
@@ -78,7 +77,6 @@
                                     <h1>Self-development  <br>challenge </h1>
                                     <p>Codelearner<br>코드러너
                                     </p>
-                                    <a class="read_more" href="about.html">로그인 </a><a class="read_more" href="contact.html">회원가입</a>
                                  </div>
                               </div>
                            </div>
