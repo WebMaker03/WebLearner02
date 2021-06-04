@@ -26,7 +26,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.jsp"><img src="images/code.png" alt="#" /></a>
+                              <a href="index.jsp"><img src="images/logo2.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -68,5 +68,6 @@
          </div>
       </header>
       <!-- end header -->
+      
 </body>
 </html>

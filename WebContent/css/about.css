@@ -64,7 +64,7 @@
 }
 
 #team .member:hover .member-info {
-    background:rgba(203, 224, 146, 1);
+    background:rgba(195, 234, 241, 1);
     opacity: 1;
     transition: 0.4s;
     height: 200px;
@@ -82,17 +82,17 @@
     font-weight: 700;
     margin-bottom: 2px;
     font-size: 18px;
-    color: #fff
+    color: #000000;
 }
 
 #team .member span {
     font-style: italic;
     display: block;
     font-size: 13px;
-    color: #fff
+    color: #000000;
 }
 
 #team .member .social a {
     transition: none;
-    color: #fff
+    color: #000000;
 }

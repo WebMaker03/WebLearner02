@@ -27,6 +27,7 @@ body {
      font-family: 'Poppins', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
+     background:#E1F2F9;
 }
 
 a {
@@ -377,19 +378,25 @@ ul.email li i {
 /** banner_main **/
 
 #top_section {
-     background: url(../images/back1.png) no-repeat #E1F2F9;
+     background: url(../images/back.png) no-repeat #E1F2F9;
      background-size: cover;
      background-repeat: no-repeat;
      padding-top: 120px;
      position: relative;
-     height: 100vh;
+     height: 75rem;
      background-position: center;
 }
 
+
+#myCarousel{
+	width:100%;
+	height:700px;
+}
+
 #myCarousel .carousel-indicators {
-     bottom: -50px;
+     bottom: 50px;
      margin-left: 11px;
-     right: inherit;
+     
 }
 
 #myCarousel .carousel-indicators .active {
@@ -411,7 +418,16 @@ ul.email li i {
 
 .myCarouselSize{
 	width:100%;
-	height: 840px;
+	height: 60rem;
+	display: flex;
+    justify-content: center;
+
+}
+.carousel-inner{
+	width:1000px;
+	height:500px;
+	margin-top:12rem;
+
 }
 .relative {
      position: inherit;
@@ -422,7 +438,7 @@ ul.email li i {
 .bluid {
      margin-top: 10px;
      font-family: 'Open Sans', sans-serif;
-     text-align: left;
+     text-align: center;
 }
 
 .banner_main .bluid h1 {
@@ -434,11 +450,12 @@ ul.email li i {
 }
 
 .banner_main .bluid p {
-     color: #fff;
+     color: #000000;
      line-height: 25px;
      font-weight: 500;
      padding-bottom: 50px;
      font-size: 17px;
+     
 }
 
 .banner_main .bluid .read_more {
@@ -1067,11 +1084,8 @@ ul.social_icon li a:hover {
    padding-bottom: 50px;
 }
 
-/* 
-#img_responsive1 {
- 	width: 200px;
-	height:70px;
-	background-size:cover; 
+#inslide_title{
+	text-align:center;
+	margin-left:80px;
 }
- */
 
