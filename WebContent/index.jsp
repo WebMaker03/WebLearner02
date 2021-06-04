@@ -50,6 +50,7 @@
          <div class="container" style="margin-top:80px">
             <div class="row">
                <div class="col-md-12">
+               	<div class="myCarouselSize">
                   <div id="myCarousel" class="carousel slide" data-ride="carousel">
                      <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -94,6 +95,7 @@
                   </div>
                </div>
             </div>
+         </div>
          </div>
       </div>
       <!-- end slider section -->
