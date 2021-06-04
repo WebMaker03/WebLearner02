@@ -103,6 +103,8 @@
          </div>
       </div>
       <!-- end theme -->
+      
+      <jsp:include page="footer.jsp"></jsp:include>
 
 </body>
 </html>
