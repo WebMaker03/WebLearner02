@@ -321,7 +321,8 @@ menu section
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link {
-     padding: 0px 30px;
+     padding: 20px;
+     margin-top: 20px;
      color: #000000;
      font-size: 25px;
      line-height: 20px;
@@ -351,6 +352,7 @@ ul.email {
      justify-content: flex-end;
      flex-wrap: wrap;
      margin-right: 50px;
+     margin-top:25px;
 }
 
 ul.email li {
@@ -391,7 +393,7 @@ ul.email li i {
 }
 
 #myCarousel .carousel-indicators .active {
-     background: #CBE092;
+     background: #A4D4E8;
 }
 
 #myCarousel .carousel-indicators li {
@@ -589,7 +591,7 @@ ul.email li i {
 .theme {
      padding-top: 90px;
      padding-bottom: 90px;
-     background:#DDE6D6;
+     background:#E1F2F9;
 }
 
 .theme .titlepage::before {
@@ -898,13 +900,12 @@ ul.email li i {
 /** footer **/
 
 .footer {
-     /* background: #222222;
-     padding-top: 90px */
-     background-color: #CBE092;
+     padding-top: 90px ;
+     background-color: #A4D4E8;
      text-align: center;
   	 color: white;
-   	position: absolute;
-   	font-size: 25px;
+   	 position: absolute;
+    font-size: 25px;
    	bottom: 0;
    	width: 100%;
 }
