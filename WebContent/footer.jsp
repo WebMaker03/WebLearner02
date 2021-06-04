@@ -14,7 +14,8 @@
 <body>
        <div class="row">
          	<div class="footer">
-           	 Team CodingLeaner<br>김승주,
+           	 MadeBy : (주) CodeLearner<br>
+           	 
         	 </div>
         </div>
 </body>

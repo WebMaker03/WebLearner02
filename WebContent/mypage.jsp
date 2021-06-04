@@ -29,8 +29,8 @@
 	<%
 		}
 	%>
- <div class="portfolio">
-	<div class="container" style="margin-top:40px">
+ <div class="theme">
+	<div class="container" style="margin-top:100px">
 			<h1>마이페이지</h1>
 			<br>
 			<div class="row">

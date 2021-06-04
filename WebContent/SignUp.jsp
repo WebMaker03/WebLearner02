@@ -17,7 +17,7 @@
 	<div class="container_join">
 		<div class="d-flex justify-content-center">
 			<form class="sign-up">
-				<h2 class="heading mb-6" style="text-align: center;">Sign up</h2>
+				<h2 class="heading mb-6" id="signupTitle">Sign Up</h2>
 				<!--  ID -->
 				<div class="form-group fone mt-5">
 					<div class="input-group is-invalid">
