@@ -134,7 +134,8 @@
 
 		</div>
 
-		<script type="text/javascript" src="signUp_1.js"></script>
 	</div>
+	
 </body>
+	<script type="text/javascript" src="signUp.js"></script>
 </html>
