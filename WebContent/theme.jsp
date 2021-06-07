@@ -45,7 +45,7 @@
                         <img id="theme" src="images/health.jpg" alt="#"/>
                         <div class="theme_text">
                            <div class="li_icon">
-                              <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+                              <a href="theme_test.jsp?theme=health"><i class="fa fa-search" aria-hidden="true"></i></a>
                               <!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
                            </div>
                              <h3>운동</h3>
@@ -60,7 +60,7 @@
                         <img id="theme" src="images/life_cycle.jpg" alt="#"/>
                         <div class="theme_text">
                            <div class="li_icon">
-                              <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+                              <a href="theme_test.jsp?theme=life_cycle"><i class="fa fa-search" aria-hidden="true"></i></a>
                               <!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
                            </div>
                              <h3>생활습관</h3>
@@ -75,7 +75,7 @@
                         <img id="theme" src="images/Reading.png" alt="#"/>
                         <div class="theme_text">
                            <div class="li_icon">
-                              <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+                              <a href="theme_test.jsp?theme=reading"><i class="fa fa-search" aria-hidden="true"></i></a>
                               <!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
                            </div>
                            <h3>독서</h3>
@@ -90,7 +90,7 @@
                         <img id="theme" src="images/care.jpg" alt="#"/>
                         <div class="theme_text">
                            <div class="li_icon">
-                              <a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a>
+                              <a href="theme_test.jsp?theme=care"><i class="fa fa-search" aria-hidden="true"></i></a>
                               <!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
                            </div>
                            <h3>돌봄</h3>
