@@ -389,8 +389,8 @@ ul.email li i {
 
 
 #myCarousel{
-	width:100%;
-	height:700px;
+   width:100%;
+   height:700px;
 }
 
 #myCarousel .carousel-indicators {
@@ -417,16 +417,16 @@ ul.email li i {
 }
 
 .myCarouselSize{
-	width:100%;
-	height: 60rem;
-	display: flex;
+   width:100%;
+   height: 60rem;
+   display: flex;
     justify-content: center;
 
 }
 .carousel-inner{
-	width:1000px;
-	height:500px;
-	margin-top:12rem;
+   width:1000px;
+   height:500px;
+   margin-top:12rem;
 
 }
 .relative {
@@ -924,10 +924,10 @@ ul.email li i {
      padding-top: 20px ;
      background-color: #A4D4E8;
      text-align: center;
-  	 color: white;
-  	 position: relative;
+      color: white;
+      position: relative;
     font-size: 25px;
-   	 bottom: 0;
+       bottom: 0;
     width: 100%;
    
 }
@@ -1085,7 +1085,6 @@ ul.social_icon li a:hover {
 }
 
 #inslide_title{
-	text-align:center;
-	margin-left:80px;
+   text-align:center;
+   margin-left:80px;
 }
-
