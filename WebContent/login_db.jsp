@@ -1,6 +1,8 @@
-<%@page import="DAO.LoginDAO"%>
+<%@page import="DAO.UserDAO"%>
 <jsp:useBean id="user" class="DTO.Users" scope="session"/>
- <%request.setCharacterEncoding("UTF-8"); %>
+ <%
+ 	request.setCharacterEncoding("UTF-8");
+ %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,17 +13,17 @@
 
   <%
   	if(request.getParameter("userid")!=null){
-  		
-	   	String userid = request.getParameter("userid");
-	    String userpw = request.getParameter("userpw");
-	    user.setId(userid);
-	    user.setPw(userpw);
-	    LoginDAO lo = new LoginDAO();
-	    
-	  	boolean flag=lo.login(user);
-	  	if(flag){
-	  		session.setAttribute("session_user", user);
-	  		%>
+    		
+  	   	String userid = request.getParameter("userid");
+  	    String userpw = request.getParameter("userpw");
+  	    user.setId(userid);
+  	    user.setPw(userpw);
+  	    UserDAO lo = new UserDAO();
+  	    
+  	  	boolean flag=lo.login(userid,userpw);
+  	  	if(flag){
+  	  		session.setAttribute("session_user", user);
+  %>
 	  		<script>
 	  		alert('로그인 성공하셨습니다.');
 	  		location.href="index.jsp";
