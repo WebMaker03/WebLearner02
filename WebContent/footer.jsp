@@ -22,8 +22,7 @@
                      <a class="logo_footer" href="index.jsp"><img src="images/logo_footer.png" alt="#" /></a>
                   </div>
                   
-                  <div class="col-md-3 col-sm-6"
-                  >
+                  <div class="col-md-3 col-sm-6">
                      <div class="Informa helpful">
                         <h3>전체 서비스</h3>
                         <ul>
@@ -69,7 +68,7 @@
                   </div>
                </div>
             </div>
-            <div class="copyright text_align_left">
+            <div class="last_line">
                <div class="container">
                   <div class="row d_flex">
                      <div class="col-md-6">
