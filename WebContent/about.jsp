@@ -57,6 +57,7 @@
 							alt="">
 						<div class="member-info">
 							<div class="member-info-content">
+								<h4>Kang onyu</h4>
 								<h4> 강 온 유 </h4>
 								<span>Frontend Developer</span>
 								<div class="social">
@@ -76,6 +77,7 @@
 							alt="">
 						<div class="member-info">
 							<div class="member-info-content">
+								<h4> Yu aerim </h4>
 								<h4> 유 애 림 </h4>
 								<span>Frontend Developer</span>
 								<div class="social">
@@ -95,6 +97,7 @@
 							alt="">
 						<div class="member-info">
 							<div class="member-info-content">
+								<h4> Yoon sujeong </h4>
 								<h4> 윤 수 정 </h4>
 								<span>Frontend Developer</span>
 								<div class="social">
@@ -123,7 +126,7 @@
 							alt="">
 						<div class="member-info">
 							<div class="member-info-content">
-								<h4> Kim Seung Joo</h4>
+								<h4> Kim SeungJoo</h4>
 								<h4> 김 승 주 </h4>
 								<span>Project Manager</span>
 								<div class="social">
@@ -144,7 +147,7 @@
 							alt="">
 						<div class="member-info">
 							<div class="member-info-content">
-								<h4> Lee Jae Hyun</h4>
+								<h4> Lee JaeHyun</h4>
 								<h4> 이 재 현</h4>
 								<span>BackEnd Developer</span>
 								<div class="social">
