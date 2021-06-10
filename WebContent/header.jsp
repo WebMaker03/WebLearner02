@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="test"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,14 +50,7 @@
                         </div>
                      </nav>
                   </div>
-                  <div class="col-md-2 d_none">
-                     <ul class="email text_align_right">
-                        <li> <a href="login.jsp"> Login </a></li>
-                      <!--   <li> <a href="Javascript:void(0)"> <i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"> </i></a> </li> -->
-                    	<li> <a href="SignUp.jsp"> SignUp </a></li>
-                     </ul>
-                  </div>
-               </div>
+                  <test:header></test:header> <!-- 로그인 유무에 따라 헤더가 다르게 들어감 -->
             </div>
          </div>
       </header>
