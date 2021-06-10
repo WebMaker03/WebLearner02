@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="DAO.LoginDAO"%>
+<%@page import="DAO.UserDAO"%>
 <jsp:useBean id="user" class="DTO.Users" scope="session"/>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@
        String userpw = request.getParameter("userpw");
        user.setId(userid);
        user.setPw(userpw);
-       LoginDAO lo = new LoginDAO();
+       UserDAO lo = new UserDAO();
        
         boolean flag=lo.login(userid,userpw);
         if(flag){
