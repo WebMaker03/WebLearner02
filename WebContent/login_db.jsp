@@ -12,7 +12,6 @@
 
   <%
      if(request.getParameter("userid")!=null){
-        
        String userid = request.getParameter("userid");
        String userpw = request.getParameter("userpw");
        user.setId(userid);
@@ -24,7 +23,7 @@
            session.setAttribute("session_user", user);
            %>
            <script>
-           alert('로그인 실패');
+           alert('로그인 성공');
            location.href="index.jsp";
            </script><%
         }else{

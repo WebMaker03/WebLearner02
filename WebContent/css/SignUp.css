@@ -259,3 +259,27 @@ div#signupbtn{
    text-align:center;
    color:#3498DB;
 }
+ .modal {
+     background-image: linear-gradient(rgb(35, 79, 71) 0%, rgb(36, 121, 106) 100.2%)
+ }
+
+ img {
+     width: 65px;
+     margin-bottom: 16%
+ }
+
+ .img-thumbnail {
+     border: none;
+     position: relative;
+     left: 50px
+ }
+
+ .headr {
+     font-size: 22px;
+     font-weight: 900;
+     color: #374c37
+ }
+
+ .modal-title {
+     color: #0d440d
+ }

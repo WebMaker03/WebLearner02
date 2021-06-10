@@ -420,7 +420,8 @@ ul.email li i {
    width:100%;
    height: 60rem;
    display: flex;
-    justify-content: center;
+   justify-content: center;
+   margin-left: 40px;
 
 }
 .carousel-inner{
@@ -1087,4 +1088,14 @@ ul.social_icon li a:hover {
 #inslide_title{
    text-align:center;
    margin-left:80px;
+}
+
+.last_line{
+	
+	background: #151515;
+	padding: 20px 0px;
+	text-align: left;
+}
+.last_line div{
+	background:black;
 }
