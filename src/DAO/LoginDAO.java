@@ -30,28 +30,40 @@ public class LoginDAO {
 
 	
 	
-	public boolean login(Users user) {
-		
-		String sql ="select * from users where id=?";
-		try {
-			pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1,user.getId());
-			rs=pstmt.executeQuery();
-			while(rs.next()) {
-				System.out.println("testing");
-				return true;
-			}
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return false;
-		
-	
-		
+	   
+	   public boolean login(String userid, String userpw) {
+	      
+	      String sql ="select * from users where id=?";
+	      try {
+	         conn = DBConnection.getConnection();
+	         pstmt=conn.prepareStatement(sql);
+	         pstmt.setString(1,userid);
+	         rs=pstmt.executeQuery();
+	         if(rs.next()) {
+	            System.out.println("확인!");
+	            System.out.println(rs.getString("pw"));
+	               if(rs.getString("pw").equals(userpw)) {
+	                  System.out.println("로그인성공");
+	                  return true;
+	               }
+	               else {
+	                  System.out.println("로그인실패-비밀번호불일치");
+	               }
+	            }
+	            else {
+	               System.out.println("해당아이디없음");
+	            }
+	         
+	      } catch (SQLException e) {
+	         // TODO Auto-generated catch block
+	         e.printStackTrace();
+	      }
+	      return false;
+	      
+	   
+	      
+	   }
+
+
+
 	}
-
-
-
-}
