@@ -10,6 +10,7 @@
 <!-- responsive-->
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/SignUp.css">
+<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -89,7 +90,7 @@
 							<span class="input-group-text" id="passwordArea"
 								style="width: 120px;">이메일</span>
 						</div>
-						<input type="text" class="form-control is-invalid" maxlength="20"
+						<input type="text" class="form-control is-invalid" maxlength="40"
 							placeholder="이메일을 입력하세요" aria-describedby="passwordArea" required
 							name="userEmail">
 					</div>
@@ -97,30 +98,25 @@
 						<!--  alert -->
 					</div>
 				</div>
-				<!--  GENDER -->
-
+				<!--  AGE -->
 				<div class="form-group fone mt-4">
 
-					<div class="input-group-prepend">
-						<span class="input-group-text" style="width: 120px;">성별</span>
-
-						<div class="input-group-text" style="margin-left: 3px">
-							<input type="radio" name="gender" checked="checked">
+					<div class="input-group is-invalid">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="AgeArea"
+								style="width: 120px;">나이</span>
 						</div>
-						<span class="input-group-text" style="margin-right: 5px;">남자</span>
-
-						<div class="input-group-text">
-							<input type="radio" name="gender">
-						</div>
-						<span class="input-group-text">여자</span>
+						<input type="text" class="form-control is-invalid" maxlength="20"
+							placeholder="나이를 입력하세요" aria-describedby="AgeArea" required
+							name="userAge">
 					</div>
 				</div>
 
 
 				<input type="checkbox" class="form-check-input ml-0"
 					id="exampleCheck1"> <label class="form-check-label ml-4"
-					for="exampleCheck1">I agree to Stoke <u>Terms</u> and <u>Privacy
-						Policy</u></label> <br>
+					for="exampleCheck1">I agree to Stoke <u>Terms</u> and <a data-toggle="modal" href="#myPolicy">Privacy
+						Policy</a></label> <br>
 				<br>
 				<div id="signupbtn">
 					<input type="button" class="signupbtn" value="회원가입">
@@ -135,7 +131,9 @@
 		</div>
 
 	</div>
-	
+
 </body>
 	<script type="text/javascript" src="signUp.js"></script>
 </html>
+
+
