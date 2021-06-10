@@ -17,8 +17,8 @@
   	   	String userid = request.getParameter("userid");
   	    String userpw = request.getParameter("userpw");
   	    user.setId(userid);
-  	    user.setPw(userpw);
-  	    UserDAO lo = new UserDAO();
+  	  	user.setPw(userpw);
+  	  UserDAO lo = new UserDAO();
   	    
   	  	boolean flag=lo.login(userid,userpw);
   	  	if(flag){
