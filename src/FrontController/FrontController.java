@@ -61,7 +61,7 @@ public class FrontController extends HttpServlet {
 			String name=request.getParameter("userId");
 			JSONObject obj = new JSONObject();
 			// 여기서 dao 호출 후 전달값 달리해주면 될듯!( 다오에서 값이 있으면	1 전달)
-			obj.put("result", "1"); //중복이면 1전달
+			obj.put("result", "0"); //중복이면 1전달
 			// 중복이 아니면? 0전달?
 			response.getWriter().print(obj);
 		}
