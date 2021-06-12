@@ -11,30 +11,18 @@ public class UserDAO {
 	 PreparedStatement pstmt = null;
 	 ResultSet rs = null;
 	 
-// DB 연결
-	public UserDAO() {
-
-		try {
-
-			conn = DBConnection.getConnection();
-
-		} catch (Exception e) {
-
-			e.printStackTrace(); 
-
-		}
-
-	}
 
 // 회원가입
 	public boolean SignUp(Users user) {
-		String sql="insert into member(id,pw,u_name,age) values (?,?,?,?)";
+		conn = DBConnection.connect();
+		String sql="insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
 	      try {
 	         pstmt=conn.prepareStatement(sql);
 	         pstmt.setString(1, user.getId());
 	         pstmt.setString(2, user.getPw());
 	         pstmt.setString(3, user.getU_name());
-	         pstmt.setInt(3, user.getAge());
+	         pstmt.setString(4, user.getEmail());
+	         pstmt.setInt(5, user.getAge());
 	         pstmt.executeUpdate();
 	      } catch (SQLException e) {
 	         // TODO Auto-generated catch block
@@ -58,7 +46,7 @@ public class UserDAO {
 		
 		String sql ="select * from users where id=?";
 		try {
-			conn = DBConnection.getConnection();
+			conn = DBConnection.connect();
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1,userid);
 			rs=pstmt.executeQuery();
