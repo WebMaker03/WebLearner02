@@ -8,70 +8,58 @@ import java.sql.SQLException;
 import DTO.Users;
 
 public class UserDAO {
-	Connection conn = null;
-	PreparedStatement pstmt = null;
-	ResultSet rs = null;
+	 Connection conn = null;
+	 PreparedStatement pstmt = null;
+	 ResultSet rs = null;
+	 
 
-// DB ¿¬°á
-	public UserDAO() {
-
-		try {
-
-			conn = DBConnection.getConnection();
-
-		} catch (Exception e) {
-
-			e.printStackTrace();
-
-		}
-
-	}
-
-// È¸¿ø°¡ÀÔ
+// íšŒì›ê°€ì…
 	public boolean SignUp(Users user) {
-		String sql = "insert into member(id,pw,u_name,age) values (?,?,?,?)";
-		try {
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, user.getId());
-			pstmt.setString(2, user.getPw());
-			pstmt.setString(3, user.getU_name());
-			pstmt.setInt(3, user.getAge());
-			pstmt.executeUpdate();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return false;
-		} finally {
-			try {
-				pstmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		return true;
+		conn = DBConnection.connect();
+		String sql="insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
+	      try {
+	         pstmt=conn.prepareStatement(sql);
+	         pstmt.setString(1, user.getId());
+	         pstmt.setString(2, user.getPw());
+	         pstmt.setString(3, user.getU_name());
+	         pstmt.setString(4, user.getEmail());
+	         pstmt.setInt(5, user.getAge());
+	         pstmt.executeUpdate();
+	      } catch (SQLException e) {
+	         // TODO Auto-generated catch block
+	         e.printStackTrace();
+	         return false;
+	      } finally {
+	         try {
+	            pstmt.close();
+	            conn.close();
+	         } catch (SQLException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	         }
+	      }
+	      return true;
 	}
 
-// ·Î±×ÀÎ
+// ë¡œê·¸ì¸
 	public boolean login(String userid, String userpw) {
 
 		String sql = "select * from users where id=?";
 		try {
-			conn = DBConnection.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, userid);
-			rs = pstmt.executeQuery();
-			if (rs.next()) {
-				System.out.println("È®ÀÎ!");
+			conn = DBConnection.connect();
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1,userid);
+			rs=pstmt.executeQuery();
+			if(rs.next()) {
+				System.out.println("í™•ì¸!");
 				if (rs.getString("pw").equals(userpw)) {
-					System.out.println("·Î±×ÀÎ¼º°ø");
+					System.out.println("ë¡œê·¸ì¸ì„±ê³µ");
 					return true;
 				} else {
-					System.out.println("·Î±×ÀÎ½ÇÆĞ-ºñ¹Ğ¹øÈ£ºÒÀÏÄ¡");
+					System.out.println("ë¡œê·¸ì¸ì‹¤íŒ¨-ë¹„ë°€ë²ˆí˜¸ë¶ˆì¼ì¹˜");
 				}
 			} else {
-				System.out.println("ÇØ´ç¾ÆÀÌµğ¾øÀ½");
+				System.out.println("í•´ë‹¹ì•„ì´ë””ì—†ìŒ");
 			}
 
 		} catch (SQLException e) {
@@ -82,7 +70,7 @@ public class UserDAO {
 
 	}
 
-// id Áßº¹Ã¼Å©
+// id ì¤‘ë³µì²´í¬
 	public boolean IdCheck(String userid) {
 		boolean idCheck = false;
 		String sql = "select * from users where id=?";
@@ -92,10 +80,10 @@ public class UserDAO {
 			pstmt.setString(1, userid);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				System.out.println("ÇØ´ç ¾ÆÀÌµğ Á¸Àç");
+				System.out.println("í•´ë‹¹ ì•„ì´ë”” ì¡´ì¬");
 				idCheck = false;
 			} else {
-				System.out.println("ÇØ´ç¾ÆÀÌµğ¾øÀ½");
+				System.out.println("í•´ë‹¹ì•„ì´ë””ì—†ìŒ");
 				idCheck = true;
 			}
 		} catch (SQLException e) {

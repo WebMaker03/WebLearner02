@@ -31,23 +31,9 @@
 <!-- body -->
 <body class="utmain-layo">
 
-
-   <!-- loader  -->
- 
-   <!-- end loader -->
-
-   <%
-      
-          Users user=(Users)session.getAttribute("session_user");
-         if(user==null){%>
+  
    <jsp:include page="header.jsp"></jsp:include>
 
-   <%}else{
-            %>
-   <jsp:include page="header2.jsp"></jsp:include>
-   <%
-         }
-      %>
    <!-- start slider section -->
    <div id="top_section" class="banner_main">
       <div class="container" style="margin-top: 80px">

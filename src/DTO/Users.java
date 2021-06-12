@@ -6,6 +6,7 @@ public class Users {
 	private String userpw;
 	private String u_name;
 	private int age;
+	private String email;
 	private int point;
 	
 	public Users() {;}
@@ -14,15 +15,24 @@ public class Users {
 		this.userid =userid;
 		this.userpw=userpw;
 	}
-	public Users(int u_code, String id, String pw, String u_name, int age, int point) {
+	public Users(int u_code, String id, String pw, String u_name, String email, int age, int point) {
 		this.u_code = u_code;
 		this.userid = id;
 		this.userpw = pw;
 		this.u_name = u_name;
+		this.email = email;
 		this.age = age;
 		this.point = point;
 	}
 	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	//getter, setter
 	public int getU_code() {
 		return u_code;
