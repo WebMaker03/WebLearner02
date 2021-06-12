@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONObject;
+
 /**
  * Servlet implementation class FrontController
  */
@@ -45,8 +47,8 @@ public class FrontController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String cp = request.getContextPath(); // 문자열 잘라내기 위해
 		String action = uri.substring(cp.length()); 
-		
 		ActionForward forward = null;
+		
 		if (action.equals("/main.do")) {
 			// 메인을 보여주는 애 호출
 			try {
@@ -55,7 +57,15 @@ public class FrontController extends HttpServlet {
 				e.printStackTrace();
 			}
 
-		} else {
+		}else if(action.equals("/checkid.do")) {
+			String name=request.getParameter("userId");
+			JSONObject obj = new JSONObject();
+			// 여기서 dao 호출 후 전달값 달리해주면 될듯!( 다오에서 값이 있으면	1 전달)
+			obj.put("result", "1"); //중복이면 1전달
+			// 중복이 아니면? 0전달?
+			response.getWriter().print(obj);
+		}
+		else {
 			// 에러 페이지로 이동 시킴. ( 페이지가 없을 경우) -> 404
 			forward = new ActionForward();
 			forward.setRedirect(false);
@@ -64,6 +74,7 @@ public class FrontController extends HttpServlet {
 		
 		if(forward!=null) {
 			if(forward.isRedirect()) { //전달할 객체가 있니? 없는 경우
+				System.out.println("test");
 				response.sendRedirect(forward.getPath());
 			}else { //전달할 정보가 있는 경우
 				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); //request 재설정

@@ -10,7 +10,6 @@
 <!-- responsive-->
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/SignUp.css">
-<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -31,6 +30,7 @@
 							name="id"> <input type="button" class="Idcheckbtn"
 							style="margin-left: 6px; text-align: center;" value="중복확인 ">
 					</div>
+
 					<div class="check_font" id="id_check">
 						<!--  alert -->
 					</div>
@@ -42,9 +42,9 @@
 							<span class="input-group-text" id="passwordArea"
 								style="width: 120px;">비밀번호</span>
 						</div>
-						<input type="password" class="form-control is-invalid" maxlength="20"
-							placeholder="비밀번호를 입력하세요" aria-describedby="passwordArea"
-							required name="pw1">
+						<input type="password" class="form-control is-invalid"
+							maxlength="20" placeholder="비밀번호를 입력하세요"
+							aria-describedby="passwordArea" required name="pw1">
 					</div>
 					<div class="check_font" id="pw_check">
 						<!--  alert -->
@@ -59,8 +59,7 @@
 						</div>
 						<input type="password" class="form-control is-invalid"
 							maxlength="20" placeholder="비밀번호를 입력하세요"
-							aria-describedby="passwordCheckArea" required name="pw2"
-							>
+							aria-describedby="passwordCheckArea" required name="pw2">
 					</div>
 					<div class="check_font" id="pw2_check">
 						<!--  alert -->
@@ -73,9 +72,9 @@
 							<span class="input-group-text" id="nameArea"
 								style="width: 120px;">이름</span>
 						</div>
-						<input type="text" class="form-control is-invalid"
-							maxlength="20" placeholder="이름을 입력하세요"
-							aria-describedby="nameArea" required name="userName">
+						<input type="text" class="form-control is-invalid" maxlength="20"
+							placeholder="이름을 입력하세요" aria-describedby="nameArea" required
+							name="userName">
 					</div>
 					<div class="check_font" id="name_check">
 						<!--  alert -->
@@ -98,28 +97,33 @@
 						<!--  alert -->
 					</div>
 				</div>
-				<!--  AGE -->
+				<!--  GENDER -->
+
 				<div class="form-group fone mt-4">
 
-					<div class="input-group is-invalid">
-						<div class="input-group-prepend">
-							<span class="input-group-text" id="AgeArea"
-								style="width: 120px;">나이</span>
+					<div class="input-group-prepend">
+						<span class="input-group-text" style="width: 120px;">성별</span>
+
+						<div class="input-group-text" style="margin-left: 3px">
+							<input type="radio" name="gender" checked="checked">
 						</div>
-						<input type="text" class="form-control is-invalid" maxlength="20"
-							placeholder="나이를 입력하세요" aria-describedby="AgeArea" required
-							name="userAge">
+						<span class="input-group-text" style="margin-right: 5px;">남자</span>
+
+						<div class="input-group-text">
+							<input type="radio" name="gender">
+						</div>
+						<span class="input-group-text">여자</span>
 					</div>
 				</div>
 
 
 				<input type="checkbox" class="form-check-input ml-0"
 					id="exampleCheck1"> <label class="form-check-label ml-4"
-					for="exampleCheck1">I agree to Stoke <u>Terms</u> and <a data-toggle="modal" href="#myPolicy">Privacy
-						Policy</a></label> <br>
-				<br>
+					for="exampleCheck1">I agree to Stoke <u>Terms</u> and <u>Privacy
+						Policy</u></label> <br> <br>
 				<div id="signupbtn">
-					<input type="button" class="signupbtn" value="회원가입">
+					<input type="button" class="signupbtn" id="signup_btn" value="회원가입"
+						onclick="button1_click();">
 					<!-- onclick이랑 frm.submit() 부분 필요 -->
 				</div>
 				<p class="exist mt-2" style="text-align: center;">
@@ -133,7 +137,11 @@
 	</div>
 
 </body>
-	<script type="text/javascript" src="signUp.js"></script>
+<script type="text/javascript" src="signUp.js"></script>
+<script>
+function button1_click() {
+	console.log("버튼1을 누르셨습니다.");
+	/*  frm.submit(); */
+}
+</script>
 </html>
-
-
