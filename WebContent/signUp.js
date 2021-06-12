@@ -24,17 +24,18 @@ $("input[name=id]").blur(function() {
 		// id = "id_reg" / name = "userId"
 		var user_id = $("input[name=id]").val();
 		$.ajax({
-			url : '${pageContext.request.contextPath}/user/idCheck?userId='+ user_id,
-			type : 'get',
-			success : function(data) {
-				console.log("1 = 중복o / 0 = 중복x : "+ data);							
-				
-				if (data == 1) {
+			url : 'checkid.do',
+			type : 'POST',
+			dataType:'JSON',
+			
+			success : function(response) {
+				console.log("1 = 중복o / 0 = 중복x : "+ response.result);							
+				if (response.result=="1") {
 						// 1 : 아이디가 중복되는 문구
 						$("#id_check").text("사용중인 아이디입니다 :p");
 						$("#id_check").css("color", "red");
-						$("#reg_submit").attr("disabled", true);
-					} else {
+						$("#signup_btn").attr("disabled", true);
+				} else {
 						
 						if(idJ.test(user_id)){
 							// 0 : 아이디 길이 / 문자열 검사
@@ -60,6 +61,7 @@ $("input[name=id]").blur(function() {
 				}
 			});
 		});
+
 
 /* 비밀번호 조건 -> AJAX 사용
 	1. 영문+숫자
