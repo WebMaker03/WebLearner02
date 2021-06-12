@@ -137,5 +137,5 @@
 	</div>
 	
 </body>
-	<script type="text/javascript" src="signUp.js"></script>
+	<script type="text/javascript" src="./js/signUp.js"></script>
 </html>

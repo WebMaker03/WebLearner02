@@ -115,4 +115,44 @@ $("input[name=userEmail]").blur(function() {
 			$('#email_check').css('color', 'red');
 		}
 	});
+// 회원가입 버튼 
+		var inval_Arr = new Array(3).fill(false);
+	$("#signupbtn").click(function() {
+		// 비밀번호가 같은 경우 && 비밀번호 정규식
+		if (($("input[name=pw1]").val() == ($("input[name=pw2]").val()))
+				&& pwJ.test($("input[name=pw1]").val())) {
+			inval_Arr[0] = true;
+		} else {
+			inval_Arr[0] = false;
+		}
+		// 이름 정규식
+		if (nameJ.test($("input[name=userName]").val())) {
+			inval_Arr[1] = true;	
+		} else {
+			inval_Arr[1] = false;
+		}
+		// 이메일 정규식
+		if (mailJ.test($("input[name=userEmail]").val())){
+			inval_Arr[2] = true;
+		} else {
+			inval_Arr[2] = false;
+		}
+		
+		var validAll = true;
+		for(var i = 0; i < inval_Arr.length; i++){
+			
+			if(inval_Arr[i] == false){
+				validAll = false;
+			}
+		}
+		
+		if(validAll){ // 유효성 모두 통과
+			alert('가입완료');
+			
+		} else{
+			alert("입력한 정보들을 다시 한 번 확인해주세요 :"+')');
+			
+		};
+	});
+	
 
