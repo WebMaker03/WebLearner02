@@ -266,11 +266,7 @@ button {
      max-width: 1170px;
 
 }
-.container1 {
-     max-width: 80%;
-     align-items:center;
 
-}
 /*---------------------------- 
 loader  
 ----------------------------*/
@@ -1100,8 +1096,4 @@ ul.social_icon li a:hover {
 }
 .last_line div{
 	background:black;
-}
-
-caption{
-	caption-side:top;
 }
