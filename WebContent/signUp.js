@@ -120,7 +120,7 @@ $("input[name=userEmail]").blur(function() {
 	
 // 회원가입 버튼 체크
 	var inval_Arr = new Array(3).fill(false);
-	$('#signUp_btn').click(function(){
+	$('#signup_btn').click(function(){
 		// 비밀번호가 같은 경우 && 비밀번호 정규식
 		if (($("input[name=pw1]").val() == ($('input[name=pw2]').val()))
 				&& pwJ.test($("input[name=pw1]").val())) {
@@ -150,7 +150,6 @@ $("input[name=userEmail]").blur(function() {
 		
 		if(validAll){ // 유효성 모두 통과
 			console.log('가입성공');
-			
 		} else{
 			console.log('가입실패');
 			

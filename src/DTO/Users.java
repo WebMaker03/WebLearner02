@@ -24,7 +24,13 @@ public class Users {
 		this.age = age;
 		this.point = point;
 	}
-	
+	public Users(int u_code, String id, String pw, String u_name, String email) {
+		this.u_code = u_code;
+		this.userid = id;
+		this.userpw = pw;
+		this.u_name = u_name;
+		this.email = email;
+	}
 	public String getEmail() {
 		return email;
 	}

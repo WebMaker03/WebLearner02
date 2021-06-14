@@ -22,7 +22,7 @@ public class UserDAO {
 			pstmt.setString(2, user.getPw());
 			pstmt.setString(3, user.getU_name());
 			pstmt.setString(4, user.getEmail());
-			pstmt.setInt(5, user.getAge());
+			pstmt.setInt(5, 10);
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
