@@ -22,9 +22,10 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 $("input[name=id]").blur(function() {
 		// id = "id_reg" / name = "userId"
 		var user_id = $("input[name=id]").val();
+		console.log("아이디 :"+user_id);
 		$.ajax({
-			url : 'checkid.do',
-			type : 'POST',
+			url : 'checkid.do?userId='+user_id,
+			type : 'GET',
 			dataType:'JSON',
 			
 			success : function(response) {
@@ -35,7 +36,7 @@ $("input[name=id]").blur(function() {
 						$("#id_check").css("color", "red");
 						$("#signup_btn").attr("disabled", true);
 				} else {
-						
+					   $("#signup_btn").attr("disabled", false);
 						if(idJ.test(user_id)){
 							// 0 : 아이디 길이 / 문자열 검사
 							$("#id_check").text("사용가능한 아이디입니다 :)");
