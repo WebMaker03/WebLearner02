@@ -18,40 +18,42 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 	// 이메일 검사 정규식
 	var mailJ = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 	
-// 아이디 중복체크 -> DB연동해서 해야되서 백단으로 빼야할지...
-
+// ID검사
 $("input[name=id]").blur(function() {
 		// id = "id_reg" / name = "userId"
 		var user_id = $("input[name=id]").val();
+		console.log("아이디 :"+user_id);
 		$.ajax({
-			url : '${pageContext.request.contextPath}/user/idCheck?userId='+ user_id,
-			type : 'get',
-			success : function(data) {
-				console.log("1 = 중복o / 0 = 중복x : "+ data);							
-				
-				if (data == 1) {
+			url : 'checkid.do?userId='+user_id,
+			type : 'GET',
+			dataType:'JSON',
+			
+			success : function(response) {
+				console.log("1 = 중복o / 0 = 중복x : "+ response.result);							
+				if (response.result=="1") {
 						// 1 : 아이디가 중복되는 문구
 						$("#id_check").text("사용중인 아이디입니다 :p");
 						$("#id_check").css("color", "red");
-						$("#reg_submit").attr("disabled", true);
-					} else {
-						
+						$("#signup_btn").attr("disabled", true);
+				} else {
+					   $("#signup_btn").attr("disabled", false);
 						if(idJ.test(user_id)){
 							// 0 : 아이디 길이 / 문자열 검사
-							$("#id_check").text("");
-							$("#reg_submit").attr("disabled", false);
+							$("#id_check").text("사용가능한 아이디입니다 :)");
+							$("#id_check").css("color", "red");
+							$('#signUp_btn').attr("disabled", false);
 						// 아이디가 공백이면
 						} else if(user_id == ""){
 							
 							$('#id_check').text('아이디를 입력해주세요 :)');
 							$('#id_check').css('color', 'red');
-							$("#reg_submit").attr("disabled", true);				
+							$('#signUp_btn').attr("disabled", true);				
 						// 아이디가 규격에 맞게 입력할 수 있도록	
 						} else {
 							
 							$('#id_check').text("아이디는 소문자와 숫자 4~12자리만 가능합니다 :) :)");
 							$('#id_check').css('color', 'red');
-							$("#reg_submit").attr("disabled", true);
+							$('#signUp_btn').attr("disabled", true);
 						}
 						
 					}
@@ -60,6 +62,7 @@ $("input[name=id]").blur(function() {
 				}
 			});
 		});
+
 
 /* 비밀번호 조건 -> AJAX 사용
 	1. 영문+숫자
@@ -115,4 +118,44 @@ $("input[name=userEmail]").blur(function() {
 			$('#email_check').css('color', 'red');
 		}
 	});
+	
+// 회원가입 버튼 체크
+	var inval_Arr = new Array(3).fill(false);
+	$('#signUp_btn').click(function(){
+		// 비밀번호가 같은 경우 && 비밀번호 정규식
+		if (($("input[name=pw1]").val() == ($('input[name=pw2]').val()))
+				&& pwJ.test($("input[name=pw1]").val())) {
+			inval_Arr[0] = true;
+		} else {
+			inval_Arr[0] = false;
+		}
+		// 이름 정규식
+		if (nameJ.test($("input[name=userName]").val())) {
+			inval_Arr[1] = true;	
+		} else {
+			inval_Arr[1] = false;
+		}
+		// 이메일 정규식
+		if (mailJ.test($("input[name=userEmail]").val())){
+			inval_Arr[2] = true;
+		} else {
+			inval_Arr[2] = false;
+		}
+		var validAll = true;
+		for(var i = 0; i < inval_Arr.length; i++){
+			
+			if(inval_Arr[i] == false){
+				validAll = false;
+			}
+		}
+		
+		if(validAll){ // 유효성 모두 통과
+			console.log('가입성공');
+			
+		} else{
+			console.log('가입실패');
+			
+		}
+	});	
+
 

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.container1 {
+	margin-left: 15%; 
+	max-width : 80%;
+	align-items: center;
+}
+
+caption {
+	caption-side: top;
+}
