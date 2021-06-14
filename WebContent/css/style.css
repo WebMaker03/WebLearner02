@@ -262,7 +262,11 @@ button {
      align-items: center;
      flex-wrap: wrap;
 }
-.container {
+.container{
+     max-width: 1170px;
+
+}
+.container1 {
      max-width: 80%;
      align-items:center;
 
