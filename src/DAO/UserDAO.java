@@ -104,7 +104,7 @@ public class UserDAO {
       }
       return user;
    }
-   
+   // 회원가입 시 아이디 체크 함수
    public boolean checkId(String userid) {
       conn = DBConnection.connect();
       String sql = "select count(*) from users where id=?";
