@@ -10,7 +10,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-	@@ -12,6 +16,8 @@
+<!-- bootstrap css -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- style css -->
 <link rel="stylesheet" href="css/style.css">
 <!-- responsive-->
 <link rel="stylesheet" href="css/responsive.css">
@@ -19,7 +21,10 @@
 
 
 </head>
+<body>
 	
+	<jsp:include page="header.jsp"></jsp:include>
+
 	<div class="theme">
 		<div class="container" style="margin-top: 80px; margin-bottom: 70px;">
 			<h1 style = "font-size : 40px;"><strong>마이페이지</strong></h1>
