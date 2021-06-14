@@ -3,6 +3,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import DTO.Users;
 
@@ -74,6 +75,57 @@ public class UserDAO {
 		
 	}
 
+	// 회원정보 가져오기
+	// 파라미터로 아이디 값을 주면서 검색
+	// 반환값은 users로 
+	// 체크아이디 (아이디 중복검사) 아디값 받으면 중복되는 값 중복되면 false 없으면 true
 
+	public Users showUser(String userid) {
+		Users user = new Users();
+		conn=DBConnection.connect();
+		
+		try {
+			String sql = "select * from users where userid=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				user.setU_code(rs.getInt("u_code"));
+				user.setId(rs.getString("userid"));
+				user.setPw(rs.getString("userpw"));
+				user.setU_name(rs.getString("u_name"));
+				user.setAge(rs.getInt("age"));
+				user.setEmail(rs.getString("email"));
+				user.setPoint(rs.getInt("point"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
+	}
+	
+	public boolean checkId(String userid) {
+		conn = DBConnection.connect();
+		String sql = "select count(*) from users where userid=?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				if(rs.getInt(1)!=0){
+					
+					return false;
+					
+				}
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return true;
+	}
 
 }
