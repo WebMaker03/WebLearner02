@@ -16,7 +16,7 @@
 <body>
 	<div class="container_join">
 		<div class="d-flex justify-content-center">
-			<form class="sign-up" action="control_user.jsp?action=new" method="post">
+			<form class="sign-up">
 				<h2 class="heading mb-6" id="signupTitle">Sign Up</h2>
 				<!--  ID -->
 				<div class="form-group fone mt-5">
@@ -27,11 +27,8 @@
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
 							placeholder="ID를 입력하세요" aria-describedby="InputArea" required
-							name="id">
-						<!-- 중복체크 버튼 불필요 
-							 <input type="button" class="Idcheckbtn"
+							name="id"> <input type="button" class="Idcheckbtn"
 							style="margin-left: 6px; text-align: center;" value="중복확인 ">
-						 -->
 					</div>
 
 					<div class="check_font" id="id_check">
@@ -100,32 +97,29 @@
 						<!--  alert -->
 					</div>
 				</div>
-				<!--  GENDER -->
-
+				
 				<div class="form-group fone mt-4">
-
-					<div class="input-group-prepend">
-						<span class="input-group-text" style="width: 120px;">성별</span>
-
-						<div class="input-group-text" style="margin-left: 3px">
-							<input type="radio" name="gender" checked="checked">
+					<div class="input-group is-invalid">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="AgeArea"
+								style="width: 120px;">나이</span>
 						</div>
-						<span class="input-group-text" style="margin-right: 5px;">남자</span>
-
-						<div class="input-group-text">
-							<input type="radio" name="gender">
-						</div>
-						<span class="input-group-text">여자</span>
+						<input type="text" class="form-control is-invalid" maxlength="40"
+							placeholder="나이를 입력하세요" aria-describedby="AgeArea" required
+							name="userAge">
+					</div>
+					<div class="check_font" id="Age_check">
+						<!--  alert -->
 					</div>
 				</div>
-
+			
 
 				<input type="checkbox" class="form-check-input ml-0"
 					id="exampleCheck1"> <label class="form-check-label ml-4"
 					for="exampleCheck1">I agree to Stoke <u>Terms</u> and <u>Privacy
 						Policy</u></label> <br> <br>
 				<div id="signupbtn">
-					<input type="submit" class="signupbtn" id="signup_btn" value="회원가입"
+					<input type="button" class="signupbtn" id="signup_btn" value="회원가입"
 						onclick="button1_click();">
 					<!-- onclick이랑 frm.submit() 부분 필요 -->
 				</div>
