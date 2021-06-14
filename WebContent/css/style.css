@@ -262,13 +262,11 @@ button {
      align-items: center;
      flex-wrap: wrap;
 }
-
 .container {
-     max-width: 1170px;
-  
+     max-width: 80%;
+     align-items:center;
+
 }
-
-
 /*---------------------------- 
 loader  
 ----------------------------*/
