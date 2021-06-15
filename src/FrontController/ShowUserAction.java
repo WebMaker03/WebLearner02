@@ -10,14 +10,14 @@ public class ShowUserAction implements Action {
 
    @Override
    public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-      ActionForward forward = new ActionForward(); // °´Ã¼´Â ¹Ì¸® »ı¼º
+      ActionForward forward = new ActionForward(); // ê°ì²´ëŠ” ë¯¸ë¦¬ ìƒì„±
 
       UserDAO udao  = new UserDAO();
       String userid= request.getParameter("userid");
       Users user= udao.showUser(userid);
       
       request.setAttribute("show_user", user); 
-      forward.setRedirect(false); // true- ¹İÈ¯ÇÏ´Â °´Ã¼ ¾øÀ½ / false-¹İÈ¯ÇÏ´Â °´Ã¼°¡ ÀÖÀ½À» ÀÇ¹Ì
+      forward.setRedirect(false); // true- ë°˜í™˜í•˜ëŠ” ê°ì²´ ì—†ìŒ / false-ë°˜í™˜í•˜ëŠ” ê°ì²´ê°€ ìˆìŒì„ ì˜ë¯¸
       forward.setPath("test.jsp");
       return forward;
    }

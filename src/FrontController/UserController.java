@@ -94,6 +94,12 @@ public class UserController extends HttpServlet {
             e.printStackTrace();
          }
 
+      } else if(action.equals("/updateuser.do")) {	// user_controller, 업데이트
+    	  try {
+              forward = new ShowUserAction().execute(request, response);
+           } catch (Exception e) {
+              e.printStackTrace();
+           }
       }
 
       else {

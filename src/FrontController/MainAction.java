@@ -8,9 +8,9 @@ public class MainAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		ActionForward forward= new ActionForward(); //°´Ã¼´Â ¹Ì¸® »ı¼º
+		ActionForward forward= new ActionForward(); //ê°ì²´ëŠ” ë¯¸ë¦¬ ìƒì„±
 		
-		forward.setRedirect(true); // true- ¹İÈ¯ÇÏ´Â °´Ã¼ ¾øÀ½ / false-¹İÈ¯ÇÏ´Â °´Ã¼°¡ ÀÖÀ½À» ÀÇ¹Ì
+		forward.setRedirect(true); // true- ë°˜í™˜í•˜ëŠ” ê°ì²´ ì—†ìŒ / false-ë°˜í™˜í•˜ëŠ” ê°ì²´ê°€ ìˆìŒì„ ì˜ë¯¸
 		forward.setPath("main.jsp");
 		return forward;
 	}
