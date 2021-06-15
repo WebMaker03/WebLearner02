@@ -21,14 +21,20 @@ public class SignUpAction implements Action {
 		newUser.setAge(Integer.parseInt(request.getParameter("userAge")));
 		newUser.setEmail(request.getParameter("userEmail"));
 		
-		udao.SignUp(newUser);
-		
-		forward.setRedirect(true); // true- 반환하는 객체 없음 / false-반환하는 객체가 있음을 의미
-		request.getSession().setAttribute("msg", "회원가입을 축하합니다.");
-		forward.setPath("Main.jsp");
-
-		// 성공 메세지 출력??
+		if(udao.SignUp(newUser)) {
+			forward.setRedirect(false);
+			request.getSession().setAttribute("msg", "회원가입 실패");
+			forward.setPath("Main.jsp");
+		}	else {
+			forward.setRedirect(true); // true- 반환하는 객체 없음 / false-반환하는 객체가 있음을 의미
+			request.getSession().setAttribute("msg", "회원가입을 축하합니다.");
+			forward.setPath("Main.jsp");
+			
+			// 성공 메세지 출력??
+			
+		};
 		return forward;
+		
 	}
 
 }
