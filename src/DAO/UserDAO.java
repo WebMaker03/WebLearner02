@@ -13,7 +13,7 @@ public class UserDAO {
     ResultSet rs = null;
     
 
-// È¸¿ø°¡ÀÔ
+// íšŒì›ê°€ì…
    public boolean SignUp(Users user) {
       conn = DBConnection.connect();
       String sql="insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
@@ -42,7 +42,7 @@ public class UserDAO {
    }
 
    
-// ·Î±×ÀÎ
+// ë¡œê·¸ì¸
    public boolean login(String userid, String userpw) {
       
       String sql ="select * from users where id=?";
@@ -52,17 +52,17 @@ public class UserDAO {
          pstmt.setString(1,userid);
          rs=pstmt.executeQuery();
          if(rs.next()) {
-            System.out.println("È®ÀÎ!");
+            System.out.println("í™•ì¸!");
                if(rs.getString("pw").equals(userpw)) {
-                  System.out.println("·Î±×ÀÎ¼º°ø");
+                  System.out.println("ë¡œê·¸ì¸ì„±ê³µ");
                   return true;
                }
                else {
-                  System.out.println("·Î±×ÀÎ½ÇÆĞ-ºñ¹Ğ¹øÈ£ºÒÀÏÄ¡");
+                  System.out.println("ë¡œê·¸ì¸ì‹¤íŒ¨-ë¹„ë°€ë²ˆí˜¸ë¶ˆì¼ì¹˜");
                }
             }
             else {
-               System.out.println("ÇØ´ç¾ÆÀÌµğ¾øÀ½");
+               System.out.println("í•´ë‹¹ì•„ì´ë””ì—†ìŒ");
             }
          
       } catch (SQLException e) {
@@ -75,10 +75,10 @@ public class UserDAO {
       
    }
 
-   // È¸¿øÁ¤º¸ °¡Á®¿À±â
-   // ÆÄ¶ó¹ÌÅÍ·Î ¾ÆÀÌµğ °ªÀ» ÁÖ¸é¼­ °Ë»ö
-   // ¹İÈ¯°ªÀº users·Î 
-   // Ã¼Å©¾ÆÀÌµğ (¾ÆÀÌµğ Áßº¹°Ë»ç) ¾Æµğ°ª ¹ŞÀ¸¸é Áßº¹µÇ´Â °ª Áßº¹µÇ¸é false ¾øÀ¸¸é true
+   // íšŒì›ì •ë³´ ê°€ì ¸ì˜¤ê¸°
+   // íŒŒë¼ë¯¸í„°ë¡œ ì•„ì´ë”” ê°’ì„ ì£¼ë©´ì„œ ê²€ìƒ‰
+   // ë°˜í™˜ê°’ì€ usersë¡œ 
+   // ì²´í¬ì•„ì´ë”” (ì•„ì´ë”” ì¤‘ë³µê²€ì‚¬) ì•„ë””ê°’ ë°›ìœ¼ë©´ ì¤‘ë³µë˜ëŠ” ê°’ ì¤‘ë³µë˜ë©´ false ì—†ìœ¼ë©´ true
 
    public Users showUser(String userid) {
       Users user = new Users();
@@ -104,10 +104,12 @@ public class UserDAO {
       }
       return user;
    }
-   
+
+   // íšŒì›ê°€ì… ì‹œ ì•„ì´ë”” ì²´í¬ í•¨ìˆ˜
    public boolean checkId(String userid) {
       conn = DBConnection.connect();
-      String sql = "select count(*) from users where id=?";
+      String sql = "select * from users where userid=?";
+
       try {
          pstmt = conn.prepareStatement(sql);
          pstmt.setString(1, userid);

@@ -16,7 +16,7 @@
 <body>
 	<div class="container_join">
 		<div class="d-flex justify-content-center">
-			<form class="sign-up">
+			<form class="sign-up" method="post" action="signup.do">
 				<h2 class="heading mb-6" id="signupTitle">Sign Up</h2>
 				<!--  ID -->
 				<div class="form-group fone mt-5">
@@ -27,8 +27,9 @@
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
 							placeholder="ID를 입력하세요" aria-describedby="InputArea" required
-							name="id"> <input type="button" class="Idcheckbtn"
-							style="margin-left: 6px; text-align: center;" value="중복확인 ">
+							name="id">
+							<!--  <input type="button" class="Idcheckbtn"
+							style="margin-left: 6px; text-align: center;" value="중복확인 "> -->
 					</div>
 
 					<div class="check_font" id="id_check">
@@ -119,7 +120,7 @@
 					for="exampleCheck1">I agree to Stoke <u>Terms</u> and <u>Privacy
 						Policy</u></label> <br> <br>
 				<div id="signupbtn">
-					<input type="button" class="signupbtn" id="signup_btn" value="회원가입"
+					<input type="submit" class="signupbtn" id="signup_btn" value="회원가입"
 						onclick="button1_click();">
 					<!-- onclick이랑 frm.submit() 부분 필요 -->
 				</div>
@@ -141,4 +142,5 @@ function button1_click() {
 	/*  frm.submit(); */
 }
 </script>
+
 </html>

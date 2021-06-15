@@ -52,31 +52,40 @@ public class UserController extends HttpServlet {
          throws ServletException, IOException {
       // TODO Auto-generated method stub
       String uri = request.getRequestURI();
-      String cp = request.getContextPath(); // ¹®ÀÚ¿­ Àß¶ó³»±â À§ÇØ
+      String cp = request.getContextPath(); // ë¬¸ìì—´ ì˜ë¼ë‚´ê¸° ìœ„í•´
       String action = uri.substring(cp.length());
       ActionForward forward = null;
 
-      if (action.equals("/main.do")) { // ¸ŞÀÎÈ­¸é ¿¬°á- ±âÅ¸ ÄÁÆ®·Ñ·¯ 
-         // ¸ŞÀÎÀ» º¸¿©ÁÖ´Â ¾Ö È£Ãâ
+      if (action.equals("/main.do")) { // ë©”ì¸í™”ë©´ ì—°ê²°- ê¸°íƒ€ ì»¨íŠ¸ë¡¤ëŸ¬ 
+         // ë©”ì¸ì„ ë³´ì—¬ì£¼ëŠ” ì•  í˜¸ì¶œ
          try {
             forward = new MainAction().execute(request, response);
          } catch (Exception e) {
             e.printStackTrace();
          }
 
-      } else if (action.equals("/checkid.do")) {// Áßº¹ Ã¼Å© ¿¬°á _ È¸¿ø°¡ÀÔ user controller
+      } else if (action.equals("/checkid.do")) {// ì¤‘ë³µ ì²´í¬ ì—°ê²° _ íšŒì›ê°€ì… user controller
          String userid = request.getParameter("userId");
          System.out.println(userid);
 
          JSONObject obj = new JSONObject();
          UserDAO udao = new UserDAO();
-         if (udao.checkId(userid)) { // false°¡ Àü´ŞµÇ¸é Áßº¹ÀÌ¶õ ¶æ
-            obj.put("result", "0"); // Áßº¹ÀÌ¸é 1Àü´Ş
+         if (udao.checkId(userid)) { // falseê°€ ì „ë‹¬ë˜ë©´ ì¤‘ë³µì´ë€ ëœ»
+
+            obj.put("result", "0"); // ì¤‘ë³µì•„ë‹ˆë©´ 0ì „ë‹¬
+            System.out.println("ì—¬ê¸°ë¡œì˜´");
+
          } else {
-            obj.put("result", "1"); // Áßº¹ÀÌ¸é 1Àü´Ş
+            obj.put("result", "1"); // ì¤‘ë³µì´ë©´ 1ì „ë‹¬
          }
          response.getWriter().print(obj);
-      } else if (action.equals("/signup.do")) { // È¸¿ø°¡ÀÔ user_controller
+      } else if (action.equals("/signup.do")) { // íšŒì›ê°€ì… user_controller
+
+    	  try {
+              forward = new SignUpAction().execute(request, response);
+           } catch (Exception e) {
+              e.printStackTrace();
+           }
 
       } else if (action.equals("/showuser.do")) { //user_controller
          try {
@@ -88,18 +97,18 @@ public class UserController extends HttpServlet {
       }
 
       else {
-         // ¿¡·¯ ÆäÀÌÁö·Î ÀÌµ¿ ½ÃÅ´. ( ÆäÀÌÁö°¡ ¾øÀ» °æ¿ì) -> 404
+         // ì—ëŸ¬ í˜ì´ì§€ë¡œ ì´ë™ ì‹œí‚´. ( í˜ì´ì§€ê°€ ì—†ì„ ê²½ìš°) -> 404
          forward = new ActionForward();
          forward.setRedirect(false);
          forward.setPath("/error/error404.jsp");
       }
 
       if (forward != null) {
-         if (forward.isRedirect()) { // Àü´ŞÇÒ °´Ã¼°¡ ÀÖ´Ï? ¾ø´Â °æ¿ì
+         if (forward.isRedirect()) { // ì „ë‹¬í•  ê°ì²´ê°€ ìˆë‹ˆ? ì—†ëŠ” ê²½ìš°
             System.out.println("test");
             response.sendRedirect(forward.getPath());
-         } else { // Àü´ŞÇÒ Á¤º¸°¡ ÀÖ´Â °æ¿ì
-            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request Àç¼³Á¤
+         } else { // ì „ë‹¬í•  ì •ë³´ê°€ ìˆëŠ” ê²½ìš°
+            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request ì¬ì„¤ì •
             dispatcher.forward(request, response);
 
          }
