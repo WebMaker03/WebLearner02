@@ -27,8 +27,9 @@
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
 							placeholder="ID를 입력하세요" aria-describedby="InputArea" required
-							name="id"> <input type="button" class="Idcheckbtn"
-							style="margin-left: 6px; text-align: center;" value="중복확인 ">
+							name="id">
+							<!--  <input type="button" class="Idcheckbtn"
+							style="margin-left: 6px; text-align: center;" value="중복확인 "> -->
 					</div>
 
 					<div class="check_font" id="id_check">

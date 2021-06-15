@@ -65,13 +65,14 @@ public class UserController extends HttpServlet {
          }
 
       } else if (action.equals("/checkid.do")) {// 중복 체크 연결 _ 회원가입 user controller
-         String userid = request.getParameter("id");
+         String userid = request.getParameter("userId");
          System.out.println(userid);
 
          JSONObject obj = new JSONObject();
          UserDAO udao = new UserDAO();
          if (udao.checkId(userid)) { // false가 전달되면 중복이란 뜻
-            obj.put("result", "0"); // 중복이면 1전달
+            obj.put("result", "0"); // 중복아니면 0전달
+            System.out.println("여기로옴");
          } else {
             obj.put("result", "1"); // 중복이면 1전달
          }
