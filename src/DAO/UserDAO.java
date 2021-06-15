@@ -108,11 +108,11 @@ public class UserDAO {
    // 회원가입 시 아이디 체크 함수
    public boolean checkId(String userid) {
       conn = DBConnection.connect();
-      String sql = "update (?,?,?,?) from users where userid=?";
+      String sql = "select * from users where userid=?";
 
       try {
          pstmt = conn.prepareStatement(sql);
-         pstmt.setString(5, userid);
+         pstmt.setString(1, userid);
          ResultSet rs = pstmt.executeQuery();
          if(rs.next()) {
             if(rs.getInt(1)!=0){
@@ -130,4 +130,12 @@ public class UserDAO {
       return true;
    }
 
+   // 업데이트 유저 (이름, 이메일, 나이)
+   public boolean updateUser(Users user) {
+	   return false;
+   }
+   // 업데이트 비밀번호
+   public boolean updateUserPw(Users user) {
+	   return false;
+   }
 }
