@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//WebContent/login_db.jsp=UTF-8
+encoding//src/DAO/UserDAO.java=UTF-8
 encoding//src/FrontController/ChallengeController.java=UTF-8
 encoding//src/FrontController/EtcController.java=UTF-8
 encoding//src/FrontController/MainAction.java=UTF-8

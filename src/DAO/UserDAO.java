@@ -13,7 +13,7 @@ public class UserDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 
-// 회원가입
+
 	public boolean SignUp(Users user) {
 		conn = DBConnection.connect();
 		String sql = "insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
@@ -41,25 +41,24 @@ public class UserDAO {
 		return true;
 	}
 
-// 로그인
+
 	public boolean login(String userid, String userpw) {
 
-		String sql = "select * from users where id=?";
+		String sql = "select * from users where userid=?";
 		try {
 			conn = DBConnection.connect();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, userid);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				System.out.println("확인!");
-				if (rs.getString("pw").equals(userpw)) {
-					System.out.println("로그인성공");
+				if (rs.getString("userpw").equals(userpw)) {
+					System.out.println("로그인 성공입니다. ");
 					return true;
 				} else {
-					System.out.println("로그인실패-비밀번호불일치");
+					System.out.println("비밀번호가 틀렸습니다. ");
 				}
 			} else {
-				System.out.println("해당아이디없음");
+				System.out.println("유저 정보가 없습니다.");
 			}
 
 		} catch (SQLException e) {
@@ -70,24 +69,20 @@ public class UserDAO {
 
 	}
 
-	// 회원정보 가져오기
-	// 파라미터로 아이디 값을 주면서 검색
-	// 반환값은 users로
-	// 체크아이디 (아이디 중복검사) 아디값 받으면 중복되는 값 중복되면 false 없으면 true
-
+	
 	public Users showUser(String userid) {
 		Users user = new Users();
 		conn = DBConnection.connect();
 
 		try {
-			String sql = "select * from users where id=?";
+			String sql = "select * from users where userid=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, userid);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				user.setU_code(rs.getInt("u_code"));
-				user.setId(rs.getString("id"));
-				user.setPw(rs.getString("pw"));
+				user.setId(rs.getString("userid"));
+				user.setPw(rs.getString("userpw"));
 				user.setU_name(rs.getString("u_name"));
 				user.setAge(rs.getInt("age"));
 				// user.setEmail(rs.getString("email"));
@@ -100,7 +95,6 @@ public class UserDAO {
 		return user;
 	}
 
-	// 회원가입 시 아이디 체크 함수
 	public boolean checkId(String userid) {
 		conn = DBConnection.connect();
 		String sql = "select * from users where userid=?";
@@ -125,7 +119,6 @@ public class UserDAO {
 		return true;
 	}
 
-	// 업데이트 유저 (이름, 이메일, 나이)
 	public boolean updateUser(Users user) {		// name, email, age, id
 		conn = DBConnection.connect();
 		String sql = "update users set u_name=?"
@@ -155,7 +148,7 @@ public class UserDAO {
 		return true;
 	}
 
-	// 업데이트 비밀번호
+	// �뾽�뜲�씠�듃 鍮꾨�踰덊샇
 	public boolean updateUserPw(Users user) {	// id, pw
 		conn = DBConnection.connect();
 		String sql = "update users set userpw=?"
