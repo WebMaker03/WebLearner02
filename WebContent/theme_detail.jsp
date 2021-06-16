@@ -23,7 +23,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="titlepage text_align_center">
-						<h2>운동</h2>
+						<h2>${show_theme_name}</h2>
 						<!-- foreach로 테마에 맞게 바뀌게 -->
 					</div>
 				</div>
@@ -41,10 +41,11 @@
 							<div class="carousel-item active">
 								<div class="container-fluid">
 									<div class="carousel-caption we1_do">
+										
 										<div class="row">
+										
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">
-
 													<i><img src="images/we1.png" alt="#" /></i>
 													<h3>
 														걷기
@@ -55,6 +56,7 @@
 													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
 												</div>
 											</div>
+											
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">
 
@@ -93,6 +95,7 @@
 													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
 												</div>
 											</div>
+											
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">
 													<i><img src="images/we1.png" alt="#" /></i>
@@ -112,6 +115,7 @@
 							<div class="carousel-item">
 								<div class="container-fluid">
 									<div class="carousel-caption we1_do">
+										
 										<div class="row">
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">
@@ -153,9 +157,11 @@
 									</div>
 								</div>
 							</div>
+							
 							<div class="carousel-item">
 								<div class="container-fluid">
 									<div class="carousel-caption we1_do">
+										
 										<div class="row">
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">

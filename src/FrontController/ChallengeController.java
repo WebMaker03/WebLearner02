@@ -1,6 +1,8 @@
 package FrontController;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,36 +15,63 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("*.ch")
 public class ChallengeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public ChallengeController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-    /**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	/**
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		actionDo(request, response);
+	public ChallengeController() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		actionDo(request, response);
-	}
-	
-	private void actionDo(HttpServletRequest request, HttpServletResponse response)
-		         throws ServletException, IOException {
-		
-	
+		actionCh(request, response);
 	}
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		actionCh(request, response);
+	}
+
+	private void actionCh(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String uri = request.getRequestURI();
+		String cp = request.getContextPath();
+		String action = uri.substring(cp.length());
+		ActionForward forward = null;
+
+		if (action.equals("/calltheme.ch")) { // 테마이름, 테마 리스트 호출
+			try {
+				forward = new CallThemeAction().execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		} else {
+			forward = new ActionForward();
+			forward.setRedirect(false);
+			forward.setPath("/error/error404.jsp");
+		}
+
+		if (forward != null) {
+			if (forward.isRedirect()) {
+				response.sendRedirect(forward.getPath());
+			} else {
+				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request 옱 꽕 젙
+				dispatcher.forward(request, response);
+			}
+		}
+	}
 
 }
