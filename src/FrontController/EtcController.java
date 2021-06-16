@@ -9,10 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.simple.JSONObject;
-
-import DAO.UserDAO;
-
 /**
  * Servlet implementation class EtcController 화면 시작, 전환, 기타 작업 을 위한 Controller
  * 
@@ -59,23 +55,12 @@ public class EtcController extends HttpServlet {
 
 		if (action.equals("/start.etc")) {
 			try {
-
-				forward = new StartAction().execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
-		} else if (action.equals("/main.etc")) {
-			try {
-
 				forward = new MainAction().execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
 
-	 else {
-
+		} else {
 			forward = new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("/error/error404.jsp");
@@ -85,9 +70,7 @@ public class EtcController extends HttpServlet {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
 			} else {
-
-				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request �옱�꽕�젙
-
+				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request 옱 꽕 젙
 				dispatcher.forward(request, response);
 			}
 		}
