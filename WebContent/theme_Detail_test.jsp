@@ -15,7 +15,8 @@
 </head>
 <body>
 
-	<jsp:include page="header.jsp"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
+
 <div class="container d-flex justify-content-center mt-40 mb-50" >
     <div class="w-100 overflow-auto order-2 order-md-1" style="margin-top: 170px">
         <div class="card-group-control card-group-control-right">
