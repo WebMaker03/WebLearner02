@@ -3,8 +3,8 @@ use codelearner2;
 /* create¹® */
 CREATE TABLE `users` (
   `u_code` int PRIMARY KEY AUTO_INCREMENT,
-  `userid` varchar(255) NOT NULL,
-  `userpw` varchar(255) NOT NULL,
+  `usersid` varchar(255) NOT NULL,
+  `userspw` varchar(255) NOT NULL,
   `u_name` varchar(255) NOT NULL,
   `age` int NOT NULL,
   `point` int DEFAULT 5000,
@@ -53,7 +53,6 @@ CREATE TABLE `post` (
   `p_code` int PRIMARY KEY AUTO_INCREMENT,
   `u_code` int NOT NULL,
   `b_code` int NOT NULL,
-  `p_title` varchar(300) NOT NULL,
   `p_text` varchar(500),
   foreign key(u_code) references users(u_code) on delete cascade,
   foreign key(b_code) references board(b_code) on delete cascade
