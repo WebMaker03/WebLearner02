@@ -142,11 +142,6 @@ public class VerificationDAO {
 		return true;
 	}
 	
-	// 해당 유저의 해당 챌린지 인증갯수 카운트
-	
-	// 인증 글만 수정하게...
-	
-	// 날짜 변수 추가...
 	
 	
 	
