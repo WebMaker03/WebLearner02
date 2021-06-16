@@ -14,7 +14,7 @@ import DAO.DBConnection;;
 public class ChallengesDAO {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
-	// Ã§¸°Áö Âü°¡
+	// Ã§ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public boolean start_ch(Challenges ch) {
 		try {
 			conn=DBConnection.connect();
@@ -45,7 +45,7 @@ public class ChallengesDAO {
 		return true;
 		}
 	}
-	// Å×¸¶º° Ã§¸°Áö º¸¿©ÁÖ±â 
+	// ï¿½×¸ï¿½ï¿½ï¿½ Ã§ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ 
 	public ArrayList<Challenges> theme_chal(String theme){
 
 	      ArrayList<Challenges> datas=new ArrayList();
@@ -84,8 +84,8 @@ public class ChallengesDAO {
 	      }
 	      return datas;
 	   }
-	// ÁøÇàÁß Ã§¸°Áö Áß¿¡¼­ ³¯Â¥°ªÀÌ Áö³ª¸é Á¾·áµÈ Ã§¸°Áö·Î ÀÌµ¿
-	// ÀÏ´Ü ´Þ¼º·üÀº µðÆúÆ®°ªÀ¸·Î
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã§ï¿½ï¿½ï¿½ï¿½ ï¿½ß¿ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ Ã§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
+	// ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public boolean byebyechallenge() {
 		conn=DBConnection.connect();
 		PreparedStatement pstmt2 = null;
