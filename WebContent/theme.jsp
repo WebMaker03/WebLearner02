@@ -77,7 +77,7 @@
 							<img id="theme" src="images/Reading.png" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-									<a href="theme_test.jsp?theme=reading"><i
+									<a href="theme.etc?theme=reading"><i
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
