@@ -126,18 +126,18 @@ public class UserDAO {
 	}
 
 	// 업데이트 유저 (이름, 이메일, 나이)
-	public boolean updateUser(Users user) {
+	public boolean updateUser(Users user) {		// name, email, age, id
 		conn = DBConnection.connect();
 		String sql = "update users set u_name=?"
 				+ " email=?"
 				+ " age=?"
-				+ " where u_code=?;";
+				+ " where userid=?;";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user.getU_name());
 			pstmt.setString(2, user.getEmail());
 			pstmt.setInt(3, user.getAge());
-			pstmt.setInt(4, user.getU_code());
+			pstmt.setString(4, user.getId());
 			pstmt.executeUpdate();
 			return false;
 		} catch (SQLException e) {
@@ -156,7 +156,28 @@ public class UserDAO {
 	}
 
 	// 업데이트 비밀번호
-	public boolean updateUserPw(Users user) {
-		return false;
+	public boolean updateUserPw(Users user) {	// id, pw
+		conn = DBConnection.connect();
+		String sql = "update users set userpw=?"
+				+ " where userid=?;";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getPw());
+			pstmt.setString(2, user.getId());
+			pstmt.executeUpdate();
+			return false;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return true;
 	}
 }
