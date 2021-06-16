@@ -105,6 +105,7 @@ public class UserDAO {
       return user;
    }
    
+   // 아이디 중복체크
    public boolean checkId(String userid) {
       conn = DBConnection.connect();
       String sql = "select count(*) from users where id=?";
