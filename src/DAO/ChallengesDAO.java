@@ -14,7 +14,7 @@ import DAO.DBConnection;;
 public class ChallengesDAO {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
-	// ç���� ����
+
 	public boolean start_ch(Challenges ch) {
 		try {
 			conn=DBConnection.connect();
@@ -45,7 +45,7 @@ public class ChallengesDAO {
 		return true;
 		}
 	}
-	// �׸��� ç���� �����ֱ� 
+
 	public ArrayList<Challenges> theme_chal(String theme){
 
 	      ArrayList<Challenges> datas=new ArrayList();
@@ -84,8 +84,8 @@ public class ChallengesDAO {
 	      }
 	      return datas;
 	   }
-	// ������ ç���� �߿��� ��¥���� ������ ����� ç������ �̵�
-	// �ϴ� �޼����� ����Ʈ������
+	// 占쏙옙占쏙옙占쏙옙 챌占쏙옙占쏙옙 占쌩울옙占쏙옙 占쏙옙짜占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占� 챌占쏙옙占쏙옙占쏙옙 占싱듸옙
+	// 占싹댐옙 占쌨쇽옙占쏙옙占쏙옙 占쏙옙占쏙옙트占쏙옙占쏙옙占쏙옙
 	public boolean byebyechallenge() {
 		conn=DBConnection.connect();
 		PreparedStatement pstmt2 = null;
