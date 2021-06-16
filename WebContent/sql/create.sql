@@ -1,4 +1,3 @@
-create database codelearner2;
 use codelearner2;
 
 /* create¹® */
