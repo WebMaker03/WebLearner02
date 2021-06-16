@@ -52,31 +52,41 @@ public class UserController extends HttpServlet {
          throws ServletException, IOException {
       // TODO Auto-generated method stub
       String uri = request.getRequestURI();
-      String cp = request.getContextPath(); // ¹®ÀÚ¿­ Àß¶ó³»±â À§ÇØ
+      String cp = request.getContextPath(); // è‡¾ëª„ì˜„ï¿½ë¿´ ï¿½ì˜’ï¿½ì”ªï¿½ê¶¡æ¹²ï¿½ ï¿½ìžï¿½ë¹
       String action = uri.substring(cp.length());
       ActionForward forward = null;
 
-      if (action.equals("/main.do")) { // ¸ÞÀÎÈ­¸é ¿¬°á- ±âÅ¸ ÄÁÆ®·Ñ·¯ 
-         // ¸ÞÀÎÀ» º¸¿©ÁÖ´Â ¾Ö È£Ãâ
+      if (action.equals("/main.do")) { // ï§Žë¶¿ì”¤ï¿½ì†•ï§Žï¿½ ï¿½ë¿°å¯ƒï¿½- æ¹²ê³ ï¿½ è€Œâ‘¦ë“ƒæ¿¡ã…»ìœ­ 
+         // ï§Žë¶¿ì”¤ï¿½ì“£ è¹‚ëŒë¿¬äºŒì‡°ë’— ï¿½ë¸· ï¿½ìƒ‡ç•°ï¿½
+    	  
          try {
             forward = new MainAction().execute(request, response);
          } catch (Exception e) {
             e.printStackTrace();
          }
 
-      } else if (action.equals("/checkid.do")) {// Áßº¹ Ã¼Å© ¿¬°á _ È¸¿ø°¡ÀÔ user controller
+      } else if (action.equals("/checkid.do")) {// ä»¥ë¬ë‚¬ ï§£ëŒ„ê²• ï¿½ë¿°å¯ƒï¿½ _ ï¿½ì‰¶ï¿½ìåª›ï¿½ï¿½ì—¯ user controller
          String userid = request.getParameter("userId");
          System.out.println(userid);
 
          JSONObject obj = new JSONObject();
          UserDAO udao = new UserDAO();
-         if (udao.checkId(userid)) { // false°¡ Àü´ÞµÇ¸é Áßº¹ÀÌ¶õ ¶æ
-            obj.put("result", "0"); // Áßº¹ÀÌ¸é 1Àü´Þ
+         if (udao.checkId(userid)) { // falseåª›ï¿½ ï¿½ìŸ¾ï¿½ë––ï¿½ë¦ºï§Žï¿½ ä»¥ë¬ë‚¬ï¿½ì” ï¿½ï¿½ ï¿½ì‘œ
+
+            obj.put("result", "0"); // ä»¥ë¬ë‚¬ï¿½ë¸˜ï¿½ë•²ï§Žï¿½ 0ï¿½ìŸ¾ï¿½ë––
+            System.out.println("ï¿½ë¿¬æ¹²ê³•ì¤ˆï¿½ìƒ‚");
+
          } else {
-            obj.put("result", "1"); // Áßº¹ÀÌ¸é 1Àü´Þ
+            obj.put("result", "1"); // ä»¥ë¬ë‚¬ï¿½ì” ï§Žï¿½ 1ï¿½ìŸ¾ï¿½ë––
          }
          response.getWriter().print(obj);
-      } else if (action.equals("/signup.do")) { // È¸¿ø°¡ÀÔ user_controller
+      } else if (action.equals("/signup.do")) { // ï¿½ì‰¶ï¿½ìåª›ï¿½ï¿½ì—¯ user_controller
+
+    	  try {
+              forward = new SignUpAction().execute(request, response);
+           } catch (Exception e) {
+              e.printStackTrace();
+           }
 
       } else if (action.equals("/showuser.do")) { //user_controller
          try {
@@ -85,21 +95,27 @@ public class UserController extends HttpServlet {
             e.printStackTrace();
          }
 
+      } else if(action.equals("/updateuser.do")) {	// user_controller, ï¿½ë¾½ï¿½ëœ²ï¿½ì” ï¿½ë“ƒ
+    	  try {
+              forward = new UpdateUserAction().execute(request, response);
+           } catch (Exception e) {
+              e.printStackTrace();
+           }
       }
 
       else {
-         // ¿¡·¯ ÆäÀÌÁö·Î ÀÌµ¿ ½ÃÅ´. ( ÆäÀÌÁö°¡ ¾øÀ» °æ¿ì) -> 404
+         // ï¿½ë¿‰ï¿½ìœ­ ï¿½ëŸ¹ï¿½ì” ï§žï¿½æ¿¡ï¿½ ï¿½ì” ï¿½ë£ž ï¿½ë–†ï¿½ê¶¡. ( ï¿½ëŸ¹ï¿½ì” ï§žï¿½åª›ï¿½ ï¿½ë¾¾ï¿½ì“£ å¯ƒìŽŒìŠ¦) -> 404
          forward = new ActionForward();
          forward.setRedirect(false);
          forward.setPath("/error/error404.jsp");
       }
 
       if (forward != null) {
-         if (forward.isRedirect()) { // Àü´ÞÇÒ °´Ã¼°¡ ÀÖ´Ï? ¾ø´Â °æ¿ì
+         if (forward.isRedirect()) { // ï¿½ìŸ¾ï¿½ë––ï¿½ë¸· åª›ì•¹ê»œåª›ï¿½ ï¿½ì—³ï¿½ë•²? ï¿½ë¾¾ï¿½ë’— å¯ƒìŽŒìŠ¦
             System.out.println("test");
             response.sendRedirect(forward.getPath());
-         } else { // Àü´ÞÇÒ Á¤º¸°¡ ÀÖ´Â °æ¿ì
-            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request Àç¼³Á¤
+         } else { // ï¿½ìŸ¾ï¿½ë––ï¿½ë¸· ï¿½ì ™è¹‚ë‹¿ï¿½ ï¿½ì—³ï¿½ë’— å¯ƒìŽŒìŠ¦
+            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request ï¿½ì˜±ï¿½ê½•ï¿½ì ™
             dispatcher.forward(request, response);
 
          }
