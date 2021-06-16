@@ -23,15 +23,14 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="titlepage text_align_center">
-						<h2>운동</h2>
+						<h2>${show_theme_name}</h2>
 						<!-- foreach로 테마에 맞게 바뀌게 -->
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12" style="margin-top: -100px">
-					<div id="we1" class="carousel slide" data-ride="carousel"
-						align="center">
+					<div id="we1" class="carousel slide" data-ride="carousel" align="center" >
 						<ol class="carousel-indicators">
 							<li data-target="#we1" data-slide-to="0" class="active"></li>
 							<li data-target="#we1" data-slide-to="1"></li>
@@ -42,7 +41,35 @@
 							<div class="carousel-item active">
 								<div class="container-fluid">
 									<div class="carousel-caption we1_do">
+										
 										<div class="row">
+										
+											<div class="col-md-4">
+												<div id="bo_hoo" class="we_boxx text_align_center">
+													<i><img src="images/we1.png" alt="#" /></i>
+													<h3>
+														걷기
+													</h3>
+													<p>many variations of passages of Lorem Ipsum
+														available, but the majority have suffered alteration in
+														some form, by injected humour, or randomised words which</p>
+													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
+												</div>
+											</div>
+											
+											<div class="col-md-4">
+												<div id="bo_hoo" class="we_boxx text_align_center">
+
+													<i><img src="images/we1.png" alt="#" /></i>
+													<h3>
+														걷기
+													</h3>
+													<p>many variations of passages of Lorem Ipsum
+														available, but the majority have suffered alteration in
+														some form, by injected humour, or randomised words which</p>
+													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
+												</div>
+											</div>
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">
 
@@ -68,6 +95,7 @@
 													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
 												</div>
 											</div>
+											
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">
 													<i><img src="images/we1.png" alt="#" /></i>
@@ -87,6 +115,7 @@
 							<div class="carousel-item">
 								<div class="container-fluid">
 									<div class="carousel-caption we1_do">
+										
 										<div class="row">
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">
@@ -128,9 +157,11 @@
 									</div>
 								</div>
 							</div>
+							
 							<div class="carousel-item">
 								<div class="container-fluid">
 									<div class="carousel-caption we1_do">
+										
 										<div class="row">
 											<div class="col-md-4">
 												<div id="bo_hoo" class="we_boxx text_align_center">
@@ -191,4 +222,5 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
