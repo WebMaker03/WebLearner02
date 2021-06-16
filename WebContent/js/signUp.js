@@ -18,7 +18,8 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 	var nameJ = /^[가-힣]{2,6}$/;
 	// 이메일 검사 정규식
 	var mailJ = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-	
+	// 나이 정규식
+	var ageJ = /^[0-9]{1,3}$/;
 // ID검사
 $("input[name=id]").blur(function() {
 		// id = "id_reg" / name = "userId"
@@ -119,7 +120,16 @@ $("input[name=userEmail]").blur(function() {
 			$('#email_check').css('color', 'red');
 		}
 	});
-	
+// 나이 확인
+$("input[name=userAge]").blur(function() {
+	if(ageJ.test($(this).val())) {
+		console.log(ageJ.test($(this).val()));
+		$("#age_check").text("");
+	} else{
+		$('#age_check').text("나이는 숫자로만 입력바랍니다.");
+		$('#age_check').css('color','red');
+	}
+});
 // 회원가입 버튼 체크
 	var inval_Arr = new Array(3).fill(false);
 	$('#signup_btn').click(function(){
