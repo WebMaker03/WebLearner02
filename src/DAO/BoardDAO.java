@@ -24,13 +24,14 @@ public class BoardDAO {
 
 			pstmt.setInt(1, cnt);
 
-
 			ResultSet rs=pstmt.executeQuery();
+			
 			while(rs.next()) {
 				MessageSet ms=new MessageSet();
 				Post p=new Post();
 
 				//작업필요
+				p.setP_text(rs.get);
 
 				ArrayList<Comments> clist=new ArrayList();
 
