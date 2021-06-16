@@ -10,7 +10,7 @@ public class SignUpAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); //객체는 미리 생성
+		ActionForward forward= new ActionForward(); 
 		
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
@@ -21,7 +21,14 @@ public class SignUpAction implements Action {
 		newUser.setAge(Integer.parseInt(request.getParameter("userAge")));
 		newUser.setEmail(request.getParameter("userEmail"));
 		
-		if(udao.SignUp(newUser)) {
+		udao.SignUp(newUser);
+		
+		forward.setRedirect(true); 
+		request.getSession().setAttribute("msg", "회원가입이 완료되었습니다.");
+		forward.setPath("main.etc");
+
+
+	/*	if(udao.SignUp(newUser)) {
 			forward.setRedirect(false);
 			request.getSession().setAttribute("msg", "회원가입 실패");
 			forward.setPath("Main.jsp");
@@ -32,7 +39,8 @@ public class SignUpAction implements Action {
 			
 			// 성공 메세지 출력??
 			
-		};
+		};*/
+
 		return forward;
 		
 	}
