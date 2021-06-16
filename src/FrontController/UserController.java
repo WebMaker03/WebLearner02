@@ -52,34 +52,34 @@ public class UserController extends HttpServlet {
          throws ServletException, IOException {
       // TODO Auto-generated method stub
       String uri = request.getRequestURI();
-      String cp = request.getContextPath(); // 문자열 잘라내기 위해
+      String cp = request.getContextPath(); 
       String action = uri.substring(cp.length());
       ActionForward forward = null;
 
-      if (action.equals("/main.do")) { // 메인화면 연결- 기타 컨트롤러 
-         // 메인을 보여주는 애 호출
+      if (action.equals("/main.do")) { 
          try {
             forward = new MainAction().execute(request, response);
          } catch (Exception e) {
             e.printStackTrace();
          }
 
-      } else if (action.equals("/checkid.do")) {// 중복 체크 연결 _ 회원가입 user controller
+      } else if (action.equals("/checkid.do")) {
          String userid = request.getParameter("userId");
          System.out.println(userid);
 
          JSONObject obj = new JSONObject();
          UserDAO udao = new UserDAO();
-         if (udao.checkId(userid)) { // false가 전달되면 중복이란 뜻
 
-            obj.put("result", "0"); // 중복아니면 0전달
-            System.out.println("여기로옴");
+         if (udao.checkId(userid)) { 
+
+            obj.put("result", "0"); 
+         
 
          } else {
-            obj.put("result", "1"); // 중복이면 1전달
+            obj.put("result", "1"); 
          }
          response.getWriter().print(obj);
-      } else if (action.equals("/signup.do")) { // 회원가입 user_controller
+      } else if (action.equals("/signup.do")) { // ȸ������ 
 
     	  try {
               forward = new SignUpAction().execute(request, response);
@@ -87,34 +87,51 @@ public class UserController extends HttpServlet {
               e.printStackTrace();
            }
 
-      } else if (action.equals("/showuser.do")) { //user_controller
+      } else if (action.equals("/showuser.do")) { //ȸ������ �����ֱ�
          try {
             forward = new ShowUserAction().execute(request, response);
          } catch (Exception e) {
             e.printStackTrace();
          }
 
-      } else if(action.equals("/updateuser.do")) {	// user_controller, 업데이트
+
+      } else if(action.equals("/updateuser.do")) {	
+
     	  try {
               forward = new UpdateUserAction().execute(request, response);
            } catch (Exception e) {
               e.printStackTrace();
            }
+      }else if(action.equals("/login.do")) {	//�α���
+    	  try {
+              forward = new LoginAction().execute(request, response);
+           } catch (Exception e) {
+              e.printStackTrace();
+           }
+      }else if(action.equals("/logout.do")) { //�α׾ƿ�
+    	  try {
+              forward = new LogoutAction().execute(request, response);
+           } catch (Exception e) {
+              e.printStackTrace();
+           }
       }
+    	  
 
       else {
-         // 에러 페이지로 이동 시킴. ( 페이지가 없을 경우) -> 404
+
          forward = new ActionForward();
          forward.setRedirect(false);
          forward.setPath("/error/error404.jsp");
       }
 
       if (forward != null) {
-         if (forward.isRedirect()) { // 전달할 객체가 있니? 없는 경우
-            System.out.println("test");
+
+         if (forward.isRedirect()) { 
+   
             response.sendRedirect(forward.getPath());
-         } else { // 전달할 정보가 있는 경우
-            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request 재설정
+         } else { 
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); 
             dispatcher.forward(request, response);
 
          }

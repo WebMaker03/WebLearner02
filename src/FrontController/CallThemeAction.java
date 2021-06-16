@@ -7,13 +7,13 @@ public class CallThemeAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); //ê°ì²´ëŠ” ë¯¸ë¦¬ ìƒì„±
+		ActionForward forward= new ActionForward(); 
 		
 		String themeName = request.getParameter("theme");
 		request.setAttribute("show_theme_name", themeName);
 		
 		
-		forward.setRedirect(false); // true- ë°˜í™˜í•˜ëŠ” ê°ì²´ ì—†ìŒ / false-ë°˜í™˜í•˜ëŠ” ê°ì²´ê°€ ìˆìŒì„ ì˜ë¯¸
+		forward.setRedirect(false); // true- ¹İÈ¯ÇÏ´Â °´Ã¼ ¾øÀ½ / false-¹İÈ¯ÇÏ´Â °´Ã¼°¡ ÀÖÀ½À» ÀÇ¹Ì
 		forward.setPath("theme_detail.jsp");
 		return forward;
 	}

@@ -51,7 +51,7 @@ public class ChallengeController extends HttpServlet {
 		String action = uri.substring(cp.length());
 		ActionForward forward = null;
 
-		if (action.equals("/calltheme.ch")) { // 테마이름, 테마 리스트 호출
+		if (action.equals("/calltheme.ch")) { // �뀒留덉씠由�, �뀒留� 由ъ뒪�듃 �샇異�
 			try {
 				forward = new CallThemeAction().execute(request, response);
 			} catch (Exception e) {
@@ -68,7 +68,7 @@ public class ChallengeController extends HttpServlet {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
 			} else {
-				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request 옱 꽕 젙
+				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request �삺 苑� �젟
 				dispatcher.forward(request, response);
 			}
 		}
