@@ -39,7 +39,8 @@
 							<img id="theme" src="images/health.jpg" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-									<a href="theme_test.jsp?theme=health"><i
+								<!-- 1 운동 -->
+									<a href="calltheme.ch?theme=운동"><i
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -58,7 +59,8 @@
 							<img id="theme" src="images/life_cycle.jpg" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-									<a href="theme_test.jsp?theme=life_cycle"><i
+								<!-- 2 생활습관 -->
+									<a href="calltheme.ch?theme=생활습관"><i
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -77,7 +79,9 @@
 							<img id="theme" src="images/Reading.png" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
+
 									<a href="theme.etc?theme=reading"><i
+
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -96,7 +100,8 @@
 							<img id="theme" src="images/care.jpg" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-									<a href="theme_test.jsp?theme=care"><i class="fa fa-search"
+								<!-- 4 돌봄 -->
+									<a href="calltheme.ch?theme=care"><i class="fa fa-search"
 										aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>

@@ -1,4 +1,5 @@
 package DAO;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,10 +9,10 @@ import java.util.ArrayList;
 import DTO.Users;
 
 public class UserDAO {
-    Connection conn = null;
-    PreparedStatement pstmt = null;
-    ResultSet rs = null;
-    
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+
 
    public boolean SignUp(Users user) {
       conn = DBConnection.connect();
@@ -125,4 +126,5 @@ public class UserDAO {
    public boolean updateUserPw(Users user) {
 	   return false;
    }
+
 }

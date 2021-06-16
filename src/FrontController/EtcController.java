@@ -59,6 +59,7 @@ public class EtcController extends HttpServlet {
 
 		if (action.equals("/start.etc")) {
 			try {
+
 				forward = new StartAction().execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -66,14 +67,15 @@ public class EtcController extends HttpServlet {
 
 		} else if (action.equals("/main.etc")) {
 			try {
+
 				forward = new MainAction().execute(request, response);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-
 		}
 
-		else {
+	 else {
+
 			forward = new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("/error/error404.jsp");
@@ -83,7 +85,9 @@ public class EtcController extends HttpServlet {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
 			} else {
+
 				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request �옱�꽕�젙
+
 				dispatcher.forward(request, response);
 			}
 		}

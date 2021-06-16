@@ -5,24 +5,20 @@ public class MyC {
 	private int c_code;
 	private int u_code;
 	private boolean state;
-	private int fee;
-	private int period;
 	private String startD;
 	private String finishD;
 	private int achievementPercentage;
-	
+	// 수정사항 : fee, period 변수 삭제
 	
 	
 	public MyC() {;}
 	
-	public MyC(int mc_code, int c_code, int u_code, boolean state, int fee, int period, String startD, String finishD,
+	public MyC(int mc_code, int c_code, int u_code, boolean state, String startD, String finishD,
 			int achievementPercentage) {
 		this.mc_code = mc_code;
 		this.c_code = c_code;
 		this.u_code = u_code;
 		this.state = state;
-		this.fee = fee;
-		this.period = period;
 		this.startD = startD;
 		this.finishD = finishD;
 		this.achievementPercentage = achievementPercentage;
@@ -52,18 +48,6 @@ public class MyC {
 	}
 	public void setState(boolean state) {
 		this.state = state;
-	}
-	public int getFee() {
-		return fee;
-	}
-	public void setFee(int fee) {
-		this.fee = fee;
-	}
-	public int getPeriod() {
-		return period;
-	}
-	public void setPeriod(int period) {
-		this.period = period;
 	}
 	public String getStartD() {
 		return startD;

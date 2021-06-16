@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import DAO.UserDAO;
 import DTO.Users;
 
-public class UpdateUserAction implements Action {
+public class UpdateUserPasswordAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -17,12 +17,10 @@ public class UpdateUserAction implements Action {
 		Users loginUser = new Users();
 		String pwCheck = "";
 		if(loginUser.getPw()== pwCheck) {	// pwCheck을 이렇게 해도 될까..?
-			newUser.setId(request.getParameter("updateName"));
-			newUser.setPw(request.getParameter("updateEmail"));
-			newUser.setAge(Integer.parseInt(request.getParameter("updateAge")));
-			newUser.setId(loginUser.getId());
+			newUser.setId(request.getParameter("updatePw"));
+			newUser.setU_code(loginUser.getU_code());
 			
-			if(udao.updateUser(newUser)) {
+			if(udao.updateUserPw(newUser)) {
 				forward.setRedirect(false);
 				request.getSession().setAttribute("msg", "회원정보 수정 실패");
 				forward.setPath("Main.jsp");
@@ -38,5 +36,6 @@ public class UpdateUserAction implements Action {
 			//out.println("<script>history.go(-1);</script>");
 		}
 		return forward;
-	}
+		}
+
 }
