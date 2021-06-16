@@ -31,7 +31,7 @@ public class BoardDAO {
 				Post p=new Post();
 
 				//작업필요
-				p.setP_text(rs.get);
+			//	p.setP_text(rs.get);
 
 				ArrayList<Comments> clist=new ArrayList();
 
@@ -43,7 +43,7 @@ public class BoardDAO {
 				//작업필요
 				
 				ms.setMessage(p);
-				ms.setRlist(ct);
+				//ms.setRlist(ct);
 
 				datas.add(ms);
 

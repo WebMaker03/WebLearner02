@@ -1,3 +1,4 @@
+
 package FrontController;
 
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ public class CallThemeAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		ActionForward forward= new ActionForward(); //객체는 미리 생성
+		ActionForward forward= new ActionForward(); 
 		
 		String themeName = request.getParameter("theme");
 		request.setAttribute("show_theme_name", themeName);
@@ -22,7 +23,7 @@ public class CallThemeAction implements Action {
 		ArrayList cInfo = cdao.theme_chal(themeName);
 		request.setAttribute("show_challenge", cInfo);
 		
-		forward.setRedirect(false); // true- 반환하는 객체 없음 / false-반환하는 객체가 있음을 의미
+		forward.setRedirect(false); 
 		forward.setPath("theme_detail.jsp");
 		return forward;
 	}
