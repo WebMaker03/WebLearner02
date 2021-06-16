@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 /**
  * Servlet Filter implementation class EncodingFilter
  */
-@WebFilter("*.jsp")
+@WebFilter(value= {"*.jsp", "*.do","*.ch","*.bo","*.etc"})
 public class EncodingFilter implements Filter {
 	private String encoding=null;
     /**
@@ -36,7 +36,7 @@ public class EncodingFilter implements Filter {
 		// TODO Auto-generated method stub
 		// place your code here
 		request.setCharacterEncoding(encoding);
-		System.out.println("ÇÊÅÍ Àû¿ë È®ÀÎ!");
+		System.out.println("Ã‡ÃŠÃ…Ã Ã€Ã»Â¿Ã« ÃˆÂ®Ã€Ã!");
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
 	}
