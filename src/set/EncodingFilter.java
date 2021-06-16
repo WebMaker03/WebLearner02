@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 /**
  * Servlet Filter implementation class EncodingFilter
  */
-@WebFilter(value= {"*.jsp", "*.do","*.ch","*.bo","*.etc"})
+@WebFilter("*.jsp")
 public class EncodingFilter implements Filter {
 	private String encoding=null;
     /**
