@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/DAO/ChallengesDAO.java=UTF-8
 encoding//src/DAO/UserDAO.java=UTF-8
 encoding//src/FrontController/ChallengeController.java=UTF-8
 encoding//src/FrontController/EtcController.java=UTF-8
