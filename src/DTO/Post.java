@@ -4,17 +4,24 @@ public class Post {
 	private int p_code;
 	private int u_code;
 	private int b_code;
+	// p_title 변수 추가
+	private String p_title;
 	private String p_text;
+	// cm_count 변수 추가
+	private int cm_count;
+
 	
 	
 	
 	public Post() {;}
 	
-	public Post(int p_code, int u_code, int b_code, String p_text) {
+	public Post(int p_code, int u_code, int b_code, String p_title ,String p_text) {
 		this.p_code = p_code;
 		this.u_code = u_code;
 		this.b_code = b_code;
+		this.p_title = p_title;
 		this.p_text = p_text;
+		this.cm_count = 0;
 	}
 
 
@@ -43,6 +50,23 @@ public class Post {
 	public void setP_text(String p_text) {
 		this.p_text = p_text;
 	}
+
+	public int getCm_count() {
+		return cm_count;
+	}
+
+	public void setCm_count(int cm_count) {
+		this.cm_count = cm_count;
+	}
+
+	public String getP_title() {
+		return p_title;
+	}
+
+	public void setP_title(String p_title) {
+		this.p_title = p_title;
+	}
+	
 	
 	
 }

@@ -3,16 +3,16 @@ use codelearner2;
 /* 가상데이터 insert */
 
 /*users 테이블*/
-insert into users(usersid, userspw, u_name, age, email) values('hong', 'a1234567', '홍길동', 20, 'email1@gmail.com');
-insert into users(usersid, userspw, u_name, age, email) values('lim', 'a1234567', '임꺽정', 30, 'email2@gmail.com');
-insert into users(usersid, userspw, u_name, age, email) values('kim', 'a1234567', '김유저', 15, 'email3@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('hong', 'a1234567', '홍길동', 20, 'email1@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('lim', 'a1234567', '임꺽정', 30, 'email2@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('kim', 'a1234567', '김유저', 15, 'email3@gmail.com');
 select * from users;
 
 /* challenges 테이블 */
-insert into challenges(c_name, theme, img) values('공부챌린지1','공부', '공부사진1');
-insert into challenges(c_name, theme, period, img) values('독서챌린지1','독서', 30, '독서사진1');
-insert into challenges(c_name, theme, fee, img) values('운동챌린지1','운동', 500, '운동사진1');
-insert into challenges(c_name, theme, fee, period, img) values('생활습관챌린지1','생활습관', 500, 30, '생활습관사진1');
+insert into challenges(c_name, theme, img) values('공부챌린지1','공부', 'challenge1.jpg');
+insert into challenges(c_name, theme, period, img) values('독서챌린지1','독서', 30, 'challenge3.jpg');
+insert into challenges(c_name, theme, fee, img) values('운동챌린지1','운동', 500, 'challenge2.jps');
+insert into challenges(c_name, theme, fee, period, img) values('생활습관챌린지1','생활습관', 500, 30, 'challenge4.jpg');
 select * from challenges;
 
 /* myC 테이블 */
@@ -44,9 +44,9 @@ insert into board (c_code) values(3);
 insert into board (c_code) values(4);
 select* from board;
 
-insert into post (u_code,b_code,p_text) values(1,1,'게시물1');
-insert into post (u_code,b_code,p_text) values(2,2,'게시물2');
-insert into post (u_code,b_code,p_text) values(3,3,'게시물3');
+insert into post (u_code,b_code, p_title,p_text) values(1,1,'게시물제목1','게시물1');
+insert into post (u_code,b_code, p_title,p_text) values(2,2,'게시물제목2','게시물2');
+insert into post (u_code,b_code, p_title,p_text) values(3,3,'게시물제목3','게시물3');
 select* from post;
 
 insert into comments (u_code,p_code,cm_text) values(1,1,'댓글1');
