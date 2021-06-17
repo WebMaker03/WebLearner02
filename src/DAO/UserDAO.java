@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import DTO.Users;
 
@@ -12,7 +13,7 @@ public class UserDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 
-// È¸¿ø°¡ÀÔ
+
 	public boolean SignUp(Users user) {
 		conn = DBConnection.connect();
 		String sql = "insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
@@ -24,10 +25,10 @@ public class UserDAO {
 			pstmt.setString(4, user.getEmail());
 			pstmt.setInt(5, user.getAge());
 			pstmt.executeUpdate();
+			return false;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return false;
 		} finally {
 			try {
 				pstmt.close();
@@ -40,25 +41,24 @@ public class UserDAO {
 		return true;
 	}
 
-// ·Î±×ÀÎ
+
 	public boolean login(String userid, String userpw) {
 
-		String sql = "select * from users where id=?";
+		String sql = "select * from users where userid=?";
 		try {
 			conn = DBConnection.connect();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, userid);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				System.out.println("È®ÀÎ!");
-				if (rs.getString("pw").equals(userpw)) {
-					System.out.println("·Î±×ÀÎ¼º°ø");
+				if (rs.getString("userpw").equals(userpw)) {
+					System.out.println("ë¡œê·¸ì¸ ì„±ê³µì…ë‹ˆë‹¤. ");
 					return true;
 				} else {
-					System.out.println("·Î±×ÀÎ½ÇÆĞ-ºñ¹Ğ¹øÈ£ºÒÀÏÄ¡");
+					System.out.println("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤. ");
 				}
 			} else {
-				System.out.println("ÇØ´ç¾ÆÀÌµğ¾øÀ½");
+				System.out.println("ìœ ì € ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			}
 
 		} catch (SQLException e) {
@@ -69,4 +69,108 @@ public class UserDAO {
 
 	}
 
+	
+	public Users showUser(String userid) {
+		Users user = new Users();
+		conn = DBConnection.connect();
+
+		try {
+			String sql = "select * from users where userid=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				user.setU_code(rs.getInt("u_code"));
+				user.setId(rs.getString("userid"));
+				user.setPw(rs.getString("userpw"));
+				user.setU_name(rs.getString("u_name"));
+				user.setAge(rs.getInt("age"));
+				// user.setEmail(rs.getString("email"));
+				user.setPoint(rs.getInt("point"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
+	}
+
+	public boolean checkId(String userid) {
+		conn = DBConnection.connect();
+		String sql = "select * from users where userid=?";
+
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			ResultSet rs = pstmt.executeQuery();
+			if (rs.next()) {
+				if (rs.getInt(1) != 0) {
+
+					return false;
+
+				}
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return true;
+	}
+
+	public boolean updateUser(Users user) {		// name, email, age, id
+		conn = DBConnection.connect();
+		String sql = "update users set u_name=?"
+				+ " email=?"
+				+ " age=?"
+				+ " where userid=?;";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getU_name());
+			pstmt.setString(2, user.getEmail());
+			pstmt.setInt(3, user.getAge());
+			pstmt.setString(4, user.getId());
+			pstmt.executeUpdate();
+			return false;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return true;
+	}
+
+	// ï¿½ë¾½ï¿½ëœ²ï¿½ì” ï¿½ë“ƒ é®ê¾¨ï¿½è¸°ëŠìƒ‡
+	public boolean updateUserPw(Users user) {	// id, pw
+		conn = DBConnection.connect();
+		String sql = "update users set userpw=?"
+				+ " where userid=?;";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getPw());
+			pstmt.setString(2, user.getId());
+			pstmt.executeUpdate();
+			return false;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return true;
+	}
 }

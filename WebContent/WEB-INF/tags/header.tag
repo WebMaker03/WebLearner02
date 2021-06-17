@@ -12,7 +12,7 @@
 	<c:otherwise>
 		<div class="col-md-2 d_none">
 			<ul class="email text_align_right">
-				<li><a href="logout.jsp"> Logout </a></li>
+				<li><a href="logout.do"> Logout </a></li>
 			</ul>
 		</div>
 	</c:otherwise>
