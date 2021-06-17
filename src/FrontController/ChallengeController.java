@@ -51,7 +51,7 @@ public class ChallengeController extends HttpServlet {
 		String action = uri.substring(cp.length());
 		ActionForward forward = null;
 
-		if (action.equals("/calltheme.ch")) { // �뀒留덉씠由�, �뀒留� 由ъ뒪�듃 �샇異�
+		if (action.equals("/calltheme.ch")) { 
 			try {
 				forward = new CallThemeAction().execute(request, response);
 			} catch (Exception e) {

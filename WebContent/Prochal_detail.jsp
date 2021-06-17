@@ -8,7 +8,6 @@
 <title>현재 참가중인 챌린지 상세보기 화면 & 인증 파트</title>
 
 <link rel="stylesheet" href="css/Prochal_detail.css">
-<link rel="stylesheet" href="css/style.css">
 <!-- responsive-->
 <link rel="stylesheet" href="css/responsive.css">
 <!-- bootstrap css -->
@@ -20,68 +19,147 @@
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<div class="container marketing">
-
-
-
-		<div class="row">
-
-			<div class="col-lg-4" style="margin-top: 220px">
-			
-				<svg class="bd-placeholder-img rounded-circle" width="140"
-					height="140" xmlns="http://www.w3.org/2000/svg" role="img"
-					aria-label="Placeholder: 140x140"
-					preserveAspectRatio="xMidYMid slice" focusable="false">
-				<title>수영</title><rect width="100%" height="100%" fill="#777"></rect>
-				<text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-				</svg>
-				
-				
-				
-				
-				<div style="margin-bottom: 20px">
-					<h2>수영 챌린지</h2>
+	<div class="theme">
+		<div class="container_prochal" style="margin-top: 80px; margin-bottom: 30px;">
+			<div class="row" style="margin-top: 30px; margin-left:100px;">
+				<div class="col-12 col-md-7">
+					<h2 id="start_title">
+						<strong>[ 진행 중 챌린지 상세보기 ]</strong>
+					</h2>
+					<!-- 챌린지 상세보기 카드 -->
+					<div class="card p-3" id="prochal_card">
+						<div class="row">
+							<div class="col-12 col-md-5">
+								<img id="img_show" src="images/health.jpg" alt="My Image">
+							</div>
+							<div class="col-12 col-md-7 py-2 px-3">
+								<span id="challenge_title"> <i class="fa fa-hashtag"
+									aria-hidden="true"></i></i> &nbsp 챌린지 이름
+								</span>
+								<p class="font-weight-bold my-2">June 26</p>
+								<h6 class="mb-3">Introducing iPhone XS, iPhone XS Max and
+									iPhone XR - Apple</h6>
+								<p>iPhone XS impresses with its screen - 5.8 inch OLED
+									display Super Retina opens new frontiers of the virtual world,
+									increased area, brightness and depth - this is...</p>
+								<div class="d-flex mt-2 mb-3">
+									<!-- <button class="btn">오늘 인증하기!</button> -->
+									<button type="button" class="btn btn-danger"
+										data-toggle="modal" data-target="#form">인증하기</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<h3>상세 기간 : </h3>
-				<p>챌린지 상세 설명</p>
-				<p>
-					<a class="btn btn-secondary" href="#">인증 현황 ↓↓</a>
-				</p>
+			</div>
 
-			
+			<div class="row" style="margin-left:-50px;">
+				<div class="col-lg-6 mb-4" style="margin-left:100px;">
+					<div class="card shadow mb-4" id="card2">
+						<div class="card-header py-3" id="card2_header">
+							<h6 class="m-0 font-weight-bold text-primary">인증 목록</h6>
+						</div>
+						<div class="card-body" id="card2_body">
+						<!-- 인증 현황 body -->
+						
+						
+						</div>
+					</div>
+				</div>
+
+				<!-- 인증 현황 파트  -->
+				<div class="col-lg-3 mb-4">
+					<div class="card shadow mb-4" id="card3">
+						<div class="card-header py-3" id="card3_header">
+							<h6 class="m-0 font-weight-bold text-primary">인증 현황</h6>
+						</div>
+						<div class="card-body" id="card3_body">
+							<h4 class="font-weight-bold">
+								별점 1 <span class="float-right">10%</span>
+							</h4>
+							<div class="progress mb-4">
+								<div class="progress-bar bg-danger" role="progressbar"
+									style="width: 10%" aria-valuenow="10" aria-valuemin="0"
+									aria-valuemax="100"></div>
+							</div>
+							<h4 class="font-weight-bold">
+								별점 2 <span class="float-right">20%</span>
+							</h4>
+							<div class="progress mb-4">
+								<div class="progress-bar bg-warning" role="progressbar"
+									style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+									aria-valuemax="100"></div>
+							</div>
+							<h4 class="font-weight-bold">
+								별점 3 <span class="float-right">20%</span>
+							</h4>
+							<div class="progress mb-4">
+								<div class="progress-bar" role="progressbar" style="width: 20%"
+									aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+							<h4 class=" font-weight-bold">
+								별점 4 <span class="float-right">40%</span>
+							</h4>
+							<div class="progress mb-4">
+								<div class="progress-bar bg-info" role="progressbar"
+									style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+									aria-valuemax="100"></div>
+							</div>
+							<h4 class=" font-weight-bold">
+								별점 5 <span class="float-right">10%</span>
+							</h4>
+							<div class="progress">
+								<div class="progress-bar bg-success" role="progressbar"
+									style="width: 10%" aria-valuenow="10" aria-valuemin="0"
+									aria-valuemax="100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 		</div>
-		<!-- START THE FEATURETTES -->
-
-		<hr class="featurette-divider">
-<h2 class = "row" > <a class="btn btn-secondary" href="#"> 챌린지 인증 </a>
-			 </h2>
-		<div class="row featurette">
-			<div class="col-md-7">
-				<h2 class= row" > <a  href="#"> </a>
-				</h2>
-				<p class="lead">Some great placeholder content for the first
-					featurette here. Imagine some exciting prose here.</p>
-			</div>
-			<div class="col-md-5">
-				<svg
-					class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-					width="500" height="500" xmlns="http://www.w3.org/2000/svg"
-					role="img" aria-label="Placeholder: 500x500"
-					preserveAspectRatio="xMidYMid slice" focusable="false">
-					<title>Placeholder</title>
-					</svg>
-
-			</div>
-		</div>
-
-	
-		<hr class="featurette-divider">
 
 	</div>
-	<!-- /END THE FEATURETTES -->
+
+	<!-- modal -->
+	<div class="modal fade" id="form" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="text-right cross">
+					<i class="fa fa-times mr-2"></i>
+				</div>
+				<div class="card-body text-center">
+					<img src=" https://i.imgur.com/d2dKtI7.png" height="100"
+						width="100">
+					<div class="comment-box text-center">
+						<h4>오늘 하루 챌린지 도전 기록을 남겨보세요!</h4>
+						<div class="rating">
+							<input type="radio" name="rating" value="5" id="5"><label
+								for="5">☆</label> <input type="radio" name="rating" value="4"
+								id="4"><label for="4">☆</label> <input type="radio"
+								name="rating" value="3" id="3"><label for="3">☆</label>
+							<input type="radio" name="rating" value="2" id="2"><label
+								for="2">☆</label> <input type="radio" name="rating" value="1"
+								id="1"><label for="1">☆</label>
+						</div>
+						<div class="comment-area">
+							<textarea class="form-control" placeholder="what is your view?"
+								rows="4"></textarea>
+						</div>
+						<div class="text-center mt-4">
+							<button class="btn btn-success send px-5">
+								등록하기 <i class="fa fa-long-arrow-right ml-1"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>
+
 </body>
 </html>
