@@ -3,9 +3,11 @@
      color: #000;
      overflow-x: hidden;
      height: 100%;
-     background-color: #00C853;
+     background-color: #7BBBD6;
      background-repeat: no-repeat
  }
+ 
+ 
 
  .card {
      border-radius: 10px;
@@ -14,6 +16,7 @@
      padding: 20px;
      margin-top: 50px;
      margin-bottom: 50px
+     border: #7BBBD6 solid 3px;
  }
 
  .profile-pic {
@@ -21,7 +24,7 @@
      height: 60px;
      border-radius: 50%;
      object-fit: contain;
-     background-color: #E0E0E0
+     background-color: #7BBBD6
  }
 
  textarea {
@@ -29,18 +32,19 @@
      border-radius: 10px;
      box-sizing: border-box;
      color: #616161;
-     border: 1px solid #F5F5F5;
+     border: 3px solid #C3EAF1;
      font-size: 16px;
      letter-spacing: 1px;
-     height: 500px !important;
      width: 100%
  }
+ 
+ 
 
  textarea:focus {
      -moz-box-shadow: none !important;
      -webkit-box-shadow: none !important;
      box-shadow: none !important;
-     border: 1px solid #00C853 !important;
+     border: 3px solid #7BBBD6 !important;
      outline-width: 0 !important
  }
  
@@ -84,4 +88,45 @@
 
  .options:hover {
      color: #000
+ }
+ 
+.form-control {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 23px;
+    border: 3px solid #C3EAF1;
+}
+
+#checkbutton{
+	margin-left:850px; 
+	
+}
+
+#backbutton{
+	margin-left:20px;
+}
+
+#form_c{
+	 border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 23px;
+    border: 3px solid #C3EAF1;
+    height: 70px;
+	
+}
+#form_c:focus {
+     -moz-box-shadow: none !important;
+     -webkit-box-shadow: none !important;
+     box-shadow: none !important;
+     border: 3px solid #7BBBD6 !important;
+     outline-width: 0 !important
+ }
+ 
+ #writer_theme{
+ margin-left:30px;
+ }
+ #writer_name{
+ margin-left:5px;
  }

@@ -17,38 +17,50 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-<div class="container px-4 py-5 mx-auto" >
- <div class="h2 font-weight-bold" style="margin-top:150px">게시글 작성하기</div>
-    <div class="row d-flex justify-content-center" >
-        <div class="card">
-            <div class="row px-3">
-                <div class="flex-column">
-                
-                    <h3 class="mb-0 font-weight-normal">작성자 이름</h3> <select name="privacy" class="privacy">
-                    
-                        <option>축구</option>
-                        <option>야구</option>
-                        <option>농구</option>
-                    </select>
-                   
-                </div>
-            </div>
-        
-            <div class="row px-3 form-group"> <textarea class="text-muted bg-light mt-4 mb-3" placeholder="Hi Camilla, what's on your mind today?"></textarea> </div>
-            <div class="row px-3">
-                <p class="fa fa-user options mb-0 mr-4"></p>
-                <p class="fa fa-map-marker options mb-0 mr-4"></p>
-                <p class="fa fa-image options mb-0 mr-4"></p> <img class="options" src="https://img.icons8.com/material/24/000000/more--v2.png" width="30px" height="28px">
-                <div class="btn btn-success ml-auto">Post</div>
-            </div>
-        </div>
-    </div>
-</div>
+	<div class="container px-4 py-5 mx-auto">
+		<div class="h2 font-weight-bold" style="margin-top: 150px">게시글
+			작성하기</div>
+		<div class="row d-flex justify-content-center">
+			<div class="card" style="border: #7BBBD6 solid;">
+				<form>
+				<div class="row px-3">
+					<div class="flex-column">
+						
+						<h3 class="mb-0 font-weight-normal" id="writer_name" style="font-size: 30px">테마 이름</h3>
+						
+
+
+					</div>
+					<div class="flex-column">
+					<h2 class="mb-0 font-weight-normal" id="writer_theme" style="font-size: 20px; margin-top: 13px;">작성자 이름</h2>
+					</div>
+				</div>
+				<hr>
+				
+				<textarea class="form-control" id="form_c" required="" rows="1"
+					placeholder="제목을 입력하세요!"></textarea>
+				<div class="row px-3 form-group">
+					<textarea class="text-muted bg-light mt-4 mb-3"
+						placeholder="내용을 작성해주세요!!"
+						style="font-size: 20px; height: 500px;" ></textarea>
+				</div>
+				
+				<div class="row px-3">
+				
+				<button type="button" id="checkbutton" class="btn btn-outline-primary">등록하기</button> 
+				<button type="button" id="backbutton" class="btn btn-outline-primary">취소하기</button>
+				</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 </html>
