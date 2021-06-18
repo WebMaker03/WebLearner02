@@ -14,7 +14,7 @@ public class CallThemeAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		ActionForward forward= new ActionForward(); 
-		
+		System.out.println("call theme");
 		String themeName = request.getParameter("theme");
 		request.setAttribute("show_theme_name", themeName);
 		

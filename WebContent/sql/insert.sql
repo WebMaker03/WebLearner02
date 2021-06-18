@@ -9,10 +9,10 @@ insert into users(usersid, userspw, u_name, age, email) values('kim', 'a1234567'
 select * from users;
 
 /* challenges 테이블 */
-insert into challenges(c_name, theme, img) values('공부챌린지1','공부', '공부사진1');
-insert into challenges(c_name, theme, period, img) values('독서챌린지1','독서', 30, '독서사진1');
-insert into challenges(c_name, theme, fee, img) values('운동챌린지1','운동', 500, '운동사진1');
-insert into challenges(c_name, theme, fee, period, img) values('생활습관챌린지1','생활습관', 500, 30, '생활습관사진1');
+insert into challenges(c_name, theme, img, info) values('공부챌린지1','공부', '공부사진1','공부하자!!');
+insert into challenges(c_name, theme, period, img, info) values('독서챌린지1','독서', 30, '독서사진1','독서하자!');
+insert into challenges(c_name, theme, fee, img, info) values('운동챌린지1','운동', 500, '운동사진1','운동하자!');
+insert into challenges(c_name, theme, fee, period, img, info) values('생활습관챌린지1','생활습관', 500, 30, '생활습관사진1','좋은습관가져여');
 select * from challenges;
 
 /* myC 테이블 */
@@ -30,8 +30,8 @@ insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, i
 select * from myC;
 
 /* verification 테이블*/
-insert into verification(u_code, mc_code, v_text, v_img) values(1, 1, '인증텍스트1', '인증사진1');
-insert into verification(u_code, mc_code, v_text, v_img) values(2, 2, '인증텍스트2','인증사진2');
+insert into verification(u_code, mc_code, v_text, v_img, rating) values(1, 1, '인증텍스트1', '인증사진1',5);
+insert into verification(u_code, mc_code, v_text, v_img, rating) values(2, 2, '인증텍스트2','인증사진2', 1);
 insert into verification(u_code, mc_code, v_text, v_img) values(3, 3, '인증텍스트3','인증사진3');
 select * from verification;
 

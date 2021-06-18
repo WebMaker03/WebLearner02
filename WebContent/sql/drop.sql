@@ -9,5 +9,4 @@ drop table board;
 drop table verification;
 drop table myC;
 drop table challenges;
-drop table theme;
 drop table users;

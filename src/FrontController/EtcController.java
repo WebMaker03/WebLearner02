@@ -19,78 +19,85 @@ import DAO.UserDAO;
  */
 @WebServlet("*.etc")
 public class EtcController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public EtcController() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+   /**
+    * @see HttpServlet#HttpServlet()
+    */
+   public EtcController() {
+      super();
+      // TODO Auto-generated constructor stub
+   }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		actionDo(request, response);
-	}
+   /**
+    * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+    *      response)
+    */
+   protected void doGet(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+      // TODO Auto-generated method stub
+      actionDo(request, response);
+   }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		actionDo(request, response);
-	}
+   /**
+    * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+    *      response)
+    */
+   protected void doPost(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+      // TODO Auto-generated method stub
+      actionDo(request, response);
+   }
 
-	private void actionDo(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		String uri = request.getRequestURI();
-		String cp = request.getContextPath();
-		String action = uri.substring(cp.length());
-		ActionForward forward = null;
+   private void actionDo(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+      // TODO Auto-generated method stub
+      String uri = request.getRequestURI();
+      String cp = request.getContextPath();
+      String action = uri.substring(cp.length());
+      ActionForward forward = null;
 
-		if (action.equals("/start.etc")) {
-			try {
+      if (action.equals("/start.etc")) {
+         try {
 
-				forward = new StartAction().execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+            forward = new StartAction().execute(request, response);
+         } catch (Exception e) {
+            e.printStackTrace();
+         }
 
-		} else if (action.equals("/main.etc")) {
-			try {
+      } else if (action.equals("/main.etc")) {
+         try {
 
-				forward = new MainAction().execute(request, response);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
+            forward = new MainAction().execute(request, response);
+         } catch (Exception e) {
+            e.printStackTrace();
+         }
+      }else if (action.equals("/showchal.etc")) {
+         try {
 
-	 else {
+            forward = new Show_chalAction().execute(request, response);
+         } catch (Exception e) {
+            e.printStackTrace();
+         }
+      }
 
-			forward = new ActionForward();
-			forward.setRedirect(false);
-			forward.setPath("/error/error404.jsp");
-		}
+    else {
 
-		if (forward != null) {
-			if (forward.isRedirect()) {
-				response.sendRedirect(forward.getPath());
-			} else {
+         forward = new ActionForward();
+         forward.setRedirect(false);
+         forward.setPath("/error/error404.jsp");
+      }
 
-				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request �옱�꽕�젙
+      if (forward != null) {
+         if (forward.isRedirect()) {
+            response.sendRedirect(forward.getPath());
+         } else {
 
-				dispatcher.forward(request, response);
-			}
-		}
-	}
+            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  옱 꽕 젙
+
+            dispatcher.forward(request, response);
+         }
+      }
+   }
 
 }

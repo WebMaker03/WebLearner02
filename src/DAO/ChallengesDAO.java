@@ -14,6 +14,31 @@ public class ChallengesDAO {
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 
+	public Challenges getonechal(int c_code) {
+		Challenges ch = new Challenges();
+		try {
+			conn = DBConnection.connect();
+			String sql="select * from challenges where c_code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, c_code);
+			
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				
+				ch.setC_code(rs.getInt("c_code"));
+				ch.setC_name(rs.getString("c_name"));
+				ch.setTheme(rs.getString("theme"));
+				ch.setFee(rs.getInt("fee"));
+				ch.setPeriod(rs.getInt("period"));
+
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return ch;
+
+	}
 	public boolean start_ch(Challenges ch) {
 		try {
 			conn = DBConnection.connect();
