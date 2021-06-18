@@ -23,7 +23,7 @@
          <div class="col scroll">
             <div class="card">
                <div class="card-title d-flex px-4">
-                  <p class="challenge_title">${challenge.c_code}</p>
+                  <p class="challenge_title">${challenge.c_name}</p>
 
                </div>
                <div class="row">
@@ -41,7 +41,7 @@
                         <div class="card" id="chell_info">
                            <div class="row">
                               <i class="fa fa-clock-o fa-3x" aria-hidden="true"></i> <span
-                                 id="chel_people"> 챌린지 기간: 2주</span>
+                                 id="chel_people"> 챌린지 기간:&nbsp ${challenge.period} 일</span>
                            </div>
                         </div>
                      </div>
@@ -49,7 +49,7 @@
                         <div class="card" id="chell_info">
                            <div class="row">
                               <i class="fa fa-star fa-3x" aria-hidden="true"></i> <span
-                                 id="chel_people"> 챌린지 포인트 : 100P</span>
+                                 id="chel_people"> 챌린지 포인트 :&nbsp ${challenge.fee} 점</span>
                            </div>
                         </div>
                      </div>

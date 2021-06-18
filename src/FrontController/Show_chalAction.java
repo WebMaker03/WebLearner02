@@ -15,7 +15,7 @@ public class Show_chalAction implements Action {
    
          ActionForward forward= new ActionForward(); 
          
-         int c_code = Integer.parseInt( request.getParameter("challenge"));
+         int c_code = Integer.parseInt( request.getParameter("chalCode"));
          
          ChallengesDAO cdao = new ChallengesDAO();
          Challenges ch = cdao.getonechal(c_code);

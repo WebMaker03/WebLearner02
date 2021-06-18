@@ -30,6 +30,7 @@ public class ChallengesDAO {
 				ch.setTheme(rs.getString("theme"));
 				ch.setFee(rs.getInt("fee"));
 				ch.setPeriod(rs.getInt("period"));
+				ch.setInfo(rs.getString("info"));
 
 			}
 		} catch (SQLException e) {
@@ -81,12 +82,12 @@ public class ChallengesDAO {
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				Challenges ch = new Challenges();
-
+				ch.setC_code(rs.getInt("c_code"));
 				ch.setC_name(rs.getString("c_name"));
 				ch.setTheme(rs.getString("theme"));
 				ch.setFee(rs.getInt("fee"));
 				ch.setPeriod(rs.getInt("period"));
-
+				ch.setInfo(rs.getString("info"));
 				datas.add(ch);
 
 			}
@@ -104,9 +105,6 @@ public class ChallengesDAO {
 		}
 		return datas;
 	}
-
-	// 占쏙옙占쏙옙占쏙옙 챌占쏙옙占쏙옙 占쌩울옙占쏙옙 占쏙옙짜占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙占� 챌占쏙옙占쏙옙占쏙옙 占싱듸옙
-	// 占싹댐옙 占쌨쇽옙占쏙옙占쏙옙 占쏙옙占쏙옙트占쏙옙占쏙옙占쏙옙
 	public boolean byebyechallenge() {
 		conn = DBConnection.connect();
 		PreparedStatement pstmt2 = null;
