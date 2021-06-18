@@ -109,7 +109,6 @@ public class ChallengesDAO {
 			pstmt2 = conn.prepareStatement(sql2);
 
 			for (int i = 0; i < myClist.size(); i++) {
-				System.out.println("testing");
 				pstmt2.setInt(1, myClist.get(i).getMc_code());
 				success = pstmt2.execute();
 
@@ -124,7 +123,7 @@ public class ChallengesDAO {
 	}
 
 	// 현재진행중 리스트 반환값 datas
-	public ArrayList<MyC> prochal() {
+	public ArrayList<MyC> prochal(String userid) {
 		ArrayList<MyC> datas = new ArrayList();
 		try {
 			conn = DBConnection.connect();
@@ -163,7 +162,7 @@ public class ChallengesDAO {
 	}
 
 	// 종료된챌린지 리스트 반환값 datas
-	public ArrayList<MyC> finchal() {
+	public ArrayList<MyC> finchal(String userid) {
 		ArrayList<MyC> datas = new ArrayList();
 		try {
 			conn = DBConnection.connect();
@@ -183,7 +182,7 @@ public class ChallengesDAO {
 				myc.setFinishD(rs.getString("finishD"));
 				myc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				datas.add(myc);
-
+				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -200,4 +199,46 @@ public class ChallengesDAO {
 		return datas;
 
 	}
+	
+	// 진행중 챌린지 갯수 int cnt 반환
+	public int cntprochal(int u_code) {
+		int cnt=0;
+		try {
+			conn=DBConnection.connect();
+			String sql = "select count(*)  from myc where u_code = ? and state=true";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, u_code);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				cnt= rs.getInt(1);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return cnt;
+	}
+	// 종료된 챌린지 갯수 int cnt 반환
+	public int cntfinchal(int u_code) {
+		int cnt=0;
+		try {
+			conn=DBConnection.connect();
+			String sql = "select count(*)  from myc where u_code = ? and state=false";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, u_code);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				cnt= rs.getInt(1);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return cnt;
+	}
+	
 }
