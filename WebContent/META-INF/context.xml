@@ -5,6 +5,6 @@
    name="jdbc/mysql"
    url="jdbc:mysql://localhost:3308/codelearner2"
    username="root"
-   password="1234"
+   password="0640"
    maxActive="10" maxIdle="5" />
 </Context>
