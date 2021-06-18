@@ -15,9 +15,10 @@ CREATE TABLE `challenges` (
   `c_code` int PRIMARY KEY AUTO_INCREMENT,
   `c_name` varchar(255) NOT NULL,
   `theme` varchar(50) NOT NULL,
-  `fee` int NOT NULL default 100,
-  `period` int NOT NULL default 14,
-  `img` varchar(255)
+  `fee` int default 100,
+  `period` int default 14,
+  `img` varchar(255),
+  `info` varchar(255) NOT null
 );
 
 CREATE TABLE `myC` (
@@ -39,6 +40,7 @@ CREATE TABLE `verification` (
   `mc_code` int NOT NULL,
   `v_text` varchar(500) NOT NULL,
   `v_img` varchar(255) ,
+  `rating` int default 3,
   foreign key(u_code) references users(u_code) on delete cascade,
   foreign key(mc_code) references myC(mc_code) on delete cascade
 );

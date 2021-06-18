@@ -80,7 +80,7 @@
 							<div class="theme_text">
 								<div class="li_icon">
 								<!-- 3 독서 -->
-									<a href="calltheme.ch?theme=reading"><i
+									<a href="calltheme.ch?theme=독서"><i
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -100,7 +100,7 @@
 							<div class="theme_text">
 								<div class="li_icon">
 								<!-- 4 공부 -->
-									<a href="calltheme.ch?theme=study"><i class="fa fa-search"
+									<a href="calltheme.ch?theme=공부"><i class="fa fa-search"
 										aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
