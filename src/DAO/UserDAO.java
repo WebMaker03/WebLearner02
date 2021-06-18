@@ -13,11 +13,7 @@ public class UserDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 
-<<<<<<< HEAD
-// ȸ������
-=======
 
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 	public boolean SignUp(Users user) {
 		conn = DBConnection.connect();
 		String sql = "insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
@@ -45,11 +41,7 @@ public class UserDAO {
 		return true;
 	}
 
-<<<<<<< HEAD
-// �α���
-=======
 
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 	public boolean login(String userid, String userpw) {
 
 		String sql = "select * from users where userid=?";
@@ -59,28 +51,14 @@ public class UserDAO {
 			pstmt.setString(1, userid);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-<<<<<<< HEAD
-				System.out.println("Ȯ��!");
-				if (rs.getString("pw").equals(userpw)) {
-					System.out.println("�α��μ���");
-=======
 				if (rs.getString("userpw").equals(userpw)) {
 					System.out.println("로그인 성공입니다. ");
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 					return true;
 				} else {
-<<<<<<< HEAD
-					System.out.println("�α��ν���-��й�ȣ����ġ");
-=======
 					System.out.println("비밀번호가 틀렸습니다. ");
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 				}
 			} else {
-<<<<<<< HEAD
-				System.out.println("�ش���̵����");
-=======
 				System.out.println("유저 정보가 없습니다.");
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 			}
 
 		} catch (SQLException e) {
@@ -91,15 +69,7 @@ public class UserDAO {
 
 	}
 
-<<<<<<< HEAD
-	// ȸ������ ��������
-	// �Ķ���ͷ� ���̵� ���� �ָ鼭 �˻�
-	// ��ȯ���� users��
-	// üũ���̵� (���̵� �ߺ��˻�) �Ƶ� ������ �ߺ��Ǵ� �� �ߺ��Ǹ� false ������ true
-
-=======
 	
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 	public Users showUser(String userid) {
 		Users user = new Users();
 		conn = DBConnection.connect();
@@ -125,7 +95,6 @@ public class UserDAO {
 		return user;
 	}
 
-
 	public boolean checkId(String userid) {
 		conn = DBConnection.connect();
 		String sql = "select * from users where userid=?";
@@ -149,7 +118,6 @@ public class UserDAO {
 
 		return true;
 	}
-
 
 	public boolean updateUser(Users user) {		// name, email, age, id
 		conn = DBConnection.connect();
@@ -180,7 +148,7 @@ public class UserDAO {
 		return true;
 	}
 
-
+	// �뾽�뜲�씠�듃 鍮꾨�踰덊샇
 	public boolean updateUserPw(Users user) {	// id, pw
 		conn = DBConnection.connect();
 		String sql = "update users set userpw=?"
