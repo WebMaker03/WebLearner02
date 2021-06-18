@@ -31,11 +31,8 @@ public class BoardDAO {
 				Post p=new Post();
 
 				//작업필요
-				p.setU_code(rs.getInt("u_code"));
-				p.setP_text(rs.getString("p_text"));
-				p.setB_code(rs.getInt("b_code"));
-				
-			
+			//	p.setP_text(rs.get);
+
 				ArrayList<Comments> clist=new ArrayList();
 
 				String sql2="select * from comments where cm_code=? order by date desc";
@@ -43,22 +40,10 @@ public class BoardDAO {
 				pstmt.setInt(1, rs.getInt("cm_code"));
 				ResultSet rs2=pstmt.executeQuery();
 				
-				int c=0;
-				while(rs2.next()) {
-					Comments cm = new Comments();
-					
-					cm.setCm_text(rs.getString("cm_text"));
-					cm.setP_code(rs.getInt("p_code"));
-					cm.setU_code(rs.getInt("u_code"));
-					
-					clist.add(cm);
-					c++;
-				}
-				rs2.close();
-				p.setCm_count(c);
+				//작업필요
 				
 				ms.setMessage(p);
-				ms.setClist(clist);
+				//ms.setRlist(ct);
 
 				datas.add(ms);
 
@@ -109,34 +94,6 @@ public class BoardDAO {
 	}
 	                
 	// * 게시글 수정 *
-	public boolean updateP(Post p) {
-		try {
-			conn=DBConnection.connect();
-			String sql="update post set u_code = ? ,b_code = ?, p_text = ? where p_code = ?";
-			pstmt=conn.prepareStatement(sql);
-			
-			pstmt.setInt(1, p.getU_code());
-			pstmt.setInt(2, p.getB_code());
-			pstmt.setString(3,p.getP_text());
-			pstmt.setInt(4, p.getP_code());
-			
-			pstmt.executeUpdate();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-			return false;
-		}
-		finally {
-			try {
-				pstmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		return true;
-	}
 	                
 	// * 게시글 삭제 *
 	public boolean delP(int p_code){
@@ -166,29 +123,16 @@ public class BoardDAO {
 	               
 	// * 댓글 등록   *
 	public boolean insertCM(Comments cm){
-		
-		PreparedStatement pstmt2 = null;
-		conn=DBConnection.connect();
-		String sql="insert into comments (u_code, p_code, cm_text) values(?,?,?)";
-		Post p = new Post();
 		try {
-		
+			conn=DBConnection.connect();
+			String sql="insert into comments (u_code, p_code, cm_text) values(?,?,?)";
 			pstmt=conn.prepareStatement(sql);
 			
 			pstmt.setInt(1, cm.getU_code());
 			pstmt.setInt(2, cm.getP_code());
 			pstmt.setString(3, cm.getCm_text());
 			pstmt.executeUpdate();
-			
-			// cm_count + 1 해주기...
-//			boolean success=true;
-//			String sql2 = "update post set cm_count = ? where p_code = ?";
-//			pstmt2 = conn.prepareStatement(sql2);
-//			
-//			pstmt2.setInt(5, p.setCm_count());
-			
 		}
-	
 		catch(Exception e) {
 			e.printStackTrace();
 			return false;

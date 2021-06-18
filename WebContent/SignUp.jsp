@@ -98,7 +98,7 @@
 						<!--  alert -->
 					</div>
 				</div>
-				
+				<!--  Age  -->
 				<div class="form-group fone mt-4">
 					<div class="input-group is-invalid">
 						<div class="input-group-prepend">
@@ -109,7 +109,7 @@
 							placeholder="나이를 입력하세요" aria-describedby="AgeArea" required
 							name="userAge">
 					</div>
-					<div class="check_font" id="Age_check">
+					<div class="check_font" id="age_check">
 						<!--  alert -->
 					</div>
 				</div>
@@ -135,7 +135,7 @@
 	</div>
 
 </body>
-<script type="text/javascript" src="signUp.js"></script>
+<script type="text/javascript" src="js/signUp.js"></script>
 <script>
 function button1_click() {
 	console.log("버튼1을 누르셨습니다.");

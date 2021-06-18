@@ -1,6 +1,8 @@
 <%@page import="DTO.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +30,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-md-12" style="margin-top: -100px">
 					<div id="we1" class="carousel slide" data-ride="carousel" align="center" >
@@ -38,172 +41,10 @@
 							<li data-target="#we1" data-slide-to="3"></li>
 						</ol>
 						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="container-fluid">
-									<div class="carousel-caption we1_do">
-										
-										<div class="row">
-										
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														걷기
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-											
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														걷기
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														걷기
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														달리기
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-											
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														마라톤
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="container-fluid">
-									<div class="carousel-caption we1_do">
-										
-										<div class="row">
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														야구
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we2.png" alt="#" /></i>
-													<h3>
-														축구
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we3.png" alt="#" /></i>
-													<h3>
-														농구
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							<tag:ch_show></tag:ch_show>
+					    </div>
 							
-							<div class="carousel-item">
-								<div class="container-fluid">
-									<div class="carousel-caption we1_do">
-										
-										<div class="row">
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														수영
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														필라테스
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-											<div class="col-md-4">
-												<div id="bo_hoo" class="we_boxx text_align_center">
-													<i><img src="images/we1.png" alt="#" /></i>
-													<h3>
-														헬스
-													</h3>
-													<p>many variations of passages of Lorem Ipsum
-														available, but the majority have suffered alteration in
-														some form, by injected humour, or randomised words which</p>
-													<a class="read_moree" href="Chall_Detail.jsp">신청하기</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						 
 						<a class="carousel-control-prev" href="#we1" role="button"
 							data-slide="prev"> <i class="fa fa-angle-left"
 							aria-hidden="true"></i> <span class="sr-only">Previous</span>

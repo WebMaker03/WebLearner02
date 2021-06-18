@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import DTO.Post;
 import DTO.Verification;
 
 public class VerificationDAO {
@@ -18,15 +17,10 @@ public class VerificationDAO {
 	public boolean insertV(Verification ver) {
 		try {
 			conn=DBConnection.connect();
-			String sql="insert into verification(u_code, mc_code, v_text, v_img) values (?, ?, ?, ?);";
+			String sql=""; //작업필요
 			pstmt=conn.prepareStatement(sql);
 			
-			pstmt.setInt(1, ver.getU_code());
-			pstmt.setInt(2, ver.getMc_code());
-			pstmt.setString(3, ver.getV_text());
-			pstmt.setString(4, ver.getV_img());
-			
-			pstmt.executeUpdate();
+			//작업필요
 		
 		}
 		catch(Exception e) {
@@ -47,25 +41,21 @@ public class VerificationDAO {
 	}
 	
 	// *인증 조회하기*
-	public ArrayList<Verification> showV() {
+	public  ArrayList<Verification> showV() {
 		
 		ArrayList<Verification> datas=new ArrayList();
 		
 		try {
 			conn=DBConnection.connect();
-			String sql="select * from verification";
+			String sql=""; //작업필요
 			pstmt=conn.prepareStatement(sql);
+			
+			//작업필요
+
 
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {
-				Verification v = new Verification();
-				
-				v.setU_code(rs.getInt("u_code"));
-				v.setMc_code(rs.getInt("mc_code"));
-				v.setV_text(rs.getString("v_text"));
-				v.setV_img(rs.getString("v_img"));
-				
-				datas.add(v);
+				//작업필요
 
 			}
 		} catch (SQLException e) {
@@ -90,7 +80,7 @@ public class VerificationDAO {
 		
 		try {
 			conn=DBConnection.connect();
-			String sql="delete from verification where v_code=?";
+			String sql="delete from message where c_code=?";
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1, v_code);
 			pstmt.executeUpdate();
@@ -109,37 +99,6 @@ public class VerificationDAO {
 		}
 		return true;
 		
-	}
-	
-	// * 인증 수정하기*
-	public boolean updateV(Verification ver) {
-		try {
-			conn=DBConnection.connect();
-			String sql="update verification set u_code = ? ,mc_code = ?, v_text = ?, v_img = ? where v_code = ?";
-			pstmt=conn.prepareStatement(sql);
-			
-			pstmt.setInt(1, ver.getU_code());
-			pstmt.setInt(2, ver.getMc_code());
-			pstmt.setString(3, ver.getV_text());
-			pstmt.setString(4, ver.getV_img());
-			pstmt.setInt(5, ver.getV_code());
-			
-			pstmt.executeUpdate();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-			return false;
-		}
-		finally {
-			try {
-				pstmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		return true;
 	}
 	
 	

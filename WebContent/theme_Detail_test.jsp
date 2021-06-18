@@ -68,7 +68,7 @@
         </div>
     </div>
 </div>
-    	${show_theme_name}
+
     
 
 

@@ -10,13 +10,13 @@ public class UpdateUserAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); //ê°ì²´ëŠ” ë¯¸ë¦¬ ìƒì„±
+		ActionForward forward= new ActionForward(); //°´Ã¼´Â ¹Ì¸® »ı¼º
 		
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
 		Users loginUser = new Users();
 		String pwCheck = "";
-		if(loginUser.getPw()== pwCheck) {	// pwCheckì„ ì´ë ‡ê²Œ í•´ë„ ë ê¹Œ..?
+		if(loginUser.getPw()== pwCheck) {	// pwCheckÀ» ÀÌ·¸°Ô ÇØµµ µÉ±î..?
 			newUser.setId(request.getParameter("updateName"));
 			newUser.setPw(request.getParameter("updateEmail"));
 			newUser.setAge(Integer.parseInt(request.getParameter("updateAge")));
@@ -24,17 +24,17 @@ public class UpdateUserAction implements Action {
 			
 			if(udao.updateUser(newUser)) {
 				forward.setRedirect(false);
-				request.getSession().setAttribute("msg", "íšŒì›ì •ë³´ ìˆ˜ì • ì‹¤íŒ¨");
+				request.getSession().setAttribute("msg", "È¸¿øÁ¤º¸ ¼öÁ¤ ½ÇÆĞ");
 				forward.setPath("Main.jsp");
 			}	else {
-				forward.setRedirect(true); // true- ë°˜í™˜í•˜ëŠ” ê°ì²´ ì—†ìŒ / false-ë°˜í™˜í•˜ëŠ” ê°ì²´ê°€ ìˆìŒì„ ì˜ë¯¸
-				request.getSession().setAttribute("msg", "íšŒì›ì •ë³´ ìˆ˜ì • ì™„ë£Œ");
+				forward.setRedirect(true); // true- ¹İÈ¯ÇÏ´Â °´Ã¼ ¾øÀ½ / false-¹İÈ¯ÇÏ´Â °´Ã¼°¡ ÀÖÀ½À» ÀÇ¹Ì
+				request.getSession().setAttribute("msg", "È¸¿øÁ¤º¸ ¼öÁ¤ ¿Ï·á");
 				forward.setPath("Main.jsp");
 			};
 			
 		} else {
-			request.getSession().setAttribute("msg", "ë¹„ë°€ë²ˆí˜¸ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”.");
-			// ìˆ˜ì •í•˜ê¸° ì „ í˜ì´ì§€ë¡œ ì´ë™.
+			request.getSession().setAttribute("msg", "ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä.");
+			// ¼öÁ¤ÇÏ±â Àü ÆäÀÌÁö·Î ÀÌµ¿.
 			//out.println("<script>history.go(-1);</script>");
 		}
 		return forward;

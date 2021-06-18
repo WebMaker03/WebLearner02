@@ -13,7 +13,11 @@ public class UserDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 
-// È¸¿ø°¡ÀÔ
+<<<<<<< HEAD
+// È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+=======
+
+>>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 	public boolean SignUp(Users user) {
 		conn = DBConnection.connect();
 		String sql = "insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
@@ -41,25 +45,42 @@ public class UserDAO {
 		return true;
 	}
 
-// ·Î±×ÀÎ
+<<<<<<< HEAD
+// ï¿½Î±ï¿½ï¿½ï¿½
+=======
+
+>>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 	public boolean login(String userid, String userpw) {
 
-		String sql = "select * from users where id=?";
+		String sql = "select * from users where userid=?";
 		try {
 			conn = DBConnection.connect();
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, userid);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				System.out.println("È®ÀÎ!");
+<<<<<<< HEAD
+				System.out.println("È®ï¿½ï¿½!");
 				if (rs.getString("pw").equals(userpw)) {
-					System.out.println("·Î±×ÀÎ¼º°ø");
+					System.out.println("ï¿½Î±ï¿½ï¿½Î¼ï¿½ï¿½ï¿½");
+=======
+				if (rs.getString("userpw").equals(userpw)) {
+					System.out.println("ë¡œê·¸ì¸ ì„±ê³µìž…ë‹ˆë‹¤. ");
+>>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 					return true;
 				} else {
-					System.out.println("·Î±×ÀÎ½ÇÆÐ-ºñ¹Ð¹øÈ£ºÒÀÏÄ¡");
+<<<<<<< HEAD
+					System.out.println("ï¿½Î±ï¿½ï¿½Î½ï¿½ï¿½ï¿½-ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ï¿½ï¿½Ä¡");
+=======
+					System.out.println("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤. ");
+>>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 				}
 			} else {
-				System.out.println("ÇØ´ç¾ÆÀÌµð¾øÀ½");
+<<<<<<< HEAD
+				System.out.println("ï¿½Ø´ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½");
+=======
+				System.out.println("ìœ ì € ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
+>>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 			}
 
 		} catch (SQLException e) {
@@ -70,24 +91,28 @@ public class UserDAO {
 
 	}
 
-	// È¸¿øÁ¤º¸ °¡Á®¿À±â
-	// ÆÄ¶ó¹ÌÅÍ·Î ¾ÆÀÌµð °ªÀ» ÁÖ¸é¼­ °Ë»ö
-	// ¹ÝÈ¯°ªÀº users·Î
-	// Ã¼Å©¾ÆÀÌµð (¾ÆÀÌµð Áßº¹°Ë»ç) ¾Æµð°ª ¹ÞÀ¸¸é Áßº¹µÇ´Â °ª Áßº¹µÇ¸é false ¾øÀ¸¸é true
+<<<<<<< HEAD
+	// È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// ï¿½Ä¶ï¿½ï¿½ï¿½Í·ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¸é¼­ ï¿½Ë»ï¿½
+	// ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ usersï¿½ï¿½
+	// Ã¼Å©ï¿½ï¿½ï¿½Ìµï¿½ (ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ßºï¿½ï¿½Ë»ï¿½) ï¿½Æµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ßºï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ ï¿½ßºï¿½ï¿½Ç¸ï¿½ false ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ true
 
+=======
+	
+>>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 	public Users showUser(String userid) {
 		Users user = new Users();
 		conn = DBConnection.connect();
 
 		try {
-			String sql = "select * from users where id=?";
+			String sql = "select * from users where userid=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, userid);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				user.setU_code(rs.getInt("u_code"));
-				user.setId(rs.getString("id"));
-				user.setPw(rs.getString("pw"));
+				user.setId(rs.getString("userid"));
+				user.setPw(rs.getString("userpw"));
 				user.setU_name(rs.getString("u_name"));
 				user.setAge(rs.getInt("age"));
 				// user.setEmail(rs.getString("email"));
@@ -100,7 +125,7 @@ public class UserDAO {
 		return user;
 	}
 
-	// È¸¿ø°¡ÀÔ ½Ã ¾ÆÀÌµð Ã¼Å© ÇÔ¼ö
+
 	public boolean checkId(String userid) {
 		conn = DBConnection.connect();
 		String sql = "select * from users where userid=?";
@@ -125,7 +150,7 @@ public class UserDAO {
 		return true;
 	}
 
-	// ¾÷µ¥ÀÌÆ® À¯Àú (ÀÌ¸§, ÀÌ¸ÞÀÏ, ³ªÀÌ)
+
 	public boolean updateUser(Users user) {		// name, email, age, id
 		conn = DBConnection.connect();
 		String sql = "update users set u_name=?"
@@ -155,7 +180,7 @@ public class UserDAO {
 		return true;
 	}
 
-	// ¾÷µ¥ÀÌÆ® ºñ¹Ð¹øÈ£
+
 	public boolean updateUserPw(Users user) {	// id, pw
 		conn = DBConnection.connect();
 		String sql = "update users set userpw=?"

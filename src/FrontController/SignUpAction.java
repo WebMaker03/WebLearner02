@@ -10,7 +10,7 @@ public class SignUpAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); //ê°ì²´ëŠ” ë¯¸ë¦¬ ìƒì„±
+		ActionForward forward= new ActionForward(); 
 		
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
@@ -21,18 +21,26 @@ public class SignUpAction implements Action {
 		newUser.setAge(Integer.parseInt(request.getParameter("userAge")));
 		newUser.setEmail(request.getParameter("userEmail"));
 		
-		if(udao.SignUp(newUser)) {
+		udao.SignUp(newUser);
+		
+		forward.setRedirect(true); 
+		request.getSession().setAttribute("msg", "È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+		forward.setPath("main.etc");
+
+
+	/*	if(udao.SignUp(newUser)) {
 			forward.setRedirect(false);
-			request.getSession().setAttribute("msg", "íšŒì›ê°€ì… ì‹¤íŒ¨");
+			request.getSession().setAttribute("msg", "È¸¿ø°¡ÀÔ ½ÇÆĞ");
 			forward.setPath("Main.jsp");
 		}	else {
-			forward.setRedirect(true); // true- ë°˜í™˜í•˜ëŠ” ê°ì²´ ì—†ìŒ / false-ë°˜í™˜í•˜ëŠ” ê°ì²´ê°€ ìˆìŒì„ ì˜ë¯¸
-			request.getSession().setAttribute("msg", "íšŒì›ê°€ì…ì„ ì¶•í•˜í•©ë‹ˆë‹¤.");
+			forward.setRedirect(true); // true- ¹İÈ¯ÇÏ´Â °´Ã¼ ¾øÀ½ / false-¹İÈ¯ÇÏ´Â °´Ã¼°¡ ÀÖÀ½À» ÀÇ¹Ì
+			request.getSession().setAttribute("msg", "È¸¿ø°¡ÀÔÀ» ÃàÇÏÇÕ´Ï´Ù.");
 			forward.setPath("Main.jsp");
 			
-			// ì„±ê³µ ë©”ì„¸ì§€ ì¶œë ¥??
+			// ¼º°ø ¸Ş¼¼Áö Ãâ·Â??
 			
-		};
+		};*/
+
 		return forward;
 		
 	}
