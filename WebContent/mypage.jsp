@@ -3,22 +3,15 @@
    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
-<div></div>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <!-- bootstrap css -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- style css -->
-<link rel="stylesheet" href="css/style.css">
 <!-- responsive-->
 <link rel="stylesheet" href="css/responsive.css">
-<!-- theme css -->
-<link rel="stylesheet" href="css/theme.css">
 <!-- Mypage css -->
-<link rel="stylesheet" href="css/mypage.css">
-
+<link rel="stylesheet" href="css/Mypage.css">
 
 </head>
 <body>
@@ -33,15 +26,11 @@
          <br>
          <div class="row">
             <div class="col">
-               <div class="container-mt-5">
-                  <div class="row d-flex">
-                     <div class="col-md-7">
                         <div class="card p-2 text-center">
                            <div class="row">
                               <div class="col-md-7 border-right no-gutters">
                                  <div class="py-3">
-                                    <img src="https://i.imgur.com/hczKIze.jpg" width="100"
-                                       class="rounded-circle">
+                                    <img src="https://i.imgur.com/hczKIze.jpg" width="100" class="rounded-circle">
                                     <h4 class="text-secondary">Name</h4>
                                     <div class="stats">
                                        <div class="mt-4">
@@ -78,14 +67,11 @@
                               </div>
                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
             </div>
             <div class="col">
 
                <div class="card"
-                  style="width: 300px; height: 350px; margin-left: 70px;">
+                  style="width: 300px; height: 355px; margin-left: 100px;">
                   <div class="card-body">
                      <a href="#" class="btn btn-light"
                         style="margin-top: 30px; margin-left: 40px;"> 작성한 게시글 & 댓글</a><br>
@@ -95,17 +81,18 @@
                         style="margin-top: 20px; margin-left: 40px;"> 인증현황 보러가기 </a>
                   </div>
                </div>
-            </div>
+     
          </div>
       </div>
-   </div>
+</div>
    <hr>
    <div class="container1" style="margin-top: 30px;">
-      <h1>챌린지 현황</h1>
+      <h2 style="font-size: 40px;">
+            <strong>나의 챌린지 현황</strong>
+         </h2>
       <div class="row">
          <div class="col">
-            <table class="table"
-               style="width: 600px; margin-top: 30px; margin-bottom: 100px; color: black; text-align: center; background-color: white;">
+            <table class="table" style="width: 600px; margin-top: 30px; margin-bottom: 100px; color: black; text-align: center; background-color: white;">
                <caption style="font-size: 25px; caption-side: top;">
                   <strong>진행중인 챌린지</strong>
                   <div align="right" style="font-size: 18px;">___개 진행중</div>
@@ -254,7 +241,6 @@
       </div>
    </div>
    </div>
-
 
    <!-- footer start -->
    <jsp:include page="footer.jsp"></jsp:include>
