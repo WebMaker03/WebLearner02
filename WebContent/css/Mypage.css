@@ -1,7 +1,8 @@
+
 @charset "UTF-8";
 
 body {
-    background-color: #ebeff2;
+    background-color: #ebeff2
 }
 
 button{
@@ -16,7 +17,8 @@ button{
     border: none;
     border-radius: 5px;
     box-shadow: 5px 6px 6px 2px #e9ecef;
-    margin-left:10%;
+    margin-bottom:40px;
+    margin-left:13%;
     width:800px;
 }
 .cardP{
@@ -35,7 +37,7 @@ button{
 .allergy {
     position: relative;
     bottom: 8px;
-    color: gray;
+    color: grey;
     
 }
 

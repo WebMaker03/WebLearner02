@@ -71,7 +71,7 @@
             <div class="col">
 
                <div class="card"
-                  style="width: 300px; height: 350px; margin-left: 70px;">
+                  style="width: 300px; height: 355px; margin-left: 100px;">
                   <div class="card-body">
                      <a href="#" class="btn btn-light"
                         style="margin-top: 30px; margin-left: 40px;"> 작성한 게시글 & 댓글</a><br>
@@ -81,10 +81,10 @@
                         style="margin-top: 20px; margin-left: 40px;"> 인증현황 보러가기 </a>
                   </div>
                </div>
-            </div>
+     
          </div>
       </div>
-
+</div>
    <hr>
    <div class="container1" style="margin-top: 30px;">
       <h2 style="font-size: 40px;">
@@ -246,4 +246,5 @@
    <jsp:include page="footer.jsp"></jsp:include>
 
 </body>
+
 </html>
