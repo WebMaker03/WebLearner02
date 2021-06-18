@@ -91,7 +91,7 @@ public class BoardDAO {
 
 	// * 게시글 수정 * // 제목이랑 내용
 	public boolean updateP(int u_code) {
-		
+		return true;
 	}
 	
 	// * 게시글 삭제 *
