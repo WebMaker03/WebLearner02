@@ -4,20 +4,31 @@ public class Verification {
 	private int v_code;
 	private int u_code;
 	private int mc_code;
+	private int rating;
 	private String v_text;
 	private String v_img;
 	
 	
 	public Verification() {;}
 	
-	public Verification(int v_code, int u_code, int mc_code, String v_text, String v_img) {
+	public Verification(int v_code, int u_code, int mc_code,int rating ,String v_text, String v_img) {
 		this.v_code = v_code;
 		this.u_code = u_code;
 		this.mc_code = mc_code;
+		this.rating = rating;
 		this.v_text = v_text;
 		this.v_img = v_img;
 	}
+	
+
 	//getter, setter
+	public int getRating() {
+		return rating;
+	}
+	
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
 	public int getV_code() {
 		return v_code;
 	}
