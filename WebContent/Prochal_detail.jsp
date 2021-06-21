@@ -20,8 +20,9 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="theme">
-		<div class="container_prochal" style="margin-top: 80px; margin-bottom: 30px;">
-			<div class="row" style="margin-top: 30px; margin-left:100px;">
+		<div class="container_prochal"
+			style="margin-top: 80px; margin-bottom: 30px;">
+			<div class="row" style="margin-top: 30px; margin-left: 100px;">
 				<div class="col-12 col-md-7">
 					<h2 id="start_title">
 						<strong>[ 진행 중 챌린지 상세보기 ]</strong>
@@ -46,6 +47,9 @@
 									<!-- <button class="btn">오늘 인증하기!</button> -->
 									<button type="button" class="btn btn-danger"
 										data-toggle="modal" data-target="#form">인증하기</button>
+
+									<button type="button" class="btn btn-danger"
+										data-toggle="modal" style="margin-left: 10px" id="btn_b">게시판가기</button>
 								</div>
 							</div>
 						</div>
@@ -53,16 +57,76 @@
 				</div>
 			</div>
 
-			<div class="row" style="margin-left:-50px;">
-				<div class="col-lg-6 mb-4" style="margin-left:100px;">
+			<div class="row" style="margin-left: -50px;">
+				<div class="col-lg-6 mb-4" style="margin-left: 100px;">
 					<div class="card shadow mb-4" id="card2">
 						<div class="card-header py-3" id="card2_header">
 							<h6 class="m-0 font-weight-bold text-primary">인증 목록</h6>
 						</div>
-						<div class="card-body" id="card2_body">
-						<!-- 인증 현황 body -->
+						<div class="center" id="card2_body">
 						
-						
+					<!-- 인증 목록 표 파트 -->
+					<div class="center" id="page-content">
+    <div class="row">
+        <div class="row container d-flex justify-content-center">
+            <div class="row" style="margin-left:10px">
+                <div class="center"  style="width : 500px">
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+                            <table class="table table-hover" >
+                                <thead>
+                                    <tr>
+                                        <th>날짜</th>
+                                        <th>별점</th>
+                                    <th>상세보기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>21.6.21</td>
+                                        <td>1</td>
+                                     
+                                        <td><button type="button" class="badge badge-danger" id="ca2_btn1">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21.6.20</td>
+                                        <td>5</td>
+                                        
+                                        <td><button type="button" class="badge badge-success" id="ca2_btn2">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21.6.18</td>
+                                        <td>3</td>
+                                  
+                                        <td><button type="button" class="badge badge-bar" id="ca2_btn3">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                       <td>21.6.16</td>
+                                        <td>4</td>
+                    
+                                        <td><button type="button" class="badge badge-info" id="ca2_btn4">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21.5.10</td>
+                                        <td>2</td>
+                    
+                                        <td><button type="button" class="badge badge-warning" id="ca2_btn5">상세보기</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+						<!-- 인증 목록 표 파트 끝 -->
+							<!-- 인증 현황 body -->
+
+
 						</div>
 					</div>
 				</div>
