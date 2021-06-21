@@ -123,7 +123,7 @@ button {
 
 @media screen and (max-width: 768px) {
     .break-line {
-        display: block;
+         display: flex;
         float: none
     }
 }
@@ -179,9 +179,10 @@ body {
     background-color: pink;
     padding: 2vw;
     font-size: 1.2vw;
-    display: none;
+    display: flex;
     color: #757575;
-    background-color: white
+    background-color: white;
+    text-align-last : start;
 }
 
 .sec i {
@@ -210,10 +211,40 @@ body {
         width: 100%;
         padding: 6vw;
         font-size: 3.6vw;
-        display: none
+        display: flex;
+        
     }
 
     .sec i {
         font-size: 6vw
     }
 }
+
+#main1 {
+	background-color: #0080ff;
+	height: 70px;
+	s
+	
+}
+
+#tkdlxm1 {
+	color: #ffffff;
+	    font-size: large;
+	  
+}
+
+#section1 {
+	width: 1100px;
+	font-size : 20px;
+}
+
+#section2 {
+	width: 1100px;
+	font-size : 20px;
+}
+
+#section3 {
+	width: 1100px;
+	font-size : 20px;
+}
+
