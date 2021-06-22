@@ -116,9 +116,9 @@
 			
 
 				<input type="checkbox" class="form-check-input ml-0"
-					id="exampleCheck1"> <label class="form-check-label ml-4"
-					for="exampleCheck1">I agree to Stoke <u>Terms</u> and <u>Privacy
-						Policy</u></label> <br> <br>
+					id="exampleCheck1">
+					 <label class="form-check-label ml-4" for="exampleCheck1">
+					 I agree to Stoke <u>Terms</u> and <u>Privacy Policy</u></label> <br> <br>
 				<div id="signupbtn">
 					<input type="submit" class="signupbtn" id="signup_btn" value="회원가입"
 						onclick="button1_click();">
