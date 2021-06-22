@@ -125,57 +125,7 @@
                   </tr>
                </thead>
                <tbody>
-                  <tr>
-                     <th scope="row">1</th>
-                     <td>challenge1</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 80%;">80%</div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">2</th>
-                     <td>challenge2</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar"
-                              aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                              style="width: 100%;">100%</div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar" aria-valuenow="40"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 40%;">40%</div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar" aria-valuenow="0"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
-                        </div>
-                     </td>
-                  </tr>
+                 <tag:End_chal></tag:End_chal>
                </tbody>
             </table>
          </div>

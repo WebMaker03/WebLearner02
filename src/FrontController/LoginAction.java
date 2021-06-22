@@ -14,7 +14,7 @@ public class LoginAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("Login Action Ω√¿€");
-		ActionForward forward = new ActionForward();
+		ActionForward forward =null;
 		UserDAO udao = new UserDAO();
 		String userid = request.getParameter("userid");
 		String passwd = request.getParameter("userpw");

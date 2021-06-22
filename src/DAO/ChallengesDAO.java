@@ -118,14 +118,7 @@ public class ChallengesDAO {
 			while (rs.next()) {
 				MyC myc = new MyC();
 				myc.setMc_code(rs.getInt("mc_code"));
-//			myc.setC_code(rs.getInt("c_code"));
-//			myc.setU_code(rs.getInt("u_code"));
-//			myc.setState(rs.getBoolean("state"));
-//			myc.setFee(rs.getInt("fee"));
-//			myc.setPeriod(rs.getInt("period"));
-//			myc.setStartD(rs.getString("startD"));
-//			myc.setFinishD(rs.getString("finishD"));
-//			myc.setAchievementPercentage(rs.getInt("achievementPercentage"));
+
 				myClist.add(myc);
 			}
 			boolean success = true;
@@ -294,23 +287,27 @@ public class ChallengesDAO {
 		return Clist;
 	}
 	
-	// verification 개수 가져오기
+	// myC 인증률 업데이트 하기! 
 	
 	public boolean achievementUpdate(MyC myC) {
 		try {
 			int cnt = 0;
+			int period = 0;
+			int achievement=0;
 			conn = DBConnection.connect();
-			String sql = "select count(*) from verfication, myC where verfication.mc_code = myC.mc_code and mc_code=?";
+			String sql = "select count(*),period from verfication, myC, challenges where verfication.mc_code = myC.mc_code and myC.c_code=challenges.c_code and mc_code=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, myC.getMc_code());
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				cnt = rs.getInt(1);
+				period= rs.getInt(2);
+				achievement = Math.round(cnt/period * 100); 
 			}
 			sql = "update myC set achievementPercentage=? where mc_code=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, cnt);
-			pstmt.setInt(2, myC.getMc_code());
+			pstmt.setInt(2, achievement);
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

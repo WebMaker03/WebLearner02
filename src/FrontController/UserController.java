@@ -64,9 +64,7 @@ public class UserController extends HttpServlet {
 			UserDAO udao = new UserDAO();
 
 			if (udao.checkId(userid)) {
-
 				obj.put("result", "0");
-
 			} else {
 				obj.put("result", "1");
 			}
