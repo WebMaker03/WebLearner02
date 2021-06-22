@@ -66,7 +66,16 @@ public class ChallengeController extends HttpServlet {
             e.printStackTrace();
          }
 
-      } 
+      }else if(action.equals("/startchal.ch")) {
+    	  try {
+    		  System.out.println("start");
+    		  forward = new StartChallengeAction().execute(request, response);
+    	  } catch (Exception e) {
+    		  e.printStackTrace();
+    	  }
+    	  
+      }
+      
       else {
          forward = new ActionForward();
          forward.setRedirect(false);
