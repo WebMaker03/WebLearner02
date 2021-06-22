@@ -39,8 +39,10 @@
 							<img id="theme" src="images/health.jpg" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
+
 								<!-- 1 운동 -->
 									<a href="calltheme.ch?theme=운동"><i
+
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -59,8 +61,9 @@
 							<img id="theme" src="images/life_cycle.jpg" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-								<!-- 2 생활습관 -->
+
 									<a href="calltheme.ch?theme=생활습관"><i
+
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -79,8 +82,9 @@
 							<img id="theme" src="images/Reading.png" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-								<!-- 3 독서 -->
+
 									<a href="calltheme.ch?theme=독서"><i
+
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -99,8 +103,10 @@
 							<img id="theme" src="images/study.png" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
+
 								<!-- 4 공부 -->
 									<a href="calltheme.ch?theme=공부"><i class="fa fa-search"
+
 										aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>

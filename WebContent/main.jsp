@@ -1,6 +1,6 @@
 <%@page import="DTO.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="css/responsive.css">
 <!-- awesome fontfamily -->
 <link rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -31,68 +31,73 @@
 <!-- body -->
 <body class="utmain-layo">
 
-  
-   <jsp:include page="header.jsp"></jsp:include>
 
-   <!-- start slider section -->
-   <div id="top_section" class="banner_main">
-      <div class="container" style="margin-top: 80px">
-         <div class="myCarouselSize">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-               </ol>
+	<jsp:include page="header.jsp"></jsp:include>
 
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="container-fluid">
-                        <div class="carousel-caption relative">
-                           <div class="bluid">
-                              <h1 id="inslide_title">
-                                 <span style="color: blue;">C</span>hallenge <span
-                                    style="color: blue;">R</span>unner
-                              </h1>
-                              <br>
-                              <p style="text-align:center; color:black;">
-                                 Welcome to Challenge Runner
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+	<!-- start slider section -->
+	<div id="top_section" class="banner_main">
+		<div class="container" style="margin-top: 80px">
+			<div class="myCarouselSize">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+					</ol>
 
-                  <div class="carousel-item">
-                     <div class="container-fluid">
-                        <div class="carousel-caption relative">
-                           <div class="bluid">
-                              <h1>
-                                 Do With <br><span style="font-style:oblique; color:blue;">C</span>hallenge 
-                                 <span style="font-style:oblique; color:blue;">R</span>unner
-                              </h1>
-                              <hr>
-                              <p style="font-weight:bold; text-align:center;">
-                                 CodeRunner는 여러분들의 목표를 응원합니다. 
-                                 <br>지금 바로 CodeRunner와 함께하세요!
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end slider section -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="container-fluid">
+								<div class="carousel-caption relative">
+									<div class="bluid">
+										<h1 id="inslide_title">
+										Welcome <br>
+											<span style="font-style: oblique; color: blue;">C</span>hallenge
+											<span style="font-style: oblique; color: blue;">R</span>unner
+										</h1>
+										<hr>
+										<br>
+										<p style="text-align: center; color: black; font-weight: bold; font-size: 18px;">
+											<br> 챌린지 러너에 오신걸 환영합니다! <br>챌린지 러너를 통해서
+											자신의 목표를 이뤄보세요!
+											자세한 설명은 사이트 소개를 이용해보세요!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="carousel-item">
+							<div class="container-fluid">
+								<div class="carousel-caption relative">
+									<div class="bluid">
+										<h1>
+											Do With <br>
+											<span style="font-style: oblique; color: blue;">C</span>hallenge
+											<span style="font-style: oblique; color: blue;">R</span>unner
+										</h1>
+										<hr>
+										<p style="font-weight: bold; text-align: center; font-size: 18px;">
+											Challenge Runner supports your goals. <br>Join Challenge
+											Runner right now! Please use the site introduction for more details.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end slider section -->
 
 
-      <jsp:include page="footer.jsp"></jsp:include>
+		<jsp:include page="footer.jsp"></jsp:include>
 
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/custom.js"></script>
+		<!-- end footer -->
+		<!-- Javascript files-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script src="js/custom.js"></script>
 </body>
 </html>
