@@ -93,7 +93,7 @@ public class UserController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if (action.equals("/login.do")) { // �α���
+		} else if (action.equals("/login.do")) { 
 			try {
 				forward = new LoginAction().execute(request, response);
 			} catch (Exception e) {
@@ -109,9 +109,7 @@ public class UserController extends HttpServlet {
 
 		else {
 
-			forward = new ActionForward();
-			forward.setRedirect(false);
-			forward.setPath("/error/error404.jsp");
+		
 		}
 
 		if (forward != null) {
@@ -120,10 +118,8 @@ public class UserController extends HttpServlet {
 
 				response.sendRedirect(forward.getPath());
 			} else {
-
 				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
 				dispatcher.forward(request, response);
-
 			}
 		}
 	}

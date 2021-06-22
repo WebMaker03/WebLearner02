@@ -58,8 +58,7 @@
                <hr id="line">
                <div class="card-body">
                   <p class="text-muted">챌린지 정보</p>
-                  <div class="challenge_info mb-3"></div>
-                  <div class="challenge_info mb-3"></div>
+                  <div class="challenge_info mb-3">${challenge.info}</div>
 
                </div>
                <hr id="line">

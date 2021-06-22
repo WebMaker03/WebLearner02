@@ -23,24 +23,22 @@ public class LoginAction implements Action {
 			// 로그인 성공
 			HttpSession session = request.getSession();
 			System.out.println("로그인");
-			if (udao.login(userid, passwd)) {
-				Users user = udao.showUser(userid);
-				if(user!= null) {
+			Users user = udao.showUser(userid);
+			if (user != null) {
 				session.setAttribute("session_user", user);
-				forward = new ActionForward();
-				forward.setRedirect(false);
-				forward.setPath("main.etc");}
-
-			} 
-		}else {
-				response.setCharacterEncoding("UTF-8");
 				response.setContentType("text/html; charset=UTF-8");
 				PrintWriter out = response.getWriter();
-				//out.println("<script>alert('로그인 실패');</script>");// 이전 화면으로 돌아간다.
-				forward.setRedirect(true);
-				forward.setPath("login.jsp");
+				out.println("<script>alert('로그인 성공');location.href='main.jsp';</script>");
+				out.flush();
 			}
-
-			return forward;
+		} else {
+			System.out.println("로그인 실패 부분");
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('로그인 실패'); location.href='login.jsp';</script>");
+			out.flush(); 
 		}
+
+		return forward;
+	}
 }
