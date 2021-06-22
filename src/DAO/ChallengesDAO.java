@@ -5,11 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 
 import DTO.Challenges;
-import DTO.MyC;
-import DTO.Users;;
+import DTO.MyC;;
 
 public class ChallengesDAO {
 	Connection conn = null;
@@ -294,6 +292,31 @@ public class ChallengesDAO {
 		}
 
 		return Clist;
+	}
+	
+	// verification 개수 가져오기
+	
+	public boolean achievementUpdate(MyC myC) {
+		try {
+			int cnt = 0;
+			conn = DBConnection.connect();
+			String sql = "select count(*) from verfication, myC where verfication.mc_code = myC.mc_code and mc_code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, myC.getMc_code());
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				cnt = rs.getInt(1);
+			}
+			sql = "update myC set achievementPercentage=? where mc_code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, cnt);
+			pstmt.setInt(2, myC.getMc_code());
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 }
