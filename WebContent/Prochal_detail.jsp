@@ -46,7 +46,7 @@
 								<div class="d-flex mt-2 mb-3">
 									<!-- <button class="btn">오늘 인증하기!</button> -->
 									<button type="button" class="btn btn-danger"
-										data-toggle="modal" data-target="#form">인증하기</button>
+										data-toggle="modal" data-target="#modalBox">인증하기</button>
 
 									<button type="button" class="btn btn-danger"
 										data-toggle="modal" style="margin-left: 10px" id="btn_b">게시판가기</button>
@@ -187,12 +187,12 @@
 	</div>
 
 	<!-- modal -->
-	<div class="modal fade" id="form" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel" aria-hidden="true" >
+	<div class="modal fade" id="modalBox" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="text-right cross">
-					<i class="fa fa-times mr-2"></i>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times mr-2"></i></span></button>
 				</div>
 				<div class="card-body text-center">
 					<img src=" https://i.imgur.com/d2dKtI7.png" height="100"
@@ -200,22 +200,20 @@
 					<div class="comment-box text-center">
 						<h4>오늘 하루 챌린지 도전 기록을 남겨보세요!</h4>
 						<div class="rating">
-							<input type="radio" name="rating" value="5" id="5">
-								<label for="5">☆</label>
-							<input type="radio" name="rating" value="4" id="4">
-								<label for="4">☆</label>
-							<input type="radio" name="rating" value="3" id="3">
-								<label for="3">☆</label>
-							<input type="radio" name="rating" value="2" id="2">
-								<label for="2">☆</label>
-							<input type="radio" name="rating" value="1" id="1">
-								<label for="1">☆</label>
+							<input type="radio" name="rating" value="5" id="5"><label
+								for="5">☆</label> <input type="radio" name="rating" value="4"
+								id="4"><label for="4">☆</label> <input type="radio"
+								name="rating" value="3" id="3"><label for="3">☆</label>
+							<input type="radio" name="rating" value="2" id="2"><label
+								for="2">☆</label> <input type="radio" name="rating" value="1"
+								id="1"><label for="1">☆</label>
 						</div>
 						<div class="comment-area">
-							<textarea class="form-control" id="review" placeholder="what is your view?" rows="4" name="review"></textarea>
+							<textarea class="form-control" placeholder="what is your view?"
+								rows="4"></textarea>
 						</div>
 						<div class="text-center mt-4">
-							<button class="btn btn-success send px-5" id="submit">
+							<button class="btn btn-success send px-5" id="submitBtn" >
 								등록하기 <i class="fa fa-long-arrow-right ml-1"></i>
 							</button>
 						</div>
@@ -226,6 +224,7 @@
 	</div>
 
 	<jsp:include page="footer.jsp"></jsp:include>
+
 </body>
-	<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 </html>

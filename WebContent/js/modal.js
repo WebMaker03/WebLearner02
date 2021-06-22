@@ -7,8 +7,8 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 /**
  * 
  */
-$('#submit').on('click',function(){
+$('#submitBtn').on('click',function(){
 	console.log('평점: '+$('input[name=rating]:checked').val());
 	console.log('리뷰: '+$('textarea#review').val());
-	$('.modal_fade').modal("hide");
+	$('#modalBox').modal("hide");
 });
