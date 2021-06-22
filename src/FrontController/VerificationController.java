@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class VerificationController
  */
-@WebServlet("*.v")
+@WebServlet("*.ve")
 public class VerificationController extends HttpServlet implements Servlet {
 	private static final long serialVersionUID = 1L;
        
@@ -63,7 +63,7 @@ public class VerificationController extends HttpServlet implements Servlet {
 		          if (forward.isRedirect()) {
 		             response.sendRedirect(forward.getPath());
 		          } else {
-		             RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  삺 苑   젟
+		             RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  �궨 �땻   �젧
 		             dispatcher.forward(request, response);
 		          }
 		       }
