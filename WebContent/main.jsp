@@ -55,9 +55,8 @@
 											<span style="font-style: oblique; color: blue;">R</span>unner
 										</h1>
 										<hr>
-										<br>
 										<p style="text-align: center; color: black; font-weight: bold; font-size: 18px;">
-											<br> 챌린지 러너에 오신걸 환영합니다! <br>챌린지 러너를 통해서
+											챌린지 러너에 오신걸 환영합니다! <br>챌린지 러너를 통해서
 											자신의 목표를 이뤄보세요!
 											자세한 설명은 사이트 소개를 이용해보세요!
 										</p>
