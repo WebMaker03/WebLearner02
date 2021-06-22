@@ -51,7 +51,6 @@ public class ChallengesDAO {
 			pstmt.setInt(3, ch.getPeriod());
 
 			pstmt.executeUpdate();
-			System.out.println("@!#@#");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

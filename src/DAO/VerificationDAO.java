@@ -15,17 +15,19 @@ public class VerificationDAO {
 	
 	// *���� ����ϱ�*
 	public boolean insertV(Verification ver) {
+		conn=DBConnection.connect();
+		String sql="insert into verification(u_code,mc_code,v_date,v_text,rating) values (?,?,now(),?,?)";
 		try {
-			conn=DBConnection.connect();
-			String sql=""; //�۾��ʿ�
 			pstmt=conn.prepareStatement(sql);
-			
-			//�۾��ʿ�
-		
+			pstmt.setInt(1, ver.getU_code());
+			pstmt.setInt(2, ver.getMc_code());
+			pstmt.setString(3, ver.getV_text());
+			pstmt.setInt(4, ver.getRating());
+			pstmt.executeUpdate();
+			return false;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
-			return false;
 		}
 		finally {
 			try {
