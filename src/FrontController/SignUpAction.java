@@ -15,8 +15,8 @@ public class SignUpAction implements Action {
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
 		
-		newUser.setId(request.getParameter("id"));
-		newUser.setPw(request.getParameter("pw1"));
+		newUser.setUserid(request.getParameter("id"));
+		newUser.setUserpw(request.getParameter("pw1"));
 		newUser.setU_name(request.getParameter("userName"));
 		newUser.setAge(Integer.parseInt(request.getParameter("userAge")));
 		newUser.setEmail(request.getParameter("userEmail"));

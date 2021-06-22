@@ -47,18 +47,23 @@ public class Users {
 	public void setU_code(int u_code) {
 		this.u_code = u_code;
 	}
-	public String getId() {
+	
+	public String getUserid() {
 		return userid;
 	}
-	public void setId(String userid) {
+
+	public void setUserid(String userid) {
 		this.userid = userid;
 	}
-	public String getPw() {
+
+	public String getUserpw() {
 		return userpw;
 	}
-	public void setPw(String userpw) {
+
+	public void setUserpw(String userpw) {
 		this.userpw = userpw;
 	}
+
 	public String getU_name() {
 		return u_name;
 	}

@@ -19,8 +19,8 @@ public class UserDAO {
 		String sql = "insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, user.getId());
-			pstmt.setString(2, user.getPw());
+			pstmt.setString(1, user.getUserid());
+			pstmt.setString(2, user.getUserpw());
 			pstmt.setString(3, user.getU_name());
 			pstmt.setString(4, user.getEmail());
 			pstmt.setInt(5, user.getAge());
@@ -81,11 +81,11 @@ public class UserDAO {
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				user.setU_code(rs.getInt("u_code"));
-				user.setId(rs.getString("userid"));
-				user.setPw(rs.getString("userpw"));
+				user.setUserid(rs.getString("userid"));
+				user.setUserpw(rs.getString("userpw"));
 				user.setU_name(rs.getString("u_name"));
 				user.setAge(rs.getInt("age"));
-				// user.setEmail(rs.getString("email"));
+				user.setEmail(rs.getString("email"));
 				user.setPoint(rs.getInt("point"));
 			}
 		} catch (SQLException e) {
@@ -130,7 +130,7 @@ public class UserDAO {
 			pstmt.setString(1, user.getU_name());
 			pstmt.setString(2, user.getEmail());
 			pstmt.setInt(3, user.getAge());
-			pstmt.setString(4, user.getId());
+			pstmt.setString(4, user.getUserid());
 			pstmt.executeUpdate();
 			return false;
 		} catch (SQLException e) {
@@ -147,16 +147,14 @@ public class UserDAO {
 		}
 		return true;
 	}
-
-	// �뾽�뜲�씠�듃 鍮꾨�踰덊샇
 	public boolean updateUserPw(Users user) {	// id, pw
 		conn = DBConnection.connect();
 		String sql = "update users set userpw=?"
 				+ " where userid=?;";
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, user.getPw());
-			pstmt.setString(2, user.getId());
+			pstmt.setString(1, user.getUserpw());
+			pstmt.setString(2, user.getUserid());
 			pstmt.executeUpdate();
 			return false;
 		} catch (SQLException e) {

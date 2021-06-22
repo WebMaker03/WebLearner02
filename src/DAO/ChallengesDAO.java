@@ -18,13 +18,13 @@ public class ChallengesDAO {
 		Challenges ch = new Challenges();
 		try {
 			conn = DBConnection.connect();
-			String sql="select * from challenges where c_code=?";
+			String sql = "select * from challenges where c_code=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, c_code);
-			
+
 			ResultSet rs = pstmt.executeQuery();
-			while(rs.next()) {
-				
+			while (rs.next()) {
+
 				ch.setC_code(rs.getInt("c_code"));
 				ch.setC_name(rs.getString("c_name"));
 				ch.setTheme(rs.getString("theme"));
@@ -40,6 +40,7 @@ public class ChallengesDAO {
 		return ch;
 
 	}
+
 	public boolean start_ch(Challenges ch) {
 		try {
 			conn = DBConnection.connect();
@@ -105,6 +106,7 @@ public class ChallengesDAO {
 		}
 		return datas;
 	}
+
 	public boolean byebyechallenge() {
 		conn = DBConnection.connect();
 		PreparedStatement pstmt2 = null;
@@ -205,7 +207,7 @@ public class ChallengesDAO {
 				myc.setFinishD(rs.getString("finishD"));
 				myc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				datas.add(myc);
-				
+
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -222,46 +224,75 @@ public class ChallengesDAO {
 		return datas;
 
 	}
-	
+
 	// 진행중 챌린지 갯수 int cnt 반환
 	public int cntprochal(int u_code) {
-		int cnt=0;
+		int cnt = 0;
 		try {
-			conn=DBConnection.connect();
+			conn = DBConnection.connect();
 			String sql = "select count(*)  from myc where u_code = ? and state=true";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, u_code);
 			ResultSet rs = pstmt.executeQuery();
-			while(rs.next()) {
-				cnt= rs.getInt(1);
-				
+			while (rs.next()) {
+				cnt = rs.getInt(1);
+
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return cnt;
 	}
+
 	// 종료된 챌린지 갯수 int cnt 반환
 	public int cntfinchal(int u_code) {
-		int cnt=0;
+		int cnt = 0;
 		try {
-			conn=DBConnection.connect();
+			conn = DBConnection.connect();
 			String sql = "select count(*)  from myc where u_code = ? and state=false";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, u_code);
 			ResultSet rs = pstmt.executeQuery();
-			while(rs.next()) {
-				cnt= rs.getInt(1);
-				
+			while (rs.next()) {
+				cnt = rs.getInt(1);
+
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return cnt;
 	}
-	
+
+	public ArrayList<Challenges> getChalName(ArrayList<MyC> myC) {
+
+		ArrayList<Challenges> Clist = new ArrayList<Challenges>();
+		try {
+			conn = DBConnection.connect();
+			for (int i = 0; i < myC.size(); i++) {
+				String sql = "select * from challenges where c_code = ?";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, myC.get(i).getC_code());
+				ResultSet rs = pstmt.executeQuery();
+				while (rs.next()) {
+					Challenges c = new Challenges();
+					c.setC_code(rs.getInt("c_code"));
+					c.setC_name(rs.getString("c_name"));
+					c.setFee(rs.getInt("fee"));
+					c.setInfo(rs.getString("info"));
+					c.setTheme(rs.getString("theme"));
+					Clist.add(c);
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return Clist;
+	}
+
 }
