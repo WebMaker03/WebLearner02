@@ -4,9 +4,9 @@ use codelearner2;
 /* 가상데이터 insert */
 
 /*users 테이블*/
-insert into users(usersid, userspw, u_name, age, email) values('hong', 'a1234567', '홍길동', 20, 'email1@gmail.com');
-insert into users(usersid, userspw, u_name, age, email) values('lim', 'a1234567', '임꺽정', 30, 'email2@gmail.com');
-insert into users(usersid, userspw, u_name, age, email) values('kim', 'a1234567', '김유저', 15, 'email3@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('hong', 'a1234567', '홍길동', 20, 'email1@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('lim', 'a1234567', '임꺽정', 30, 'email2@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('kim', 'a1234567', '김유저', 15, 'email3@gmail.com');
 select * from users;
 
 /* challenges 테이블 */
