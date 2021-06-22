@@ -51,7 +51,6 @@ public class ChallengesDAO {
 			pstmt.setInt(3, ch.getPeriod());
 
 			pstmt.executeUpdate();
-			System.out.println("@!#@#");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -65,8 +64,8 @@ public class ChallengesDAO {
 				e.printStackTrace();
 			}
 
-			return true;
 		}
+		return true;
 	}
 
 	public ArrayList<Challenges> theme_chal(String theme) {
@@ -186,7 +185,8 @@ public class ChallengesDAO {
 			String sql = "select * from myC where state=0 and u_code=?";
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setInt(1, u_code);;
+			pstmt.setInt(1, u_code);
+			;
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
@@ -286,14 +286,14 @@ public class ChallengesDAO {
 
 		return Clist;
 	}
-	
-	// myC 인증률 업데이트 하기! 
-	
+
+	// myC 인증률 업데이트 하기!
+
 	public boolean achievementUpdate(MyC myC) {
 		try {
 			int cnt = 0;
 			int period = 0;
-			int achievement=0;
+			int achievement = 0;
 			conn = DBConnection.connect();
 			String sql = "select count(*),period from verfication, myC, challenges where verfication.mc_code = myC.mc_code and myC.c_code=challenges.c_code and mc_code=?";
 			pstmt = conn.prepareStatement(sql);
@@ -301,8 +301,8 @@ public class ChallengesDAO {
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				cnt = rs.getInt(1);
-				period= rs.getInt(2);
-				achievement = Math.round(cnt/period * 100); 
+				period = rs.getInt(2);
+				achievement = Math.round(cnt / period * 100);
 			}
 			sql = "update myC set achievementPercentage=? where mc_code=?";
 			pstmt = conn.prepareStatement(sql);
