@@ -18,17 +18,13 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<div class="container px-4 py-5 mx-auto">
-		<div class="h2 font-weight-bold" style="margin-top: 150px">게시글
-			작성하기</div>
+		<h1 id="page_name">[ 게시글 작성하기 ]</h1>
 		<div class="row d-flex justify-content-center">
 			<div class="card" style="border: #7BBBD6 solid;">
 				<form>
 				<div class="row px-3">
 					<div class="flex-column">
-						
 						<h3 class="mb-0 font-weight-normal" id="writer_name" style="font-size: 30px">테마 이름</h3>
-						
-
 
 					</div>
 					<div class="flex-column">

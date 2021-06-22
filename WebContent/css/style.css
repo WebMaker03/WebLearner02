@@ -22,7 +22,7 @@ basic
 ---------------------------------------------------------------------*/
 
 body {
-     color: #666666;
+     color: #E1F2F9;
      font-size: 14px;
      font-family: 'Poppins', sans-serif;
      line-height: 1.80857;
@@ -262,12 +262,10 @@ button {
      align-items: center;
      flex-wrap: wrap;
 }
-
-.container {
+.container{
      max-width: 1170px;
-  
-}
 
+}
 
 /*---------------------------- 
 loader  

@@ -39,7 +39,10 @@
 							<img id="theme" src="images/health.jpg" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-									<a href="theme_detail.jsp"><i
+
+								<!-- 1 운동 -->
+									<a href="calltheme.ch?theme=운동"><i
+
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -58,7 +61,9 @@
 							<img id="theme" src="images/life_cycle.jpg" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-									<a href="theme_detail.jsp"><i
+
+									<a href="calltheme.ch?theme=생활습관"><i
+
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -77,7 +82,9 @@
 							<img id="theme" src="images/Reading.png" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-									<a href="theme_detail.jsp"><i
+
+									<a href="calltheme.ch?theme=독서"><i
+
 										class="fa fa-search" aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
@@ -93,14 +100,17 @@
 				<div class="col-md-6">
 					<div id="ho_nf" class="theme_main text_align_left">
 						<figure>
-							<img id="theme" src="images/care.jpg" alt="#" />
+							<img id="theme" src="images/study.png" alt="#" />
 							<div class="theme_text">
 								<div class="li_icon">
-									<a href="theme_detail.jsp"><i class="fa fa-search"
+
+								<!-- 4 공부 -->
+									<a href="calltheme.ch?theme=공부"><i class="fa fa-search"
+
 										aria-hidden="true"></i></a>
 									<!-- <a href="Javascript:void(0)"><i class="fa fa-link" aria-hidden="true"></i></a> -->
 								</div>
-								<h3>돌봄</h3>
+								<h3>공부</h3>
 								<p id="themeinfo">
 									성공한 사람보다는 가치있는 사람이 되라.<br> 자신의 몸과 건강을 지키는 것도 좋지만 내 돌봄이 필요한
 									사람을 돕는건 그것보다 더 값진일 이라고 생각합니다.<br>
