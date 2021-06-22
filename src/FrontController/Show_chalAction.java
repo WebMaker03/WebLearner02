@@ -21,7 +21,6 @@ public class Show_chalAction implements Action {
          Challenges ch = cdao.getonechal(c_code);
          
          request.setAttribute("challenge",ch);
-         
          forward.setRedirect(false); 
          forward.setPath("Chall_Detail.jsp");
          return forward;

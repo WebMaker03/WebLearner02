@@ -5,10 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import DTO.Challenges;
 import DTO.MyC;
-import DAO.DBConnection;;
+import DTO.Users;;
 
 public class ChallengesDAO {
 	Connection conn = null;
@@ -41,18 +42,18 @@ public class ChallengesDAO {
 
 	}
 
-	public boolean start_ch(Challenges ch) {
+	public boolean start_ch(Challenges ch, String u_code) {
 		try {
 			conn = DBConnection.connect();
-			String sql = "insert into challenges(c_name,theme,fee,period) values(?,?,?,?);";
+			String sql = "insert into myC(c_code,u_code,state,startD,finishD,achievementPercentage,img) values(?,?,1,now(),DATE_ADD(now(),INTERVAL ? DAY),0,null);";
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setString(1, ch.getC_name());
-			pstmt.setString(2, ch.getTheme());
-			pstmt.setInt(3, ch.getFee());
-			pstmt.setInt(4, ch.getPeriod());
+			pstmt.setInt(1, ch.getC_code());
+			pstmt.setInt(2, Integer.parseInt(u_code));
+			pstmt.setInt(3, ch.getPeriod());
 
 			pstmt.executeUpdate();
+			System.out.println("@!#@#");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
