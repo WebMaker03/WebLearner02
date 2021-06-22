@@ -13,6 +13,7 @@ public class VerificationDAO {
    Connection conn;
    PreparedStatement pstmt;
    
+   // *         ϱ *
    public boolean insertV(Verification ver) {
       conn=DBConnection.connect();
       String sql="insert into verification(u_code,mc_code,v_date,v_text,rating) values (?,?,now(),?,?)";
@@ -76,6 +77,7 @@ public class VerificationDAO {
       
    }
    
+   // *          ϱ *
    public boolean deleteV(int v_code) {
       
       try {

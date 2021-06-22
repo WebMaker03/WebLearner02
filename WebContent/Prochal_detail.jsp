@@ -64,71 +64,66 @@
                      <h6 class="m-0 font-weight-bold text-primary">인증 목록</h6>
                   </div>
                   <div class="center" id="card2_body">
+                  
+               <!-- 인증 목록 표 파트 -->
+               <div class="center" id="page-content">
+    <div class="row">
+        <div class="row container d-flex justify-content-center">
+            <div class="row" style="margin-left:10px">
+                <div class="center"  style="width : 500px">
+                    <div class="card-body">
 
-                     <!-- 인증 목록 표 파트 -->
-                     <div class="center" id="page-content">
-                        <div class="row">
-                           <div class="row container d-flex justify-content-center">
-                              <div class="row" style="margin-left: 10px">
-                                 <div class="center" style="width: 500px">
-                                    <div class="card-body">
-
-                                       <div class="table-responsive">
-                                          <table class="table table-hover">
-                                             <thead>
-                                                <tr>
-                                                   <th>날짜</th>
-                                                   <th>별점</th>
-                                                   <th>상세보기</th>
-                                                </tr>
-                                             </thead>
-                                             <tbody>
-                                                <tr>
-                                                   <td>21.6.21</td>
-                                                   <td>1</td>
-
-                                                   <td><button type="button"
-                                                         class="badge badge-danger" id="ca2_btn1">상세보기</button></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>21.6.20</td>
-                                                   <td>5</td>
-
-                                                   <td><button type="button"
-                                                         class="badge badge-success" id="ca2_btn2">상세보기</button></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>21.6.18</td>
-                                                   <td>3</td>
-
-                                                   <td><button type="button" class="badge badge-bar"
-                                                         id="ca2_btn3">상세보기</button></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>21.6.16</td>
-                                                   <td>4</td>
-
-                                                   <td><button type="button" class="badge badge-info"
-                                                         id="ca2_btn4">상세보기</button></td>
-                                                </tr>
-                                                <tr>
-                                                   <td>21.5.10</td>
-                                                   <td>2</td>
-
-                                                   <td><button type="button"
-                                                         class="badge badge-warning" id="ca2_btn5">상세보기</button></td>
-                                                </tr>
-                                             </tbody>
-                                          </table>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover" >
+                                <thead>
+                                    <tr>
+                                        <th>날짜</th>
+                                        <th>별점</th>
+                                    <th>상세보기</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>21.6.21</td>
+                                        <td>1</td>
+                                     
+                                        <td><button type="button" class="badge badge-danger" id="ca2_btn1">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21.6.20</td>
+                                        <td>5</td>
+                                        
+                                        <td><button type="button" class="badge badge-success" id="ca2_btn2">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21.6.18</td>
+                                        <td>3</td>
+                                  
+                                        <td><button type="button" class="badge badge-bar" id="ca2_btn3">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                       <td>21.6.16</td>
+                                        <td>4</td>
+                    
+                                        <td><button type="button" class="badge badge-info" id="ca2_btn4">상세보기</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>21.5.10</td>
+                                        <td>2</td>
+                    
+                                        <td><button type="button" class="badge badge-warning" id="ca2_btn5">상세보기</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                     </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                     <!-- 인증 목록 표 파트 끝 -->
+                  <!-- 인증 목록 표 파트 끝 -->
                      <!-- 인증 현황 body -->
 
 
@@ -197,10 +192,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
          <div class="modal-content">
             <div class="text-right cross">
-               <button type="button" class="close" data-dismiss="modal"
-                  aria-label="Close">
-                  <span aria-hidden="true"><i class="fa fa-times mr-2"></i></span>
-               </button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times mr-2"></i></span></button>
             </div>
             <div class="card-body text-center">
                <img src=" https://i.imgur.com/d2dKtI7.png" height="100"
@@ -217,11 +209,11 @@
                         id="1"><label for="1">☆</label>
                   </div>
                   <div class="comment-area">
-                     <textarea class="form-control" id="review"
-                        placeholder="what is your view?" rows="4"></textarea>
+                     <textarea class="form-control" id="review" placeholder="what is your view?"
+                        rows="4"></textarea>
                   </div>
                   <div class="text-center mt-4">
-                     <button class="btn btn-success send px-5" id="submitBtn">
+                     <button class="btn btn-success send px-5" id="submitBtn" >
                         등록하기 <i class="fa fa-long-arrow-right ml-1"></i>
                      </button>
                   </div>
@@ -230,17 +222,16 @@
          </div>
       </div>
    </div>
-   <!--  submitVer.ve data -->
-   <form method="post" action="submitVer.ve">
-      <input type="hidden" id="verRating" name="rating" value="rating">
-      <input type="hidden" id="verReview" name="review" value="review">
-   </form>
+   <!--  form submit -->
+         <form name="verSub" method="post" action="submitVer.ve">
+      <input type="hidden" id="verRating" name="verRating" value="rating">
+      <input type="hidden" id="verReview" name="verReview" value="review">
+      </form>
    <jsp:include page="footer.jsp"></jsp:include>
 
 </body>
 <script type="text/javascript" src="js/modal.js"></script>
-<script type="text/javascript"
-   src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 
 </html>
