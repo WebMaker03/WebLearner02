@@ -1,6 +1,8 @@
 package FrontController;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +30,7 @@ public class VerificationController extends HttpServlet implements Servlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		 actionVe(request, response);
 	}
 
 	/**
@@ -36,7 +38,34 @@ public class VerificationController extends HttpServlet implements Servlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		 actionVe(request, response);
 	}
+	  private void actionVe(HttpServletRequest request, HttpServletResponse response)
+		         throws ServletException, IOException {
+		      String uri = request.getRequestURI();
+		      String cp = request.getContextPath();
+		      String action = uri.substring(cp.length());
+		      ActionForward forward = null;
+		      if(action.equals("/submitVer.ve")) {
+		    	  try {
+		              forward = new submitVerificationAction().execute(request, response);
+		           } catch (Exception e) {
+		              e.printStackTrace();
+		           }
+		      }
+		      else {
+		          forward = new ActionForward();
+		          forward.setRedirect(false);
+		          forward.setPath("/error/error404.jsp");
+		       }
 
+		       if (forward != null) {
+		          if (forward.isRedirect()) {
+		             response.sendRedirect(forward.getPath());
+		          } else {
+		             RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  삺 苑   젟
+		             dispatcher.forward(request, response);
+		          }
+		       }
+	  }
 }

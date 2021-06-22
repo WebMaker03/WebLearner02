@@ -13,14 +13,14 @@ public class VerificationDAO {
 	Connection conn;
 	PreparedStatement pstmt;
 	
-	// *ÀÎÁõ µî·ÏÇÏ±â*
+	// *ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½*
 	public boolean insertV(Verification ver) {
 		try {
 			conn=DBConnection.connect();
-			String sql=""; //ÀÛ¾÷ÇÊ¿ä
+			String sql=""; //ï¿½Û¾ï¿½ï¿½Ê¿ï¿½
 			pstmt=conn.prepareStatement(sql);
 			
-			//ÀÛ¾÷ÇÊ¿ä
+			//ï¿½Û¾ï¿½ï¿½Ê¿ï¿½
 		
 		}
 		catch(Exception e) {
@@ -40,22 +40,22 @@ public class VerificationDAO {
 
 	}
 	
-	// *ÀÎÁõ Á¶È¸ÇÏ±â*
+	// *ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ï¿½Ï±ï¿½*
 	public  ArrayList<Verification> showV() {
 		
 		ArrayList<Verification> datas=new ArrayList();
 		
 		try {
 			conn=DBConnection.connect();
-			String sql=""; //ÀÛ¾÷ÇÊ¿ä
+			String sql=""; //ï¿½Û¾ï¿½ï¿½Ê¿ï¿½
 			pstmt=conn.prepareStatement(sql);
 			
-			//ÀÛ¾÷ÇÊ¿ä
+			//ï¿½Û¾ï¿½ï¿½Ê¿ï¿½
 
 
 			ResultSet rs=pstmt.executeQuery();
 			while(rs.next()) {
-				//ÀÛ¾÷ÇÊ¿ä
+				//ï¿½Û¾ï¿½ï¿½Ê¿ï¿½
 
 			}
 		} catch (SQLException e) {
@@ -75,7 +75,7 @@ public class VerificationDAO {
 		
 	}
 	
-	// *ÀÎÁõ »èÁ¦ÇÏ±â*
+	// *ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½*
 	public boolean deleteV(int v_code) {
 		
 		try {
@@ -100,7 +100,6 @@ public class VerificationDAO {
 		return true;
 		
 	}
-	
 	
 	
 	
