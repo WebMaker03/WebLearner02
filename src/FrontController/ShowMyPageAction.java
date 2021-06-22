@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAO.ChallengesDAO;
 import DTO.Challenges;
 import DTO.MyC;
+import DTO.Users;
 
 public class ShowMyPageAction implements Action {
 
@@ -22,8 +24,10 @@ public class ShowMyPageAction implements Action {
 		ArrayList<Challenges> Clist = cdao.getChalName(myClist);
 		request.setAttribute("pro_chalList_C", Clist); // 진행중 챌린지에 대한 챌린지 정보를 담은 리스트
 		
+		 HttpSession session = request.getSession();
+         Users user = (Users)session.getAttribute("session_user");
 		// 종료된 챌린지 가져오기 
-		ArrayList<MyC> EndList= cdao.finchal(userid);
+		ArrayList<MyC> EndList= cdao.finchal(user.getU_code());
 		request.setAttribute("end_chalList", EndList);
 		
 		ArrayList<Challenges> EndList_D = cdao.getChalName(EndList);

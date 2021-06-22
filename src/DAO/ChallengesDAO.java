@@ -179,14 +179,14 @@ public class ChallengesDAO {
 	}
 
 	// 종료된챌린지 리스트 반환값 datas
-	public ArrayList<MyC> finchal(String userid) {
+	public ArrayList<MyC> finchal(int u_code) {
 		ArrayList<MyC> datas = new ArrayList();
 		try {
 			conn = DBConnection.connect();
-			String sql = "select * from myC where state=?";
+			String sql = "select * from myC where state=0 and u_code=?";
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setBoolean(1, false);
+			pstmt.setInt(1, u_code);;
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {

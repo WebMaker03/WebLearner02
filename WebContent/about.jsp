@@ -26,11 +26,11 @@
 			<div class="section-header" id="service">
 				<h3>Meet Our Service</h3>
 				<hr>
-				<p style="margin-top: 30px; font-size: 20px; font-weight: bold; ">
-					챌린지 러너는 자신이 끝까지 못 이룰것 같을 때 찾아주시는 페이지 입니다!
-					<br>자신이 혼자 목표를 세워서 끝까지 이루는 사람은 별로 없을 것 입니다.
-					<br>매일 출석체크를 하고 게시글을 쓰고, 다른 사람들과 똑같은 목표를 같이 이뤄간다면 끝까지 할 수 있을 것 입니다.
-					<br>이런 것을 도와주는것이 챌린지 러너 페이지 입니다
+				<p id="meetService" style="margin-top: 30px; font-size: 20px; font-weight: bold; ">
+					챌린지 러너는 자신이 끝까지 못 이룰것 같을 때 찾아주시는 페이지 입니다!<br>
+					<br>자신이 혼자 목표를 세워서 끝까지 이루는 사람은 별로 없을 것 입니다.<br>
+					<br>매일 출석체크를 하고 게시글을 쓰고, 다른 사람들과 똑같은 목표를 같이 이뤄간다면 끝까지 할 수 있을 것 입니다.<br>
+					<br>이런 것을 도와주는것이 챌린지 러너 페이지 입니다<br>
 				</p>
 			</div>
 		</div>
