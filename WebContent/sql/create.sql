@@ -5,8 +5,8 @@ use codelearner2;
 
 CREATE TABLE `users` (
   `u_code` int PRIMARY KEY AUTO_INCREMENT,
-  `usersid` varchar(255) NOT NULL,
-  `userspw` varchar(255) NOT NULL,
+  `userid` varchar(255) NOT NULL,
+  `userpw` varchar(255) NOT NULL,
   `u_name` varchar(255) NOT NULL,
   `age` int NOT NULL,
   `point` int DEFAULT 5000,
