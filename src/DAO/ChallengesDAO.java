@@ -204,7 +204,7 @@ public class ChallengesDAO {
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setInt(1, u_code);
-			;
+			
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {

@@ -74,7 +74,44 @@ public class BoardDAO {
 		}
 		return datas;
 	}
-
+	// 해당챌린지의 게시물 전부
+	public ArrayList<Post> c_b_all(int u_code, int c_code){
+		ArrayList<Post> datas = new ArrayList();
+		try {
+			conn = DBConnection.connect();
+			String sql = "select * from post where u_code=? and c_code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, u_code);
+			pstmt.setInt(2, c_code);
+			ResultSet rs =pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Post p = new Post();
+				p.setP_code(rs.getInt("p_code"));
+				p.setU_code(rs.getInt("u_code"));
+				p.setB_code(rs.getInt("b_code"));
+				p.setP_title(rs.getString("p_title"));
+				p.setP_text(rs.getString("p_text"));
+				datas.add(p);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+		return datas;
+		
+	}
+	
 	// * 게시글 등록 *
 	public boolean insertP(Post p) {
 		try {
