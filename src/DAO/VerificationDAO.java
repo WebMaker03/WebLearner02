@@ -43,21 +43,27 @@ public class VerificationDAO {
    }
    
    // * 인증 조회 *
-   public  ArrayList<Verification> showV() {
+   public  ArrayList<Verification> showV(int u_code, int mc_code) {
       
       ArrayList<Verification> datas=new ArrayList();
       
       try {
          conn=DBConnection.connect();
-         String sql=""; // ۾  ʿ 
+         String sql="select * from verification where u_code=? and mc_code=?";
          pstmt=conn.prepareStatement(sql);
+         pstmt.setInt(1, u_code);
+         pstmt.setInt(2, mc_code);
          
-         // ۾  ʿ 
-
-
          ResultSet rs=pstmt.executeQuery();
          while(rs.next()) {
-            // ۾  ʿ 
+            Verification v = new Verification();
+            v.setV_code(rs.getInt("v_code"));
+            v.setU_code(rs.getInt("u_code"));
+            v.setMc_code(rs.getInt("mc_code"));
+            v.setV_date(rs.getString("v_date"));
+            v.setV_text(rs.getString("v_text"));
+            v.setRating(rs.getInt("rating"));
+            datas.add(v);
 
          }
       } catch (SQLException e) {
@@ -77,7 +83,7 @@ public class VerificationDAO {
       
    }
    
-   // *          ϱ *
+
    public boolean deleteV(int v_code) {
       
       try {
