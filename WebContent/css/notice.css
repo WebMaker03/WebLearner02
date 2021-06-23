@@ -130,6 +130,8 @@ button {
 
 #next1 {
 background-color : #28a745;
+    width: 15%;
+    height: 45px;
 }
 
 .main {
@@ -178,11 +180,12 @@ body {
     width: 100%;
     background-color: pink;
     padding: 2vw;
-    font-size: 1.2vw;
+    font-size: 18px;
     display: flex;
     color: #757575;
     background-color: white;
     text-align-last : start;
+    display: none;
 }
 
 .sec i {
@@ -229,22 +232,26 @@ body {
 
 #tkdlxm1 {
 	color: #ffffff;
-	    font-size: large;
+	    font-size: 25px;
+	    
 	  
 }
 
 #section1 {
 	width: 1100px;
 	font-size : 20px;
+	height: 75px;
 }
 
 #section2 {
 	width: 1100px;
 	font-size : 20px;
+	height: 75px;
 }
 
 #section3 {
 	width: 1100px;
 	font-size : 20px;
+	height: 75px;
 }
 

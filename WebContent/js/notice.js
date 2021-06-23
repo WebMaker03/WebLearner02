@@ -16,9 +16,10 @@ $(this).children(".section").text("챌린지 인증 현황/이전기록 확인 �
 $(this).children(".fa").toggleClass("fa-minus");
 });
 $(".sec").mouseenter(function(){
-$(this).addClass("z-depth-4");
+$(this).addClass("");
 $(this).children(".section").text("클릭!");
 $(this).next(".collapsable").css({"width":"800px"});
+$(this).next(".collapsable").css({"hegiht":"75px"});
 });
 $(".sec").mouseleave(function(){
 $(this).removeClass("z-depth-4");
