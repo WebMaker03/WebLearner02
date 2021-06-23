@@ -65,7 +65,15 @@ public class UserDAO {
       } catch (SQLException e) {
          // TODO Auto-generated catch block
          e.printStackTrace();
-      }
+      }finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
       return false;
 
    }
@@ -92,7 +100,15 @@ public class UserDAO {
       } catch (SQLException e) {
          // TODO Auto-generated catch block
          e.printStackTrace();
-      }
+      }finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
       return user;
    }
 
@@ -115,7 +131,15 @@ public class UserDAO {
       } catch (SQLException e) {
          // TODO Auto-generated catch block
          e.printStackTrace();
-      }
+      }finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
       return true;
    }

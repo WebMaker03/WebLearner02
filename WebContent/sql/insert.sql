@@ -9,6 +9,7 @@ insert into users(userid, userpw, u_name, age, email) values('lim', 'a1234567', 
 insert into users(userid, userpw, u_name, age, email) values('kim', 'a1234567', '김유저', 15, 'email3@gmail.com');
 select * from users;
 
+
 /* challenges 테이블 */
 /* 공부 */
 insert into challenges(c_name, theme, fee, period, img, info) values('하루 1시간 공부','공부', 3000 ,30,'공부1.jpg', '하루에 1시간씩만 투자해서 부담없이 꾸준하게 공부하자!');
@@ -63,6 +64,7 @@ insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, i
 insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(3, 3, true ,'2021-06-15 00:00:00', '2021-06-20 00:00:00', 70, '챌린지사진6');
 
 select * from myC;
+
 
 /* verification 테이블*/
 insert into verification(u_code, mc_code, v_date ,v_text) values(1, 1, '2021-06-17','인증텍스트1');
