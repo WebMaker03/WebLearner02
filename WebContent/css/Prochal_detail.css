@@ -465,12 +465,16 @@ body {
  
  height: 23px;
      width: 120px;
+     font-size: 10px;
  
  }
  
  #ca2_btn2 {
  height: 23px;
      width: 120px;
+     font-size: 10px;
+          background-color :#28a745;
+     color : #ffffff;
  }
  
  #ca2_btn3 {
@@ -478,16 +482,20 @@ body {
      width: 120px;
      background-color :#007bff;
      color : #ffffff;
+     font-size: 10px;
  }
  
  #ca2_btn4 {
  height: 23px;
      width: 120px;
+     font-size: 10px;
  }
  
  #ca2_btn5 {
  height: 23px;
      width: 120px;
+     font-size: 10px;
+     color : #ffffff;
  }
  
  
