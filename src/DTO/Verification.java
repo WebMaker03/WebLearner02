@@ -4,20 +4,20 @@ public class Verification {
 	private int v_code;
 	private int u_code;
 	private int mc_code;
-	private int rating;
+	private String v_date;
 	private String v_text;
-	private String v_img;
+	private int rating;
 	
 	
 	public Verification() {;}
 	
-	public Verification(int v_code, int u_code, int mc_code,int rating ,String v_text, String v_img) {
+	public Verification(int v_code, int u_code, int mc_code,int rating ,String v_text, String v_date) {
 		this.v_code = v_code;
 		this.u_code = u_code;
 		this.mc_code = mc_code;
 		this.rating = rating;
 		this.v_text = v_text;
-		this.v_img = v_img;
+		this.v_date = v_date;
 	}
 	
 
@@ -53,12 +53,16 @@ public class Verification {
 	public void setV_text(String v_text) {
 		this.v_text = v_text;
 	}
-	public String getV_img() {
-		return v_img;
+
+	public String getV_date() {
+		return v_date;
 	}
-	public void setV_img(String v_img) {
-		this.v_img = v_img;
+
+	public void setV_date(String v_date) {
+		this.v_date = v_date;
 	}
+	
+	
 	
 	
 }

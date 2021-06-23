@@ -4,16 +4,17 @@ public class Post {
 	private int p_code;
 	private int u_code;
 	private int b_code;
+	private String p_title;
 	private String p_text;
-	
 	
 	
 	public Post() {;}
 	
-	public Post(int p_code, int u_code, int b_code, String p_text) {
+	public Post(int p_code, int u_code, int b_code, String p_title, String p_text) {
 		this.p_code = p_code;
 		this.u_code = u_code;
 		this.b_code = b_code;
+		this.p_title = p_title;
 		this.p_text = p_text;
 	}
 
@@ -42,6 +43,14 @@ public class Post {
 	}
 	public void setP_text(String p_text) {
 		this.p_text = p_text;
+	}
+
+	public String getP_title() {
+		return p_title;
+	}
+
+	public void setP_title(String p_title) {
+		this.p_title = p_title;
 	}
 	
 	

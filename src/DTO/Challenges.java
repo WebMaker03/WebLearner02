@@ -7,19 +7,21 @@ public class Challenges {
 	private int fee;
 	private int period;
 	private String info;
+	private String img;
 	
 	
 	
 	public Challenges() {;}
 	
 	
-	public Challenges(int c_code, String c_name, String theme, int fee, int period,String info) {
+	public Challenges(int c_code, String c_name, String theme, int fee, int period, String info, String img) {
 		this.c_code = c_code;
 		this.c_name = c_name;
 		this.theme = theme;
 		this.fee = fee;
 		this.period = period;
 		this.info= info;
+		this.img = img;
 	}
 
 
@@ -82,6 +84,17 @@ public class Challenges {
 		this.info = info;
 	}
 
+
+	public String getImg() {
+		return img;
+	}
+
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
+	
 
 	
 	
