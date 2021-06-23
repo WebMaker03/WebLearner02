@@ -36,21 +36,21 @@
                      </div>
                      <div class="col-12 col-md-7 py-2 px-3">
                         <span id="challenge_title"> <i class="fa fa-hashtag"
-                           aria-hidden="true"></i></i> &nbsp 챌린지 이름
+                           aria-hidden="true"></i></i> &nbsp ${pro_chal_D.c_name}
                         </span>
                         <p class="font-weight-bold my-2">June 26</p>
-                        <h6 class="mb-3">Introducing iPhone XS, iPhone XS Max and
+                        <h6>${pro_chal_D.info}</h6>
+                      <!--   <h6 class="mb-3">Introducing iPhone XS, iPhone XS Max and
                            iPhone XR - Apple</h6>
                         <p>iPhone XS impresses with its screen - 5.8 inch OLED
                            display Super Retina opens new frontiers of the virtual world,
-                           increased area, brightness and depth - this is...</p>
+                           increased area, brightness and depth - this is...</p> -->
                         <div class="d-flex mt-2 mb-3">
                            <!-- <button class="btn">오늘 인증하기!</button> -->
                            <button type="button" class="btn btn-danger"
                               data-toggle="modal" data-target="#modalBox">인증하기</button>
 
-                           <button type="button" class="btn btn-danger"
-                              data-toggle="modal" style="margin-left: 10px" id="btn_b">게시판가기</button>
+                           <button type="button" class="btn btn-danger" onClick="location.href=Board_Chall.jsp" style="margin-left: 10px" id="btn_b">게시판가기</button>
                         </div>
                      </div>
                   </div>
