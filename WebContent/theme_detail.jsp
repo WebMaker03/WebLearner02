@@ -41,11 +41,11 @@
                      
                        <tag:ch_show></tag:ch_show>
              		</div>
-                     <a class="carousel-control-prev" href="#we1" role="button" data-slide="prev">
+                     <a class="carousel-control-prev" href="#we1" role="button" data-slide="prev" style=" box-shadow: 5px 5px 5px 5px;">
                      <i class="fa fa-angle-left" aria-hidden="true"></i>
                      <span class="sr-only">Previous</span>
                      </a>
-                     <a class="carousel-control-next" href="#we1" role="button" data-slide="next">
+                     <a class="carousel-control-next" href="#we1" role="button" data-slide="next" style=" box-shadow: 5px 5px 5px 5px;">
                      <i class="fa fa-angle-right" aria-hidden="true"></i>
                      <span class="sr-only">Next</span>
                      </a>
