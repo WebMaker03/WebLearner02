@@ -43,8 +43,8 @@ public class VerificationDAO {
    }
    
    // * 인증 조회 *
+
    public  ArrayList<Verification> showV(int u_code, int mc_code) {
-      
       ArrayList<Verification> datas=new ArrayList();
       
       try {
