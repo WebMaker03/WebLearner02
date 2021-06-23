@@ -2,6 +2,7 @@
 <%@page import="DTO.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,36 +85,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>21.6.21</td>
-                                        <td>1</td>
-                                     
-                                        <td><button type="button" class="badge badge-danger" id="ca2_btn1">상세보기</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21.6.20</td>
-                                        <td>5</td>
-                                        
-                                        <td><button type="button" class="badge badge-success" id="ca2_btn2">상세보기</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21.6.18</td>
-                                        <td>3</td>
-                                  
-                                        <td><button type="button" class="badge badge-bar" id="ca2_btn3">상세보기</button></td>
-                                    </tr>
-                                    <tr>
-                                       <td>21.6.16</td>
-                                        <td>4</td>
-                    
-                                        <td><button type="button" class="badge badge-info" id="ca2_btn4">상세보기</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21.5.10</td>
-                                        <td>2</td>
-                    
-                                        <td><button type="button" class="badge badge-warning" id="ca2_btn5">상세보기</button></td>
-                                    </tr>
+                                    <tag:showV></tag:showV>
                                 </tbody>
                             </table>
                         </div>

@@ -49,7 +49,7 @@ public class VerificationDAO {
       
       try {
          conn=DBConnection.connect();
-         String sql="select * from verification where u_code=? and mc_code=?";
+         String sql="select * from verification where u_code=? and mc_code=? order by v_date desc";
          pstmt=conn.prepareStatement(sql);
          pstmt.setInt(1, u_code);
          pstmt.setInt(2, mc_code);
