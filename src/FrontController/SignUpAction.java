@@ -12,7 +12,7 @@ public class SignUpAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); 
+		ActionForward forward= null;
 		
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
@@ -23,11 +23,8 @@ public class SignUpAction implements Action {
 		newUser.setAge(Integer.parseInt(request.getParameter("userAge")));
 		newUser.setEmail(request.getParameter("userEmail"));
 		
-		udao.SignUp(newUser);
 		
-		forward.setRedirect(true); 
 		request.getSession().setAttribute("msg", "회원가입이 완료되었습니다.");
-		forward.setPath("main.etc");
 		
 		if(udao.SignUp(newUser)) {			
 			response.setContentType("text/html; charset=UTF-8");

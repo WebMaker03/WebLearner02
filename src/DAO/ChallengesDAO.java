@@ -30,11 +30,20 @@ public class ChallengesDAO {
 				ch.setFee(rs.getInt("fee"));
 				ch.setPeriod(rs.getInt("period"));
 				ch.setInfo(rs.getString("info"));
+				ch.setImg(rs.getString("img"));
 
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return ch;
 
@@ -87,6 +96,7 @@ public class ChallengesDAO {
 				ch.setFee(rs.getInt("fee"));
 				ch.setPeriod(rs.getInt("period"));
 				ch.setInfo(rs.getString("info"));
+				ch.setImg(rs.getString("img"));
 				datas.add(ch);
 
 			}
@@ -133,21 +143,29 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return true;
 	}
 
 	// 현재진행중 리스트 반환값 datas
-	public ArrayList<MyC> prochal(String userid) {
+	public ArrayList<MyC> prochal(int u_code) {
 		ArrayList<MyC> datas = new ArrayList();
 		try {
 			conn = DBConnection.connect();
-			String sql = "select * from myC where state=? and userid=?";
+			String sql = "select * from myC where state=? and u_code=?";
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setBoolean(1, true);
-			pstmt.setString(2, userid);
+			pstmt.setInt(2, u_code);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				MyC myc = new MyC();
@@ -186,7 +204,7 @@ public class ChallengesDAO {
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setInt(1, u_code);
-			;
+			
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
@@ -233,6 +251,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return cnt;
@@ -254,6 +280,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return cnt;
@@ -282,6 +316,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return Clist;
@@ -312,6 +354,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return false;
 	}
