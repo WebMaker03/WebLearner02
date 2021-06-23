@@ -29,9 +29,11 @@ public class BoardDAO {
 			while (rs.next()) {
 				MessageSet ms = new MessageSet();
 				Post p = new Post();
-
-				// 작업필요
-				// p.setP_text(rs.get);
+				p.setP_code(rs.getInt("p_code"));
+				p.setU_code(rs.getInt("u_code"));
+				p.setB_code(rs.getInt("b_code"));
+				p.setP_title(rs.getString("p_title"));
+				p.setP_text(rs.getString("p_text"));
 
 				ArrayList<Comments> clist = new ArrayList();
 
@@ -39,12 +41,22 @@ public class BoardDAO {
 				pstmt = conn.prepareStatement(sql2);
 				pstmt.setInt(1, rs.getInt("cm_code"));
 				ResultSet rs2 = pstmt.executeQuery();
-
-				// 작업필요
-
+				
+				while(rs2.next()) {
+					Comments cm = new Comments();
+					cm.setCm_code(rs2.getInt("cm_code"));
+					cm.setU_code(rs2.getInt("u_code"));
+					cm.setP_code(rs2.getInt("p_code"));
+					cm.setCm_text(rs2.getString("cm_text"));
+					clist.add(cm);
+					
+				}
+				rs2.close();
+				
+				
 				ms.setMessage(p);
 				// ms.setRlist(ct);
-
+				
 				datas.add(ms);
 
 			}
@@ -90,21 +102,55 @@ public class BoardDAO {
 		return true;
 	}
 
-	// * 게시글 수정 * // 제목이랑 내용
-	public boolean updateP(int u_code, int p_code) {
+	// * 게시글 제목 수정 * // 
+	public boolean updateP_title(String p_title, int p_code) {
 		try {
 			conn = DBConnection.connect();
 			String sql = "update post set p_title=? where p_code=? ";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "p_title");
+			pstmt.setString(1, p_title);
 			pstmt.setInt(2, p_code);
+			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		return true;
 	}
+	// 게시물 내용 수정
+	public boolean updateP_text(String p_text, int p_code) {
+		try {
+			conn = DBConnection.connect();
+			String sql = "update post set p_text=? where p_code=? ";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, p_text);
+			pstmt.setInt(2, p_code);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		return true;
+	}
+	
 	
 	// * 게시글 삭제 *
 	public boolean delP(int p_code) {
@@ -145,6 +191,14 @@ public class BoardDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		return cnt;
@@ -166,6 +220,14 @@ public class BoardDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		return cnt;
