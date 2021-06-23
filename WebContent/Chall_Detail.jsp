@@ -27,7 +27,7 @@
 
                </div>
                <div class="row">
-                  <img id=challenge_img src="https://i.imgur.com/kXUgBQZ.jpg" /><br>
+                  <img id=challenge_img src= "images/${challenge.theme}/${challenge.img}" /><br>
                   <div class="col">
                      <div class="row">
                         <div class="card" id="chell_info">

@@ -14,7 +14,7 @@ public class StartChallengeAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		HttpSession session = request.getSession();
-		ActionForward forward = new ActionForward();
+		ActionForward forward =null;
 		if (session.getAttribute("session_user") == null) {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();

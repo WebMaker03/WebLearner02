@@ -14,7 +14,7 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div id="bo_ho" class="we_box text_align_left">
-									<i><img src="images/${v.theme}.jpg" alt="#" /></i>
+									<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
 									<h3>${v.c_name}</h3>
 									<p>${v.info }</p>
 									<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
@@ -34,7 +34,7 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div id="bo_ho" class="we_box text_align_left">
-									<i><img src="images/${v.theme}.jpg" alt="#" /></i>
+									<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
 									<h3>${v.c_name}</h3>
 									<p>${v.info }</p>
 									<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
@@ -49,7 +49,7 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div id="bo_ho" class="we_box text_align_left">
-									<i><img src="images/${v.theme}.jpg" alt="#" /></i>
+									<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
 									<h3>${v.c_name}</h3>
 									<p>${v.info }</p>
 									<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
@@ -64,7 +64,7 @@
 						<div class="row">
 							<div class="col-md-4">
 								<div id="bo_ho" class="we_box text_align_left">
-									<i><img src="images/${v.theme}.jpg" alt="#" /></i>
+									<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
 									<h3>${v.c_name}</h3>
 									<p>${v.info }</p>
 									<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
@@ -80,7 +80,7 @@
 			<!--3개 다 안찼는데 마지막이 경우(닫아줘야함.)-->
 			<div class="col-md-4">
 				<div id="bo_ho" class="we_box text_align_left">
-					<i><img src="images/${v.theme}.jpg" alt="#" /></i>
+					<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
 					<h3>${v.c_name}</h3>
 					<p>${v.info }</p>
 					<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
@@ -94,7 +94,7 @@
 		<c:when test="${status.index %3 ne 2}">
 			<div class="col-md-4">
 				<div id="bo_ho" class="we_box text_align_left">
-					<i><img src="images/${v.theme}.jpg" alt="#" /></i>
+					<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
 					<h3>${v.c_name}</h3>
 					<p>${v.info }</p>
 					<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
@@ -105,7 +105,7 @@
 			<!--  마지막인 경우-->
 			<div class="col-md-4">
 				<div id="bo_ho" class="we_box text_align_left">
-					<i><img src="images/${v.theme}.jpg" alt="#" /></i>
+					<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
 					<h3>${v.c_name}</h3>
 					<p>${v.info}</p>
 					<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
