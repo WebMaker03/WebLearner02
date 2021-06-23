@@ -1,6 +1,8 @@
 package FrontController;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,8 +42,35 @@ public class BoardController extends HttpServlet {
 	
 	private void actionDo(HttpServletRequest request, HttpServletResponse response)
 		         throws ServletException, IOException {
-		
+			String uri = request.getRequestURI();
+	      String cp = request.getContextPath();
+	      String action = uri.substring(cp.length());
+	      ActionForward forward = null;
+	      
+	      if (action.equals("/goBoard.bo")) { 
+	         try {
+	        	System.out.println("챌린지 게시판 화면 전환");
+	            forward = new goBoardAction().execute(request, response);
+	         } catch (Exception e) {
+	            e.printStackTrace();
+	         }
+
+	      }
+	      else {
+	         forward = new ActionForward();
+	         forward.setRedirect(false);
+	         forward.setPath("/error/error404.jsp");
+	      }
+
+	      if (forward != null) {
+	         if (forward.isRedirect()) {
+	            response.sendRedirect(forward.getPath());
+	         } else {
+	            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  삺 苑   젟
+	            dispatcher.forward(request, response);
+	         }
+	      }
+	   }
 	
 	}
 
-}

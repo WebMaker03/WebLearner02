@@ -50,7 +50,7 @@
                            <button type="button" class="btn btn-danger"
                               data-toggle="modal" data-target="#modalBox">인증하기</button>
 
-                           <button type="button" class="btn btn-danger" onClick="location.href=Board_Chall.jsp" style="margin-left: 10px" id="btn_b">게시판가기</button>
+                           <button type="button" class="btn btn-danger" onClick="location.href='goBoard.bo?c_code=${pro_chal_D.c_code}'" style="margin-left: 10px" id="btn_b">게시판가기</button>
                         </div>
                      </div>
                   </div>
