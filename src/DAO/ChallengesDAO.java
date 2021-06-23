@@ -143,11 +143,11 @@ public class ChallengesDAO {
 		ArrayList<MyC> datas = new ArrayList();
 		try {
 			conn = DBConnection.connect();
-			String sql = "select * from myC where state=?";
+			String sql = "select * from myC where state=? and userid=?";
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setBoolean(1, true);
-
+			pstmt.setString(2, userid);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				MyC myc = new MyC();
