@@ -5,7 +5,7 @@ public class Comments {
 	private int u_code;
 	private int p_code;
 	private String cm_text;
-	
+
 	
 	public Comments() {;}
 	

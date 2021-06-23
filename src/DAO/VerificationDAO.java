@@ -13,7 +13,7 @@ public class VerificationDAO {
    Connection conn;
    PreparedStatement pstmt;
    
-   // *         ϱ *
+   // * 인증 등록 *
    public boolean insertV(Verification ver) {
       conn=DBConnection.connect();
       String sql="insert into verification(u_code,mc_code,v_date,v_text,rating) values (?,?,now(),?,?)";
@@ -42,7 +42,7 @@ public class VerificationDAO {
 
    }
    
-   // *       ȸ ϱ *
+   // * 인증 조회 *
    public  ArrayList<Verification> showV() {
       
       ArrayList<Verification> datas=new ArrayList();

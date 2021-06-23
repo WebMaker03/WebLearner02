@@ -65,9 +65,9 @@ insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, i
 select * from myC;
 
 /* verification 테이블*/
-insert into verification(u_code, mc_code, v_date ,v_text, v_img) values(1, 1, '2021-06-17','인증텍스트1', '인증사진1');
-insert into verification(u_code, mc_code, v_date ,v_text, v_img) values(2, 2, '2021-06-17','인증텍스트2','인증사진2');
-insert into verification(u_code, mc_code, v_date ,v_text, v_img) values(3, 3, '2021-06-17','인증텍스트3','인증사진3');
+insert into verification(u_code, mc_code, v_date ,v_text) values(1, 1, '2021-06-17','인증텍스트1')
+insert into verification(u_code, mc_code, v_date ,v_text) values(2, 2, '2021-06-17','인증텍스트2')
+insert into verification(u_code, mc_code, v_date ,v_text) values(3, 3, '2021-06-17','인증텍스트3')
 select * from verification;
 
 

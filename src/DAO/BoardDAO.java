@@ -67,12 +67,13 @@ public class BoardDAO {
 	public boolean insertP(Post p) {
 		try {
 			conn = DBConnection.connect();
-			String sql = "insert into post (u_code, b_code, b_text) values(?,?,?)";
+			String sql = "insert into post (u_code, b_code, p_title, p_text) values(?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setInt(1, p.getU_code());
 			pstmt.setInt(2, p.getB_code());
-			pstmt.setString(3, p.getP_text());
+			pstmt.setString(3, p.getP_title());
+			pstmt.setString(4, p.getP_text());
 			pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();

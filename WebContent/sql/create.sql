@@ -1,7 +1,7 @@
 create database codelearner2;
 use codelearner2;
 
-/* create ë¬¸ */
+/* create ¹® */
 
 CREATE TABLE `users` (
   `u_code` int PRIMARY KEY AUTO_INCREMENT,
@@ -27,7 +27,7 @@ CREATE TABLE `myC` (
   `mc_code` int PRIMARY KEY AUTO_INCREMENT,
   `c_code` int NOT NULL,
   `u_code` int NOT NULL,
-  `state` boolean NOT NULL, /* ì§„í–‰ 1, ì¢…ë£Œ 0*/
+  `state` boolean NOT NULL, /* ÁøÇà 1, ³¡³­°Å 0*/
   `startD` datetime NOT NULL,
   `finishD` datetime NOT NULL,
   `achievementPercentage` int NOT NULL,
@@ -42,7 +42,6 @@ CREATE TABLE `verification` (
   `mc_code` int NOT NULL,
   `v_date` date NOT NULL,
   `v_text` varchar(500) NOT NULL,
-  `v_img` varchar(255) ,
   `rating` int default 3,
   foreign key(u_code) references users(u_code) on delete cascade,
   foreign key(mc_code) references myC(mc_code) on delete cascade
