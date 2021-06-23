@@ -26,8 +26,17 @@
 			<div class="section-header" id="service">
 				<h3>Meet Our Service</h3>
 				<hr>
-				<p style="margin-top: 30px; font-size: 20px; font-weight: bold">챌린지
-					러너는 여러분들의 목표달성을 응원합니다!</p>
+				<p style="margin-top: 30px; font-size: 20px; font-weight: bold; ">챌린지
+					러너는 여러분들의 목표달성을 응원합니다! 
+					</p>
+					<!-- 명언 문구 -->
+					<p style="font-size:20px; color:#000000; font-weight: bold; background-color: #D7F2F9;"><br><br>위대한 일을 위해서 <br>
+					대단한 도전이 필요하지 않다.<br> 
+단지 순간순간의 작은 도전이 모여<br>
+위대한 일을 이루어 간다.<br><br> -모션 코치-</p>
+<!-- 명언 문구  끝-->
+					
+					</p>
 			</div>
 		</div>
 
@@ -41,7 +50,7 @@
 				<div class="col-lg-3 col-md-6 wow fadeInUp"
 					style="visibility: visible; animation-name: fadeInUp;">
 					<div class="member">
-						<img src="images/f_1.png" class="img-fluid"
+						<img src="images/kangonyou.jpg" class="img-fluid"
 							alt="">
 						<div class="member-info">
 							<div class="member-info-content">
