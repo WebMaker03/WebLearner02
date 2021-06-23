@@ -26,7 +26,7 @@ public class UserDAO {
          pstmt.setString(4, user.getEmail());
          pstmt.setInt(5, user.getAge());
          pstmt.executeUpdate();
-         return false;
+         return true;
       } catch (SQLException e) {
          // TODO Auto-generated catch block
          e.printStackTrace();
@@ -39,7 +39,7 @@ public class UserDAO {
             e.printStackTrace();
          }
       }
-      return true;
+      return false;
    }
 
 

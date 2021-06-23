@@ -90,7 +90,18 @@ public class BoardDAO {
 	}
 
 	// * 게시글 수정 * // 제목이랑 내용
-	public boolean updateP(int u_code) {
+	public boolean updateP(int u_code, int p_code) {
+		try {
+			conn = DBConnection.connect();
+			String sql = "update post set p_title=? where p_code=? ";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "p_title");
+			pstmt.setInt(2, p_code);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return true;
 	}
 	
