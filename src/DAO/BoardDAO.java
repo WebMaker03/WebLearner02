@@ -31,7 +31,7 @@ public class BoardDAO {
 				Post p = new Post();
 				p.setP_code(rs.getInt("p_code"));
 				p.setU_code(rs.getInt("u_code"));
-				p.setB_code(rs.getInt("b_code"));
+				p.setC_code(rs.getInt("c_code"));
 				p.setP_title(rs.getString("p_title"));
 				p.setP_text(rs.getString("p_text"));
 
@@ -89,7 +89,7 @@ public class BoardDAO {
 				Post p = new Post();
 				p.setP_code(rs.getInt("p_code"));
 				p.setU_code(rs.getInt("u_code"));
-				p.setB_code(rs.getInt("b_code"));
+				p.setC_code(rs.getInt("c_code"));
 				p.setP_title(rs.getString("p_title"));
 				p.setP_text(rs.getString("p_text"));
 				datas.add(p);
@@ -116,11 +116,11 @@ public class BoardDAO {
 	public boolean insertP(Post p) {
 		try {
 			conn = DBConnection.connect();
-			String sql = "insert into post (u_code, b_code, p_title, p_text) values(?,?,?,?)";
+			String sql = "insert into post (u_code, c_code, p_title, p_text) values(?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setInt(1, p.getU_code());
-			pstmt.setInt(2, p.getB_code());
+			pstmt.setInt(2, p.getC_code());
 			pstmt.setString(3, p.getP_title());
 			pstmt.setString(4, p.getP_text());
 			pstmt.executeUpdate();
@@ -317,5 +317,39 @@ public class BoardDAO {
 		}
 		return true;
 	}
-
+	public ArrayList<Post> c_b( int c_code){
+		ArrayList<Post> datas = new ArrayList();
+		try {
+			conn = DBConnection.connect();
+			String sql = "select * from post where c_code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, c_code);
+			ResultSet rs =pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Post p = new Post();
+				p.setP_code(rs.getInt("p_code"));
+				p.setU_code(rs.getInt("u_code"));
+				p.setC_code(rs.getInt("c_code"));
+				p.setP_title(rs.getString("p_title"));
+				p.setP_text(rs.getString("p_text"));
+				datas.add(p);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+		return datas;
+		
+	}
 }
