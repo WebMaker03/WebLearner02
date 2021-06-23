@@ -16,11 +16,11 @@ public class UpdateUserAction implements Action {
 		Users newUser = new Users();
 		Users loginUser = new Users();
 		String pwCheck = "";
-		if(loginUser.getPw()== pwCheck) {	// pwCheck을 이렇게 해도 될까..?
-			newUser.setId(request.getParameter("updateName"));
-			newUser.setPw(request.getParameter("updateEmail"));
+		if(loginUser.getUserpw()== pwCheck) {	
+			newUser.setUserid(request.getParameter("updateName"));
+			newUser.setUserpw(request.getParameter("updateEmail"));
 			newUser.setAge(Integer.parseInt(request.getParameter("updateAge")));
-			newUser.setId(loginUser.getId());
+			newUser.setUserid(loginUser.getUserid());
 			
 			if(udao.updateUser(newUser)) {
 				forward.setRedirect(false);

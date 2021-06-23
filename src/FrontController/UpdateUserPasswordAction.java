@@ -16,8 +16,8 @@ public class UpdateUserPasswordAction implements Action {
 		Users newUser = new Users();
 		Users loginUser = new Users();
 		String pwCheck = "";
-		if(loginUser.getPw()== pwCheck) {	// pwCheck을 이렇게 해도 될까..?
-			newUser.setId(request.getParameter("updatePw"));
+		if(loginUser.getUserpw()== pwCheck) {	// pwCheck을 이렇게 해도 될까..?
+			newUser.setUserid(request.getParameter("updatePw"));
 			newUser.setU_code(loginUser.getU_code());
 			
 			if(udao.updateUserPw(newUser)) {

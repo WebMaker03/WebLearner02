@@ -31,7 +31,9 @@ public class ChallengeController extends HttpServlet {
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
          throws ServletException, IOException {
       // TODO Auto-generated method stub
-      actionDo(request, response);
+      System.out.println("action get");
+	   actionDo(request, response);
+      
    }
 
    /**
@@ -41,7 +43,9 @@ public class ChallengeController extends HttpServlet {
    protected void doPost(HttpServletRequest request, HttpServletResponse response)
          throws ServletException, IOException {
       // TODO Auto-generated method stub
-      actionDo(request, response);
+	   System.out.println("action post");
+	   actionDo(request, response);
+      
    }
 
    private void actionDo(HttpServletRequest request, HttpServletResponse response)
@@ -66,7 +70,16 @@ public class ChallengeController extends HttpServlet {
             e.printStackTrace();
          }
 
-      } 
+      }else if(action.equals("/startchal.ch")) {
+    	  try {
+    		  System.out.println("start");
+    		  forward = new StartChallengeAction().execute(request, response);
+    	  } catch (Exception e) {
+    		  e.printStackTrace();
+    	  }
+    	  
+      }
+      
       else {
          forward = new ActionForward();
          forward.setRedirect(false);

@@ -1,6 +1,7 @@
 <%@page import="DTO.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,10 +32,10 @@
                               <div class="col-md-7 border-right no-gutters">
                                  <div class="py-3">
                                     <img src="https://i.imgur.com/hczKIze.jpg" width="100" class="rounded-circle">
-                                    <h4 class="text-secondary">Name</h4>
+                                    <h4 class="text-secondary">${session_user.u_name}</h4>
                                     <div class="stats">
                                        <div class="mt-4">
-                                          <div class="cardP">현재 포인트는 ____P입니다.</div>
+                                          <div class="cardP">현재 포인트는 ${session_user.point}P입니다.</div>
                                           <div class="px-3">
                                              <button type="button" class="btn btn-light btn-block"
                                                 style="margin-left: 35px; width: 350px; font-size: 20px;">Point
@@ -47,15 +48,14 @@
                               <div class="col-md-5">
                                  <div class="py-3">
                                     <div>
-                                       <span class="d-block head">ID</span> <span class="bottom">User
-                                          Name</span>
+                                       <span class="d-block head">ID</span> <span class="bottom">${session_user.userid}</span>
                                     </div>
                                     <div class="mt-4">
-                                       <span class="d-block head">Age</span> <span class="bottom">23</span>
+                                       <span class="d-block head">Age</span> <span class="bottom">${session_user.age}</span>
                                     </div>
                                     <div class="mt-4">
                                        <span class="d-block head">Email</span> <span
-                                          class="bottom">CodeRunner@gmail.com</span>
+                                          class="bottom">${session_user.email}</span>
                                     </div>
                                     <div class="mt-4">
                                        <div class="px-3">
@@ -105,66 +105,7 @@
                   </tr>
                </thead>
                <tbody>
-                  <tr>
-                     <th scope="row">1</th>
-                     <td>challenge1</td>
-                     <td>
-                        <nav>
-                           <ul class="pager"
-                              style="background-color: #6495ED; margin-left: 25%; width: 150px;">
-                              <li><a href="#" style="color: white;">인증보러가기</a></li>
-                           </ul>
-                        </nav>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">2</th>
-                     <td>challenge2</td>
-                     <td>
-                        <nav>
-                           <ul class="pager"
-                              style="background-color: #6495ED; margin-left: 25%; width: 150px;">
-                              <li><a href="#" style="color: white;">인증보러가기</a></li>
-                           </ul>
-                        </nav>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <nav>
-                           <ul class="pager"
-                              style="background-color: #6495ED; margin-left: 25%; width: 150px;">
-                              <li><a href="#" style="color: white;">인증보러가기</a></li>
-                           </ul>
-                        </nav>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <nav>
-                           <ul class="pager"
-                              style="background-color: #6495ED; margin-left: 25%; width: 150px;">
-                              <li><a href="#" style="color: white;">인증보러가기</a></li>
-                           </ul>
-                        </nav>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <nav>
-                           <ul class="pager"
-                              style="background-color: #6495ED; margin-left: 25%; width: 150px;">
-                              <li><a href="#" style="color: white;">인증보러가기</a></li>
-                           </ul>
-                        </nav>
-                     </td>
-                  </tr>
+                  <tag:pro_chal></tag:pro_chal>
                </tbody>
             </table>
          </div>
@@ -184,57 +125,7 @@
                   </tr>
                </thead>
                <tbody>
-                  <tr>
-                     <th scope="row">1</th>
-                     <td>challenge1</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 80%;">80%</div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">2</th>
-                     <td>challenge2</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar"
-                              aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-                              style="width: 100%;">100%</div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar" aria-valuenow="40"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 40%;">40%</div>
-                        </div>
-                     </td>
-                  </tr>
-                  <tr>
-                     <th scope="row">3</th>
-                     <td>challenge3</td>
-                     <td>
-                        <div class="progress">
-                           <div class="progress-bar" role="progressbar" aria-valuenow="0"
-                              aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
-                        </div>
-                     </td>
-                  </tr>
+                 <tag:End_chal></tag:End_chal>
                </tbody>
             </table>
          </div>

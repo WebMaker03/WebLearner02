@@ -10,99 +10,100 @@ import DTO.Verification;
 
 public class VerificationDAO {
 
-	Connection conn;
-	PreparedStatement pstmt;
-	
-	// *¿Œ¡ı µÓ∑œ«œ±‚*
-	public boolean insertV(Verification ver) {
-		try {
-			conn=DBConnection.connect();
-			String sql=""; //¿€æ˜« ø‰
-			pstmt=conn.prepareStatement(sql);
-			
-			//¿€æ˜« ø‰
-		
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-			return false;
-		}
-		finally {
-			try {
-				pstmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		return true;
+   Connection conn;
+   PreparedStatement pstmt;
+   
+   // * Ïù∏Ï¶ù Îì±Î°ù *
+   public boolean insertV(Verification ver) {
+      conn=DBConnection.connect();
+      String sql="insert into verification(u_code,mc_code,v_date,v_text,rating) values (?,?,now(),?,?)";
+      try {
+         pstmt=conn.prepareStatement(sql);
+         pstmt.setInt(1, ver.getU_code());
+         pstmt.setInt(2, ver.getMc_code());
+         pstmt.setString(3, ver.getV_text());
+         pstmt.setInt(4, ver.getRating());
+         pstmt.executeUpdate();
+         return false;
+      }
+      catch(Exception e) {
+         e.printStackTrace();
+      }
+      finally {
+         try {
+            pstmt.close();
+            conn.close();
+         } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+         }
+      }
+      return true;
 
-	}
-	
-	// *¿Œ¡ı ¡∂»∏«œ±‚*
-	public  ArrayList<Verification> showV() {
-		
-		ArrayList<Verification> datas=new ArrayList();
-		
-		try {
-			conn=DBConnection.connect();
-			String sql=""; //¿€æ˜« ø‰
-			pstmt=conn.prepareStatement(sql);
-			
-			//¿€æ˜« ø‰
+   }
+   
+   // * Ïù∏Ï¶ù Ï°∞Ìöå *
+   public  ArrayList<Verification> showV() {
+      
+      ArrayList<Verification> datas=new ArrayList();
+      
+      try {
+         conn=DBConnection.connect();
+         String sql=""; // €æ   ø 
+         pstmt=conn.prepareStatement(sql);
+         
+         // €æ   ø 
 
 
-			ResultSet rs=pstmt.executeQuery();
-			while(rs.next()) {
-				//¿€æ˜« ø‰
+         ResultSet rs=pstmt.executeQuery();
+         while(rs.next()) {
+            // €æ   ø 
 
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		finally {
-			try {
-				pstmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				
-				e.printStackTrace();
-			}
-		}
-		return datas;
-		
-	}
-	
-	// *¿Œ¡ı ªË¡¶«œ±‚*
-	public boolean deleteV(int v_code) {
-		
-		try {
-			conn=DBConnection.connect();
-			String sql="delete from message where c_code=?";
-			pstmt=conn.prepareStatement(sql);
-			pstmt.setInt(1, v_code);
-			pstmt.executeUpdate();
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-			return false;
-		}
-		finally {
-			try {
-				pstmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return true;
-		
-	}
-	
-	
-	
-	
+         }
+      } catch (SQLException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
+      finally {
+         try {
+            pstmt.close();
+            conn.close();
+         } catch (SQLException e) {
+            
+            e.printStackTrace();
+         }
+      }
+      return datas;
+      
+   }
+   
+   // *          œ± *
+   public boolean deleteV(int v_code) {
+      
+      try {
+         conn=DBConnection.connect();
+         String sql="delete from message where c_code=?";
+         pstmt=conn.prepareStatement(sql);
+         pstmt.setInt(1, v_code);
+         pstmt.executeUpdate();
+      }
+      catch(Exception e) {
+         e.printStackTrace();
+         return false;
+      }
+      finally {
+         try {
+            pstmt.close();
+            conn.close();
+         } catch (SQLException e) {
+            e.printStackTrace();
+         }
+      }
+      return true;
+      
+   }
+   
+   
+   
 
 }

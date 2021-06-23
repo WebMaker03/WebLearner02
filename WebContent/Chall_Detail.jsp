@@ -27,7 +27,7 @@
 
                </div>
                <div class="row">
-                  <img id=challenge_img src="https://i.imgur.com/kXUgBQZ.jpg" /><br>
+                  <img id=challenge_img src= "images/${challenge.theme}/${challenge.img}" /><br>
                   <div class="col">
                      <div class="row">
                         <div class="card" id="chell_info">
@@ -58,13 +58,12 @@
                <hr id="line">
                <div class="card-body">
                   <p class="text-muted">챌린지 정보</p>
-                  <div class="challenge_info mb-3"></div>
-                  <div class="challenge_info mb-3"></div>
+                  <div class="challenge_info mb-3">${challenge.info}</div>
 
                </div>
                <hr id="line">
                <div class="buttons">
-                  <button type="button" class="btn btn-primary">참가하기</button>
+                  <a class="btn btn-primary" href="startchal.ch?c_code=${challenge.c_code}&u_code=${session_user.u_code}">참가하기</a>
                   <a class="btn btn-primary" href="#" role="button">Cancel</a>
                </div>
             </div>

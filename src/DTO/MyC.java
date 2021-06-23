@@ -8,13 +8,13 @@ public class MyC {
 	private String startD;
 	private String finishD;
 	private int achievementPercentage;
-	// 수정사항 : fee, period 변수 삭제
+	private String img;
 	
 	
 	public MyC() {;}
 	
 	public MyC(int mc_code, int c_code, int u_code, boolean state, String startD, String finishD,
-			int achievementPercentage) {
+			int achievementPercentage, String img) {
 		this.mc_code = mc_code;
 		this.c_code = c_code;
 		this.u_code = u_code;
@@ -22,6 +22,7 @@ public class MyC {
 		this.startD = startD;
 		this.finishD = finishD;
 		this.achievementPercentage = achievementPercentage;
+		this.img = img;
 	}
 
 	//getter, setter
@@ -67,5 +68,14 @@ public class MyC {
 	public void setAchievementPercentage(int achievementPercentage) {
 		this.achievementPercentage = achievementPercentage;
 	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+	
 	
 }

@@ -1,10 +1,12 @@
+create database codelearner2;
 use codelearner2;
 
-/* create문 */
+/* create 문 */
+
 CREATE TABLE `users` (
   `u_code` int PRIMARY KEY AUTO_INCREMENT,
-  `usersid` varchar(255) NOT NULL,
-  `userspw` varchar(255) NOT NULL,
+  `userid` varchar(255) NOT NULL,
+  `userpw` varchar(255) NOT NULL,
   `u_name` varchar(255) NOT NULL,
   `age` int NOT NULL,
   `point` int DEFAULT 5000,
@@ -18,14 +20,14 @@ CREATE TABLE `challenges` (
   `fee` int default 100,
   `period` int default 14,
   `img` varchar(255),
-  `info` varchar(255) NOT null
+  `info` varchar(500) NOT null
 );
 
 CREATE TABLE `myC` (
   `mc_code` int PRIMARY KEY AUTO_INCREMENT,
   `c_code` int NOT NULL,
   `u_code` int NOT NULL,
-  `state` boolean NOT NULL, /* 진행 1, 종료 0*/
+  `state` boolean NOT NULL, /* 진행 1, 끝난거 0*/
   `startD` datetime NOT NULL,
   `finishD` datetime NOT NULL,
   `achievementPercentage` int NOT NULL,
@@ -38,8 +40,8 @@ CREATE TABLE `verification` (
   `v_code` int PRIMARY KEY AUTO_INCREMENT,
   `u_code` int NOT NULL,
   `mc_code` int NOT NULL,
+  `v_date` date NOT NULL,
   `v_text` varchar(500) NOT NULL,
-  `v_img` varchar(255) ,
   `rating` int default 3,
   foreign key(u_code) references users(u_code) on delete cascade,
   foreign key(mc_code) references myC(mc_code) on delete cascade
@@ -55,6 +57,7 @@ CREATE TABLE `post` (
   `p_code` int PRIMARY KEY AUTO_INCREMENT,
   `u_code` int NOT NULL,
   `b_code` int NOT NULL,
+  `p_title` varchar(300) NOT NULL,
   `p_text` varchar(500),
   foreign key(u_code) references users(u_code) on delete cascade,
   foreign key(b_code) references board(b_code) on delete cascade
