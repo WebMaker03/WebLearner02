@@ -26,7 +26,7 @@
            <tag:chal_board></tag:chal_board>
            
            <!-- 임시 게시글 등록 버튼 -->
-           <input type="button" value="게시글 등록" onClick="location.href='newPost.bo'">
+           <input type="button" value="게시글 등록" onClick="location.href='newPost.bo?c_code=${c_code}'">
         </div>
     </div>
 </div>

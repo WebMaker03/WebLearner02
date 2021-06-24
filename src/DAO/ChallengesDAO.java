@@ -365,5 +365,44 @@ public class ChallengesDAO {
 		}
 		return false;
 	}
+	
+	
+	// MyC 하나 받아오는 메서드
+	public MyC getMyc(int u_code, int c_code) {
+		MyC mc = new MyC();
+		try {
+			conn = DBConnection.connect();
+			String sql = "select * from MyC where u_code=? and c_code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, c_code);
+			pstmt.setInt(2, u_code);
+
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+
+				mc.setC_code(rs.getInt("c_code"));
+				mc.setU_code(rs.getInt("u_code"));
+				mc.setState(rs.getBoolean("state"));
+				mc.setStartD(rs.getString("startD"));
+				mc.setFinishD(rs.getString("finishD"));
+				mc.setAchievementPercentage(rs.getInt("aschievementPercentage"));
+				mc.setImg(rs.getString("img"));
+
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return mc;
+
+	}
 
 }
