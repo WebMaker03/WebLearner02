@@ -38,8 +38,7 @@
 										<div class="mt-4">
 											<div class="cardP">현재 포인트는 ${session_user.point}P입니다.</div>
 											<div class="px-3">
-												<button type="button"
-													class="btn btn-primary disabled btn-block"
+												<button type="button" class="btn btn-primary disabled btn-block"
 													style="margin-left: 35px; width: 350px; font-size: 20px;">Point
 													recharge</button>
 											</div>
@@ -60,8 +59,7 @@
 									</div>
 									<div class="mt-4">
 										<div class="px-3">
-											<button type="button" href = "WEB-INF/InfoModify.jsp" 
-												class="btn btn-primary disabled btn-block"
+											<button type="button" class="btn btn-primary disabled btn-block"
 												style="font-size: 18px;">Change Info</button>
 										</div>
 									</div>

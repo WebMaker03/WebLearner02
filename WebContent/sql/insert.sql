@@ -1,14 +1,15 @@
 
+
 use codelearner2;
 
 /* 가상데이터 insert */
 
 /*users 테이블*/
-insert into users(userid, userpw, u_name, age, email) values('hong', 'a1234567', '홍길동', 20, 'email1@gmail.com');
-insert into users(userid, userpw, u_name, age, email) values('lim', 'a1234567', '임꺽정', 30, 'email2@gmail.com');
 insert into users(userid, userpw, u_name, age, email) values('kim', 'a1234567', '김유저', 15, 'email3@gmail.com');
-select * from users;
+insert into users(userid, userpw, u_name, age, email) values('hong', 'a1234567', '홍길동', 20,'email1@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('lim', 'a1234567', '임꺽정', 30, 'email2@gmail.com');
 
+select * from users;
 
 /* challenges 테이블 */
 /* 공부 */
@@ -53,39 +54,58 @@ select * from challenges;
 
 /* myC 테이블 */
 
+/* 진행중챌린지*/
+insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(1, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 50, '공부1.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(2, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 60, '공부5.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(3, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 70, '공부6.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(4, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 80, '공부2.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(5, 1, true, '2021-06-15 00:00:00','2021-06-30 00:00:00', 50, '공부3.jpg');
+
+insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(2, 1, true , '2021-06-01 00:00:00', '2021-06-30 00:00:00', 60, '챌린지사진5');
+insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(3, 3, true ,'2021-06-15 00:00:00', '2021-06-30 00:00:00', 70, '챌린지사진6');
+
 /* 끝난챌린지*/
 insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(1, 1, true, '2021-05-17 00:00:00','2021-05-31 00:00:00', 50, '챌린지사진1');
 insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(2, 2, true , '2021-05-01 00:00:00', '2021-05-31 00:00:00', 60, '챌린지사진2');
 insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(3, 3, true ,'2021-05-17 00:00:00', '2021-05-31 00:00:00', 70, '챌린지사진3');
 
-/* 진행중챌린지*/
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(1, 1, true, '2021-06-05 00:00:00','2021-06-20 00:00:00', 50, '챌린지사진4');
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(2, 2, true , '2021-06-01 00:00:00', '2021-07-01 00:00:00', 60, '챌린지사진5');
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(3, 3, true ,'2021-06-15 00:00:00', '2021-06-20 00:00:00', 70, '챌린지사진6');
 
 select * from myC;
 
-
 /* verification 테이블*/
-insert into verification(u_code, mc_code, v_date ,v_text) values(1, 1, '2021-06-17','인증텍스트1');
-insert into verification(u_code, mc_code, v_date ,v_text) values(2, 2, '2021-06-17','인증텍스트2');
-insert into verification(u_code, mc_code, v_date ,v_text) values(3, 3, '2021-06-17','인증텍스트3');
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 1, '2021-06-17','인증텍스트1', 4);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 1, '2021-06-18','인증텍스트2', 1);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 2, '2021-06-23','인증텍스트3', 5);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 3, '2021-06-22','인증텍스트4', 2);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 4, '2021-06-21','인증텍스트5', 3);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 5, '2021-06-20','인증텍스트6', 2);
+
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(2, 2, '2021-06-17','인증텍스트', 1);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(3, 3, '2021-06-17','인증텍스트', 5);
 select * from verification;
 
 
-/* board, post, comments*/
-insert into board (c_code) values(1);
-insert into board (c_code) values(2);
-insert into board (c_code) values(3);
-insert into board (c_code) values(4);
-select* from board;
+/* post, comments*/
 
-insert into post (u_code,b_code, p_title,p_text) values(1,1,'게시물제목1','게시물1');
-insert into post (u_code,b_code, p_title,p_text) values(2,2,'게시물제목2','게시물2');
-insert into post (u_code,b_code, p_title,p_text) values(3,3,'게시물제목3','게시물3');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'게시물1','포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'게시물2','포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'게시물3','포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'게시물4','포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'게시물5','포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'게시물6','포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용');
+
+insert into post (u_code, c_code, p_title,p_text) values(2,1,'게시물제목7','포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용포스트내용');
+insert into post (u_code, c_code, p_title,p_text) values(3,3,'게시물제목3','게시물3');
 select* from post;
 
-insert into comments (u_code,p_code,cm_text) values(1,1,'댓글1');
-insert into comments (u_code,p_code,cm_text) values(2,2,'댓글2');
+insert into comments (u_code,p_code,cm_text) values(1,1,'1번 포스트 유저1 댓글1');
+insert into comments (u_code,p_code,cm_text) values(2,1,'1번 포스트 유저2 댓글2');
+insert into comments (u_code,p_code,cm_text) values(2,1,'1번 포스트 유저2 댓글3');
+insert into comments (u_code,p_code,cm_text) values(1,1,'1번 포스트 유저1 댓글4');
+
+insert into comments (u_code,p_code,cm_text) values(1,2,'2번 포스트 유저1 댓글1');
+insert into comments (u_code,p_code,cm_text) values(1,2,'2번 포스트 유저1 댓글2');
+
 insert into comments (u_code,p_code,cm_text) values(3,3,'댓글3');
+
 select* from comments;
