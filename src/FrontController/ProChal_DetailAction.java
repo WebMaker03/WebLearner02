@@ -24,7 +24,7 @@ public class ProChal_DetailAction implements Action{
          
          ChallengesDAO cdao = new ChallengesDAO();
          Challenges ch = cdao.getonechal(c_code);
-         request.setAttribute("pro_chal_D",ch);
+         request.setAttribute("pro_chal_c",ch);
          
          HttpSession session = request.getSession();
  		 Users user = (Users)session.getAttribute("session_user");
