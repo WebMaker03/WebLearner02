@@ -1,7 +1,6 @@
 <%@page import="DTO.Post"%>
 <%@page import="DTO.MyC"%>
 <%@page import="DTO.Comments"%>
-<%@page import="DTO.Board"%>
 <%@page import="DAO.BoardDAO"%>
 <%@page import="DTO.Challenges"%>
 <%@page import="java.util.ArrayList"%>

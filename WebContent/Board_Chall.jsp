@@ -24,6 +24,9 @@
         <div class="card-group-control card-group-control-right">
             
            <tag:chal_board></tag:chal_board>
+           
+           <!-- 임시 게시글 등록 버튼 -->
+           <input type="button" value="게시글 등록" onClick="location.href='newPost.bo'">
         </div>
     </div>
 </div>
