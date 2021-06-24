@@ -437,13 +437,13 @@ public class ChallengesDAO {
 	}
 
 	
-	public MyC callMyC(int c_code) {
+	public MyC callMyC(int mc_code) {
 		MyC mc = new MyC();
 		try {
 			conn = DBConnection.connect();
-			String sql = "select * from MyC where c_code=?";
+			String sql = "select * from MyC where mc_code=?";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, c_code);
+			pstmt.setInt(1, mc_code);
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
