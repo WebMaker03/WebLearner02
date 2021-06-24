@@ -13,14 +13,11 @@ button {
 	color:white;
 }
 
-
-
 .card {
 	background-color: #C2E0F4;
 	color: black;
-	border: none;
 	border-radius: 10px;
-	box-shadow: 5px 6px 6px 2px #e9ecef;
+	box-shadow: 5px 6px 6px 2px #98c1e7;
 
 	margin-bottom: 40px;
 	margin-left: 13%;
