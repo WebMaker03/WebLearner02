@@ -64,7 +64,7 @@
 
 						<button name="next" id="next1"
 							class="btn btn-success rounded-0 mb-5 next"
-							style="margin-top: 70px">home</button>
+							style="margin-top: 70px"><a  href = "main.jsp">home</a></button>
 					</div>
 				</div>
 

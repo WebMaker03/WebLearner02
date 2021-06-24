@@ -48,14 +48,14 @@
 									<li class="nav-item"><a class="nav-link" href="board.jsp">전체
 											게시판</a></li>
 								</ul>
-								<!-- 로그인 유무에 따라 헤더가 다르게 들어감 -->
-								<test:header></test:header>
 
 							</div>
+
+
 						</nav>
 					</div>
-					<!--  -->
-
+					<!-- 로그인 유무에 따라 헤더가 다르게 들어감 -->
+					<test:header></test:header>
 
 				</div>
 			</div>
