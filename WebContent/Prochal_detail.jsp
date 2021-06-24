@@ -2,6 +2,7 @@
 <%@page import="DTO.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +27,7 @@
          <div class="row" style="margin-top: 30px; margin-left: 100px;">
             <div class="col-12 col-md-7">
                <h2 id="start_title">
-                  <strong>[ 진행 중 챌린지 상세보기 ]</strong>
+                  <strong>[  ${pro_chal_m.mc_code}]</strong>
                </h2>
                <!-- 챌린지 상세보기 카드 -->
                <div class="card p-3" id="prochal_card">
@@ -36,21 +37,21 @@
                      </div>
                      <div class="col-12 col-md-7 py-2 px-3">
                         <span id="challenge_title"> <i class="fa fa-hashtag"
-                           aria-hidden="true"></i></i> &nbsp 챌린지 이름
+                           aria-hidden="true"></i></i> &nbsp ${pro_chal_c.c_name}
                         </span>
                         <p class="font-weight-bold my-2">June 26</p>
-                        <h6 class="mb-3">Introducing iPhone XS, iPhone XS Max and
+                        <h6>${pro_chal_D.info}</h6>
+                      <!--   <h6 class="mb-3">Introducing iPhone XS, iPhone XS Max and
                            iPhone XR - Apple</h6>
                         <p>iPhone XS impresses with its screen - 5.8 inch OLED
                            display Super Retina opens new frontiers of the virtual world,
-                           increased area, brightness and depth - this is...</p>
+                           increased area, brightness and depth - this is...</p> -->
                         <div class="d-flex mt-2 mb-3">
                            <!-- <button class="btn">오늘 인증하기!</button> -->
                            <button type="button" class="btn btn-danger"
                               data-toggle="modal" data-target="#modalBox">인증하기</button>
 
-                           <button type="button" class="btn btn-danger"
-                              data-toggle="modal" style="margin-left: 10px" id="btn_b">게시판가기</button>
+                           <button type="button" class="btn btn-danger" onClick="location.href='goBoard.bo?c_code=${pro_chal_c.c_code}'" style="margin-left: 10px" id="btn_b">게시판가기</button>
                         </div>
                      </div>
                   </div>
@@ -84,36 +85,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>21.6.21</td>
-                                        <td>1</td>
-                                     
-                                        <td><button type="button" class="badge badge-danger" id="ca2_btn1">상세보기</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21.6.20</td>
-                                        <td>5</td>
-                                        
-                                        <td><button type="button" class="badge badge-success" id="ca2_btn2">상세보기</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21.6.18</td>
-                                        <td>3</td>
-                                  
-                                        <td><button type="button" class="badge badge-bar" id="ca2_btn3">상세보기</button></td>
-                                    </tr>
-                                    <tr>
-                                       <td>21.6.16</td>
-                                        <td>4</td>
-                    
-                                        <td><button type="button" class="badge badge-info" id="ca2_btn4">상세보기</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21.5.10</td>
-                                        <td>2</td>
-                    
-                                        <td><button type="button" class="badge badge-warning" id="ca2_btn5">상세보기</button></td>
-                                    </tr>
+                                    <tag:showV></tag:showV>
                                 </tbody>
                             </table>
                         </div>
@@ -235,5 +207,4 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 </html>

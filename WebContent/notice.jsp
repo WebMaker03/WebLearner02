@@ -19,12 +19,12 @@
 	<div class="container-fluid px-1 py-5 mx-auto">
 		<div class="row d-flex justify-content-center text-center">
 			<div class="col-lg-9 col-md-10" style="margin-top: 170px">
-				<div class="card b-0 rounded-0 show">
+				<div class="center" style="border: #7BBBD6 solid 3px; box-shadow: 0px 0px 0px 0px; border-radius: 10px; background-color:#ffffff">
 					<div class="row justify-content-center mx-auto step-container">
 						<div class="col-md-12 col-4 step-box active" id="main1">
 							<h6 class="step-title-0" style="margin-top:10px">
-								<span class="fa fa-circle"></span> <span class="break-line"></span>
-								<span class="step-title" id="tkdlxm1"  >사이트 사용방법 안내</span>
+								<span class="fa fa-circle" style="color : #C3EAF1"></span> <span class="break-line"></span>
+								<span class="sstep-title" id="tkdlxm1"  >사이트 사용방법 안내</span>
 							</h6>
 						</div>
 
@@ -64,7 +64,7 @@
 
 
 						<button name="next" id="next1"
-							class="btn btn-success rounded-0 mb-5 next"
+							class="button"
 							style="margin-top: 70px">home</button>
 					</div>
 				</div>

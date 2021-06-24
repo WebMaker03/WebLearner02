@@ -3,17 +3,17 @@ package DTO;
 public class Post {
 	private int p_code;
 	private int u_code;
-	private int b_code;
+	private int c_code;
 	private String p_title;
 	private String p_text;
 	
 	
 	public Post() {;}
 	
-	public Post(int p_code, int u_code, int b_code, String p_title, String p_text) {
+	public Post(int p_code, int u_code, int c_code, String p_title, String p_text) {
 		this.p_code = p_code;
 		this.u_code = u_code;
-		this.b_code = b_code;
+		this.c_code = c_code;
 		this.p_title = p_title;
 		this.p_text = p_text;
 	}
@@ -32,11 +32,11 @@ public class Post {
 	public void setU_code(int u_code) {
 		this.u_code = u_code;
 	}
-	public int getB_code() {
-		return b_code;
+	public int getC_code() {
+		return c_code;
 	}
-	public void setB_code(int b_code) {
-		this.b_code = b_code;
+	public void setC_code(int c_code) {
+		this.c_code = c_code;
 	}
 	public String getP_text() {
 		return p_text;

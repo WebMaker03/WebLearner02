@@ -28,7 +28,7 @@ public class submitVerificationAction implements Action {
 //      ver.setU_code(user.getU_code());
       ver.setU_code(1);
       ver.setMc_code(3);
-      // ÀÌ µÎ°³ ¾îµð¼­ ¹Þ¾Æ¿Ã±î...
+      // ï¿½ï¿½ ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¿Ã±ï¿½...
       ver.setRating(v_rating);
       ver.setV_text(v_review);
       

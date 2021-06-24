@@ -13,11 +13,11 @@
 					<div class="carousel-caption we1_do">
 						<div class="row">
 							<div class="col-md-4">
-								<div id="bo_ho" class="we_box text_align_left">
-									<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
+								<div id="bo_hoo" class="we_boxx text_align_left">
+									<i><img src="images/${v.theme}/${v.img}" id="im" alt="#" /></i>
 									<h3>${v.c_name}</h3>
 									<p>${v.info }</p>
-									<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
+									<a class="read_moree" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
 								</div>
 							</div>
 						</div>
@@ -33,11 +33,11 @@
 					<div class="carousel-caption we1_do">
 						<div class="row">
 							<div class="col-md-4">
-								<div id="bo_ho" class="we_box text_align_left">
-									<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
+								<div id="bo_hoo" class="we_boxx text_align_left">
+									<i><img src="images/${v.theme}/${v.img}" id="im" alt="#" /></i>
 									<h3>${v.c_name}</h3>
 									<p>${v.info }</p>
-									<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
+									<a class="read_moree" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
 								</div>
 							</div>
 		</c:when>
@@ -48,11 +48,11 @@
 					<div class="carousel-caption we1_do">
 						<div class="row">
 							<div class="col-md-4">
-								<div id="bo_ho" class="we_box text_align_left">
-									<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
+								<div id="bo_hoo" class="we_boxx text_align_left">
+									<i><img src="images/${v.theme}/${v.img}" id="im" alt="#" /></i>
 									<h3>${v.c_name}</h3>
 									<p>${v.info }</p>
-									<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
+									<a class="read_moree" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
 								</div>
 							</div>
 		</c:when>
@@ -63,11 +63,11 @@
 					<div class="carousel-caption we1_do">
 						<div class="row">
 							<div class="col-md-4">
-								<div id="bo_ho" class="we_box text_align_left">
-									<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
+								<div id="bo_hoo" class="we_boxx text_align_left">
+									<i><img src="images/${v.theme}/${v.img}" id="im" alt="#" /></i>
 									<h3>${v.c_name}</h3>
 									<p>${v.info }</p>
-									<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
+									<a class="read_moree" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
 								</div>
 							</div>
 						</div>
@@ -79,11 +79,11 @@
 		<c:when test="${status.index %3 ne 2 and status.last}">
 			<!--3개 다 안찼는데 마지막이 경우(닫아줘야함.)-->
 			<div class="col-md-4">
-				<div id="bo_ho" class="we_box text_align_left">
-					<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
+				<div id="bo_hoo" class="we_boxx text_align_left">
+					<i><img src="images/${v.theme}/${v.img}" id="im" alt="#" /></i>
 					<h3>${v.c_name}</h3>
 					<p>${v.info }</p>
-					<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
+					<a class="read_moree" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
 				</div>
 			</div>
 			</div>
@@ -93,22 +93,22 @@
 		</c:when>
 		<c:when test="${status.index %3 ne 2}">
 			<div class="col-md-4">
-				<div id="bo_ho" class="we_box text_align_left">
-					<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
+				<div id="bo_hoo" class="we_boxx text_align_left">
+					<i><img src="images/${v.theme}/${v.img}" id="im" alt="#" /></i>
 					<h3>${v.c_name}</h3>
 					<p>${v.info }</p>
-					<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
+					<a class="read_moree" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
 				</div>
 			</div>
 		</c:when>
 		<c:when test="${status.index %3 eq 2}">
 			<!--  마지막인 경우-->
 			<div class="col-md-4">
-				<div id="bo_ho" class="we_box text_align_left">
-					<i><img src="images/${v.theme}/${v.img}"  alt="#" /></i>
+				<div id="bo_hoo" class="we_boxx text_align_left">
+					<i><img src="images/${v.theme}/${v.img}" id="im" alt="#" /></i>
 					<h3>${v.c_name}</h3>
 					<p>${v.info}</p>
-					<a class="read_more" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
+					<a class="read_moree" href="showchal.ch?chalCode=${v.c_code}">Read More</a>
 				</div>
 			</div>
 			</div>

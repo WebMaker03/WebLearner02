@@ -78,6 +78,22 @@ public class ChallengeController extends HttpServlet {
     		  e.printStackTrace();
     	  }
     	  
+      }else if(action.equals("/prochal_detail.ch")) {
+    	  try {
+    		  System.out.println("진행중 챌린지 상세보기 페이지 전환");
+    		  forward = new ProChal_DetailAction().execute(request, response);
+    	  } catch (Exception e) {
+    		  e.printStackTrace();
+    	  }
+    	  
+      }else if(action.equals("/goBoard.ch")) {
+    	  try {
+    		  System.out.println("진행중 챌린지 게시판 페이지 전환");
+    		  forward = new goBoardAction().execute(request, response);
+    	  } catch (Exception e) {
+    		  e.printStackTrace();
+    	  }
+    	  
       }
       
       else {

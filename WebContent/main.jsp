@@ -50,7 +50,7 @@
 								<div class="carousel-caption relative">
 									<div class="bluid">
 										<h1 id="inslide_title">
-										Welcome <br>
+										Welcome to<br>
 											<span style="font-style: oblique; color: blue;">C</span>hallenge
 											<span style="font-style: oblique; color: blue;">R</span>unner
 										</h1>
