@@ -49,7 +49,6 @@ public class BoardController extends HttpServlet {
 	      
 	      if (action.equals("/goBoard.bo")) { 
 	         try {
-	        	System.out.println("게시판 세팅 bo");
 	            forward = new goBoardAction().execute(request, response);
 	         } catch (Exception e) {
 	            e.printStackTrace();
@@ -58,14 +57,12 @@ public class BoardController extends HttpServlet {
 
 	      }else if (action.equals("/editBoard.bo")) {
 	    	  try {
-	    		  System.out.println("보드 수정하기");
 	    		  forward = new EditBoardAction().execute(request, response);
 	    	  }catch(Exception e) {
 	    		  e.printStackTrace();
 	    	  }
 	      }else if (action.equals("/deleteBoard.bo")) {
 	    	  try {
-	    		  System.out.println("보드 삭제하기");
 	    		  forward = new DeleteBoardAction().execute(request, response);
 	    		  
 	    	  }catch(Exception e) {
@@ -74,8 +71,17 @@ public class BoardController extends HttpServlet {
 
 	      } else if(action.equals("/newPost.bo")) {
 	    	  try {
-		        	System.out.println("게시글 작성하기 bo");
+		        	System.out.println("새로운 게시글 작성");
 		            forward = new newPostAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	      }
+	    	  
+	       else if(action.equals("/addPost.bo")) {
+	    	  try {
+		        	System.out.println("새로운 게시글 등록");
+		            forward = new AddPostAction().execute(request, response);
 		         } catch (Exception e) {
 		            e.printStackTrace();
 		         }
@@ -93,7 +99,7 @@ public class BoardController extends HttpServlet {
 	         if (forward.isRedirect()) {
 	            response.sendRedirect(forward.getPath());
 	         } else {
-	            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  �� �   ��
+	            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  占쏙옙 占�   占쏙옙
 	            dispatcher.forward(request, response);
 	         }
 	      }
