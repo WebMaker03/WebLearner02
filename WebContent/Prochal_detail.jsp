@@ -45,8 +45,9 @@
                         <p class="font-weight-bold my-2">챌린지 소개 : ${pro_chal_c.info}</p>
                      	 <hr>
                         <div class="d-flex mt-2 mb-3">
-                           <button type="button" class="btn btn-danger" 
-                              data-toggle="modal" data-target="#modalBox">인증하기</button>
+
+                           <!-- <button class="btn">오늘 인증하기!</button> -->
+                           <tag:checkV></tag:checkV>
 
                            <button type="button" class="btn btn-danger" onClick="location.href='goBoard.bo?c_code=${pro_chal_c.c_code}'" style="margin-left: 10px" id="btn_b">게시판가기</button>
                         </div>
