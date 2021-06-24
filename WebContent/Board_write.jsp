@@ -32,7 +32,6 @@
 					</div>
 				</div>
 				<hr>
-				
 				<textarea class="form-control" id="form_c" required rows="1" name="p_title" placeholder="제목을 입력하세요!"></textarea>
 				<div class="row px-3 form-group">
 					<textarea class="text-muted bg-light mt-4 mb-3"
@@ -40,9 +39,6 @@
 						style="font-size: 20px; height: 500px;" ></textarea>
 				</div>
 				<input type="hidden" name= "c_code" value="${Chal.c_code}">
-				
-				  
-				
 				<div class="row px-3">
 				<input type="submit"/>
 				<!--  <button class="btn btn-success send px-5" id="submitBtn" > -->

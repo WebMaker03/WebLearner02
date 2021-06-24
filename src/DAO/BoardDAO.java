@@ -74,7 +74,6 @@ public class BoardDAO {
 		}
 		return datas;
 	}
-	// �ش�ç������ �Խù� ����
 	public ArrayList<Post> c_b_all(int u_code, int c_code){
 		ArrayList<Post> datas = new ArrayList();
 		try {
@@ -111,6 +110,7 @@ public class BoardDAO {
 		return datas;
 		
 	}
+
 	
 	public Post getOneP(int p_code) {
 		
@@ -149,14 +149,12 @@ public class BoardDAO {
 		return p;
 		}
 	}
-	
-	// * �Խñ� ��� *
+
 	public boolean insertP(Post p) {
 		try {
 			conn = DBConnection.connect();
 			String sql = "insert into post (u_code, c_code, p_title, p_text) values(?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
-
 			pstmt.setInt(1, p.getU_code());
 			pstmt.setInt(2, p.getC_code());
 			pstmt.setString(3, p.getP_title());
@@ -177,7 +175,6 @@ public class BoardDAO {
 		return true;
 	}
 
-	// * �Խñ� ���� ���� * // 
 	public boolean updateP_title(String p_title, int p_code) {
 		try {
 			conn = DBConnection.connect();
@@ -201,7 +198,7 @@ public class BoardDAO {
 		
 		return true;
 	}
-	// �Խù� ���� ����
+
 	public boolean updateP_text(String p_text, int p_code) {
 		try {
 			conn = DBConnection.connect();
@@ -279,7 +276,6 @@ public class BoardDAO {
 		return cnt;
 	}
 
-	// ��� ����
 	public int cntCM(int p_code) {
 		int cnt=0;
 		try {
@@ -333,7 +329,6 @@ public class BoardDAO {
 		return true;
 	}
 
-	// * ��� ���� *
 	public boolean delCM(int cm_code) {
 		try {
 			conn = DBConnection.connect();

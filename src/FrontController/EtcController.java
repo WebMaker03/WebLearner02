@@ -55,6 +55,7 @@ public class EtcController extends HttpServlet {
       String uri = request.getRequestURI();
       String cp = request.getContextPath();
       String action = uri.substring(cp.length());
+      response.setContentType("text/html;charset=UTF-8");
       ActionForward forward = null;
 
       if (action.equals("/start.etc")) {
