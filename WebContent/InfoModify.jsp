@@ -24,16 +24,23 @@
 <body>
 
 
-	<div class="container_join">
-		<div class="d-flex justify-content-center">
-			<form class="sign-up" method="post" action="signup.do">
-				<h2 class="heading mb-6" id="signupTitle">회원정보 수정</h2>
-				<!--  ID -->
-				<div class="form-group fone mt-5">
-					<div class="input-group is-invalid">
-						<div class="input-group-prepend">
-							<span class="input-group-text" id="InputArea"
-								style="width: 120px;">ID</span>
+
+	<div class="theme">
+		<div class="container1"
+			style="margin-top: 100px; margin-bottom: 30px;">
+			<h2 style="font-size: 40px;">
+				<strong>회원정보 수정</strong>
+			</h2>
+			<br>
+			<div class="padding container d-flex justify-content-center">
+				<div class="col-md-10 col-md-offset-1">
+					<form class="signup-form">
+						<h2 class="text-center">Change Information</h2>
+						<hr>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Name"
+								required="required">
+
 						</div>
 						<input type="text" class="form-control is-invalid" maxlength="20"
 							placeholder="ID를 입력하세요" aria-describedby="InputArea" required
