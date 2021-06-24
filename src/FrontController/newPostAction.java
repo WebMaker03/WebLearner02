@@ -32,7 +32,7 @@ public class newPostAction implements Action{
         
         ChallengesDAO cdao = new ChallengesDAO();
         
-        MyC mc = cdao.getMyc(user.getU_code(), c_code);
+        MyC mc = cdao.callMyC(user.getU_code(), c_code);
         request.setAttribute("MyC", mc);
         
         
