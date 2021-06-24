@@ -409,6 +409,45 @@ public class ChallengesDAO {
 
 	}
 
+	
+	public MyC callMyC(int c_code) {
+		MyC mc = new MyC();
+		try {
+			conn = DBConnection.connect();
+			String sql = "select * from MyC where c_code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, c_code);
+
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				mc.setC_code(rs.getInt("c_code"));
+				mc.setU_code(rs.getInt("u_code"));
+				mc.setState(rs.getBoolean("state"));
+				mc.setStartD(rs.getString("startD"));
+				mc.setFinishD(rs.getString("finishD"));
+				mc.setAchievementPercentage(rs.getInt("aschievementPercentage"));
+				mc.setImg(rs.getString("img"));
+
+
+
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return mc;
+
+	}
+	
 
 	
 	
