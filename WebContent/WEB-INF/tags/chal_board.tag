@@ -9,7 +9,7 @@
 				<a class="text-muted text-uppercase" data-toggle="collapse"
 					href="#question1" style="font-size: 25px;"><i
 					class="fa fa-hand-o-right mr-2 mt-0-20 pull-left"
-					aria-hidden="true"></i>${v.p_title} <i
+					aria-hidden="true"></i><a href="Post_Detail.jsp">${v.p_title}</a> <i
 					class="fa fa-minus mr-2 text-slate pull-right" style="float: right;"></i>
 					<input
 					type="button" class="btn btn-default disabled" value="삭제"
@@ -28,7 +28,7 @@
 			<div class="card-body">${v.p_text}</div>
 			<div
 				class="card-footer bg-transparent d-sm-flex align-items-sm-center border-top-0 pt-0">
-				<span class="text-muted">나알 짜</span>
+				<span class="text-muted">작성일</span>
 				<ul class="list-inline text-nowrap mb-0 ml-auto mt-2 mt-sm-0">
 					<li class="list-inline-item"><a href="#"
 						class="text-primary mr-2" data-abc="true"><i
