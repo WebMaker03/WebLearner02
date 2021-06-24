@@ -33,7 +33,6 @@ public class StartChallengeAction implements Action {
 			cdao.updateUserPoint(chFee, u_code);
 			response.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html; charset=UTF-8");
-			
 			out.println("<script>alert('챌린지 가입 성공! 화이팅!!');location.href='calltheme.ch?theme="+ ch.getTheme()+"'</script>");
 			out.flush();
 			
