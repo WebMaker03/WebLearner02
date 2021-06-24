@@ -27,7 +27,7 @@
 			<br>
 			<div class="row">
 				<div class="col">
-					<div class="card p-2 text-center">
+					<div class="card p-2 text-center" id="my">
 						<div class="row">
 							<div class="col-md-7 border-right no-gutters">
 								<div class="py-3">
@@ -38,9 +38,7 @@
 										<div class="mt-4">
 											<div class="cardP">현재 포인트는 ${session_user.point}P입니다.</div>
 											<div class="px-3">
-												<button type="button" class="btn btn-primary disabled btn-block"
-													style="margin-left: 35px; width: 350px; font-size: 20px;">Point
-													recharge</button>
+												<button type="button" class="btn btn-primary disabled btn-block" id="but">Point recharge</button>
 											</div>
 										</div>
 									</div>
@@ -60,7 +58,7 @@
 									<div class="mt-4">
 										<div class="px-3">
 											<button type="button" class="btn btn-primary disabled btn-block"
-												style="font-size: 18px;">Change Info</button>
+												id="butt">Change Info</button>
 										</div>
 									</div>
 								</div>
@@ -70,15 +68,14 @@
 				</div>
 				<div class="col">
 
-					<div class="card"
-						style="width: 300px; height: 355px; margin-left: 100px;">
+					<div class="card"  id="myp">
 						<div class="card-body">
 							<a href="#" class="btn btn-primary disabled"
-								style="margin-top: 30px; margin-left: 40px;"> 작성한 게시글 & 댓글</a><br>
+								id="butto"> 작성한 게시글 & 댓글</a><br>
 							<a href="#" class="btn btn-primary disabled"
-								style="margin-top: 20px; margin-left: 40px;"> 게시글 저장 목록 </a> <br>
+								id="butto"> 게시글 저장 목록 </a> <br>
 							<a href="#" class="btn btn-primary disabled"
-								style="margin-top: 20px; margin-left: 40px;"> 인증현황 보러가기 </a>
+								id="butto"> 인증현황 보러가기 </a>
 						</div>
 					</div>
 
@@ -98,8 +95,8 @@
 							<strong>진행중인 챌린지</strong>
 							<div align="right" style="font-size: 18px;">___개 진행중</div>
 						</caption>
-						<thead>
-							<tr>
+						<thead id="my">
+							<tr >
 								<th scope="col">no.</th>
 								<th scope="col">Title</th>
 								<th scope="col"></th>
@@ -110,7 +107,7 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="col">
+				<div class="col" >
 					<table class="table"
 						style="width: 600px; margin-top: 30px; color: black; text-align: center; background-color: white;">
 						<caption style="font-size: 25px; caption-side: top;">
@@ -118,7 +115,7 @@
 							<div align="right" style="font-size: 18px;">___개 완료</div>
 						</caption>
 
-						<thead>
+						<thead id="my">
 							<tr>
 								<th scope="col">no.</th>
 								<th scope="col">Title</th>

@@ -20,7 +20,7 @@
 	<div class="container px-4 py-5 mx-auto">
 		<h1 id="page_name">[ 게시글 작성하기 ]</h1>
 		<div class="row d-flex justify-content-center">
-			<div class="card" style="border: #7BBBD6 solid;">
+			<div class="card" id="boa">
 				<form>
 				<div class="row px-3">
 					<div class="flex-column">
