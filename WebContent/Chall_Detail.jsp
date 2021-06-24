@@ -64,7 +64,7 @@
                <hr id="line">
                <div class="buttons">
                   <a class="btn btn-primary" href="startchal.ch?c_code=${challenge.c_code}&u_code=${session_user.u_code}">참가하기</a>
-                  <a class="btn btn-primary" href="#" role="button">Cancel</a>
+                  <a class="btn btn-primary" href="#" onclick="history.go(-1)" role="button">Cancel</a>
                </div>
             </div>
          </div>
