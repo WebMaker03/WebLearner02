@@ -146,6 +146,7 @@ public class VerificationDAO {
 	   // 챌린지에서 fee랑 기간 받아오기
 	   // 그걸 나누기해서 업데이트
 	   // 유저포인트에 업데이트
+	   System.out.println("포인트 업데이트");
 	   try {
 		   conn = DBConnection.connect();
 		   String sql = "select * from challenges where c_code=?";
@@ -153,13 +154,11 @@ public class VerificationDAO {
 		   pstmt.setInt(1, c_code);
 		   ResultSet rs = pstmt.executeQuery();
 		   
-		   
 		   Challenges c = new Challenges();
 		   while(rs.next()) {
 			    c.setC_code(rs.getInt("c_code"));
 				c.setFee(rs.getInt("fee"));
 				c.setPeriod(rs.getInt("period"));
-				
 		   }
 		   
 		   int updateP = (int)(c.getFee() / c.getPeriod());

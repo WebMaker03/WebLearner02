@@ -153,6 +153,7 @@
             </div>
          </div>
 
+               <button type="button" class="btn btn-info" id="backBtn" onClick="history.go(-1)">이전 페이지로!</button>
       </div>
 
    </div>
