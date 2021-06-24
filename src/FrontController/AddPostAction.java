@@ -34,14 +34,17 @@ public class AddPostAction implements Action{
 		p.setP_text(request.getParameter("p_text"));
 		
 		if(bdao.insertP(p)) {			
+			System.out.println("ì¸ì„œíŠ¸pì„±ê³µ");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('°Ô½Ã±Û µî·Ï ¼º°ø');location.href='Board_Chall.jsp';</script>");
+			out.println("<script>alert('ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');location.href='Board_Chall.jsp';</script>");
+			
 			out.flush();
 		}else {
+			System.out.println("ì¸ì„œíŠ¸pì‹¤íŒ¨");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('°Ô½Ã±Ûµî·Ï ½ÇÆĞ');location.href='Board_Chall.jsp';</script>");
+			out.println("<script>alert('ï¿½Ô½Ã±Ûµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');location.href='Board_Chall.jsp';</script>");
 			out.flush();
 		}
 		
