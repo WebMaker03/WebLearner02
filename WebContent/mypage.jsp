@@ -63,8 +63,18 @@
 									</div>
 									<div class="mt-4">
 										<div class="px-3">
+											<!--  눌렀을 때 회원수정 페이지로 이동 -->
 											<button type="button" class="btn btn-primary disabled btn-block"
+											onclick="location.href='ChangeInfo.jsp'"
 												style="font-size: 18px;">Change Info</button>
+										</div>
+									</div>
+									<div class="mt-4">
+										<div class="px-3">
+											<!--  눌렀을 때 비밀번호 페이지로 이동 -->
+											<button type="button" class="btn btn-primary disabled btn-block"
+											onclick="location.href='ChangePw.jsp'"
+												style="font-size: 18px;">Change Password</button>
 										</div>
 									</div>
 								</div>
