@@ -115,7 +115,6 @@ public class BoardDAO {
 	// * �Խñ� ��� *
 	public boolean insertP(Post p) {
 		try {
-			System.out.println("BoardDAO 접근");
 			conn = DBConnection.connect();
 			String sql = "insert into post (u_code, c_code, p_title, p_text) values(?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
