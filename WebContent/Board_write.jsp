@@ -43,7 +43,7 @@
 				
 				<div class="row px-3">
 				
-				<button type="button" id="checkbutton" class="btn btn-outline-primary" onClick="location.href='addPost.bo?c_code=${c_code}'">등록하기</button> 
+				<button type="button" id="checkbutton" class="btn btn-outline-primary" onClick="location.href='addPost.bo?c_code=${Chal.c_code}'">등록하기</button> 
 				<button type="button" id="backbutton" class="btn btn-outline-primary">취소하기</button>
 				</div>
 				</form>

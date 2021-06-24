@@ -16,7 +16,7 @@ public class AddPostAction implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		ActionForward forward= new ActionForward(); 
+		ActionForward forward= null; 
 		
 		int c_code = Integer.parseInt(request.getParameter("c_code"));
         System.out.println("c_Code"+ c_code);
@@ -33,8 +33,6 @@ public class AddPostAction implements Action{
 		p.setP_title(request.getParameter("p_title"));
 		p.setP_text(request.getParameter("p_text"));
 		
-	request.getSession().setAttribute("newPost", "게시글이 등록되었습니다.");
-		
 		if(bdao.insertP(p)) {			
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
@@ -48,9 +46,6 @@ public class AddPostAction implements Action{
 		}
 		
         
-        
-//        forward.setRedirect(true); // 저장하는값이 있으면 false, 없으면 true 
-//        forward.setPath("Board_Chall.jsp");
         return forward;
 	}
 
