@@ -9,9 +9,9 @@
                      <td>${v.c_name}</td>
                      <td>
                         <nav>
-                           <ul class="pager"
+                           <ul class="pager" 
                               style="background-color: #6495ED; margin-left: 25%; width: 150px;">
-                              <li><a href="prochal_detail.ch?c_code=${v.c_code}" style="color: white;">인증보러가기</a></li>
+                              <li><a href="prochal_detail.ch?c_code=${v.c_code}&&mc_code=${pro_chalList[status.index].mc_code}" style="color: white;">인증보러가기</a></li>
                            </ul>
                         </nav>
                      </td>
