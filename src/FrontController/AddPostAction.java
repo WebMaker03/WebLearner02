@@ -36,16 +36,17 @@ public class AddPostAction implements Action{
 
 
 		if(bdao.insertP(p)) {			
-			System.out.println("인서트p성공");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('�Խñ� ��� ����');location.href='Board_Chall.jsp';</script>");
+
+			out.println("<script>alert('게시글 등록 성공');location.href='goBoard.bo?c_code="+c_code+"';</script>");
+			
+
 			out.flush();
 		}else {
-			System.out.println("인서트p실패");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('�Խñ۵�� ����');location.href='Board_Chall.jsp';</script>");
+			out.println("<script>alert('게시글 등록 실패');location.href='goBoard.bo?c_code="+c_code+"';</script>");
 			out.flush();
 		}
 		
