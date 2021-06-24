@@ -14,11 +14,11 @@
 					<input
 					type="button" class="btn btn-default disabled" value="삭제"
 					style="float: right;"
-					onClick="location.href='newPost.bo?c_code=${c_code}'">
+					onClick="location.href='deletePost.bo?p_code=${v.p_code}'">
 					<input
 					type="button" class="btn btn-default disabled" value="수정"
 					style="float: right;"
-					onClick="location.href='newPost.bo?c_code=${c_code}'">
+					onClick="location.href='editPost.bo?c_code=${v.p_code}'">
 				</a>
 			</h6>
 		</div>

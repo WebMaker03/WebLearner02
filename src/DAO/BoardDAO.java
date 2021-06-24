@@ -112,6 +112,44 @@ public class BoardDAO {
 		
 	}
 	
+	public Post getOneP(int p_code) {
+		
+		Post p = new Post();
+		
+		try {
+			conn = DBConnection.connect();
+			String sql = "select * from post where p_code = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, p_code);
+			pstmt.executeQuery();
+			
+			ResultSet rs =pstmt.executeQuery();
+			
+			while(rs.next()) {
+				p.setP_code(rs.getInt("p_code"));
+				p.setU_code(rs.getInt("u_code"));
+				p.setC_code(rs.getInt("c_code"));
+				p.setP_title(rs.getString("p_title"));
+				p.setP_text(rs.getString("p_text"));
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		return p;
+		}
+	}
+	
 	// * �Խñ� ��� *
 	public boolean insertP(Post p) {
 		try {

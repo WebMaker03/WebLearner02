@@ -55,13 +55,13 @@ public class BoardController extends HttpServlet {
 	         }
 
 
-	      }else if (action.equals("/editBoard.bo")) {
+	      }else if (action.equals("/editPost.bo")) {
 	    	  try {
 	    		  forward = new EditBoardAction().execute(request, response);
 	    	  }catch(Exception e) {
 	    		  e.printStackTrace();
 	    	  }
-	      }else if (action.equals("/deleteBoard.bo")) {
+	      }else if (action.equals("/deletePost.bo")) {
 	    	  try {
 	    		  forward = new DeleteBoardAction().execute(request, response);
 	    		  
