@@ -26,7 +26,6 @@ button {
 
 .cardP {
 	color:#1A4C6D;
-
 	width: 350px;
 	height: 60px;
 	font-size: 23px;
@@ -62,4 +61,14 @@ button {
 	margin-left: 15%;
 	max-width: 80%;
 	align-items: center;
+}
+
+#point{
+	margin-bottom : 20px;
+	font-size: 20px;
+	
+}
+#point_d{
+		font-size: 40px;
+	
 }

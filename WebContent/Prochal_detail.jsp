@@ -109,51 +109,13 @@
                      <h6 class="m-0 font-weight-bold text-primary">인증 현황</h6>
                   </div>
                   <div class="card-body" id="card3_body">
-                     <h4 class="font-weight-bold">
-                        별점 1 <span class="float-right">10%</span>
-                     </h4>
-                     <div class="progress mb-4">
-                        <div class="progress-bar bg-danger" role="progressbar"
-                           style="width: 10%" aria-valuenow="10" aria-valuemin="0"
-                           aria-valuemax="100"></div>
-                     </div>
-                     <h4 class="font-weight-bold">
-                        별점 2 <span class="float-right">20%</span>
-                     </h4>
-                     <div class="progress mb-4">
-                        <div class="progress-bar bg-warning" role="progressbar"
-                           style="width: 20%" aria-valuenow="20" aria-valuemin="0"
-                           aria-valuemax="100"></div>
-                     </div>
-                     <h4 class="font-weight-bold">
-                        별점 3 <span class="float-right">20%</span>
-                     </h4>
-                     <div class="progress mb-4">
-                        <div class="progress-bar" role="progressbar" style="width: 20%"
-                           aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                     </div>
-                     <h4 class=" font-weight-bold">
-                        별점 4 <span class="float-right">40%</span>
-                     </h4>
-                     <div class="progress mb-4">
-                        <div class="progress-bar bg-info" role="progressbar"
-                           style="width: 40%" aria-valuenow="40" aria-valuemin="0"
-                           aria-valuemax="100"></div>
-                     </div>
-                     <h4 class=" font-weight-bold">
-                        별점 5 <span class="float-right">10%</span>
-                     </h4>
-                     <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar"
-                           style="width: 10%" aria-valuenow="10" aria-valuemin="0"
-                           aria-valuemax="100"></div>
-                     </div>
+                   <tag:StarV></tag:StarV>
                   </div>
                </div>
             </div>
          </div>
 
-               <button type="button" class="btn btn-info" id="backBtn" onClick="history.go(-1)">이전 페이지로!</button>
+               <button type="button" class="btn btn-info" id="backBtn" onClick="location.href='mypage.etc'">이전 페이지로!</button>
       </div>
 
    </div>

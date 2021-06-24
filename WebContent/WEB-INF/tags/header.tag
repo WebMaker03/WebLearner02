@@ -12,7 +12,7 @@
 	<c:otherwise>
 		<div class="col-md-2 d_none">
 			<ul class="email text_align_right">
-				<li><a href="mypage.etc?userid=${session_user.userid}"> MyPage </a></li> <!-- my페이지 전환 / do로 변경 고려  -->
+				<li><a href="mypage.etc"> MyPage </a></li> <!-- my페이지 전환 / do로 변경 고려  -->
 				<li><a href="logout.do"> Logout </a></li>
 			</ul>
 		</div>

@@ -34,9 +34,11 @@
 									<img src="https://i.imgur.com/hczKIze.jpg" width="100"
 										class="rounded-circle">
 									<h4 class="text-secondary">${session_user.u_name}</h4>
+									<br>
+									<hr>
 									<div class="stats">
 										<div class="mt-4">
-											<div class="cardP">현재 포인트는 ${session_user.point}P입니다.</div>
+										<span id="point">현재 포인트는 </span><span id="point_d">${session_user.point}</span><span id="point">P 입니다.</span>
 											<div class="px-3">
 												<button type="button" class="btn btn-primary disabled btn-block"
 													style="margin-left: 35px; width: 350px; font-size: 20px;">Point
@@ -106,7 +108,7 @@
 						style="width: 600px; margin-top: 30px; margin-bottom: 100px; color: black; text-align: center; background-color: white;">
 						<caption style="font-size: 25px; caption-side: top;">
 							<strong>진행중인 챌린지</strong>
-							<div align="right" style="font-size: 18px;">___개 진행중</div>
+							<span style="font-size: 20px; margin-left:300px; color:red;">${ProChalCnt}개 진행중</span>
 						</caption>
 						<thead>
 							<tr>
@@ -125,7 +127,7 @@
 						style="width: 600px; margin-top: 30px; color: black; text-align: center; background-color: white;">
 						<caption style="font-size: 25px; caption-side: top;">
 							<strong>종료된 챌린지</strong>
-							<div align="right" style="font-size: 18px;">___개 완료</div>
+							<span style="font-size: 20px; margin-left:355px; color:red;">${finChalCnt}개 완료</span>
 						</caption>
 
 						<thead>
