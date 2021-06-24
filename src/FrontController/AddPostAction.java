@@ -16,7 +16,7 @@ public class AddPostAction implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		ActionForward forward= new ActionForward(); 
+		ActionForward forward= null; 
 		
 		int c_code = Integer.parseInt(request.getParameter("c_code"));
         System.out.println("c_Code"+ c_code);
@@ -33,24 +33,22 @@ public class AddPostAction implements Action{
 		p.setP_title(request.getParameter("p_title"));
 		p.setP_text(request.getParameter("p_text"));
 		
-	request.getSession().setAttribute("newPost", "°Ô½Ã±ÛÀÌ µî·ÏµÇ¾ú½À´Ï´Ù.");
-		
 		if(bdao.insertP(p)) {			
+			System.out.println("ì¸ì„œíŠ¸pì„±ê³µ");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('°Ô½Ã±Û µî·Ï ¼º°ø');location.href='Board_Chall.jsp';</script>");
+			out.println("<script>alert('ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');location.href='Board_Chall.jsp';</script>");
+			
 			out.flush();
 		}else {
+			System.out.println("ì¸ì„œíŠ¸pì‹¤íŒ¨");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('°Ô½Ã±Ûµî·Ï ½ÇÆĞ');location.href='Board_Chall.jsp';</script>");
+			out.println("<script>alert('ï¿½Ô½Ã±Ûµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');location.href='Board_Chall.jsp';</script>");
 			out.flush();
 		}
 		
         
-        
-//        forward.setRedirect(true); // ÀúÀåÇÏ´Â°ªÀÌ ÀÖÀ¸¸é false, ¾øÀ¸¸é true 
-//        forward.setPath("Board_Chall.jsp");
         return forward;
 	}
 
