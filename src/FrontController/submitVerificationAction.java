@@ -42,6 +42,8 @@ public class submitVerificationAction implements Action {
       
       vdao.insertV(ver);
       
+      vdao.payback(c_code, user.getU_code());
+      
       forward.setRedirect(false);
       forward.setPath("prochal_detail.ch?c_code="+c_code);
       return forward;

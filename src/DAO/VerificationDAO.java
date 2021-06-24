@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.mysql.cj.xdevapi.PreparableStatement;
+
+import DTO.Challenges;
 import DTO.Verification;
 
 public class VerificationDAO {
@@ -139,6 +142,40 @@ public class VerificationDAO {
 	   return true;
    }
    
+   public boolean payback(int c_code, int u_code){
+	   // 챌린지에서 fee랑 기간 받아오기
+	   // 그걸 나누기해서 업데이트
+	   // 유저포인트에 업데이트
+	   try {
+		   conn = DBConnection.connect();
+		   String sql = "select * from challenges where c_code=?";
+		   pstmt = conn.prepareStatement(sql);
+		   pstmt.setInt(1, c_code);
+		   ResultSet rs = pstmt.executeQuery();
+		   
+		   
+		   Challenges c = new Challenges();
+		   while(rs.next()) {
+			    c.setC_code(rs.getInt("c_code"));
+				c.setFee(rs.getInt("fee"));
+				c.setPeriod(rs.getInt("period"));
+				
+		   }
+		   
+		   int updateP = (int)(c.getFee() / c.getPeriod());
+		   String sql2 = "update users set point = point+? where u_code=?";
+		   PreparedStatement pstmt2=conn.prepareStatement(sql2);
+		   pstmt2.setInt(1, updateP);
+		   pstmt2.setInt(2, u_code);
+		   pstmt2.execute();
+		   
+		   
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	   return true;
+   }
    
    
 
