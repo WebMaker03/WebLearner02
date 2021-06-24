@@ -35,7 +35,7 @@
 			<div class="padding container d-flex justify-content-center">
 				<div class="col-md-10 col-md-offset-1">
 					<form class="signup-form">
-						<h2 class="text-center">Chage Information</h2>
+						<h2 class="text-center">Change Information</h2>
 						<hr>
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Name"

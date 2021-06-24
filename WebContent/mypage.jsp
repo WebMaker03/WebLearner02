@@ -37,7 +37,7 @@
                                        <div class="mt-4">
                                           <div class="cardP">현재 포인트는 ${session_user.point}P입니다.</div>
                                           <div class="px-3">
-                                             <button type="button" class="btn btn-light btn-block"
+                                             <button type="button" class="btn btn-primary disabled btn-block"
                                                 style="margin-left: 35px; width: 350px; font-size: 20px;">Point
                                                 recharge</button>
                                           </div>
@@ -59,8 +59,9 @@
                                     </div>
                                     <div class="mt-4">
                                        <div class="px-3">
-                                          <button type="button" class="btn btn-light btn-block"
-                                             style="font-size: 18px;">Change Info</button>
+                                          <button type="button" class="btn btn-primary disabled btn-block"
+                                             style="font-size: 18px;">
+                                             <a href = "InfoModify.jsp">Change Info</a></button>
                                        </div>
                                     </div>
                                  </div>
@@ -73,11 +74,11 @@
                <div class="card"
                   style="width: 300px; height: 355px; margin-left: 100px;">
                   <div class="card-body">
-                     <a href="#" class="btn btn-light"
+                     <a href="#" class="btn btn-primary disabled"
                         style="margin-top: 30px; margin-left: 40px;"> 작성한 게시글 & 댓글</a><br>
-                     <a href="#" class="btn btn-light"
+                     <a href="#" class="btn btn-primary disabled"
                         style="margin-top: 20px; margin-left: 40px;"> 게시글 저장 목록 </a> <br>
-                     <a href="#" class="btn btn-light"
+                     <a href="#" class="btn btn-primary disabled"
                         style="margin-top: 20px; margin-left: 40px;"> 인증현황 보러가기 </a>
                   </div>
                </div>
