@@ -40,9 +40,6 @@
 						style="font-size: 20px; height: 500px;" ></textarea>
 				</div>
 				<input type="hidden" name= "c_code" value="${Chal.c_code}">
-				
-				  
-				
 				<div class="row px-3">
 				<input type="submit"/>
 				<!--  <button class="btn btn-success send px-5" id="submitBtn" > -->
