@@ -2,6 +2,7 @@ package FrontController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAO.UserDAO;
 import DTO.Users;
@@ -14,24 +15,28 @@ public class UpdateUserAction implements Action {
 		
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
-		Users loginUser = new Users();
-		String pwCheck = "";
-		if(loginUser.getUserpw()== pwCheck) {	
-			newUser.setUserid(request.getParameter("updateName"));
-			newUser.setUserpw(request.getParameter("updateEmail"));
-			newUser.setAge(Integer.parseInt(request.getParameter("updateAge")));
-			newUser.setUserid(loginUser.getUserid());
-			
-			if(udao.updateUser(newUser)) {
+		HttpSession session = request.getSession();
+		Users originUser = (Users)session.getAttribute("session_user");
+
+			newUser.setU_name(request.getParameter("userName"));
+			newUser.setEmail(request.getParameter("userEmail"));
+			newUser.setAge(Integer.parseInt(request.getParameter("userAge")));
+			// 기존 변경 안되는 값들 session에 넘겨주기
+			newUser.setU_code(originUser.getU_code());
+			newUser.setPoint(originUser.getPoint());
+			newUser.setUserid(originUser.getUserid());
+			newUser.setUserpw(originUser.getUserpw());
+			if(!udao.updateUser(newUser)) {
+				System.out.println("2");
+				session.setAttribute("session_user", newUser);
 				forward.setRedirect(false);
-				forward.setPath("Main.jsp");
+				forward.setPath("index.jsp");
 			}	else {
+				System.out.println("2-2");
 				forward.setRedirect(true); 
-				forward.setPath("Main.jsp");
+				forward.setPath("index.jsp");
 			};
-			
-		} else {
-		}
+		
 		return forward;
 	}
 }

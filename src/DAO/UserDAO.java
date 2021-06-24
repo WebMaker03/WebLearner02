@@ -146,16 +146,16 @@ public class UserDAO {
    // 회원정보 수정
    public boolean updateUser(Users user) {		// name, email, age, id
 		conn = DBConnection.connect();
-		String sql = "update users set u_name=?"
-				+ " email=?"
+		String sql = "update users set u_name=?,"
+				+ " email=?,"
 				+ " age=?"
-				+ " where userid=?;";
+				+ " where u_code=?;";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user.getU_name());
 			pstmt.setString(2, user.getEmail());
 			pstmt.setInt(3, user.getAge());
-			pstmt.setString(4, user.getUserid());
+			pstmt.setInt(4, user.getU_code());
 			pstmt.executeUpdate();
 			return false;
 		} catch (SQLException e) {

@@ -92,7 +92,14 @@ public class UserController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if (action.equals("/login.do")) { 
+		} else if (action.equals("/updatepw.do")) {
+
+			try {
+				forward = new UpdateUserPasswordAction().execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}  else if (action.equals("/login.do")) { 
 			try {
 				forward = new LoginAction().execute(request, response);
 			} catch (Exception e) {
