@@ -129,7 +129,14 @@ button {
 }
 
 #next1 {
-background-color : #28a745;
+background-color : #ffffff;
+    width: 15%;
+    height: 45px;
+        color: #7BBBD6;
+        border: #7BBBD6 solid 3px;
+        border-radius: 10px;
+        font-weight: bold;
+        
 }
 
 .main {
@@ -178,11 +185,12 @@ body {
     width: 100%;
     background-color: pink;
     padding: 2vw;
-    font-size: 1.2vw;
+    font-size: 18px;
     display: flex;
     color: #757575;
     background-color: white;
     text-align-last : start;
+    display: none;
 }
 
 .sec i {
@@ -221,30 +229,42 @@ body {
 }
 
 #main1 {
-	background-color: #0080ff;
+	background-color: #C3EAF1;
+	border: #C3EAF1;
 	height: 70px;
-	s
+	border-radius: 10px;
+
 	
 }
 
 #tkdlxm1 {
-	color: #ffffff;
-	    font-size: large;
+	color: #000000;
+	    font-size: 25px;
+	    
 	  
 }
 
 #section1 {
 	width: 1100px;
 	font-size : 20px;
+	height: 75px;
+	background-color: #F8F9FB;
+	border-radius: 10px;
 }
 
 #section2 {
 	width: 1100px;
 	font-size : 20px;
+	height: 75px;
+	background-color: #F8F9FB;
+	border-radius: 10px;
 }
 
 #section3 {
 	width: 1100px;
 	font-size : 20px;
+	height: 75px;
+	background-color: #F8F9FB;
+	border-radius: 10px;
 }
 

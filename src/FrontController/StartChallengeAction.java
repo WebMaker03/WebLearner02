@@ -1,6 +1,7 @@
 package FrontController;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpSession;
 
 import DAO.ChallengesDAO;
 import DTO.Challenges;
+import DTO.MyC;
 
 public class StartChallengeAction implements Action {
 
@@ -19,23 +21,33 @@ public class StartChallengeAction implements Action {
 		if (session.getAttribute("session_user") == null) {
 			response.setContentType("text/html; charset=UTF-8");
 			response.setCharacterEncoding("UTF-8");
-			out.println("<script>alert('·Î±×ÀÎÇØÁÖ¼¼¿ä!!');location.href='login.jsp';</script>");
+			out.println("<script>alert('ë¡œê·¸ì¸ì„ í•˜ì„¸ìš”!');location.href='login.jsp';</script>");
 			out.flush();
 			
 		} else {
-			forward = new ActionForward();
+			forward = null;
 			ChallengesDAO cdao = new ChallengesDAO();
+			int u_code = Integer.parseInt(request.getParameter("u_code"));
+			ArrayList<MyC> checkMyC = cdao.prochal(u_code);
 			int c_code = Integer.parseInt(request.getParameter("c_code"));
 			Challenges ch = cdao.getonechal(c_code);
-			int chFee = ch.getFee();
-			String u_code = request.getParameter("u_code");
-			cdao.start_ch(ch, u_code);
-			cdao.updateUserPoint(chFee, u_code);
-			response.setCharacterEncoding("UTF-8");
-			response.setContentType("text/html; charset=UTF-8");
-			out.println("<script>alert('Ã§¸°Áö °¡ÀÔ ¼º°ø! È­ÀÌÆÃ!!');location.href='calltheme.ch?theme="+ ch.getTheme()+"'</script>");
-			out.flush();
+			if(cdao.checkChallengeRepeat(u_code,c_code)) {
+				response.setCharacterEncoding("UTF-8");
+				response.setContentType("text/html; charset=UTF-8");
+				out.println("<script>alert('ì´ë¯¸ ì°¸ê°€ì¤‘ì¸ ì±Œë¦°ì§€ ì…ë‹ˆë‹¤.');location.href='calltheme.ch?theme="+ ch.getTheme()+"'</script>");
+				out.flush();
 			
+			}else {
+				
+				int chFee = ch.getFee();
+				cdao.start_ch(ch, u_code);
+				cdao.updateUserPoint(chFee, u_code);
+				response.setCharacterEncoding("UTF-8");
+				response.setContentType("text/html; charset=UTF-8");
+				out.println("<script>alert('ì°¸ê°€ ì‹ ì²­ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.');location.href='calltheme.ch?theme="+ ch.getTheme()+"'</script>");
+				out.flush();
+				
+			}
 		}
 		return forward;
 	}

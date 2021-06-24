@@ -28,7 +28,7 @@ public class ShowMyPageAction implements Action {
 		ArrayList<MyC> myClist = cdao.prochal(user.getU_code());
 		request.setAttribute("pro_chalList", myClist);
 		ArrayList<Challenges> Clist = cdao.getChalName(myClist);
-		request.setAttribute("pro_chalList_C", Clist); // 진행중 챌린지에 대한 챌린지 정보를 담은 리스트
+		request.setAttribute("pro_chalList_C", Clist); 
 		
 		ArrayList<MyC> EndList= cdao.finchal(user.getU_code());
 		request.setAttribute("end_chalList", EndList);

@@ -54,6 +54,7 @@ public class ChallengeController extends HttpServlet {
       String cp = request.getContextPath();
       String action = uri.substring(cp.length());
       ActionForward forward = null;
+      response.setContentType("text/html;charset=UTF-8");
       
       if (action.equals("/calltheme.ch")) { 
          try {

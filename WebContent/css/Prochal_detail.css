@@ -497,5 +497,9 @@ body {
      font-size: 10px;
      color : #ffffff;
  }
+ #backBtn{
  
+ 	margin-left:580px;
+ 	width:fit-content;
+ }
  

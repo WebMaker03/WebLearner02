@@ -6,6 +6,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.mysql.cj.xdevapi.PreparableStatement;
+
+import DTO.Challenges;
 import DTO.Verification;
 
 public class VerificationDAO {
@@ -111,7 +114,67 @@ public class VerificationDAO {
    
    // 한 챌린지당 날짜 중복 안되게 검사하는 메서드
    
+
+   public boolean CheckVerification(int mc_code ) {
+
+	   try {
+		   conn = DBConnection.connect();
+		   String sql = "select * from verification where date(v_date) = date(now()) and mc_code=?";
+		pstmt=conn.prepareStatement(sql);
+		pstmt.setInt(1, mc_code);
+		ResultSet rs = pstmt.executeQuery();
+		while(rs.next()) {
+			return false; // false = 중복됐다는 뜻
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally {
+		try {
+			conn.close();
+			pstmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	   
+	   return true;
+   }
    
+   public boolean payback(int c_code, int u_code){
+	   // 챌린지에서 fee랑 기간 받아오기
+	   // 그걸 나누기해서 업데이트
+	   // 유저포인트에 업데이트
+	   System.out.println("포인트 업데이트");
+	   try {
+		   conn = DBConnection.connect();
+		   String sql = "select * from challenges where c_code=?";
+		   pstmt = conn.prepareStatement(sql);
+		   pstmt.setInt(1, c_code);
+		   ResultSet rs = pstmt.executeQuery();
+		   
+		   Challenges c = new Challenges();
+		   while(rs.next()) {
+			    c.setC_code(rs.getInt("c_code"));
+				c.setFee(rs.getInt("fee"));
+				c.setPeriod(rs.getInt("period"));
+		   }
+		   
+		   int updateP = (int)(c.getFee() / c.getPeriod());
+		   String sql2 = "update users set point = point+? where u_code=?";
+		   PreparedStatement pstmt2=conn.prepareStatement(sql2);
+		   pstmt2.setInt(1, updateP);
+		   pstmt2.setInt(2, u_code);
+		   pstmt2.execute();
+		   
+		   
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	   return true;
+   }
    
    
 
