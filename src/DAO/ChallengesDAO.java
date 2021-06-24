@@ -447,6 +447,7 @@ public class ChallengesDAO {
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
+				mc.setMc_code(rs.getInt("mc_code"));
 				mc.setC_code(rs.getInt("c_code"));
 				mc.setU_code(rs.getInt("u_code"));
 				mc.setState(rs.getBoolean("state"));
