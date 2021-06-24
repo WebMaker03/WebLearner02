@@ -29,6 +29,8 @@ public class goBoardAction implements Action{
         ArrayList<Post> post = bdao.c_b (c_code);
         request.setAttribute("post", post);
         
+        request.setAttribute("c_code",c_code);
+        
         
         forward.setRedirect(false); // 저장하는값이 있으면 false, 없으면 true 
         forward.setPath("Board_Chall.jsp");

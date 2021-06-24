@@ -3,6 +3,8 @@ $('#submitBtn').on('mousedown',function(){
    $(document).ready(function(){
       $('#verRating').val($('input[name=rating]:checked').val());
       $('#verReview').val($('textarea#review').val());
+	console.log($('#verRating').val());
+	console.log($('#verReview').val());
    });
 });
 // 이게 form 자동 submit
