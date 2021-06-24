@@ -43,7 +43,7 @@
 				
 				<div class="row px-3">
 				
-				<button type="button" id="checkbutton" class="btn btn-outline-primary">등록하기</button> 
+				<button type="button" id="checkbutton" class="btn btn-outline-primary" onClick="location.href='Board_Chall.jsp'" >등록하기</button> 
 				<button type="button" id="backbutton" class="btn btn-outline-primary">취소하기</button>
 				</div>
 				</form>
