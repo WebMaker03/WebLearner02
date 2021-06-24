@@ -28,7 +28,6 @@ public class ProChal_DetailAction implements Action{
          Challenges ch = cdao.getonechal(c_code);
          request.setAttribute("pro_chal_c",ch);
          
-         //mc_code 값 알고 있으니까 ..객체 반환
          MyC myC = cdao.callMyC(mc_code);
          request.setAttribute("pro_chal_m", myC);
          
@@ -36,10 +35,9 @@ public class ProChal_DetailAction implements Action{
  		 Users user = (Users)session.getAttribute("session_user");
  	
          VerificationDAO vdao = new VerificationDAO();
-         ArrayList<Verification> vlist = vdao.showV(user.getU_code(),mc_code); //usercode랑 c_Code
+         ArrayList<Verification> vlist = vdao.showV(user.getU_code(),mc_code); 
          request.setAttribute("vlist", vlist);
          
-         //해당 챌린지가 오늘 인증가능한지 검사! 인증 가능하면 TRUE, 인증 불가하면 FALSE
          boolean check = vdao.CheckVerification(mc_code);
          request.setAttribute("Vcheck", check);
          

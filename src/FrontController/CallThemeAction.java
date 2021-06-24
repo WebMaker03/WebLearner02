@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAO.ChallengesDAO;
 
@@ -17,7 +18,8 @@ public class CallThemeAction implements Action {
 		System.out.println("call theme");
 		String themeName = request.getParameter("theme");
 		request.setAttribute("show_theme_name", themeName);
-		
+		HttpSession session = request.getSession();
+		session.setAttribute("theme_click", themeName);
 		ChallengesDAO cdao = new ChallengesDAO();
 		
 		ArrayList cInfo = cdao.theme_chal(themeName);

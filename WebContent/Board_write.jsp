@@ -24,11 +24,11 @@
 				<form>
 				<div class="row px-3">
 					<div class="flex-column">
-						<h3 class="mb-0 font-weight-normal" id="writer_name" style="font-size: 30px">${MyC.c_code}</h3>
+						<h3 class="mb-0 font-weight-normal" id="writer_name" style="font-size: 30px">${Chal.c_name}</h3>
 
 					</div>
 					<div class="flex-column">
-					<h2 class="mb-0 font-weight-normal" id="writer_theme" style="font-size: 20px; margin-top: 13px;">${MyC.u_code}</h2>
+					<h2 class="mb-0 font-weight-normal" id="writer_theme" style="font-size: 20px; margin-top: 13px;"> 작성자 : ${session_user.u_name}</h2>
 					</div>
 				</div>
 				<hr>

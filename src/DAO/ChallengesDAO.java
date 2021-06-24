@@ -407,17 +407,14 @@ public class ChallengesDAO {
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-
+				mc.setMc_code(rs.getInt("mc_code"));
 				mc.setC_code(rs.getInt("c_code"));
 				mc.setU_code(rs.getInt("u_code"));
 				mc.setState(rs.getBoolean("state"));
 				mc.setStartD(rs.getString("startD"));
 				mc.setFinishD(rs.getString("finishD"));
-				mc.setAchievementPercentage(rs.getInt("aschievementPercentage"));
+				mc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				mc.setImg(rs.getString("img"));
-
-
-
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -453,10 +450,8 @@ public class ChallengesDAO {
 				mc.setState(rs.getBoolean("state"));
 				mc.setStartD(rs.getString("startD"));
 				mc.setFinishD(rs.getString("finishD"));
-				mc.setAchievementPercentage(rs.getInt("aschievementPercentage"));
+				mc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				mc.setImg(rs.getString("img"));
-
-
 
 			}
 		} catch (SQLException e) {
