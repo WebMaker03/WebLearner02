@@ -1,7 +1,7 @@
 <%@page import="DTO.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
-<%@ taglib tagdir="/WEB-INF/tags" prefix="tag" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="tag"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@
 </head>
 <body>
 
-   <jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
    <div class="theme">
       <div class="container1" style="margin-top: 80px; margin-bottom: 30px;">
@@ -118,24 +118,61 @@
                   <div align="right" style="font-size: 18px;">___개 완료</div>
                </caption>
 
-               <thead>
-                  <tr>
-                     <th scope="col">no.</th>
-                     <th scope="col">Title</th>
-                     <th scope="col">progress</th>
-                  </tr>
-               </thead>
-               <tbody>
-                 <tag:End_chal></tag:End_chal>
-               </tbody>
-            </table>
-         </div>
-      </div>
-   </div>
-   </div>
+	
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container1" style="margin-top: 30px;">
+			<h2 style="font-size: 40px;">
+				<strong>나의 챌린지 현황</strong>
+			</h2>
+			<div class="row">
+				<div class="col">
+					<table class="table"
+						style="width: 600px; margin-top: 30px; margin-bottom: 100px; color: black; text-align: center; background-color: white;">
+						<caption style="font-size: 25px; caption-side: top;">
+							<strong>진행중인 챌린지</strong>
+							<div align="right" style="font-size: 18px;">___개 진행중</div>
+						</caption>
+						<thead>
+							<tr>
+								<th scope="col">no.</th>
+								<th scope="col">Title</th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tag:pro_chal></tag:pro_chal>
+						</tbody>
+					</table>
+				</div>
+				<div class="col">
+					<table class="table"
+						style="width: 600px; margin-top: 30px; color: black; text-align: center; background-color: white;">
+						<caption style="font-size: 25px; caption-side: top;">
+							<strong>종료된 챌린지</strong>
+							<div align="right" style="font-size: 18px;">___개 완료</div>
+						</caption>
 
-   <!-- footer start -->
-   <jsp:include page="footer.jsp"></jsp:include>
+						<thead>
+							<tr>
+								<th scope="col">no.</th>
+								<th scope="col">Title</th>
+								<th scope="col">progress</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tag:End_chal></tag:End_chal>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer start -->
+	<jsp:include page="footer.jsp"></jsp:include>
 
 </body>
 

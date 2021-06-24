@@ -36,6 +36,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return ch;
 
@@ -135,6 +143,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return true;
@@ -188,7 +204,7 @@ public class ChallengesDAO {
 			pstmt = conn.prepareStatement(sql);
 
 			pstmt.setInt(1, u_code);
-			;
+			
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
@@ -235,6 +251,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return cnt;
@@ -256,6 +280,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return cnt;
@@ -284,6 +316,14 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		return Clist;
@@ -314,8 +354,52 @@ public class ChallengesDAO {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return false;
+	}
+	
+	public MyC callMyC(int mc_code) {
+		MyC myc = new MyC();
+		try {
+			conn = DBConnection.connect();
+			String sql = "select * from myC where mc_code=?";
+			pstmt = conn.prepareStatement(sql);
+
+			pstmt.setInt(1, mc_code);
+
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				myc.setMc_code(rs.getInt("mc_code"));
+				myc.setC_code(rs.getInt("c_code"));
+				myc.setU_code(rs.getInt("u_code"));
+				myc.setState(rs.getBoolean("state"));
+				myc.setStartD(rs.getString("startD"));
+				myc.setFinishD(rs.getString("finishD"));
+				myc.setAchievementPercentage(rs.getInt("achievementPercentage"));
+
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return myc;
+
 	}
 
 }

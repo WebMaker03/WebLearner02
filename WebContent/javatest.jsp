@@ -1,6 +1,6 @@
+<%@page import="DTO.Post"%>
 <%@page import="DTO.MyC"%>
 <%@page import="DTO.Comments"%>
-<%@page import="DTO.Board"%>
 <%@page import="DAO.BoardDAO"%>
 <%@page import="DTO.Challenges"%>
 <%@page import="java.util.ArrayList"%>
@@ -17,12 +17,17 @@
 </head>
 <body>
 <%
-
+/*
 ChallengesDAO cdao = new ChallengesDAO();
 MyC myc = new MyC();
 myc.setU_code(1);
 System.out.println(cdao.cntprochal(myc.getU_code()));
-
+*/
+BoardDAO bdao = new BoardDAO();
+Post post = new Post();
+post.setP_text("내용 수정");
+bdao.updateP_text(post.getP_text(), 1);
+System.out.println(post.getP_text());
 
 
 

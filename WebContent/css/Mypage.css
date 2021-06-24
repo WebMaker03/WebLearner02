@@ -9,21 +9,27 @@ button {
 	width: 80px;
 	hegiht: 40px;
 	font-size: 18px;
+
 	color:white;
 }
 
+
+
 .card {
-	color: balck;
-	background-color: white;
+	background-color: #C2E0F4;
+	color: black;
 	border: none;
-	border-radius: 5px;
-	box-shadow: 5px 6px 6px 2px #C2E0F4;
+	border-radius: 10px;
+	box-shadow: 5px 6px 6px 2px #e9ecef;
+
 	margin-bottom: 40px;
 	margin-left: 13%;
 	width: 800px;
 }
+
 .cardP {
 	color:#1A4C6D;
+
 	width: 350px;
 	height: 60px;
 	font-size: 23px;
@@ -35,6 +41,7 @@ button {
 }
 
 .card-body {
+
 	margin-top: 40px;
 }
 
