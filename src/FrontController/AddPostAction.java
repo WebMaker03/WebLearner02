@@ -33,23 +33,22 @@ public class AddPostAction implements Action{
 		p.setP_title(request.getParameter("p_title"));
 		p.setP_text(request.getParameter("p_text"));
 		
-	request.getSession().setAttribute("newPost", "°Ô½Ã±ÛÀÌ µî·ÏµÇ¾ú½À´Ï´Ù.");
 		
 		if(bdao.insertP(p)) {			
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('°Ô½Ã±Û µî·Ï ¼º°ø');location.href='Board_Chall.jsp';</script>");
+			out.println("<script>alert('ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');location.href='Board_Chall.jsp';</script>");
 			out.flush();
 		}else {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('°Ô½Ã±Ûµî·Ï ½ÇÆÐ');location.href='Board_Chall.jsp';</script>");
+			out.println("<script>alert('ï¿½Ô½Ã±Ûµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');location.href='Board_Chall.jsp';</script>");
 			out.flush();
 		}
 		
         
         
-//        forward.setRedirect(true); // ÀúÀåÇÏ´Â°ªÀÌ ÀÖÀ¸¸é false, ¾øÀ¸¸é true 
+//        forward.setRedirect(true); // ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ false, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ true 
 //        forward.setPath("Board_Chall.jsp");
         return forward;
 	}

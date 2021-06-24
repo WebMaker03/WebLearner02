@@ -13,7 +13,7 @@ public class BoardDAO {
 	Connection conn;
 	PreparedStatement pstmt;
 
-	// * °Ô½Ã±Û Á¶È¸ *
+	// * ï¿½Ô½Ã±ï¿½ ï¿½ï¿½È¸ *
 	public ArrayList<MessageSet> getAll(int cnt) {
 
 		ArrayList<MessageSet> datas = new ArrayList();
@@ -74,7 +74,7 @@ public class BoardDAO {
 		}
 		return datas;
 	}
-	// ÇØ´çÃ§¸°ÁöÀÇ °Ô½Ã¹° ÀüºÎ
+	// ï¿½Ø´ï¿½Ã§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public ArrayList<Post> c_b_all(int u_code, int c_code){
 		ArrayList<Post> datas = new ArrayList();
 		try {
@@ -112,13 +112,11 @@ public class BoardDAO {
 		
 	}
 	
-	// * °Ô½Ã±Û µî·Ï *
 	public boolean insertP(Post p) {
 		try {
 			conn = DBConnection.connect();
 			String sql = "insert into post (u_code, c_code, p_title, p_text) values(?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
-
 			pstmt.setInt(1, p.getU_code());
 			pstmt.setInt(2, p.getC_code());
 			pstmt.setString(3, p.getP_title());
@@ -139,7 +137,7 @@ public class BoardDAO {
 		return true;
 	}
 
-	// * °Ô½Ã±Û Á¦¸ñ ¼öÁ¤ * // 
+	
 	public boolean updateP_title(String p_title, int p_code) {
 		try {
 			conn = DBConnection.connect();
@@ -163,7 +161,7 @@ public class BoardDAO {
 		
 		return true;
 	}
-	// °Ô½Ã¹° ³»¿ë ¼öÁ¤
+	
 	public boolean updateP_text(String p_text, int p_code) {
 		try {
 			conn = DBConnection.connect();
@@ -189,7 +187,7 @@ public class BoardDAO {
 	}
 	
 	
-	// * °Ô½Ã±Û »èÁ¦ *
+	// * ï¿½Ô½Ã±ï¿½ ï¿½ï¿½ï¿½ï¿½ *
 	public boolean delP(int p_code) {
 		try {
 			conn = DBConnection.connect();
@@ -212,7 +210,7 @@ public class BoardDAO {
 		return true;
 	}
 
-	// ÀüÃ¼°Ô½Ã¹° °¹¼ö, ´ñ±Û°³¼ö ÀÐ¾î¿À´Â°Í, ¸Þ¼¼Áö¼Â
+	// ï¿½ï¿½Ã¼ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½Û°ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ï¿½ï¿½Â°ï¿½, ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	public int cntP(int c_code) {
 		int cnt=0;
 		try {
@@ -241,7 +239,7 @@ public class BoardDAO {
 		return cnt;
 	}
 
-	// ´ñ±Û °¹¼ö
+	// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public int cntCM(int p_code) {
 		int cnt=0;
 		try {
@@ -269,7 +267,7 @@ public class BoardDAO {
 		
 		return cnt;
 	}
-	// * ´ñ±Û µî·Ï *
+	// * ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ *
 	public boolean insertCM(Comments cm) {
 		try {
 			conn = DBConnection.connect();
@@ -295,7 +293,7 @@ public class BoardDAO {
 		return true;
 	}
 
-	// * ´ñ±Û »èÁ¦ *
+	// * ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ *
 	public boolean delCM(int cm_code) {
 		try {
 			conn = DBConnection.connect();

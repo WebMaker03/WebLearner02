@@ -32,7 +32,7 @@
 					</div>
 				</div>
 				<hr>
-				<form method="post" action='addPost.bo'>
+				<form method="post" action="addPost.bo">
 				<textarea class="form-control" id="form_c" required rows="1" name="p_title" placeholder="제목을 입력하세요!"></textarea>
 				<div class="row px-3 form-group">
 					<textarea class="text-muted bg-light mt-4 mb-3"
