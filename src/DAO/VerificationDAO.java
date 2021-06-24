@@ -176,6 +176,82 @@ public class VerificationDAO {
 	   return true;
    }
    
+   public ArrayList<Integer> CalcStar(int mc_code){
+	   
+	   ArrayList<Verification> vlist = new ArrayList<>();
+	   ArrayList<Integer> vstar =null;
+	   
+	   System.out.println("별점 % 계산!");
+	   try {
+		   conn = DBConnection.connect();
+		   String sql = "select * from verification where mc_code=?";
+		   pstmt = conn.prepareStatement(sql);
+		   pstmt.setInt(1, mc_code);
+		   ResultSet rs = pstmt.executeQuery();
+		   int count =0;
+		   while(rs.next()) {
+			    Verification v = new Verification();
+			    v.setMc_code(rs.getInt("mc_code"));
+			    v.setRating(rs.getInt("rating"));
+			    v.setU_code(rs.getInt("u_code"));
+			    count=count+1;
+			    vlist.add(v);
+		   }
+		   int star1 =0;
+		   int star2 =0;
+		   int star3 =0;
+		   int star4 =0;
+		   int star5 =0;
+		   
+		   for(int i =0; i<vlist.size(); i++) {
+			   if(vlist.get(i).getRating()==1) {
+				   star1+=1;
+			   }else if(vlist.get(i).getRating()==2) {
+				   star2+=1;
+			   }else if(vlist.get(i).getRating()==3) {
+				   star3+=1;
+			   }else if(vlist.get(i).getRating()==4) {
+				   star4+=1;
+			   }else if(vlist.get(i).getRating()==5) {
+				   star5+=1;
+			   }
+		   } //각 별점 별 인증 개수 파악 완료
+		  if(count!=0) {
+		   int rate1 = (int)((star1/(double)count)*100);
+		   int rate2 = (int)((star2/(double)count)*100);
+		   int rate3 = (int)((star3/(double)count)*100);
+		   int rate4 =  (int)((star4/(double)count)*100);
+		   int rate5 =  (int)((star5/(double)count)*100);
+		  
+		   System.out.println("count :"+count);
+		   System.out.println("star1: "+star1);
+		   System.out.println("star2: "+star2);
+		   System.out.println("star3: "+star3);
+		   System.out.println("star4: "+star4);
+		   System.out.println("star5: "+star5);
+		   System.out.println("rate1: "+rate1);
+		   System.out.println("rate2: "+rate2);
+		   System.out.println("rate3: "+rate3);
+		   System.out.println("rate4: "+rate4);
+		   System.out.println("rate5: "+rate5);
+		   vstar = new ArrayList();
+		   vstar.add(rate1);
+		   vstar.add(rate2);
+		   vstar.add(rate3);
+		   vstar.add(rate4);
+		   vstar.add(rate5);
+		  }
+		  else {
+			  System.out.println("인증 정보가 없습니다.");
+		  }
+		  
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	   
+	   return vstar;
+   }
    
 
 }
