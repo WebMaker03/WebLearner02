@@ -32,18 +32,22 @@
 					</div>
 				</div>
 				<hr>
-				
-				<textarea class="form-control" id="form_c" required="" rows="1"
-					placeholder="제목을 입력하세요!"></textarea>
+				<form method="post" action='addPost.bo'>
+				<textarea class="form-control" id="form_c" required rows="1" name="p_title" placeholder="제목을 입력하세요!"></textarea>
 				<div class="row px-3 form-group">
 					<textarea class="text-muted bg-light mt-4 mb-3"
-						placeholder="내용을 작성해주세요!!"
+						placeholder="내용을 작성해주세요!!" name = "p_text"
 						style="font-size: 20px; height: 500px;" ></textarea>
 				</div>
+				<input type="hidden" name= "c_code" value="${Chal.c_code}">
+				
+				  
 				
 				<div class="row px-3">
-				
-				<button type="button" id="checkbutton" class="btn btn-outline-primary" onClick="location.href='addPost.bo?c_code=${c_code}'">등록하기</button> 
+				<input type="submit"/>
+				<!--  <button class="btn btn-success send px-5" id="submitBtn" > -->
+				<!-- <button type="button" id="checkbutton" class="btn btn-outline-primary" onClick="location.href=">등록하기</button> 
+				 --></form>
 				<button type="button" id="backbutton" class="btn btn-outline-primary">취소하기</button>
 				</div>
 				</form>
