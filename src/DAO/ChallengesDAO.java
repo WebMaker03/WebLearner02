@@ -366,6 +366,7 @@ public class ChallengesDAO {
 		return false;
 	}
 	
+
 	
 	// MyC 하나 받아오는 메서드
 	public MyC getMyc(int u_code, int c_code) {
@@ -388,11 +389,14 @@ public class ChallengesDAO {
 				mc.setAchievementPercentage(rs.getInt("aschievementPercentage"));
 				mc.setImg(rs.getString("img"));
 
+
+
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}finally {
+		} finally {
+
 			try {
 				pstmt.close();
 				conn.close();
