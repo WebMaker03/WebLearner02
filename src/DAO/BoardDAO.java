@@ -74,7 +74,6 @@ public class BoardDAO {
 		}
 		return datas;
 	}
-	// �ش�ç������ �Խù� ����
 	public ArrayList<Post> c_b_all(int u_code, int c_code){
 		ArrayList<Post> datas = new ArrayList();
 		try {
