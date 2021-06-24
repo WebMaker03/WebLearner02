@@ -69,7 +69,7 @@ public class UserController extends HttpServlet {
 				obj.put("result", "1");
 			}
 			response.getWriter().print(obj);
-		} else if (action.equals("/signup.do")) { // ȸ������
+		} else if (action.equals("/signup.do")) { 
 
 			try {
 				forward = new SignUpAction().execute(request, response);
@@ -77,7 +77,7 @@ public class UserController extends HttpServlet {
 				e.printStackTrace();
 			}
 
-		} else if (action.equals("/showuser.do")) { // ȸ������ �����ֱ�
+		} else if (action.equals("/showuser.do")) { 
 			try {
 				forward = new ShowUserAction().execute(request, response);
 			} catch (Exception e) {
@@ -97,7 +97,7 @@ public class UserController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if (action.equals("/logout.do")) { // �α׾ƿ�
+		} else if (action.equals("/logout.do")) { 
 			try {
 				forward = new LogoutAction().execute(request, response);
 			} catch (Exception e) {

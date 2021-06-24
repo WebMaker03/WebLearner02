@@ -100,7 +100,7 @@ public class EtcController extends HttpServlet {
             response.sendRedirect(forward.getPath());
          } else {
 
-            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  옱 꽕 젙
+            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
 
             dispatcher.forward(request, response);
          }

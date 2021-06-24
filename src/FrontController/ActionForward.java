@@ -2,7 +2,6 @@ package FrontController;
 
 public class ActionForward {
 
-	// 방식과 경로 설정
 	private boolean redirect;
 	private String path;
 	

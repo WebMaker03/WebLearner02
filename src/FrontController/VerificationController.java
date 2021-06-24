@@ -63,7 +63,7 @@ public class VerificationController extends HttpServlet implements Servlet {
 		          if (forward.isRedirect()) {
 		             response.sendRedirect(forward.getPath());
 		          } else {
-		             RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  �궨 �땻   �젧
+		             RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); 
 		             dispatcher.forward(request, response);
 		          }
 		       }

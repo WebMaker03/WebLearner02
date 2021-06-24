@@ -24,8 +24,6 @@ public class SignUpAction implements Action {
 		newUser.setEmail(request.getParameter("userEmail"));
 		
 		
-		//request.getSession().setAttribute("msg", "ȸ�������� �Ϸ�Ǿ����ϴ�.");
-		
 		if(udao.SignUp(newUser)) {			
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();

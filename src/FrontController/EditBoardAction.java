@@ -23,7 +23,7 @@ public class EditBoardAction implements Action {
         
 		
         forward.setRedirect(false);
-        forward.setPath("Board_Chall.jsp"); // 프론트랑 연결 필요!
+        forward.setPath("Board_Chall.jsp"); 
 		return forward;
 	}
 

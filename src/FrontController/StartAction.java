@@ -11,15 +11,14 @@ public class StartAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		System.out.println("Start Action ½ÃÀÛ");
+		System.out.println("Start Action ì‹œì‘");
 		ActionForward forward= new ActionForward();
 		ChallengesDAO ch = new ChallengesDAO();
 		if(!ch.byebyechallenge()) {
-			System.out.println("ÁøÇàÁß -> Á¾·á·Î ¾÷µ¥ÀÌÆ® ½ÇÆĞ");
+			System.out.println("ì§„í–‰ì¤‘ -> ì¢…ë£Œë¡œ ë„˜ì–´ê°€ì§€ ì•ŠìŒ");
 		}else {
-			System.out.println("ÁøÇàÁß -> Á¾·á·Î ¾÷µ¥ÀÌÆ® ¼º°ø");
+			System.out.println("ì§„í–‰ì¤‘ -> ì¢…ë£Œë¡œ ë„˜ì–´ê°");
 		}
-		
 		forward.setRedirect(true); 
 		forward.setPath("main.etc");
 		return forward;
