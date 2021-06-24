@@ -38,6 +38,8 @@ public class ProChal_DetailAction implements Action{
          ArrayList<Verification> vlist = vdao.showV(user.getU_code(),mc_code); //usercode¶û c_Code
          request.setAttribute("vlist", vlist);
          
+         // ÇØ´ç Ã§¸°Áö°¡
+         
          forward.setRedirect(false); 
          forward.setPath("Prochal_detail.jsp");
          return forward;
