@@ -29,11 +29,12 @@ public class submitVerificationAction implements Action {
       ver.setU_code(1);
       ver.setMc_code(3);
 
+
       ver.setRating(v_rating);
       ver.setV_text(v_review);
       
       
-      //ÀÎÁõÀÌ ÀÌ¹Ì ÀÖ´ÂÁö °Ë»ç!
+      //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½!
       
       vdao.insertV(ver);
       forward.setRedirect(false);

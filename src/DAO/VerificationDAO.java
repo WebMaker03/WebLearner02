@@ -111,7 +111,9 @@ public class VerificationDAO {
    
    // 한 챌린지당 날짜 중복 안되게 검사하는 메서드
    
+
    public boolean CheckVerification(int mc_code ) {
+
 	   try {
 		   conn = DBConnection.connect();
 		   String sql = "select * from verification where date(v_date) = date(now()) and mc_code=?";
