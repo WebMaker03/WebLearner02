@@ -27,7 +27,7 @@
          <div class="row" style="margin-top: 30px; margin-left: 100px;">
             <div class="col-12 col-md-7">
                <h2 id="start_title">
-                  <strong>[ 진행 중 챌린지 상세보기 ]</strong>
+                  <strong>[  ${pro_chal_m.mc_code}]</strong>
                </h2>
                <!-- 챌린지 상세보기 카드 -->
                <div class="card p-3" id="prochal_card">
@@ -37,7 +37,7 @@
                      </div>
                      <div class="col-12 col-md-7 py-2 px-3">
                         <span id="challenge_title"> <i class="fa fa-hashtag"
-                           aria-hidden="true"></i></i> &nbsp ${pro_chal_D.c_name}
+                           aria-hidden="true"></i></i> &nbsp ${pro_chal_c.c_name}
                         </span>
                         <p class="font-weight-bold my-2">June 26</p>
                         <h6>${pro_chal_D.info}</h6>
@@ -51,7 +51,7 @@
                            <button type="button" class="btn btn-danger"
                               data-toggle="modal" data-target="#modalBox">인증하기</button>
 
-                           <button type="button" class="btn btn-danger" onClick="location.href='goBoard.bo?c_code=${pro_chal_D.c_code}'" style="margin-left: 10px" id="btn_b">게시판가기</button>
+                           <button type="button" class="btn btn-danger" onClick="location.href='goBoard.bo?c_code=${pro_chal_c.c_code}'" style="margin-left: 10px" id="btn_b">게시판가기</button>
                         </div>
                      </div>
                   </div>

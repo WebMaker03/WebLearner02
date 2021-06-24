@@ -21,29 +21,18 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<div class="container d-flex justify-content-center mt-40 mb-50">
-		<div class="w-100 overflow-auto order-2 order-md-1"
-			style="margin-top: 170px">
-			<div class="card-group-control card-group-control-right">
-				<table class="table table-striped">
-					<caption style="font-size: 25px; caption-side: top;">
-						<strong>Challenge Board</strong>
-					</caption>
-					<thead>
-						<tr>
-							<th scope="col">no.</th>
-							<th scope="col">Title</th>
-							<th scope="col">ID</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tag:chal_board></tag:chal_board>
-					</tbody>
-				</table>
-				<button type="button" class="btn btn-primary disabled" style = "float:right;">글쓰기</button>
-			</div>
-		</div>
-	</div>
+
+<div class="container d-flex justify-content-center mt-40 mb-50" >
+    <div class="w-100 overflow-auto order-2 order-md-1" style="margin-top: 170px">
+        <div class="card-group-control card-group-control-right">
+            
+           <tag:chal_board></tag:chal_board>
+           
+           <!-- 임시 게시글 등록 버튼 -->
+           <input type="button" value="게시글 등록" onClick="location.href='newPost.bo?c_code=${c_code}'">
+        </div>
+    </div>
+</div>
 
 
 
