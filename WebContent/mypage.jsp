@@ -14,15 +14,17 @@
 <!-- Mypage css -->
 <link rel="stylesheet" href="css/Mypage.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<div class="theme">
-		<div class="container1" style="margin-top: 80px; margin-bottom: 30px;">
+		<div class="container1" style="margin-top: 100px; margin-bottom: 30px;">
 			<h2 style="font-size: 40px;">
-				<strong>마이페이지</strong>
+				<i class="fa fa-heart" aria-hidden="true" style="color:red;"></i> <strong> 마이페이지</strong>
 			</h2>
 			<br>
 			<div class="row">
@@ -90,7 +92,7 @@
 		<hr>
 		<div class="container1" style="margin-top: 30px;">
 			<h2 style="font-size: 40px;">
-				<strong>나의 챌린지 현황</strong>
+				<i class="fa fa-hashtag" aria-hidden="true" style="color:blue"></i> <strong> 나의 챌린지 현황</strong>
 			</h2>
 			<div class="row">
 				<div class="col">
