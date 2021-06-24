@@ -55,7 +55,34 @@ public class BoardController extends HttpServlet {
 	            e.printStackTrace();
 	         }
 
+
+	      }else if (action.equals("/editBoard.bo")) {
+	    	  try {
+	    		  System.out.println("게시판 수정");
+	    		  forward = new EditBoardAction().execute(request, response);
+	    	  }catch(Exception e) {
+	    		  e.printStackTrace();
+	    	  }
+	      }else if (action.equals("/deleteBoard.bo")) {
+	    	  try {
+	    		  System.out.println("게시판 삭제");
+	    		  forward = new DeleteBoardAction().execute(request, response);
+	    		  
+	    	  }catch(Exception e) {
+	    		  e.printStackTrace();
+	    	  }
+
+	      } else if(action.equals("/newPost.bo")) {
+	    	  try {
+		        	System.out.println("새로운 게시글 등록");
+		            forward = new newPostAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	    	  
+
 	      }
+	      
 	      else {
 	         forward = new ActionForward();
 	         forward.setRedirect(false);
