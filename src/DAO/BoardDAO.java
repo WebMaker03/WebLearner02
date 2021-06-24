@@ -111,9 +111,10 @@ public class BoardDAO {
 		return datas;
 		
 	}
-	
+
 	public boolean insertP(Post p) {
 		try {
+			System.out.println("BoardDAO 접근");
 			conn = DBConnection.connect();
 			String sql = "insert into post (u_code, c_code, p_title, p_text) values(?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
@@ -137,7 +138,6 @@ public class BoardDAO {
 		return true;
 	}
 
-	
 	public boolean updateP_title(String p_title, int p_code) {
 		try {
 			conn = DBConnection.connect();
@@ -161,7 +161,7 @@ public class BoardDAO {
 		
 		return true;
 	}
-	
+
 	public boolean updateP_text(String p_text, int p_code) {
 		try {
 			conn = DBConnection.connect();
@@ -239,7 +239,6 @@ public class BoardDAO {
 		return cnt;
 	}
 
-	// ��� ����
 	public int cntCM(int p_code) {
 		int cnt=0;
 		try {
@@ -293,7 +292,6 @@ public class BoardDAO {
 		return true;
 	}
 
-	// * ��� ���� *
 	public boolean delCM(int cm_code) {
 		try {
 			conn = DBConnection.connect();

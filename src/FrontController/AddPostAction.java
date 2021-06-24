@@ -16,7 +16,7 @@ public class AddPostAction implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		ActionForward forward= new ActionForward(); 
+		ActionForward forward= null; 
 		
 		int c_code = Integer.parseInt(request.getParameter("c_code"));
         System.out.println("c_Code"+ c_code);
@@ -33,23 +33,22 @@ public class AddPostAction implements Action{
 		p.setP_title(request.getParameter("p_title"));
 		p.setP_text(request.getParameter("p_text"));
 		
-		
+
+
 		if(bdao.insertP(p)) {			
+			System.out.println("인서트p성공");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>alert('�Խñ� ��� ����');location.href='Board_Chall.jsp';</script>");
 			out.flush();
 		}else {
+			System.out.println("인서트p실패");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>alert('�Խñ۵�� ����');location.href='Board_Chall.jsp';</script>");
 			out.flush();
 		}
 		
-        
-        
-//        forward.setRedirect(true); // �����ϴ°��� ������ false, ������ true 
-//        forward.setPath("Board_Chall.jsp");
         return forward;
 	}
 

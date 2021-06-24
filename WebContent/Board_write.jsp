@@ -21,7 +21,7 @@
 		<h1 id="page_name">[ 게시글 작성하기 ]</h1>
 		<div class="row d-flex justify-content-center">
 			<div class="card" style="border: #7BBBD6 solid;">
-				<form>
+				<form method="post" action="addPost.bo">
 				<div class="row px-3">
 					<div class="flex-column">
 						<h3 class="mb-0 font-weight-normal" id="writer_name" style="font-size: 30px">${Chal.c_name}</h3>
@@ -32,7 +32,6 @@
 					</div>
 				</div>
 				<hr>
-				<form method="post" action="addPost.bo">
 				<textarea class="form-control" id="form_c" required rows="1" name="p_title" placeholder="제목을 입력하세요!"></textarea>
 				<div class="row px-3 form-group">
 					<textarea class="text-muted bg-light mt-4 mb-3"
@@ -44,7 +43,7 @@
 				<input type="submit"/>
 				<!--  <button class="btn btn-success send px-5" id="submitBtn" > -->
 				<!-- <button type="button" id="checkbutton" class="btn btn-outline-primary" onClick="location.href=">등록하기</button> 
-				 --></form>
+				 -->
 				<button type="button" id="backbutton" class="btn btn-outline-primary">취소하기</button>
 				</div>
 				</form>
