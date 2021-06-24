@@ -16,11 +16,9 @@ button {
 .card {
 	background-color: #C2E0F4;
 	color: black;
-	border-radius: 10px;
+	border-radius: 50px;
 	box-shadow: 5px 6px 6px 2px #98c1e7;
-
 	margin-bottom: 40px;
-	margin-left: 13%;
 	width: 800px;
 }
 
@@ -29,7 +27,7 @@ button {
 	width: 350px;
 	height: 60px;
 	font-size: 23px;
-	border-radius: 5px;
+	border-radius: 20px;
 	background-color: #85C1E9;
 	margin-top: 50px;
 	margin-bottom: 10px;
@@ -70,5 +68,37 @@ button {
 }
 #point_d{
 		font-size: 40px;
+		color:blue;
+}
+#uname{
+	margin-top:10px;
+	font-size: 25px;
+	font-weight: bold;
 	
+}
+#beige{
+	color:gold;
+}
+#ucase{
+	margin-top:10px;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+#pro_table{
+	
+	width: 600px; 
+	margin-top: 30px;
+	 margin-bottom: 100px;
+	  color: black;
+	   text-align: center; 
+	   background-color: white;
+}
+#finChal_Table{
+	width: 600px; 
+	margin-top: 30px;
+	 margin-bottom: 100px;
+	  color: black;
+	   text-align: center; 
+	   background-color: white;
 }

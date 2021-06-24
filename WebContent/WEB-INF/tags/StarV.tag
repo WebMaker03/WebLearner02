@@ -5,7 +5,7 @@
 	<c:when test="${!empty VStar}">
 		<c:forEach var="v" items="${VStar}" varStatus="status">
 			<h4 class="font-weight-bold">
-				별점 ${status.index} <span class="float-right">${v}%</span>
+				별점 ${status.count} <span class="float-right">${v}%</span>
 			</h4>
 			<div class="progress mb-4">
 				<div class="progress-bar bg-danger" role="progressbar"

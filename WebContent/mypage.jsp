@@ -22,21 +22,21 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 	<div class="theme">
-		<div class="container1" style="margin-top: 100px; margin-bottom: 30px;">
+		<div class="container" style="margin-top: 100px; margin-bottom: 30px;">
 			<h2 style="font-size: 40px;">
 				<i class="fa fa-heart" aria-hidden="true" style="color:red;"></i> <strong> 마이페이지</strong>
 			</h2>
 			<br>
 			<div class="row">
-				<div class="col">
-					<div class="card p-2 text-center">
+				<div class="col-md-8">
+					<div class="card text-center">
 						<div class="row">
 							<div class="col-md-7 border-right no-gutters">
 								<div class="py-3">
 									<img src="https://i.imgur.com/hczKIze.jpg" width="100"
 										class="rounded-circle">
-									<h4 class="text-secondary">${session_user.u_name}</h4>
-									<br>
+									<h4 class="text-secondary" id="uname">${session_user.u_name}</h4>
+									<h4 class="text-secondary" id="ucase">회원등급 : <i class="fa fa-universal-access fa-2x" aria-hidden="true" id="beige"></i></h4>
 									<hr>
 									<div class="stats">
 										<div class="mt-4">
@@ -82,10 +82,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col-md-4">
 
 					<div class="card"
-						style="width: 300px; height: 355px; margin-left: 100px;">
+						style="width: 300px; height: 400px; margin-left: 100px;">
 						<div class="card-body">
 							<a href="#" class="btn btn-primary disabled"
 								style="margin-top: 30px; margin-left: 40px;"> 작성한 게시글 & 댓글</a><br>
@@ -100,22 +100,21 @@
 			</div>
 		</div>
 		<hr>
-		<div class="container1" style="margin-top: 30px;">
+		<div class="container" style="margin-top: 30px;">
 			<h2 style="font-size: 40px;">
 				<i class="fa fa-hashtag" aria-hidden="true" style="color:blue"></i> <strong> 나의 챌린지 현황</strong>
 			</h2>
 			<div class="row">
-				<div class="col">
-					<table class="table"
-						style="width: 600px; margin-top: 30px; margin-bottom: 100px; color: black; text-align: center; background-color: white;">
+				<div class="col-md-6">
+					<table class="table" id="pro_table">
 						<caption style="font-size: 25px; caption-side: top;">
 							<strong>진행중인 챌린지 </strong><i class="fa fa-hourglass-start" aria-hidden="true"></i>
-							<span style="font-size: 20px; margin-left:280px; color:red;">${ProChalCnt}개 진행중</span>
+							<span style="font-size: 20px; margin-left:240px; color:red;">${ProChalCnt}개 진행중</span>
 						</caption>
 						<thead>
 							<tr>
-								<th scope="col">no.</th>
-								<th scope="col">Title</th>
+								<th scope="col">No.</th>
+								<th scope="col">Challenge Info</th>
 								<th scope="col"></th>
 							</tr>
 						</thead>
@@ -124,12 +123,11 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="col">
-					<table class="table"
-						style="width: 600px; margin-top: 30px; color: black; text-align: center; background-color: white;">
+				<div class="col-md-6">
+					<table class="table" id="finChal_Table">
 						<caption style="font-size: 25px; caption-side: top;">
 							<strong>종료된 챌린지  </strong><i class="fa fa-hourglass-end" aria-hidden="true"></i>
-							<span style="font-size: 20px; margin-left:330px; color:red;">${finChalCnt}개 완료</span>
+							<span style="font-size: 20px; margin-left:280px; color:red;">${finChalCnt}개 완료</span>
 						</caption>
 
 						<thead>
