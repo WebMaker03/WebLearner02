@@ -385,7 +385,7 @@ public class ChallengesDAO {
 				mc.setState(rs.getBoolean("state"));
 				mc.setStartD(rs.getString("startD"));
 				mc.setFinishD(rs.getString("finishD"));
-				mc.setAchievementPercentage(rs.getInt("aschievementPercentage"));
+				mc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				mc.setImg(rs.getString("img"));
 
 			}

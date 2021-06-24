@@ -62,11 +62,12 @@ public class BoardController extends HttpServlet {
 		         } catch (Exception e) {
 		            e.printStackTrace();
 		         }
+	      }
 	    	  
-	      } else if(action.equals("/addPost.bo")) {
+	       else if(action.equals("/addPost.bo")) {
 	    	  try {
 		        	System.out.println("새로운 게시글 등록");
-		            forward = new newPostAction().execute(request, response);
+		            forward = new AddPostAction().execute(request, response);
 		         } catch (Exception e) {
 		            e.printStackTrace();
 		         }
