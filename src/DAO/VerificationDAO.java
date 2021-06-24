@@ -111,7 +111,30 @@ public class VerificationDAO {
    
    // 한 챌린지당 날짜 중복 안되게 검사하는 메서드
    
-   public boolean CheckDate() {
+
+   public boolean CheckVerification(int mc_code ) {
+
+	   try {
+		   conn = DBConnection.connect();
+		   String sql = "select * from verification where date(v_date) = date(now()) and mc_code=?";
+		pstmt=conn.prepareStatement(sql);
+		pstmt.setInt(1, mc_code);
+		ResultSet rs = pstmt.executeQuery();
+		while(rs.next()) {
+			return false; // false = 중복됐다는 뜻
+		}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally {
+		try {
+			conn.close();
+			pstmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	   
 	   return true;
    }

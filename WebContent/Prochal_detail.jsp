@@ -197,6 +197,8 @@
    </div>
    <!--  form submit -->
          <form name="verSub" method="post" action="submitVer.ve">
+       <input type="hidden" id="c_code" name = "c_code" value="${pro_chal_c.c_code}">       
+       <input type="hidden" id="mc_code" name = "mc_code" value="${pro_chal_m.mc_code}">       
       <input type="hidden" id="verRating" name="verRating" value="rating">
       <input type="hidden" id="verReview" name="verReview" value="review">
       </form>

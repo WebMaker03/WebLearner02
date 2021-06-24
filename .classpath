@@ -11,7 +11,12 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Web Programming/resource/새 폴더/json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Web Programming/resource/mysql-connector-java-8.0.24/mysql-connector-java-8.0.24.jar"/>
+=======
+	<classpathentry kind="lib" path="D:/JSP_KSJ/resource/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/JSP_KSJ/resource/mysql-connector-java-8.0.23.jar"/>
+>>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 	<classpathentry kind="output" path="bin"/>
 </classpath>

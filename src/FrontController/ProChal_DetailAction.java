@@ -1,3 +1,4 @@
+
 package FrontController;
 
 import java.util.ArrayList;
@@ -37,6 +38,10 @@ public class ProChal_DetailAction implements Action{
          VerificationDAO vdao = new VerificationDAO();
          ArrayList<Verification> vlist = vdao.showV(user.getU_code(),mc_code); //usercode랑 c_Code
          request.setAttribute("vlist", vlist);
+         
+         //해당 챌린지가 오늘 인증가능한지 검사! 인증 가능하면 TRUE, 인증 불가하면 FALSE
+         boolean check = vdao.CheckVerification(mc_code);
+         request.setAttribute("Vcheck", check);
          
          forward.setRedirect(false); 
          forward.setPath("Prochal_detail.jsp");
