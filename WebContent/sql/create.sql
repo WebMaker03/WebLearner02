@@ -47,20 +47,14 @@ CREATE TABLE `verification` (
   foreign key(mc_code) references myC(mc_code) on delete cascade
 );
 
-CREATE TABLE `board` (
-  `b_code` int PRIMARY KEY AUTO_INCREMENT,
-  `c_code` int NOT NULL,
-  foreign key(c_code) references challenges(c_code) on delete cascade
-);
-
 CREATE TABLE `post` (
   `p_code` int PRIMARY KEY AUTO_INCREMENT,
   `u_code` int NOT NULL,
-  `b_code` int NOT NULL,
+  `c_code` int NOT NULL,
   `p_title` varchar(300) NOT NULL,
   `p_text` varchar(500),
   foreign key(u_code) references users(u_code) on delete cascade,
-  foreign key(b_code) references board(b_code) on delete cascade
+  foreign key(c_code) references challenges(c_code) on delete cascade
 );
 
 CREATE TABLE `comments` (
