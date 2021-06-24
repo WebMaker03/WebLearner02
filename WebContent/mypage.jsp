@@ -99,8 +99,8 @@
 					<table class="table"
 						style="width: 600px; margin-top: 30px; margin-bottom: 100px; color: black; text-align: center; background-color: white;">
 						<caption style="font-size: 25px; caption-side: top;">
-							<strong>진행중인 챌린지</strong>
-							<span style="font-size: 20px; margin-left:300px; color:red;">${ProChalCnt}개 진행중</span>
+							<strong>진행중인 챌린지 </strong><i class="fa fa-hourglass-start" aria-hidden="true"></i>
+							<span style="font-size: 20px; margin-left:280px; color:red;">${ProChalCnt}개 진행중</span>
 						</caption>
 						<thead>
 							<tr>
@@ -118,8 +118,8 @@
 					<table class="table"
 						style="width: 600px; margin-top: 30px; color: black; text-align: center; background-color: white;">
 						<caption style="font-size: 25px; caption-side: top;">
-							<strong>종료된 챌린지</strong>
-							<span style="font-size: 20px; margin-left:355px; color:red;">${finChalCnt}개 완료</span>
+							<strong>종료된 챌린지  </strong><i class="fa fa-hourglass-end" aria-hidden="true"></i>
+							<span style="font-size: 20px; margin-left:330px; color:red;">${finChalCnt}개 완료</span>
 						</caption>
 
 						<thead>
