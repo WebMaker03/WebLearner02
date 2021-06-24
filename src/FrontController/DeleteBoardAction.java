@@ -18,7 +18,7 @@ public class DeleteBoardAction implements Action{
 		request.setAttribute("p_code", p_code);
 		
 		forward.setRedirect(false);
-		forward.setPath("Board_Chall");
+		forward.setPath("Board_Chall.jsp");// 프론트랑 연결 필요!
 		
 		return forward;
 	}
