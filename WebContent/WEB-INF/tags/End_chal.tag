@@ -11,7 +11,7 @@
 		<td>
 			<div class="progress">
 				<div class="progress-bar" role="progressbar" aria-valuenow="${list1.achievementPercentage}"
-					aria-valuemin="0" aria-valuemax="100" style="width: 80%;">${list1.achievementPercentage}%</div>
+					aria-valuemin="0" aria-valuemax="100" style="width: ${list1.achievementPercentage}%;">${list1.achievementPercentage}%</div>
 			</div>
 		</td>
 	</tr>

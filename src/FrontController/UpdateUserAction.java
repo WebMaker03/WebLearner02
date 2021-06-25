@@ -2,6 +2,7 @@ package FrontController;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAO.UserDAO;
 import DTO.Users;
@@ -10,33 +11,32 @@ public class UpdateUserAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); //°´Ã¼´Â ¹Ì¸® »ı¼º
+		ActionForward forward= new ActionForward(); 
 		
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
-		Users loginUser = new Users();
-		String pwCheck = "";
-		if(loginUser.getUserpw()== pwCheck) {	
-			newUser.setUserid(request.getParameter("updateName"));
-			newUser.setUserpw(request.getParameter("updateEmail"));
-			newUser.setAge(Integer.parseInt(request.getParameter("updateAge")));
-			newUser.setUserid(loginUser.getUserid());
-			
-			if(udao.updateUser(newUser)) {
+		HttpSession session = request.getSession();
+		Users originUser = (Users)session.getAttribute("session_user");
+
+			newUser.setU_name(request.getParameter("userName"));
+			newUser.setEmail(request.getParameter("userEmail"));
+			newUser.setAge(Integer.parseInt(request.getParameter("userAge")));
+			// ê¸°ì¡´ ë³€ê²½ ì•ˆë˜ëŠ” ê°’ë“¤ sessionì— ë„˜ê²¨ì£¼ê¸°
+			newUser.setU_code(originUser.getU_code());
+			newUser.setPoint(originUser.getPoint());
+			newUser.setUserid(originUser.getUserid());
+			newUser.setUserpw(originUser.getUserpw());
+			if(!udao.updateUser(newUser)) {
+				System.out.println("2");
+				session.setAttribute("session_user", newUser);
 				forward.setRedirect(false);
-				request.getSession().setAttribute("msg", "È¸¿øÁ¤º¸ ¼öÁ¤ ½ÇÆĞ");
-				forward.setPath("Main.jsp");
+				forward.setPath("index.jsp");
 			}	else {
-				forward.setRedirect(true); // true- ¹İÈ¯ÇÏ´Â °´Ã¼ ¾øÀ½ / false-¹İÈ¯ÇÏ´Â °´Ã¼°¡ ÀÖÀ½À» ÀÇ¹Ì
-				request.getSession().setAttribute("msg", "È¸¿øÁ¤º¸ ¼öÁ¤ ¿Ï·á");
-				forward.setPath("Main.jsp");
+				System.out.println("2-2");
+				forward.setRedirect(true); 
+				forward.setPath("index.jsp");
 			};
-			
-		} else {
-			request.getSession().setAttribute("msg", "ºñ¹Ğ¹øÈ£¸¦ È®ÀÎÇØÁÖ¼¼¿ä.");
-			// ¼öÁ¤ÇÏ±â Àü ÆäÀÌÁö·Î ÀÌµ¿.
-			//out.println("<script>history.go(-1);</script>");
-		}
+		
 		return forward;
 	}
 }

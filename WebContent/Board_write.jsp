@@ -21,29 +21,30 @@
 		<h1 id="page_name">[ 게시글 작성하기 ]</h1>
 		<div class="row d-flex justify-content-center">
 			<div class="card" id="boa">
-				<form>
+				<form method="post" action="addPost.bo">
+
 				<div class="row px-3">
 					<div class="flex-column">
-						<h3 class="mb-0 font-weight-normal" id="writer_name" style="font-size: 30px">${MyC.c_code}</h3>
+						<h3 class="mb-0 font-weight-normal" id="writer_name" style="font-size: 30px">${Chal.c_name}</h3>
 
 					</div>
 					<div class="flex-column">
-					<h2 class="mb-0 font-weight-normal" id="writer_theme" style="font-size: 20px; margin-top: 13px;">${MyC.u_code}</h2>
+					<h2 class="mb-0 font-weight-normal" id="writer_theme" style="font-size: 20px; margin-top: 13px;"> 작성자 : ${session_user.u_name}</h2>
 					</div>
 				</div>
 				<hr>
-				
-				<textarea class="form-control" id="form_c" required="" rows="1"
-					placeholder="제목을 입력하세요!"></textarea>
+				<textarea class="form-control" id="form_c" required rows="1" name="p_title" placeholder="제목을 입력하세요!"></textarea>
 				<div class="row px-3 form-group">
 					<textarea class="text-muted bg-light mt-4 mb-3"
-						placeholder="내용을 작성해주세요!!"
+						placeholder="내용을 작성해주세요!!" name = "p_text"
 						style="font-size: 20px; height: 500px;" ></textarea>
 				</div>
-				
+				<input type="hidden" name= "c_code" value="${Chal.c_code}">
 				<div class="row px-3">
-				
-				<button type="button" id="checkbutton" class="btn btn-outline-primary">등록하기</button> 
+				<input type="submit"/>
+				<!--  <button class="btn btn-success send px-5" id="submitBtn" > -->
+				<!-- <button type="button" id="checkbutton" class="btn btn-outline-primary" onClick="location.href=">등록하기</button> 
+				 -->
 				<button type="button" id="backbutton" class="btn btn-outline-primary">취소하기</button>
 				</div>
 				</form>

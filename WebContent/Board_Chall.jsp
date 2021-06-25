@@ -29,7 +29,8 @@
            <tag:chal_board></tag:chal_board>
            
            <!-- 임시 게시글 등록 버튼 -->
-           <input type="button" value="게시글 등록" onClick="location.href='newPost.bo?c_code=${c_code}'">
+           <input type="button" class="btn btn-primary disabled"value="게시글 등록" onClick="location.href='newPost.bo?c_code=${c_code}'">
+           <button type="button" class="btn btn-info" id="backBtn" onClick="history.go(-1)">이전 페이지로!</button>
         </div>
     </div>
 </div>

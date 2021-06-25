@@ -14,21 +14,14 @@ public class LogoutAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		ActionForward forward =null;
-		//¼¼¼Ç¿¡ µé¾îÀÖ´Â °ªÀ» ÃÊ±âÈ­
 		
 		HttpSession session =request.getSession();
-		session.invalidate(); // ¼¼¼Ç »èÁ¦, ¸Ş¸ğ¸® ÇØÁ¦ÀÇ °³³äÀÌ ¾Æ´Ï¶ó ÇØ´ç °ª¿¡ ´ëÇØ ¹«È¿È­¶ó´Â °³³äÀÌ Á¤È®
-		//session.removeAttribute("uid"); ÀÌ·¸°Ô ÇØµµ µÊ. ÀÌ°Ç ¼Ó¼º¸¸ Á¦°Å, ¼¼¼ÇÀº »ì¾ÆÀÖÀ½.
+		session.invalidate(); 
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		out.println("<script>alert('·Î±×¾Æ¿ô µÇ¾ú½À´Ï´Ù!'); location.href='main.jsp';</script>");
+		out.println("<script>alert('ë¡œê·¸ì•„ì›ƒ ë˜ì—ˆìŠµë‹ˆë‹¤.'); location.href='main.jsp';</script>");
 		out.flush(); 
-		
-	/*	response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter out = response.getWriter();
-		out.println("<script>alert('·Î±×¾Æ¿ô µÇ¾ú½À´Ï´Ù.');</script>");*/
-		
+
 		return forward;
 	}
 	

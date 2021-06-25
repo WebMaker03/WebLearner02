@@ -18,7 +18,6 @@ public class ShowMyPageAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		ActionForward forward= new ActionForward(); 
-		String userid = request.getParameter("userid");
 		ChallengesDAO cdao = new ChallengesDAO();
 		/*UserDAO  udao = new UserDAO();
 		Users user = udao.showUser(userid);*/
@@ -28,13 +27,21 @@ public class ShowMyPageAction implements Action {
 		ArrayList<MyC> myClist = cdao.prochal(user.getU_code());
 		request.setAttribute("pro_chalList", myClist);
 		ArrayList<Challenges> Clist = cdao.getChalName(myClist);
-		request.setAttribute("pro_chalList_C", Clist); // ÁøÇàÁß Ã§¸°Áö¿¡ ´ëÇÑ Ã§¸°Áö Á¤º¸¸¦ ´ãÀº ¸®½ºÆ®
+		request.setAttribute("pro_chalList_C", Clist); 
 		
 		ArrayList<MyC> EndList= cdao.finchal(user.getU_code());
 		request.setAttribute("end_chalList", EndList);
 		
 		ArrayList<Challenges> EndList_D = cdao.getChalName(EndList);
 		request.setAttribute("end_chalList_D", EndList_D);
+		
+		// ì§„í–‰ì¤‘ ì±Œë¦°ì§€ ê°œìˆ˜ ë°˜í™˜
+		int ProChalCnt= cdao.cntprochal(user.getU_code());
+		request.setAttribute("ProChalCnt", ProChalCnt);
+		
+		// ì¢…ë£Œëœ ì±Œë¦°ì§€ ê°œìˆ˜ ë°˜í™˜
+		int finChalCnt= cdao.cntfinchal(user.getU_code());
+		request.setAttribute("finChalCnt", finChalCnt);
 		
 		forward.setRedirect(false); 
 		forward.setPath("mypage.jsp");
