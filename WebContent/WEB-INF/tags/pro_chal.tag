@@ -18,17 +18,5 @@
                   </tr>
 </c:forEach>
 
-<!--  <tr>
-                     <th scope="row">1</th>
-                     <td>challenge1</td>
-                     <td>
-                        <nav>
-                           <ul class="pager"
-                              style="background-color: #6495ED; margin-left: 25%; width: 150px;">
-                              <li><a href="#" style="color: white;">인증보러가기</a></li>
-                           </ul>
-                        </nav>
-                     </td>
-                  </tr>
--->
+
                   

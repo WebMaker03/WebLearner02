@@ -33,7 +33,7 @@
                <div class="card p-3" id="prochal_card">
                   <div class="row">
                      <div class="col-12 col-md-5">
-                        <img id="img_show" src="images/health.jpg" alt="My Image">
+                        <img id="img_show" src="images/${pro_chal_c.theme}/${pro_chal_c.img}" alt="My Image">
                      </div>
                      <div class="col-12 col-md-7 py-2 px-3">
                         <span id="challenge_title"> <i class="fa fa-hashtag"
