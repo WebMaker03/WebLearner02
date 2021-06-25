@@ -176,11 +176,11 @@ public class UserDAO {
 	public boolean updateUserPw(Users user) {	// id, pw
 		conn = DBConnection.connect();
 		String sql = "update users set userpw=?"
-				+ " where userid=?;";
+				+ " where u_code=?;";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user.getUserpw());
-			pstmt.setString(2, user.getUserid());
+			pstmt.setInt(2, user.getU_code());
 			pstmt.executeUpdate();
 			return false;
 		} catch (SQLException e) {
