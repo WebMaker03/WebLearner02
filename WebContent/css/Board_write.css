@@ -103,12 +103,18 @@
 }
 
 #checkbutton{
+	color:black;
 	margin-left:850px; 
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
 	
 }
 
 #backbutton{
+	color:black;
 	margin-left:20px;
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
 }
 
 #form_c{
@@ -116,8 +122,9 @@
     border-left: 0;
     border-right: 0;
     font-size: 23px;
-    border: 3px solid #C3EAF1;
     height: 70px;
+    border: 3px solid #C3EAF1;
+    border-radius: 10px;
 	
 }
 #form_c:focus {
@@ -133,4 +140,9 @@
  }
  #writer_name{
  margin-left:5px;
+ }
+ 
+ #boa{
+ 	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
  }

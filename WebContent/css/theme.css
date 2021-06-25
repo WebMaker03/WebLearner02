@@ -32,12 +32,13 @@
 }
 
 #bo_hoo:hover {
-     border: #85C1E9 solid 3px;
+     border: #85C1E9 solid 5px;
      transition: ease-in all 0.5s;
 }
 
 .we_boxx {
-     border: #7BBBD6 solid 1px;
+     border: #7BBBD6 solid 3px;
+     border-radius: 10px;
      transition: ease-in all 0.5s;
      padding: 30px 20px 30px 20px;
      margin-bottom: 26px;
@@ -112,6 +113,7 @@
 
 .read_moree {
 	 border: #85C1E9 solid 0.5px;
+	 border-radius: 10px;
      display: inline-block;
      background: #C3EAF1 ;
      color: #1A4C6D;
