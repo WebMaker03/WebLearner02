@@ -27,9 +27,8 @@ button {
 	width: 350px;
 	height: 60px;
 	font-size: 23px;
-	border-radius: 5px;
-	background-color: #ffffff;
-
+	border-radius: 20px;
+	background-color: #85C1E9;
 	margin-top: 50px;
 	margin-bottom: 10px;
 	margin-left: 50px;
@@ -62,46 +61,6 @@ button {
 	align-items: center;
 }
 
-#my{
-	border: #7BBBD6 solid 3px;
-	border-radius: 10px;
-}
-
-#myp{
-	border: #7BBBD6 solid 3px;
-	border-radius: 10px;
-	width: 300px;
-	 height: 355px;
-	  margin-left: 100px;
-}
-
-#but{
-	border: #7BBBD6 solid 3px;
-	border-radius: 10px;
-	margin-left: 35px;
-	width: 350px;
-	font-size: 20px;
-	background-color:#E1F2F9;
-	color: black;
-}
-
-#butt{
-	border: #7BBBD6 solid 3px;
-	border-radius: 10px;
-	background-color:#E1F2F9;
-	font-size: 18px;
-	color: black;
-	margin-top: 75px;
-}
-
-#butto{
-	border: #7BBBD6 solid 3px;
-	border-radius: 10px;
-	background-color:#E1F2F9;
-	margin-top: 30px; 
-	margin-left: 40px;
-	color: black;
-}
 #point{
 	margin-bottom : 20px;
 	font-size: 20px;
@@ -127,7 +86,6 @@ button {
 	
 }
 #pro_table{
-	
 	width: 600px; 
 	margin-top: 30px;
 	 margin-bottom: 100px;
