@@ -149,6 +149,44 @@ public class BoardDAO {
 		return p;
 		}
 	}
+	
+public Comments getOneCM(int cm_code) {
+		
+		Comments cm = new Comments();
+		
+		try {
+			conn = DBConnection.connect();
+			String sql = "select * from comments where cm_code = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, cm_code);
+			pstmt.executeQuery();
+			
+			ResultSet rs =pstmt.executeQuery();
+			
+			while(rs.next()) {
+				
+				cm.setCm_code(rs.getInt("cm_code"));
+				cm.setP_code(rs.getInt("p_code"));
+				cm.setU_code(rs.getInt("u_code"));
+				cm.setCm_text(rs.getString("cm_text"));
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		return cm;
+		}
+	}
 
 	public boolean insertP(Post p) {
 		try {
