@@ -545,10 +545,12 @@ ul.email li i {
 
 #we1 a.carousel-control-prev {
      left: 43%;
+     border-radius: 10px;                                                                      <!--  ¹Ù²Þ  -->
 }
 
 #we1 a.carousel-control-next {
      right: 43%;
+     border-radius: 10px;                                                                      <!--  ¹Ù²Þ  -->
 }
 
 #we1 a.carousel-control-next:focus,

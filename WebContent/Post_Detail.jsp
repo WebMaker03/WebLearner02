@@ -17,9 +17,9 @@
 	<div class="container_jonn" >
 		
 		<div class="d-flex justify-content-center row" >
-			<div class="comment" style="margin-top: 200px" >
+			<div class="comment" style="margin-top: 200px">
 				<div
-					class="d-flex flex-row align-items-center text-left comment-top p-2 bg-white border-bottom px-4">
+					class="d-flex flex-row align-items-center text-left comment-top p-2 border-bottom px-4" id="po" >
 					<div class="profile-image">
 						<i class="fa fa-book" aria-hidden="true"></i>
 					</div>
@@ -31,6 +31,7 @@
 						<div
 							class="d-flex flex-row align-items-center align-content-center post-title">
 							<span>${c_code}</span>
+
 						</div>
 
 					</div>
@@ -49,17 +50,17 @@
 						<div
 							class="d-flex flex-row justify-content-between align-items-center action-collapse p-2"
 							data-toggle="collapse" aria-expanded="false"
-							aria-controls="collapse-1" href="#collapse-1">
+							aria-controls="collapse-1" href="#collapse-1" id="post">
 							<span>댓글 보기</span><i class="fa fa-chevron-down servicedrop"></i>
 						</div>
-						<div id="collapse-1" class="collapse">
+						<div id="collapse-1" class="collapse" >
 							<div class="commented-section mt-2">
-								<div class="d-flex flex-row align-items-center commented-user">
+								<div class="d-flex flex-row align-items-center commented-user" id="post">
 									<h5 class="mr-2">작성자 1</h5>
 									<span class="dot mb-1"></span><span class="mb-1 ml-2">4
 										hours ago</span>
 								</div>
-								<div class="comment-text-sm">
+								<div class="comment-text-sm" id="post">
 									<span>Lorem ipsum dolor sit amet, consectetur adipiscing
 										elit, sed do eiusmod tempor incididunt ut labore et dolore
 										magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -74,12 +75,12 @@
 							</div>
 							<hr>
 							<div class="commented-section mt-2">
-								<div class="d-flex flex-row align-items-center commented-user">
+								<div class="d-flex flex-row align-items-center commented-user" id="post">
 									<h5 class="mr-2">작성자 2</h5>
 									<span class="dot mb-1"></span><span class="mb-1 ml-2">5
 										hours ago</span>
 								</div>
-								<div class="comment-text-sm">
+								<div class="comment-text-sm" id="post">
 									<span>Lorem ipsum dolor sit amet, consectetur adipiscing
 										elit, sed do eiusmod tempor incididunt ut labore et dolore
 										magna aliqua..</span>
@@ -91,13 +92,13 @@
 
 							</div>
 							<hr>
-							<div class="commented-section mt-2">
-								<div class="d-flex flex-row align-items-center commented-user">
+							<div class="commented-section mt-2" >
+								<div class="d-flex flex-row align-items-center commented-user" id="post">
 									<h5 class="mr-2">작성자 3</h5>
 									<span class="dot mb-1"></span><span class="mb-1 ml-2">10
 										hours ago</span>
 								</div>
-								<div class="comment-text-sm">
+								<div class="comment-text-sm" id="post">
 									<span>Nunc sed id semper risus in hendrerit gravida
 										rutrum. Non odio euismod lacinia at quis risus sed. Commodo
 										ullamcorper a lacus vestibulum sed arcu non odio euismod. Enim

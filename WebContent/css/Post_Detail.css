@@ -45,7 +45,9 @@ body {
 }
 
 .comment-text {
-    font-size: 20px
+	margin-top: 20px;
+    font-size: 20px;
+    color: black;
     
 }
 
@@ -70,10 +72,18 @@ body {
 	border: #7BBBD6 solid 3px;
 	border-radius: 10px;
 	width: 1100px;
-	background: #F8F9FB;
+	background: #fff;
 }
 
 .buttt {
 	background: #7BBBD6;
 	width:100px;
+}
+
+#post{
+	color: black;
+}
+
+#po{
+	background-color:#E1F2F9;
 }

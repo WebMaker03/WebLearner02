@@ -1,7 +1,10 @@
 package FrontController;
 
+import java.io.PrintWriter;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAO.UserDAO;
 import DTO.Users;
@@ -10,32 +13,30 @@ public class UpdateUserPasswordAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); //객체는 미리 생성
-		
+		ActionForward forward = null; // 객체는 미리 생성
+
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
-		Users loginUser = new Users();
-		String pwCheck = "";
-		if(loginUser.getUserpw()== pwCheck) {	// pwCheck을 이렇게 해도 될까..?
-			newUser.setUserid(request.getParameter("updatePw"));
-			newUser.setU_code(loginUser.getU_code());
-			
-			if(udao.updateUserPw(newUser)) {
-				forward.setRedirect(false);
-				request.getSession().setAttribute("msg", "회원정보 수정 실패");
-				forward.setPath("Main.jsp");
-			}	else {
-				forward.setRedirect(true); // true- 반환하는 객체 없음 / false-반환하는 객체가 있음을 의미
-				request.getSession().setAttribute("msg", "회원정보 수정 완료");
-				forward.setPath("Main.jsp");
-			};
-			
+		PrintWriter out = response.getWriter();
+		HttpSession session = request.getSession();
+		Users originUser = (Users)session.getAttribute("session_user");
+		newUser.setUserpw(request.getParameter("pw1"));
+		newUser.setU_code(originUser.getU_code());
+		if (!udao.updateUserPw(newUser)) {
+			session.invalidate();
+			response.setCharacterEncoding("UTF-8");
+			response.setContentType("text/html; charset=UTF-8");
+			out.println("<script>alert('비밀번호가 변경되었습니다. 다시로그인 해주세요.');"
+					+ " location.href='index.jsp';</script>");
+			out.flush();
 		} else {
-			request.getSession().setAttribute("msg", "비밀번호를 확인해주세요.");
-			// 수정하기 전 페이지로 이동.
-			//out.println("<script>history.go(-1);</script>");
+			response.setCharacterEncoding("UTF-8");
+			response.setContentType("text/html; charset=UTF-8");
+			out.println("<script>alert('비밀번호 변경실패!!');"
+					+ " location.href='history.go(-1)';</script>");
+			out.flush();
 		}
 		return forward;
-		}
+	}
 
 }
