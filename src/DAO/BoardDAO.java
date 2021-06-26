@@ -496,4 +496,6 @@ public Comments getOneCM(int cm_code) {
 		return datas;
 		
 	}
+	
+
 }

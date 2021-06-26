@@ -9,7 +9,9 @@
 				<a class="text-muted text-uppercase" data-toggle="collapse"
 					href="#question1" style="font-size: 25px;"><i
 					class="fa fa-hand-o-right mr-2 mt-0-20 pull-left"
+
 					aria-hidden="true"></i><a href="postDetail.bo?p_code=${v.p_code}">${v.p_title}</a> <i
+
 					class="fa fa-minus mr-2 text-slate pull-right" style="float: right;"></i>
 					<input
 					type="button" class="btn btn-default disabled" value="삭제"

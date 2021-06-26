@@ -1,5 +1,7 @@
 package FrontController;
 
+import java.io.PrintWriter;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -11,11 +13,12 @@ public class UpdateUserAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); 
+		ActionForward forward= null; 
 		
 		UserDAO udao = new UserDAO();
 		Users newUser = new Users();
 		HttpSession session = request.getSession();
+		PrintWriter out = response.getWriter();
 		Users originUser = (Users)session.getAttribute("session_user");
 
 			newUser.setU_name(request.getParameter("userName"));
@@ -27,14 +30,18 @@ public class UpdateUserAction implements Action {
 			newUser.setUserid(originUser.getUserid());
 			newUser.setUserpw(originUser.getUserpw());
 			if(!udao.updateUser(newUser)) {
-				System.out.println("2");
 				session.setAttribute("session_user", newUser);
-				forward.setRedirect(false);
-				forward.setPath("index.jsp");
+				response.setCharacterEncoding("UTF-8");
+				response.setContentType("text/html; charset=UTF-8");
+				out.println("<script>alert('회원정보가 수정되었습니다 :)');"
+						+ " location.href='mypage.etc';</script>");
+				out.flush();
 			}	else {
-				System.out.println("2-2");
-				forward.setRedirect(true); 
-				forward.setPath("index.jsp");
+				response.setCharacterEncoding("UTF-8");
+				response.setContentType("text/html; charset=UTF-8");
+				out.println("<script>alert('회원정보 수정 실패!!');"
+						+ " location.href='history.go(-1)';</script>");
+				out.flush();
 			};
 		
 		return forward;

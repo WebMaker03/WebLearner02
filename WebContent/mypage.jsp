@@ -28,6 +28,7 @@
 			</h2>
 			<br>
 			<div class="row">
+
 				<div class="col-md-8">
 					<div class="card text-center">
 						<div class="row">
@@ -42,9 +43,7 @@
 										<div class="mt-4">
 										<span id="point">현재 포인트는 </span><span id="point_d">${session_user.point}</span><span id="point">P 입니다.</span>
 											<div class="px-3">
-												<button type="button" class="btn btn-primary disabled btn-block"
-													style="margin-left: 35px; width: 350px; font-size: 20px;">Point
-													recharge</button>
+												<button type="button" class="btn btn-primary disabled btn-block" id="but">Point recharge</button>
 											</div>
 										</div>
 									</div>
@@ -64,9 +63,7 @@
 									<div class="mt-4">
 										<div class="px-3">
 											<!--  눌렀을 때 회원수정 페이지로 이동 -->
-											<button type="button" class="btn btn-primary disabled btn-block"
-											onclick="location.href='ChangeInfo.jsp'"
-												style="font-size: 18px;">Change Info</button>
+											<button type="button" class="btn btn-primary disabled btn-block" onclick="location.href='ChangeInfo.jsp'" style="font-size: 18px;">Change Info</button>
 										</div>
 									</div>
 									<div class="mt-4">
@@ -84,15 +81,15 @@
 				</div>
 				<div class="col-md-4">
 
-					<div class="card"
+					<div class="card"   id="myp"
 						style="width: 300px; height: 400px; margin-left: 100px;">
 						<div class="card-body">
 							<a href="#" class="btn btn-primary disabled"
-								style="margin-top: 30px; margin-left: 40px;"> 작성한 게시글 & 댓글</a><br>
+								id="butto"> 작성한 게시글 & 댓글</a><br>
 							<a href="#" class="btn btn-primary disabled"
-								style="margin-top: 20px; margin-left: 40px;"> 게시글 저장 목록 </a> <br>
+								id="butto"> 게시글 저장 목록 </a> <br>
 							<a href="#" class="btn btn-primary disabled"
-								style="margin-top: 20px; margin-left: 40px;"> 인증현황 보러가기 </a>
+								id="butto"> 인증현황 보러가기 </a>
 						</div>
 					</div>
 
@@ -111,7 +108,7 @@
 							<strong>진행중인 챌린지 </strong><i class="fa fa-hourglass-start" aria-hidden="true"></i>
 							<span style="font-size: 20px; margin-left:240px; color:red;">${ProChalCnt}개 진행중</span>
 						</caption>
-						<thead>
+						<thead id="my">
 							<tr>
 								<th scope="col">No.</th>
 								<th scope="col">Challenge Info</th>
@@ -123,6 +120,7 @@
 						</tbody>
 					</table>
 				</div>
+				
 				<div class="col-md-6">
 					<table class="table" id="finChal_Table">
 						<caption style="font-size: 25px; caption-side: top;">
@@ -130,7 +128,7 @@
 							<span style="font-size: 20px; margin-left:280px; color:red;">${finChalCnt}개 완료</span>
 						</caption>
 
-						<thead>
+						<thead id="my">
 							<tr>
 								<th scope="col">no.</th>
 								<th scope="col">Title</th>
