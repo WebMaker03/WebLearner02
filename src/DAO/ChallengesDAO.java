@@ -400,7 +400,7 @@ public class ChallengesDAO {
 
 		try {
 			conn = DBConnection.connect();
-			String sql = "select * from MyC where u_code=? and c_code=?";
+			String sql = "select * from MyC where u_code=? and c_code=? and state=1";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, u_code);
 			pstmt.setInt(2, c_code);

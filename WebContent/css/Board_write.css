@@ -116,6 +116,13 @@
 	border: #7BBBD6 solid 3px;
 	border-radius: 10px;
 }
+#submitbutton{
+		color:black;
+	margin-left:20px;
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+	
+}
 
 #form_c{
 	 border-top: 0;

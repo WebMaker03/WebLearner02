@@ -7,11 +7,42 @@
 			<h4 class="font-weight-bold">
 				별점 ${status.count} <span class="float-right">${v}%</span>
 			</h4>
+			<c:if test="${status.count eq 1}">
 			<div class="progress mb-4">
 				<div class="progress-bar bg-danger" role="progressbar"
 					style="width: ${v}%" aria-valuenow="${v}" aria-valuemin="0"
 					aria-valuemax="100"></div>
 			</div>
+			</c:if>
+				<c:if test="${status.count eq 2}">
+			<div class="progress mb-4">
+				<div class="progress-bar bg-warning" role="progressbar"
+					style="width: ${v}%" aria-valuenow="${v}" aria-valuemin="0"
+					aria-valuemax="100"></div>
+			</div>
+			</c:if>
+				<c:if test="${status.count eq 3}">
+			<div class="progress mb-4">
+				<div class="progress-bar  bg-success" role="progressbar"
+					style="width: ${v}%;" aria-valuenow="${v}" aria-valuemin="0"
+					aria-valuemax="100"></div>
+			</div>
+			</c:if>
+				<c:if test="${status.count eq 4}">
+			<div class="progress mb-4">
+				<div class="progress-bar  bg-info" role="progressbar"
+					style="width: ${v}%" aria-valuenow="${v}" aria-valuemin="0"
+					aria-valuemax="100"></div>
+			</div>
+			</c:if>
+				<c:if test="${status.count eq 5}">
+			<div class="progress mb-4">
+				<div class="progress-bar" role="progressbar" 
+					style="width: ${v}%; color:red;" aria-valuenow="${v}" aria-valuemin="0"
+					aria-valuemax="100"></div>
+			</div>
+			</c:if>
+			
 		</c:forEach>
 	</c:when>
 	<c:otherwise>
