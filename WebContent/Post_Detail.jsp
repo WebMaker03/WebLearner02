@@ -24,23 +24,20 @@
 						<i class="fa fa-book" aria-hidden="true"></i>
 					</div>
 					<div class="d-flex flex-column ml-3">
-						<div class="d-flex flex-row post-title" id="post">
-							<h1>작성된 게시글 제목</h1>
-							<span class="ml-2">(작성한 사람 이름)</span>
+						<div class="d-flex flex-row post-title">
+							<h1>${v.p_title}</h1>
+							<span class="ml-2">${u_code}</span>
 						</div>
 						<div
-							class="d-flex flex-row align-items-center align-content-center post-title" id="post" >
-							<span>작성된 시간(6 hours ago)</span>
+							class="d-flex flex-row align-items-center align-content-center post-title">
+							<span>${c_code}</span>
+
 						</div>
 
 					</div>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
-					<p class="comment-text">Lorem ipsum dolor sit amet, consectetur
-						adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-						dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-						exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat.</p>
+					<p class="comment-text">${v._p_title}</p>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4">
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">
