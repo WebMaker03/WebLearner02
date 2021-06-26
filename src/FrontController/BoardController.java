@@ -84,6 +84,15 @@ public class BoardController extends HttpServlet {
 		         } catch (Exception e) {
 		            e.printStackTrace();
 		         }
+	      } else if(action.equals("/postDetail.bo")) {
+	    	  try {
+		        	System.out.println("게시글 상세보기");
+		            forward = new PostDetailAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	    	  
+
 	      } else if(action.equals("/addcmt.bo")) {
 	    	  try {
 		        	System.out.println("새로운 댓글 등록");
