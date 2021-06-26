@@ -30,10 +30,9 @@
 							<span class="ml-2">작성자이름</span>
 						</div>
 						<div>
-							class="d-flex flex-row align-items-center align-content-center post-title">
 
+							<class="d-flex flex-row align-items-center align-content-center post-title">
 							<span>등록날짜</span>
-
 						</div>
 
 					</div>
@@ -43,10 +42,13 @@
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4">
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">
+						<form method = "post" action="addCmt.bo" >
+						<input type = "hidden" name = "p_code" value = "${v.p_code}">
 						<input
-							type="text" class="search"
+							type="text" class="search" name="cm_text" 
 							placeholder="자신의 의견을 작성해보세요!">
 						<button type="button" class="btn btn-link">완료!</button>
+						</form>
 					</div>
 					<div class="collapsable-comment">
 						<div
@@ -55,8 +57,12 @@
 							aria-controls="collapse-1" href="#collapse-1" id="post">
 							<span>댓글 보기</span><i class="fa fa-chevron-down servicedrop"></i>
 						</div>
+<<<<<<< HEAD
 
 						<div id="collapse-1" class="collapse" >
+=======
+						<div id="collapse-1" class="collapse">
+>>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
 							<tag:cmt_show></tag:cmt_show>
 						</div>
 					</div>
