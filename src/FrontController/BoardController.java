@@ -93,7 +93,7 @@ public class BoardController extends HttpServlet {
 		         }
 	    	  
 
-	      } else if(action.equals("/addcmt.bo")) {
+	      } else if(action.equals("/addCmt.bo")) {
 	    	  try {
 		        	System.out.println("새로운 댓글 등록");
 		            forward = new AddCmtAction().execute(request, response);
@@ -102,7 +102,7 @@ public class BoardController extends HttpServlet {
 		         }
 	    	  
 
-	      }  else if(action.equals("/delcmt.bo")) {
+	      }  else if(action.equals("/delCmt.bo")) {
 	    	  try {
 		        	System.out.println("댓글 삭제");
 		            forward = new DelCmtAction().execute(request, response);
