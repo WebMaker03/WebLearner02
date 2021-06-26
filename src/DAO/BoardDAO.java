@@ -423,4 +423,45 @@ public Comments getOneCM(int cm_code) {
 		return datas;
 		
 	}
+	public ArrayList<Users> getCwriters( ArrayList<Comments> clist){ //u_code 작성자이름 comment에 u_code
+		
+		ArrayList<Users> userlist = new ArrayList();
+		try {
+			conn = DBConnection.connect();
+			String sql = "select * from users where u_code=?";
+			pstmt = conn.prepareStatement(sql);
+			
+			for(int i=0;i<clist.size();i++) {
+				int u_code= clist.get(i).getU_code();
+				pstmt.setInt(1, u_code);
+				ResultSet rs =pstmt.executeQuery();
+				while(rs.next()) {
+					Users u = new Users();
+					u.setAge(rs.getInt("age"));
+					u.setU_name(rs.getString("u_name"));
+					u.setU_code(rs.getInt("u_code"));
+					u.setUserid(rs.getString("userid"));
+					u.setEmail(rs.getString("email"));
+					userlist.add(u);
+				}
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
+		return userlist;
+	
+	}
+
 }
