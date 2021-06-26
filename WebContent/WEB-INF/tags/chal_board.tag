@@ -13,10 +13,12 @@
 					aria-hidden="true"></i><a href="postDetail.bo?p_code=${v.p_code}">${v.p_title}</a> <i
 
 					class="fa fa-minus mr-2 text-slate pull-right" style="float: right;"></i>
+					<c:if test="${v.u_code eq session_user.u_code}">
 					<input
 					type="button" class="btn btn-default disabled" value="삭제"
 					style="float: right;"
 					onClick="location.href='deletePost.bo?p_code=${v.p_code}'">
+					</c:if>
 					<%-- <input
 					type="button" class="btn btn-default disabled" value="수정"
 					style="float: right;"
