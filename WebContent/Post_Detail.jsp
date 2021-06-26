@@ -41,12 +41,12 @@
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4">
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">
-						<form method = "post" action="addCmt.bo" >
+						<form method = "post" action="addCmt.bo" id="cmtForm" >
 						<input type = "hidden" name = "p_code" value = "${v.p_code}">
 						<input
 							type="text" class="search" name="cm_text" 
 							placeholder="자신의 의견을 작성해보세요!">
-						<button type="button" class="btn btn-link">완료!</button>
+						<button type="submit" form="cmtForm" class="btn btn-link">완료!</button>
 						</form>
 					</div>
 					<div class="collapsable-comment">
