@@ -26,7 +26,7 @@
 					</div>
 					<div class="d-flex flex-column ml-3">
 						<div class="d-flex flex-row post-title">
-							<h1>${p.p_title}</h1>
+							<h1>${post.p_title}</h1>
 							<span class="ml-2">작성자이름</span>
 						</div>
 						<div>
@@ -37,14 +37,14 @@
 					</div>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
-					<p class="comment-text">${v._p_title}</p>
+					<p class="comment-text">${post.p_title}</p>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4">
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">
 						<form method = "post" action="addCmt.bo" id="cmtForm" >
-						<input type = "hidden" name = "p_code" value = "${v.p_code}">
+						<input type = "hidden" name = "p_code" id = "p_code" value = "${post.p_code}">
 						<input
-							type="text" class="search" name="cm_text" 
+							type="text" class="search" name="cm_text" id="cm_text" 
 							placeholder="자신의 의견을 작성해보세요!">
 						<button type="submit" form="cmtForm" class="btn btn-link">완료!</button>
 						</form>
