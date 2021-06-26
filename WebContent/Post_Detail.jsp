@@ -38,7 +38,8 @@
 					</div>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
-					<p class="comment-text">${p.p_title}</p>
+
+					<p class="comment-text">${post.p_title}</p>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4">
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">
