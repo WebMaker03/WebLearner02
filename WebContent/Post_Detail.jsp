@@ -31,12 +31,9 @@
 						</div>
 						<div>
 							class="d-flex flex-row align-items-center align-content-center post-title">
-<<<<<<< HEAD
-							<span>등록날짜</span>
-=======
-							<span>${c_code}</span>
 
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
+							<span>등록날짜</span>
+
 						</div>
 
 					</div>
@@ -58,72 +55,9 @@
 							aria-controls="collapse-1" href="#collapse-1" id="post">
 							<span>댓글 보기</span><i class="fa fa-chevron-down servicedrop"></i>
 						</div>
-<<<<<<< HEAD
-						<div id="collapse-1" class="collapse">
-							<tag:cmt_show></tag:cmt_show>
-=======
+
 						<div id="collapse-1" class="collapse" >
-							<div class="commented-section mt-2">
-								<div class="d-flex flex-row align-items-center commented-user" id="post">
-									<h5 class="mr-2">작성자 1</h5>
-									<span class="dot mb-1"></span><span class="mb-1 ml-2">4
-										hours ago</span>
-								</div>
-								<div class="comment-text-sm" id="post">
-									<span>Lorem ipsum dolor sit amet, consectetur adipiscing
-										elit, sed do eiusmod tempor incididunt ut labore et dolore
-										magna aliqua. Ut enim ad minim veniam, quis nostrud
-										exercitation ullamco laboris nisi ut aliquip ex ea commodo
-										consequat.</span>
-								</div>
-								<ul class="nav justify-content-end">
-									<button type="button" class="btn btn-link">수정</button>
-									<button type="button" class="btn btn-link">삭제</button>
-								</ul>
-
-							</div>
-							<hr>
-							<div class="commented-section mt-2">
-								<div class="d-flex flex-row align-items-center commented-user" id="post">
-									<h5 class="mr-2">작성자 2</h5>
-									<span class="dot mb-1"></span><span class="mb-1 ml-2">5
-										hours ago</span>
-								</div>
-								<div class="comment-text-sm" id="post">
-									<span>Lorem ipsum dolor sit amet, consectetur adipiscing
-										elit, sed do eiusmod tempor incididunt ut labore et dolore
-										magna aliqua..</span>
-								</div>
-								<ul class="nav justify-content-end">
-									<button type="button" class="btn btn-link">수정</button>
-									<button type="button" class="btn btn-link">삭제</button>
-								</ul>
-
-							</div>
-							<hr>
-							<div class="commented-section mt-2" >
-								<div class="d-flex flex-row align-items-center commented-user" id="post">
-									<h5 class="mr-2">작성자 3</h5>
-									<span class="dot mb-1"></span><span class="mb-1 ml-2">10
-										hours ago</span>
-								</div>
-								<div class="comment-text-sm" id="post">
-									<span>Nunc sed id semper risus in hendrerit gravida
-										rutrum. Non odio euismod lacinia at quis risus sed. Commodo
-										ullamcorper a lacus vestibulum sed arcu non odio euismod. Enim
-										facilisis gravida neque convallis a. In mollis nunc sed id.
-										Adipiscing elit pellentesque habitant morbi tristique senectus
-										et netus. Ultrices mi tempus imperdiet nulla malesuada
-										pellentesque.</span>
-								</div>
-								
-								<ul class="nav justify-content-end">
-									<button type="button" class="btn btn-link">수정</button>
-									<button type="button" class="btn btn-link">삭제</button>
-								</ul>
-							</div>
-							<hr>
->>>>>>> branch 'master' of https://github.com/WebMaker03/WebLearner02.git
+							<tag:cmt_show></tag:cmt_show>
 						</div>
 					</div>
 				</div>
