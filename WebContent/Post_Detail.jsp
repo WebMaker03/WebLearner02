@@ -34,7 +34,7 @@
 							<span class="ml-2">작성자이름</span>
 						</div>
 					</div>
-					<a href="javascript:history.back();"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
+					<a href="javascript:goBoard.bo?c_code=${post.c_code};"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
 
