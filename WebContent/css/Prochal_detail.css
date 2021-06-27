@@ -191,6 +191,8 @@ btn btn-secondary {
 }
 #prochal_card{
 	border-radius: 10px 10px 10px 10px;
+	border: #7BBBD6 solid 3px;
+     border-radius: 10px;
 	
 }
 
@@ -206,7 +208,7 @@ body {
 
 .cross {
     padding: 10px;
-    color: #d6312d;
+    color: #7BBBD6;
     cursor: pointer;
     font-size: 23px
 }
@@ -222,7 +224,7 @@ body {
 
 .comment-area textarea {
     resize: none;
-    border: 1px solid #ff0000
+    border: 1px solid #7BBBD6
 }
 
 .form-control:focus {
@@ -241,8 +243,8 @@ body {
 
 .send:hover {
     color: #fff;
-    background-color: #f50202;
-    border-color: #f50202
+    background-color: #7BBBD6;
+    border-color: #7BBBD6
 }
 
 .rating {
@@ -295,7 +297,8 @@ body {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border-radius: 1px;
+    border: #7BBBD6 solid 3px;
+     border-radius: 10px;
     -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1)
 } 
 
@@ -330,7 +333,8 @@ body {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border-radius: 1px;
+    border: #7BBBD6 solid 3px;
+     border-radius: 10px;
     -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1)
 } 
 
@@ -346,8 +350,10 @@ body {
 }
 
 #btn_b {          
-	background-color: #34ba48;
-	border-color: #34ba48;
+	background-color: #E1F2F9;
+	color:black;
+	 border: #7BBBD6 solid 3px;
+     border-radius: 10px;
 }
 
  body {
@@ -462,14 +468,19 @@ body {
  }
  
  #ca2_btn1 {
- 
+ background-color: #E1F2F9;
+	color:black;
+	 border: #7BBBD6 solid 3px;
+     border-radius: 10px;
  height: 23px;
      width: 120px;
-     font-size: 10px;
+     font-size: 13px;
+     
  
  }
  
  #ca2_btn2 {
+ 
  height: 23px;
      width: 120px;
      font-size: 10px;
@@ -478,6 +489,7 @@ body {
  }
  
  #ca2_btn3 {
+ 
  height: 23px;
      width: 120px;
      background-color :#007bff;
@@ -498,7 +510,10 @@ body {
      color : #ffffff;
  }
  #backBtn{
- 
+ 	background-color: #E1F2F9;
+	color:black;
+	 border: #7BBBD6 solid 3px;
+     border-radius: 10px;
  	margin-left:580px;
  	width:fit-content;
  }

@@ -56,3 +56,28 @@ a {
 .mt-0-20 {
     margin-top: .20rem !important
 }
+
+#font{
+	color:black;
+}
+
+#style{
+	 border: #7BBBD6 solid 3px;
+     border-radius: 10px;
+}
+#black{
+	color:black;
+}
+
+#check{
+	background-color: #E1F2F9;
+	color:black;
+	 border: #7BBBD6 solid 3px;
+     border-radius: 10px;
+}
+#head{
+	font-size: 40px;
+    text-align-last: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}

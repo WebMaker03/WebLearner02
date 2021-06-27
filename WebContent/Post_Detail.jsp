@@ -26,12 +26,12 @@
 					<div class="d-flex flex-column ml-3">
 						<div class="d-flex flex-row post-title" id="post">
 							<h1>작성된 게시글 제목</h1>
-							<span class="ml-2">(작성한 사람 이름)</span>
+							<span class="ml-2" id="postname">(작성한 사람 이름)</span>
+							<span id="postname">작성된 시간(6 hours ago)</span>
 						</div>
-						<div
-							class="d-flex flex-row align-items-center align-content-center post-title" id="post" >
-							<span>작성된 시간(6 hours ago)</span>
-						</div>
+						
+							
+						
 
 					</div>
 				</div>

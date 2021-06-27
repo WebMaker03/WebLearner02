@@ -143,3 +143,8 @@ button {
 	   text-align: center; 
 	   background-color: white;
 }
+
+#board{
+	border: #7BBBD6 solid 3px;
+    border-radius: 10px;
+}
