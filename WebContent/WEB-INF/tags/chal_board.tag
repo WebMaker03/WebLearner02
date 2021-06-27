@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <c:forEach var="v" items="${post}" varStatus="status">
+
 	<div class="card mb-2 w-100" id="style">
 		<div class="card-header">
 			<h6 class="card-title">
