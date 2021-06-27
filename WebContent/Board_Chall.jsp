@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 <!-- bootstrap css -->
 
-<link rel="stylesheet" href="css/theme_detail_test.css">
+<link rel="stylesheet" type="text/css"  href="css/board.css">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/responsive.css">
@@ -22,7 +22,6 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 
-
 <div class="container d-flex justify-content-center mt-40 mb-50" >
     <div class="w-100 overflow-auto order-2 order-md-1" style="margin-top: 170px">
     	<div class="row">
@@ -32,17 +31,10 @@
            <button type="button" class="btn btn-info" id="backBtn" onClick="location.href='prochal_detail.ch?c_code=${c_code}&&mc_code=${mychal.mc_code}'">이전 페이지로!</button><!--진행중 챌린지 상세보기로 돌아감 c_code & mc_code -->
     	</div>
         <div class="card-group-control card-group-control-right">
-        
-        
-						<h2 id="head">게시판</h2>
-					
+            
            <tag:chal_board></tag:chal_board>
            
            <!-- 임시 게시글 등록 버튼 -->
-
-           <input type="button" class="btn btn-primary disabled"value="게시글 등록" onClick="location.href='newPost.bo?c_code=${c_code}'" id="check" >
-           <button type="button" class="btn btn-info" onClick="history.go(-1)" id="check" >이전 페이지로!</button>
-
         </div>
     </div>
 </div>
