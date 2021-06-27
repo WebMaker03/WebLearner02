@@ -10,7 +10,7 @@ body, html {
 	border: #7BBBD6 solid 3px;
 	border-radius: 10px;
     width: 500px;
-    height: 500px;
+    height: 530px;
     padding: 40px 40px;
     
 }
@@ -44,16 +44,18 @@ body, html {
 }
 
 .profile-img-card {
-    width: 120px;
-    height: 120px;
-   margin-top: 35px;
+    width: 140px;
+    height: 140px;
+    
+    margin-top: 25px;
     margin-right: auto;
     margin-bottom: 30px;
     margin-left: auto;
     display: block;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    border-radius: 50%;
+    border-radius: 50% ;
+    border: #7BBBD6 solid 3px;
 }
 
 /*
@@ -115,11 +117,9 @@ body, html {
 }
 
 .btn.btn-signin {
-    /*background-color: #4d90fe; */
     background-color:  #7BBBD6;
-    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
     padding: 0px;
-    margin-top: 60px;
+    margin-top: 35px;
     font-weight: 700;
     font-size: 14px;
     height: 60px;
@@ -148,4 +148,17 @@ body, html {
 .forgot-password:active,
 .forgot-password:focus{
     color: rgb(12, 97, 33);
+}
+
+#login_text{
+	color: blue;
+	font-size: 20px;
+	margin-bottom :20px;
+}
+#return{
+	margin-left:140px;
+}
+#gosignup{
+	margin-left:230px;
+	margin-bottom :20px;
 }
