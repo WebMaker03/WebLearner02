@@ -9,6 +9,9 @@
 
 
 <link rel="stylesheet" href="css/Board_write.css">
+<!-- bootstrap css -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- responsive-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,11 +44,11 @@
 				</div>
 				<input type="hidden" name= "c_code" value="${Chal.c_code}">
 				<div class="row px-3">
-				<input type="submit"/>
+				<input type="submit" id="submitbutton" class="btn btn-outline-primary" value="작성완료" />
 				<!--  <button class="btn btn-success send px-5" id="submitBtn" > -->
 				<!-- <button type="button" id="checkbutton" class="btn btn-outline-primary" onClick="location.href=">등록하기</button> 
 				 -->
-				<button type="button" id="backbutton" class="btn btn-outline-primary">취소하기</button>
+				<button type="button" id="backbutton" class="btn btn-outline-primary" onclick="history.go(-1)">취소하기</button>
 				</div>
 				</form>
 				

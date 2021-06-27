@@ -77,18 +77,42 @@ public class BoardController extends HttpServlet {
 		         } catch (Exception e) {
 		            e.printStackTrace();
 		         }
-	      }
-	    	  
-	       else if(action.equals("/addPost.bo")) {
+	      } else if(action.equals("/addPost.bo")) {
 	    	  try {
 		        	System.out.println("새로운 게시글 등록");
 		            forward = new AddPostAction().execute(request, response);
 		         } catch (Exception e) {
 		            e.printStackTrace();
 		         }
+	      } else if(action.equals("/postDetail.bo")) {
+	    	  try {
+		        	System.out.println("게시글 상세보기");
+		            forward = new PostDetailAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	    	  
+
+	      } else if(action.equals("/addCmt.bo")) {
+	    	  try {
+		        	System.out.println("새로운 댓글 등록");
+		            forward = new AddCmtAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	    	  
+
+	      }  else if(action.equals("/delCmt.bo")) {
+	    	  try {
+		        	System.out.println("댓글 삭제");
+		            forward = new DelCmtAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
 	    	  
 
 	      }
+
 	      
 	      else {
 	         forward = new ActionForward();

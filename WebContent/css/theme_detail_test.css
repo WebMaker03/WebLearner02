@@ -57,6 +57,7 @@ a {
     margin-top: .20rem !important
 }
 
+
 #font{
 	color:black;
 }
@@ -80,4 +81,42 @@ a {
     text-align-last: center;
     margin-top: 10px;
     margin-bottom: 20px;
+
+#p_title{
+	font-size: 25px;
+	font-weight:bold;
+	
+}
+#p_text{
+	color:black;
+	font-size: 25px;
+
+}
+#board_t{
+	margin-left: 20px;
+	margin-bottom:10px;
+	font-size: 40px;
+	font-weight: bold;
+	color:black;
+}
+#boardicon{
+	color:blue;
+	margin-left:20px;
+	margin-bottom: 10px;
+	margin-top:13px;
+}
+
+#backBtn{
+	width: 130px;
+	height: 50px;
+	margin-left:10px;
+	margin-top: 10px;
+	
+}
+#addBtn{
+	width: 130px;
+	height: 50px;
+	margin-left:380px;
+	margin-top: 10px;
+
 }

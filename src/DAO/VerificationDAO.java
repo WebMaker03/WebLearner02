@@ -223,17 +223,6 @@ public class VerificationDAO {
 		   int rate4 =  (int)((star4/(double)count)*100);
 		   int rate5 =  (int)((star5/(double)count)*100);
 		  
-		   System.out.println("count :"+count);
-		   System.out.println("star1: "+star1);
-		   System.out.println("star2: "+star2);
-		   System.out.println("star3: "+star3);
-		   System.out.println("star4: "+star4);
-		   System.out.println("star5: "+star5);
-		   System.out.println("rate1: "+rate1);
-		   System.out.println("rate2: "+rate2);
-		   System.out.println("rate3: "+rate3);
-		   System.out.println("rate4: "+rate4);
-		   System.out.println("rate5: "+rate5);
 		   vstar = new ArrayList();
 		   vstar.add(rate1);
 		   vstar.add(rate2);

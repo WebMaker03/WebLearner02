@@ -93,3 +93,14 @@ body {
 	margin-top: 11px;
 	margin-left: 20px;
 }
+
+
+#back{
+	color: black;
+	font-size: 18px;
+	margin-left:10px; 
+}
+#backicon{
+	color:blue;
+	margin-left:700px;
+}
