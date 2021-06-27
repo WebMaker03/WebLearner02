@@ -63,7 +63,7 @@
 
 
 
-						<button name="next" id="next1"
+						<button onclick="location.href='main.etc'" name="next" id="next1"
 							class="button"
 							style="margin-top: 70px">home</button>
 					</div>
