@@ -45,8 +45,7 @@
                                  소개</a></li>
                            <li class="nav-item"><a class="nav-link" href="theme.jsp">테마별
                                  챌린지</a></li>
-                           <li class="nav-item"><a class="nav-link" href="board.jsp">전체
-                                 게시판</a></li>
+                           
                         </ul>
 
                      </div>
