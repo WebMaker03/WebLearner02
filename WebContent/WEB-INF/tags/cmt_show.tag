@@ -5,9 +5,9 @@
 <c:forEach var="v" items="${cList}" varStatus="status">
 
 							<div class="commented-section mt-2">
-								<div class="d-flex flex-row align-items-center commented-user">
+								<div class="d-flex flex-row align-items-center commented-user" id="post">
 									<h5 class="mr-2">${uList[status.index].u_name}</h5>
-									<span class="dot mb-1"></span><span class="mb-1 ml-2">챌린지이름, 색깔바꾸기</span>
+									<span class="dot mb-1"></span><span style="margin-left: 3px;"> 아이디  : ${uList[status.index].userid}</span>
 								</div>
 								<div class="comment-text-sm">
 									<span>${v.cm_text}</span>

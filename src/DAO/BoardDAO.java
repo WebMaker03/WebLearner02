@@ -13,7 +13,6 @@ public class BoardDAO {
 	Connection conn;
 	PreparedStatement pstmt;
 
-	// * �Խñ� ��ȸ *
 	public ArrayList<MessageSet> getAll(int cnt) {
 
 		ArrayList<MessageSet> datas = new ArrayList();
@@ -335,7 +334,6 @@ public Comments getOneCM(int cm_code) {
 	}
 	
 	
-	// * �Խñ� ���� *
 	public boolean delP(int p_code) {
 		try {
 			conn = DBConnection.connect();
@@ -414,7 +412,7 @@ public Comments getOneCM(int cm_code) {
 		
 		return cnt;
 	}
-	// * ��� ��� *
+
 	public boolean insertCM(Comments cm) {
 		try {
 			conn = DBConnection.connect();

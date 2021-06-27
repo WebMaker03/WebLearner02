@@ -7,6 +7,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/Post_Detail.css">
+<!-- bootstrap css -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- responsive-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,20 +25,16 @@
 				<div
 					class="d-flex flex-row align-items-center text-left comment-top p-2 border-bottom px-4" id="po" >
 					<div class="profile-image">
-						<i class="fa fa-book" aria-hidden="true"></i>
+					 			<i class="fa fa-pencil-square fa-3x" aria-hidden="true" style="color:blue"></i>
 					</div>
 					<div class="d-flex flex-column ml-3">
 						<div class="d-flex flex-row post-title">
-							<h1>${post.p_title}</h1>
+							<h1 style="font-weight: bold;">제목 : &nbsp </h1>
+							<h1 style="font-weight: bold;">${post.p_title}</h1>
 							<span class="ml-2">작성자이름</span>
 						</div>
-						<div>
-
-							<class="d-flex flex-row align-items-center align-content-center post-title">
-							<span>등록날짜</span>
-						</div>
-
 					</div>
+					<a href="javascript:history.back();"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
 
