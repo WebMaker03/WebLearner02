@@ -29,7 +29,7 @@
                            <li><a href="index.jsp">홈</a></li>
                            <li><a href="about.jsp">사이트 소개</a></li>
                            <li><a href="theme.jsp">테마별 챌린지</a></li>
-                           <li><a href="booad.jsp">전체 게시판</a></li>
+                           
                         </ul>
                      </div>
                   </div>
