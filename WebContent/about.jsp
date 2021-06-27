@@ -26,6 +26,13 @@
 			<div class="section-header" id="service">
 				<h3>Meet Our Service</h3>
 				<hr>
+				<!-- 명언 문구 -->
+					<p style="font-size:20px; color:#000000; font-weight: bold; background-color: #D7F2F9;"><br><br>위대한 일을 위해서 <br>
+					대단한 도전이 필요하지 않다.<br> 
+단지 순간순간의 작은 도전이 모여<br>
+위대한 일을 이루어 간다.<br><br> -모션 코치-</p>
+				<br>
+				
 				<p style="margin-top: 30px; font-size: 20px; font-weight: bold; ">챌린지
 					러너는 여러분들의 목표달성을 응원합니다! 
 					</p>
@@ -33,14 +40,9 @@
 					챌린지 러너는 자신이 끝까지 못 이룰것 같을 때 찾아주시는 페이지 입니다!<br>
 					<br>자신이 혼자 목표를 세워서 끝까지 이루는 사람은 별로 없을 것 입니다.<br>
 					<br>매일 출석체크를 하고 게시글을 쓰고, 다른 사람들과 똑같은 목표를 같이 이뤄간다면 끝까지 할 수 있을 것 입니다.<br>
-					<br>이런 것을 도와주는것이 챌린지 러너 페이지 입니다<br>
+					<br>이런 것을 도와주는것이 챌린지 러너 페이지 입니다.<br>
 				</p>
 				
-				<!-- 명언 문구 -->
-					<p style="font-size:20px; color:#000000; font-weight: bold; background-color: #D7F2F9;"><br><br>위대한 일을 위해서 <br>
-					대단한 도전이 필요하지 않다.<br> 
-단지 순간순간의 작은 도전이 모여<br>
-위대한 일을 이루어 간다.<br><br> -모션 코치-</p>
 			</div>
 		</div>
 
