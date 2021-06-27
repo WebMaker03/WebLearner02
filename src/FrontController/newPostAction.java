@@ -15,11 +15,11 @@ import DTO.Users;
 
 public class newPostAction implements Action{
 
-	@Override
-	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); 
+   @Override
+   public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+      ActionForward forward= new ActionForward(); 
        
-		int c_code = Integer.parseInt(request.getParameter("c_code"));
+      int c_code = Integer.parseInt(request.getParameter("c_code"));
         System.out.println("c_Code"+ c_code);
         
 //        int u_code = Integer.parseInt(request.getParameter("u_code"));
@@ -40,6 +40,6 @@ public class newPostAction implements Action{
         forward.setRedirect(false);
         forward.setPath("Board_write.jsp");
         return forward;
-	}
+   }
 
 }

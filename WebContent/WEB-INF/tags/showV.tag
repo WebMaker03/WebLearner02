@@ -8,5 +8,6 @@
 
 		<td><button href="" type="button" class="badge badge-success"
 				id="ca2_btn1">상세보기</button></td>
+
 	</tr>
 </c:forEach>
