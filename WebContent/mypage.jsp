@@ -30,7 +30,7 @@
 			<div class="row">
 
 				<div class="col-md-8">
-					<div class="card text-center">
+					<div class="card text-center" id="board">
 						<div class="row">
 							<div class="col-md-7 border-right no-gutters">
 								<div class="py-3">

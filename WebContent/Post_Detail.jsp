@@ -28,11 +28,13 @@
 					 			<i class="fa fa-pencil-square fa-3x" aria-hidden="true" style="color:blue"></i>
 					</div>
 					<div class="d-flex flex-column ml-3">
-						<div class="d-flex flex-row post-title">
+
+						<div class="d-flex flex-row post-title" id="post">
 							<h1 style="font-weight: bold;">제목 : &nbsp </h1>
 							<h1 style="font-weight: bold;">${post.p_title}</h1>
-							<span class="ml-2">작성자이름</span>
+							<span id="postname" class="ml-2">작성자이름</span>
 						</div>
+
 					</div>
 					<a href="javascript:history.back();"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
 				</div>

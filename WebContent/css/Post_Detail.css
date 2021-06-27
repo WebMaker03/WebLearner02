@@ -82,11 +82,19 @@ body {
 
 #post{
 	color: black;
+	margin-top: 3px;
 }
 
 #po{
 	background-color:#E1F2F9;
 }
+#postname{
+	color: black;
+	margin-top: 11px;
+	margin-left: 20px;
+}
+
+
 #back{
 	color: black;
 	font-size: 18px;
