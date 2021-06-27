@@ -15,7 +15,8 @@
 								
 								<c:if test="${v.u_code eq session_user.u_code}">
 									<ul class="nav justify-content-end">
-										<button type="button" class="btn btn-link">삭제</button>
+										<button type="button" class="btn btn-link" onclick="location.href='delCmt.bo?cm_code=${v.cm_code}'">삭제</button>
+										
 									</ul>
 								</c:if>
 								
