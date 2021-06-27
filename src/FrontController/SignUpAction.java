@@ -24,17 +24,15 @@ public class SignUpAction implements Action {
 		newUser.setEmail(request.getParameter("userEmail"));
 		
 		
-		request.getSession().setAttribute("msg", "È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-		
 		if(udao.SignUp(newUser)) {			
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('È¸¿ø°¡ÀÔ ¼º°ø');location.href='main.jsp';</script>");
+			out.println("<script>alert('íšŒì›ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.');location.href='main.jsp';</script>");
 			out.flush();
 		}else {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('È¸¿ø°¡ÀÔ ½ÇÆĞ');location.href='main.jsp';</script>");
+			out.println("<script>alert('íšŒì›ê°€ì… ì‹¤íŒ¨ì…ë‹ˆë‹¤.');location.href='main.jsp';</script>");
 			out.flush();
 		}
 

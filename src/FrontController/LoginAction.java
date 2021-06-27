@@ -13,29 +13,27 @@ public class LoginAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		System.out.println("Login Action ½ÃÀÛ");
+		System.out.println("Login Action");
 		ActionForward forward =null;
 		UserDAO udao = new UserDAO();
 		String userid = request.getParameter("userid");
 		String passwd = request.getParameter("userpw");
 
 		if (udao.login(userid, passwd)) {
-			// ·Î±×ÀÎ ¼º°ø
 			HttpSession session = request.getSession();
-			System.out.println("·Î±×ÀÎ");
+			System.out.println("ë¡œê·¸ì¸");
 			Users user = udao.showUser(userid);
 			if (user != null) {
 				session.setAttribute("session_user", user);
 				response.setContentType("text/html; charset=UTF-8");
 				PrintWriter out = response.getWriter();
-				out.println("<script>alert('·Î±×ÀÎ ¼º°ø');location.href='main.jsp';</script>");
+				out.println("<script>alert('ë¡œê·¸ì¸ ë˜ì—ˆìŠµë‹ˆë‹¤.');location.href='main.jsp';</script>");
 				out.flush();
 			}
 		} else {
-			System.out.println("·Î±×ÀÎ ½ÇÆĞ ºÎºĞ");
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter out = response.getWriter();
-			out.println("<script>alert('·Î±×ÀÎ ½ÇÆĞ'); location.href='login.jsp';</script>");
+			out.println("<script>alert('ë¡œê·¸ì¸ ì‹¤íŒ¨ì…ë‹ˆë‹¤.'); location.href='login.jsp';</script>");
 			out.flush(); 
 		}
 

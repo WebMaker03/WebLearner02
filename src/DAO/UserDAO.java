@@ -14,7 +14,7 @@ public class UserDAO {
    ResultSet rs = null;
 
 
-
+   // 회원가입
    public boolean SignUp(Users user) {
       conn = DBConnection.connect();
       String sql = "insert into users(userid,userpw,u_name,email,age) values (?,?,?,?,?)";
@@ -42,7 +42,7 @@ public class UserDAO {
       return false;
    }
 
-
+   // 로그인
    public boolean login(String userid, String userpw) {
 
       String sql = "select * from users where userid=?";
@@ -78,7 +78,7 @@ public class UserDAO {
 
    }
 
-   
+   // 회원목록 출력
    public Users showUser(String userid) {
       Users user = new Users();
       conn = DBConnection.connect();
@@ -111,7 +111,7 @@ public class UserDAO {
 		}
       return user;
    }
-
+   // 아이디 체크
    public boolean checkId(String userid) {
       conn = DBConnection.connect();
       String sql = "select * from users where userid=?";
@@ -143,19 +143,19 @@ public class UserDAO {
 
       return true;
    }
-
+   // 회원정보 수정
    public boolean updateUser(Users user) {		// name, email, age, id
 		conn = DBConnection.connect();
-		String sql = "update users set u_name=?"
-				+ " email=?"
+		String sql = "update users set u_name=?,"
+				+ " email=?,"
 				+ " age=?"
-				+ " where userid=?;";
+				+ " where u_code=?;";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user.getU_name());
 			pstmt.setString(2, user.getEmail());
 			pstmt.setInt(3, user.getAge());
-			pstmt.setString(4, user.getUserid());
+			pstmt.setInt(4, user.getU_code());
 			pstmt.executeUpdate();
 			return false;
 		} catch (SQLException e) {
@@ -172,14 +172,15 @@ public class UserDAO {
 		}
 		return true;
 	}
+   	// 비밀번호 수정
 	public boolean updateUserPw(Users user) {	// id, pw
 		conn = DBConnection.connect();
 		String sql = "update users set userpw=?"
-				+ " where userid=?;";
+				+ " where u_code=?;";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user.getUserpw());
-			pstmt.setString(2, user.getUserid());
+			pstmt.setInt(2, user.getU_code());
 			pstmt.executeUpdate();
 			return false;
 		} catch (SQLException e) {

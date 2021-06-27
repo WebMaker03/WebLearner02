@@ -79,4 +79,5 @@
 </body>
 <jsp:include page="footer.jsp"></jsp:include>
 <script type="text/javascript" src="js/notice.js"></script>
+
 </html>

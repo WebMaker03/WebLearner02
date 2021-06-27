@@ -15,12 +15,11 @@ import DTO.Users;
 
 public class newPostAction implements Action{
 
-	@Override
-	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); 
+   @Override
+   public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+      ActionForward forward= new ActionForward(); 
        
-        // À¯Àú Á¤º¸¶û Ã§¸°Áö Á¤º¸ ¹Ş¾Æ¿Í¼­ MyC°ª ³Ñ±â±â..?
-		int c_code = Integer.parseInt(request.getParameter("c_code"));
+      int c_code = Integer.parseInt(request.getParameter("c_code"));
         System.out.println("c_Code"+ c_code);
         
 //        int u_code = Integer.parseInt(request.getParameter("u_code"));
@@ -32,13 +31,15 @@ public class newPostAction implements Action{
         
         ChallengesDAO cdao = new ChallengesDAO();
         
-        MyC mc = cdao.getMyc(user.getU_code(), c_code);
-        request.setAttribute("MyC", mc);
+        MyC mc = cdao.callMyC(user.getU_code(), c_code);
+        request.setAttribute("MyC", mc); //MyC ê°ì²´ ì €ì¥
         
+        Challenges ch =cdao.getonechal(mc.getC_code());
+        request.setAttribute("Chal", ch); //MyC ê°ì²´ ì €ì¥
         
-        forward.setRedirect(false); // ÀúÀåÇÏ´Â°ªÀÌ ÀÖÀ¸¸é false, ¾øÀ¸¸é true 
+        forward.setRedirect(false);
         forward.setPath("Board_write.jsp");
         return forward;
-	}
+   }
 
 }

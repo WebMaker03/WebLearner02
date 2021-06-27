@@ -54,6 +54,7 @@ public class ChallengeController extends HttpServlet {
       String cp = request.getContextPath();
       String action = uri.substring(cp.length());
       ActionForward forward = null;
+      response.setContentType("text/html;charset=UTF-8");
       
       if (action.equals("/calltheme.ch")) { 
          try {
@@ -94,6 +95,13 @@ public class ChallengeController extends HttpServlet {
     		  e.printStackTrace();
     	  }
     	  
+      }else if(action.equals("/showV.ch")) {
+    	  try {
+    		  System.out.println("인증화면 상세보기");
+    		  forward = new ShowVAction().execute(request, response);
+    	  }catch(Exception e) {
+    		  
+    	  }
       }
       
       else {

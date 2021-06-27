@@ -245,7 +245,8 @@ div#signupbtn{
 	width:150px;
 	height:40px;
 	background: #E1F2F9;
-	border-color:#A4D4E8;
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
 	
 }
 

@@ -9,32 +9,38 @@ import javax.servlet.http.HttpSession;
 import DAO.BoardDAO;
 import DAO.ChallengesDAO;
 import DTO.Challenges;
+import DTO.MyC;
 import DTO.Post;
 import DTO.Users;
 
 public class goBoardAction implements Action{
 
-	@Override
-	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); 
+   @Override
+   public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+      ActionForward forward= new ActionForward(); 
         
         int c_code = Integer.parseInt(request.getParameter("c_code"));
         System.out.println("c_Code"+ c_code);
-      //	게시글 가져와서 request.Set해야됨.
+      
         
-        BoardDAO bdao =new BoardDAO(); // boardDao에서 해당유저가 해당 챌린지에 작성한 게시글 
-        // u_code 랑  c_code 넘겨 줘야ㅏㅏㅏㅏ
-      /*  HttpSession session =request.getSession();
-        Users user = (Users)session.getAttribute("session_user");*/
+        BoardDAO bdao =new BoardDAO();  
+        ChallengesDAO cdao= new ChallengesDAO();
         ArrayList<Post> post = bdao.c_b (c_code);
         request.setAttribute("post", post);
-        
+       
+        Challenges chal = cdao.getonechal(c_code);
         request.setAttribute("c_code",c_code);
+        request.setAttribute("chal",chal);
         
+       HttpSession session = request.getSession();
+       Users user= (Users)session.getAttribute("session_user");
+             
+        MyC myc= cdao.callMyC(user.getU_code(),c_code);
+        request.setAttribute("mychal",myc);
         
-        forward.setRedirect(false); // 저장하는값이 있으면 false, 없으면 true 
+        forward.setRedirect(false); 
         forward.setPath("Board_Chall.jsp");
         return forward;
-	}
+   }
 
 }

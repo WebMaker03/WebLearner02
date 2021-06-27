@@ -13,28 +13,23 @@ button {
 	color:white;
 }
 
-
-
 .card {
 	background-color: #C2E0F4;
 	color: black;
-	border: none;
-	border-radius: 10px;
-	box-shadow: 5px 6px 6px 2px #e9ecef;
-
+	border-radius: 50px;
+	box-shadow: 5px 6px 6px 2px #98c1e7;
 	margin-bottom: 40px;
-	margin-left: 13%;
 	width: 800px;
 }
 
 .cardP {
 	color:#1A4C6D;
-
 	width: 350px;
 	height: 60px;
 	font-size: 23px;
 	border-radius: 5px;
-	background-color: #85C1E9;
+	background-color: #ffffff;
+
 	margin-top: 50px;
 	margin-bottom: 10px;
 	margin-left: 50px;
@@ -65,4 +60,92 @@ button {
 	margin-left: 15%;
 	max-width: 80%;
 	align-items: center;
+}
+
+#my{
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+}
+
+#myp{
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+	width: 300px;
+	 height: 355px;
+	  margin-left: 100px;
+}
+
+#but{
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+	margin-left: 35px;
+	width: 350px;
+	font-size: 20px;
+	background-color:#E1F2F9;
+	color: black;
+}
+
+#butt{
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+	background-color:#E1F2F9;
+	font-size: 18px;
+	color: black;
+	margin-top: 75px;
+}
+
+#butto{
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+	background-color:#E1F2F9;
+	margin-top: 30px; 
+	margin-left: 40px;
+	color: black;
+}
+#point{
+	margin-bottom : 20px;
+	font-size: 20px;
+	
+}
+#point_d{
+		font-size: 40px;
+		color:blue;
+}
+#uname{
+	margin-top:10px;
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+#beige{
+	color:gold;
+}
+#ucase{
+	margin-top:10px;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+#pro_table{
+	
+	width: 600px; 
+	margin-top: 30px;
+	 margin-bottom: 100px;
+	  color: black;
+	   text-align: center; 
+	   background-color: white;
+}
+#finChal_Table{
+	width: 600px; 
+	margin-top: 30px;
+	 margin-bottom: 100px;
+	  color: black;
+	   text-align: center; 
+	   background-color: white;
+}
+
+#board{
+	border: #7BBBD6 solid 3px;
+    border-radius: 10px;
+
 }

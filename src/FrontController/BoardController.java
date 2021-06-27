@@ -45,27 +45,25 @@ public class BoardController extends HttpServlet {
 			String uri = request.getRequestURI();
 	      String cp = request.getContextPath();
 	      String action = uri.substring(cp.length());
+	      response.setContentType("text/html;charset=UTF-8");
 	      ActionForward forward = null;
 	      
 	      if (action.equals("/goBoard.bo")) { 
 	         try {
-	        	System.out.println("Ã§¸°Áö °Ô½ÃÆÇ È­¸é ÀüÈ¯");
 	            forward = new goBoardAction().execute(request, response);
 	         } catch (Exception e) {
 	            e.printStackTrace();
 	         }
 
 
-	      }else if (action.equals("/editBoard.bo")) {
+	      }else if (action.equals("/editPost.bo")) {
 	    	  try {
-	    		  System.out.println("°Ô½ÃÆÇ ¼öÁ¤");
 	    		  forward = new EditBoardAction().execute(request, response);
 	    	  }catch(Exception e) {
 	    		  e.printStackTrace();
 	    	  }
-	      }else if (action.equals("/deleteBoard.bo")) {
+	      }else if (action.equals("/deletePost.bo")) {
 	    	  try {
-	    		  System.out.println("°Ô½ÃÆÇ »èÁ¦");
 	    		  forward = new DeleteBoardAction().execute(request, response);
 	    		  
 	    	  }catch(Exception e) {
@@ -74,14 +72,47 @@ public class BoardController extends HttpServlet {
 
 	      } else if(action.equals("/newPost.bo")) {
 	    	  try {
-		        	System.out.println("»õ·Î¿î °Ô½Ã±Û µî·Ï");
+		        	System.out.println("ìƒˆë¡œìš´ ê²Œì‹œê¸€ ì‘ì„±");
 		            forward = new newPostAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	      } else if(action.equals("/addPost.bo")) {
+	    	  try {
+		        	System.out.println("ìƒˆë¡œìš´ ê²Œì‹œê¸€ ë“±ë¡");
+		            forward = new AddPostAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	      } else if(action.equals("/postDetail.bo")) {
+	    	  try {
+		        	System.out.println("ê²Œì‹œê¸€ ìƒì„¸ë³´ê¸°");
+		            forward = new PostDetailAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	    	  
+
+	      } else if(action.equals("/addCmt.bo")) {
+	    	  try {
+		        	System.out.println("ìƒˆë¡œìš´ ëŒ“ê¸€ ë“±ë¡");
+		            forward = new AddCmtAction().execute(request, response);
+		         } catch (Exception e) {
+		            e.printStackTrace();
+		         }
+	    	  
+
+	      }  else if(action.equals("/delCmt.bo")) {
+	    	  try {
+		        	System.out.println("ëŒ“ê¸€ ì‚­ì œ");
+		            forward = new DelCmtAction().execute(request, response);
 		         } catch (Exception e) {
 		            e.printStackTrace();
 		         }
 	    	  
 
 	      }
+
 	      
 	      else {
 	         forward = new ActionForward();
@@ -93,7 +124,7 @@ public class BoardController extends HttpServlet {
 	         if (forward.isRedirect()) {
 	            response.sendRedirect(forward.getPath());
 	         } else {
-	            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  ˜± ê½    ™
+	            RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath()); // request  å ì™ì˜™ å ï¿½   å ì™ì˜™
 	            dispatcher.forward(request, response);
 	         }
 	      }

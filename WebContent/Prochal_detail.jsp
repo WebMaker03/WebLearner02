@@ -27,29 +27,27 @@
          <div class="row" style="margin-top: 30px; margin-left: 100px;">
             <div class="col-12 col-md-7">
                <h2 id="start_title">
-                  <strong>[  ${pro_chal_m.mc_code}]</strong>
+                  <strong>[ 진행중인 챌린지 상세보기 ]</strong>
                </h2>
                <!-- 챌린지 상세보기 카드 -->
                <div class="card p-3" id="prochal_card">
                   <div class="row">
                      <div class="col-12 col-md-5">
-                        <img id="img_show" src="images/health.jpg" alt="My Image">
+                        <img id="img_show" src="images/${pro_chal_c.theme}/${pro_chal_c.img}" alt="My Image">
                      </div>
                      <div class="col-12 col-md-7 py-2 px-3">
                         <span id="challenge_title"> <i class="fa fa-hashtag"
                            aria-hidden="true"></i></i> &nbsp ${pro_chal_c.c_name}
                         </span>
-                        <p class="font-weight-bold my-2">June 26</p>
-                        <h6>${pro_chal_D.info}</h6>
-                      <!--   <h6 class="mb-3">Introducing iPhone XS, iPhone XS Max and
-                           iPhone XR - Apple</h6>
-                        <p>iPhone XS impresses with its screen - 5.8 inch OLED
-                           display Super Retina opens new frontiers of the virtual world,
-                           increased area, brightness and depth - this is...</p> -->
+                        <hr>
+                        <p class="font-weight-bold my-2">챌린지 시작 날짜 : ${pro_chal_m.startD}</p>
+                        <p class="font-weight-bold my-2">챌린지 종료 예정 날짜 : ${pro_chal_m.finishD}</p>
+                        <p class="font-weight-bold my-2">챌린지 소개 : ${pro_chal_c.info}</p>
+                     	 <hr>
                         <div class="d-flex mt-2 mb-3">
+
                            <!-- <button class="btn">오늘 인증하기!</button> -->
-                           <button type="button" class="btn btn-danger"
-                              data-toggle="modal" data-target="#modalBox">인증하기</button>
+                           <tag:checkV></tag:checkV>
 
                            <button type="button" class="btn btn-danger" onClick="location.href='goBoard.bo?c_code=${pro_chal_c.c_code}'" style="margin-left: 10px" id="btn_b">게시판가기</button>
                         </div>
@@ -111,50 +109,13 @@
                      <h6 class="m-0 font-weight-bold text-primary">인증 현황</h6>
                   </div>
                   <div class="card-body" id="card3_body">
-                     <h4 class="font-weight-bold">
-                        별점 1 <span class="float-right">10%</span>
-                     </h4>
-                     <div class="progress mb-4">
-                        <div class="progress-bar bg-danger" role="progressbar"
-                           style="width: 10%" aria-valuenow="10" aria-valuemin="0"
-                           aria-valuemax="100"></div>
-                     </div>
-                     <h4 class="font-weight-bold">
-                        별점 2 <span class="float-right">20%</span>
-                     </h4>
-                     <div class="progress mb-4">
-                        <div class="progress-bar bg-warning" role="progressbar"
-                           style="width: 20%" aria-valuenow="20" aria-valuemin="0"
-                           aria-valuemax="100"></div>
-                     </div>
-                     <h4 class="font-weight-bold">
-                        별점 3 <span class="float-right">20%</span>
-                     </h4>
-                     <div class="progress mb-4">
-                        <div class="progress-bar" role="progressbar" style="width: 20%"
-                           aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                     </div>
-                     <h4 class=" font-weight-bold">
-                        별점 4 <span class="float-right">40%</span>
-                     </h4>
-                     <div class="progress mb-4">
-                        <div class="progress-bar bg-info" role="progressbar"
-                           style="width: 40%" aria-valuenow="40" aria-valuemin="0"
-                           aria-valuemax="100"></div>
-                     </div>
-                     <h4 class=" font-weight-bold">
-                        별점 5 <span class="float-right">10%</span>
-                     </h4>
-                     <div class="progress">
-                        <div class="progress-bar bg-success" role="progressbar"
-                           style="width: 10%" aria-valuenow="10" aria-valuemin="0"
-                           aria-valuemax="100"></div>
-                     </div>
+                   <tag:StarV></tag:StarV>
                   </div>
                </div>
             </div>
          </div>
 
+               <button type="button" class="btn btn-info" id="backBtn" onClick="location.href='mypage.etc'">이전 페이지로!</button>
       </div>
 
    </div>
@@ -197,6 +158,8 @@
    </div>
    <!--  form submit -->
          <form name="verSub" method="post" action="submitVer.ve">
+       <input type="hidden" id="c_code" name = "c_code" value="${pro_chal_c.c_code}">       
+       <input type="hidden" id="mc_code" name = "mc_code" value="${pro_chal_m.mc_code}">       
       <input type="hidden" id="verRating" name="verRating" value="rating">
       <input type="hidden" id="verReview" name="verReview" value="review">
       </form>
