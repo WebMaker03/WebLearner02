@@ -8,7 +8,7 @@
 		<div class="card-header">
 			<h6 class="card-title">
 
-				<i class="fa fa-hand-o-right mr-2 mt-0-20 pull-left" aria-hidden="true"></i>
+				<i class="fa fa-hand-o-right fa-2x mr-2 mt-0-20 pull-left" aria-hidden="true" style="color : blue"></i>
 					<a href="postDetail.bo?p_code=${v.p_code}"><span id="p_title">${v.p_title}</span></a> 
 				<a class="text-muted text-uppercase" data-toggle="collapse"	href="#question${status.index}" style="font-size: 25px;">
 					<i class="fa fa-minus mr-2 text-slate pull-right" style="float: right;"></i></a>
