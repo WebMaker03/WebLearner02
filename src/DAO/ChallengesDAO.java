@@ -7,7 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import DTO.Challenges;
-import DTO.MyC;;
+import DTO.MyC;
+import DTO.Verification;;
 
 public class ChallengesDAO {
 	Connection conn = null;
@@ -502,8 +503,59 @@ public class ChallengesDAO {
 		return check;
 
 	}
-
-
 	
+	public ArrayList<Integer> endPercentage( ArrayList<MyC> myc){
+
+		   ArrayList<Integer> endPercent =new ArrayList<Integer>();
+		   int period = 0;
+		   int vercount =0;
+		   
+		   PreparedStatement pstmt2= null;
+		   System.out.println("달성율 계산");
+		   try {
+			   conn = DBConnection.connect();
+			   String sql = "select period from challenges where c_code=?";
+			   pstmt = conn.prepareStatement(sql);
+			   for(int i=0;i< myc.size();i++) {
+				   
+				   // 기간 가져오기 
+				   pstmt.setInt(1, myc.get(i).getC_code());
+				   ResultSet rs = pstmt.executeQuery();
+				   while(rs.next()) {
+					   period = rs.getInt(1);
+				   }
+				   
+				   
+				   //인증 개수 가져오기
+				   String sql2= "select count(*) from verification where mc_code=?";
+				   pstmt2 = conn.prepareStatement(sql2);
+				   pstmt2.setInt(1, myc.get(i).getMc_code());
+				   ResultSet rs1 = pstmt2.executeQuery();
+				   while(rs1.next()) {
+					  vercount = rs1.getInt(1);
+				   }
+				   
+				   int endp = (int)((vercount/(double)period)*100);
+				   endPercent.add(endp);
+				   
+			   }
+			  
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				pstmt.close();
+				pstmt2.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		   
+		   return endPercent;
+	   }
+		
 	
 }

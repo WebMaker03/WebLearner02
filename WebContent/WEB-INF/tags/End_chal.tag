@@ -10,8 +10,8 @@
 		<td>${end_chalList_D[status.index].c_name}</td>
 		<td>
 			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="${list1.achievementPercentage}"
-					aria-valuemin="0" aria-valuemax="100" style="width: ${list1.achievementPercentage}%;">${list1.achievementPercentage}%</div>
+				<div class="progress-bar" role="progressbar" aria-valuenow="${endPercent[status.index]}"
+					aria-valuemin="0" aria-valuemax="100" style="width: ${endPercent[status.index]}%;">${endPercent[status.index]}%</div>
 			</div>
 		</td>
 	</tr>

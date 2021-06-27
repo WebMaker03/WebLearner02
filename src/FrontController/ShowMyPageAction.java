@@ -32,6 +32,9 @@ public class ShowMyPageAction implements Action {
 		ArrayList<MyC> EndList= cdao.finchal(user.getU_code());
 		request.setAttribute("end_chalList", EndList);
 		
+		ArrayList<Integer> endPercent = cdao.endPercentage(EndList);
+		request.setAttribute("endPercent", endPercent);
+		
 		ArrayList<Challenges> EndList_D = cdao.getChalName(EndList);
 		request.setAttribute("end_chalList_D", EndList_D);
 		

@@ -441,7 +441,7 @@ public Comments getOneCM(int cm_code) {
 	public boolean delCM(int cm_code) {
 		try {
 			conn = DBConnection.connect();
-			String sql = "delete from reply where cm_code=?";
+			String sql = "delete from comments where cm_code=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, cm_code);
 			pstmt.executeUpdate();
@@ -494,6 +494,7 @@ public Comments getOneCM(int cm_code) {
 		return datas;
 		
 	}
+	
 	
 
 }
