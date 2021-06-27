@@ -46,16 +46,18 @@
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">
 						<form method = "post" action="addCmt.bo" id="cmtForm" >
 						<input type = "hidden" name = "p_code" value ="${post.p_code}"> 
-						<input	type="text" class="search" name="cm_text" 
+						<input	type="text" class="search" name="cm_text" style="
+    font-size: 20px;
+"
 							placeholder="자신의 의견을 작성해보세요!">
-						<button type="submit" form="cmtForm" class="btn btn-link">완료!</button>
+						<button type="submit" form="cmtForm" class="btn btn-link" style="display: contents">완료!</button>
 						</form>
 					</div>
 					<div class="collapsable-comment">
 						<div
 							class="d-flex flex-row justify-content-between align-items-center action-collapse p-2"
 							data-toggle="collapse" aria-expanded="false"
-							aria-controls="collapse-1" href="#collapse-1" id="post">
+							aria-controls="collapse-1" href="#collapse-1" id="post" style=" font-size: 17px; font-weight: bold;">
 							<span>댓글 보기</span><i class="fa fa-chevron-down servicedrop"></i>
 						</div>
 
