@@ -53,7 +53,7 @@ public class ChallengesDAO {
 	public boolean start_ch(Challenges ch, int u_code) {
 		try {
 			conn = DBConnection.connect();
-			String sql = "insert into myC(c_code,u_code,state,startD,finishD,achievementPercentage,img) values(?,?,1,now(),DATE_ADD(now(),INTERVAL ? DAY),0,null);";
+			String sql = "insert into myC(c_code,u_code,state,startD,finishD,img) values(?,?,1,now(),DATE_ADD(now(),INTERVAL ? DAY),null);";
 			pstmt = conn.prepareStatement(sql);
 			
 			pstmt.setInt(1, ch.getC_code());
@@ -204,7 +204,6 @@ public class ChallengesDAO {
 				myc.setState(rs.getBoolean("state"));
 				myc.setStartD(rs.getString("startD"));
 				myc.setFinishD(rs.getString("finishD"));
-				myc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				datas.add(myc);
 
 			}
@@ -244,7 +243,6 @@ public class ChallengesDAO {
 				myc.setState(rs.getBoolean("state"));
 				myc.setStartD(rs.getString("startD"));
 				myc.setFinishD(rs.getString("finishD"));
-				myc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				datas.add(myc);
 
 			}
@@ -360,40 +358,40 @@ public class ChallengesDAO {
 
 	// myC 인증률 업데이트 하기!
 
-	public boolean achievementUpdate(MyC myC) {
-		try {
-			int cnt = 0;
-			int period = 0;
-			int achievement = 0;
-			conn = DBConnection.connect();
-			String sql = "select count(*),period from verfication, myC, challenges where verfication.mc_code = myC.mc_code and myC.c_code=challenges.c_code and mc_code=?";
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, myC.getMc_code());
-			ResultSet rs = pstmt.executeQuery();
-			while (rs.next()) {
-				cnt = rs.getInt(1);
-				period = rs.getInt(2);
-				achievement = Math.round(cnt / period * 100);
-			}
-			sql = "update myC set achievementPercentage=? where mc_code=?";
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, cnt);
-			pstmt.setInt(2, achievement);
-			return true;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			try {
-				pstmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		return false;
-	}
+//	public boolean achievementUpdate(MyC myC) {
+//		try {
+//			int cnt = 0;
+//			int period = 0;
+//			int achievement = 0;
+//			conn = DBConnection.connect();
+//			String sql = "select count(*),period from verfication, myC, challenges where verfication.mc_code = myC.mc_code and myC.c_code=challenges.c_code and mc_code=?";
+//			pstmt = conn.prepareStatement(sql);
+//			pstmt.setInt(1, myC.getMc_code());
+//			ResultSet rs = pstmt.executeQuery();
+//			while (rs.next()) {
+//				cnt = rs.getInt(1);
+//				period = rs.getInt(2);
+//				achievement = Math.round(cnt / period * 100);
+//			}
+//			sql = "update myC set achievementPercentage=? where mc_code=?";
+//			pstmt = conn.prepareStatement(sql);
+//			pstmt.setInt(1, cnt);
+//			pstmt.setInt(2, achievement);
+//			return true;
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}finally {
+//			try {
+//				pstmt.close();
+//				conn.close();
+//			} catch (SQLException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
+//		return false;
+//	}
 
 	// mc_code로 mychallenge 받아오기
 	public MyC callMyC(int u_code,int c_code) {
@@ -414,7 +412,6 @@ public class ChallengesDAO {
 				mc.setState(rs.getBoolean("state"));
 				mc.setStartD(rs.getString("startD"));
 				mc.setFinishD(rs.getString("finishD"));
-				mc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				mc.setImg(rs.getString("img"));
 			}
 		} catch (SQLException e) {
@@ -451,7 +448,6 @@ public class ChallengesDAO {
 				mc.setState(rs.getBoolean("state"));
 				mc.setStartD(rs.getString("startD"));
 				mc.setFinishD(rs.getString("finishD"));
-				mc.setAchievementPercentage(rs.getInt("achievementPercentage"));
 				mc.setImg(rs.getString("img"));
 
 			}
