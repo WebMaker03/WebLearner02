@@ -70,6 +70,23 @@ public class UserController extends HttpServlet {
 				obj.put("result", "1");
 			}
 			response.getWriter().print(obj);
+			
+		} else if(action.equals("/checkpw.do")) {
+			String pwCheck = request.getParameter("userPw");
+			String userid = request.getParameter("userId");
+			System.out.println(pwCheck);
+			System.out.println(userid);
+
+			JSONObject obj = new JSONObject();
+			UserDAO udao = new UserDAO();
+
+			if (udao.checkPw(pwCheck,userid)) {
+				obj.put("result", "0");
+			} else {
+				obj.put("result", "1");
+			}
+			response.getWriter().print(obj);
+			
 		} else if (action.equals("/signup.do")) { 
 
 			try {
