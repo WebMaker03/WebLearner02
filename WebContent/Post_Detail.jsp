@@ -35,11 +35,11 @@
 							<span style="font-weight: bold; font-size:30px;">${post.p_title}</span>
 							</div>
 							
-							<div class="col" style="margin-top:20px;">
-							<span id="postname"> | 작성자 : ${writer.u_name}</span>
-							</div>
 					<a href="goBoard.bo?c_code=${post.c_code}"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
 						</div>
+							<div class="d-flex flex-row post-title" style="margin-top:20px;">
+							<span id="postname"> | 작성자 : ${writer.u_name}</span>
+							</div>
 
 					</div>
 				</div>
