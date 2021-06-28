@@ -299,7 +299,9 @@ body {
     background-clip: border-box;
     border: #7BBBD6 solid 3px;
      border-radius: 10px;
-    -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1)
+    -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1);
+    overflow-x: hidden;
+    overflow-y:auto;
 } 
 
 #card2-header {
