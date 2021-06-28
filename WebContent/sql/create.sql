@@ -1,7 +1,7 @@
 create database codelearner2;
 use codelearner2;
 
-/* create ¹® */
+/* create */
 
 CREATE TABLE `users` (
   `u_code` int PRIMARY KEY AUTO_INCREMENT,
@@ -27,7 +27,7 @@ CREATE TABLE `myC` (
   `mc_code` int PRIMARY KEY AUTO_INCREMENT,
   `c_code` int NOT NULL,
   `u_code` int NOT NULL,
-  `state` boolean NOT NULL, /* ÁøÇà 1, ³¡³­°Å 0*/
+  `state` boolean NOT NULL, /* ï¿½ï¿½ï¿½ï¿½ 1, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0*/
   `startD` datetime NOT NULL,
   `finishD` datetime NOT NULL,
   `achievementPercentage` int NOT NULL,
