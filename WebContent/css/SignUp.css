@@ -156,9 +156,12 @@ u {
     cursor: pointer
 }
 
-p.exist {
-    font-size: 9px;
-    color: #C2C2CC
+.exist {
+    color: #C2C2CC;
+    marin-left: 20px;
+    margin-top: -5px; 
+    text-align: center; 
+    font-size:15px;
 }
 
 p.exist span {

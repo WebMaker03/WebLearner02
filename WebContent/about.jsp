@@ -24,7 +24,7 @@
 	<section id="team">
 		<div class="container" style="margin-top: 150px">
 			<div class="section-header" id="service">
-				<h3>Meet Our Service</h3>
+				<h3> ★ Meet Our Service ★</h3>
 				<hr>
 				<!-- 명언 문구 -->
 					<p style="font-size:20px; color:#000000; font-weight: bold; background-color: #D7F2F9;"><br><br>위대한 일을 위해서 <br>
@@ -48,7 +48,7 @@
 
 		<div class="container" style="margin-top: 20px">
 			<div class="section-header">
-				<h3>Meet Our Team</h3>
+				<h3>★ Meet Our Team ★</h3>
 				<hr>
 				<p style="margin-top: 30px">FrontEnd</p>
 			</div>
@@ -56,7 +56,7 @@
 				<div class="col-lg-3 col-md-6 wow fadeInUp"
 					style="visibility: visible; animation-name: fadeInUp;">
 					<div class="member">
-						<img src="images/kangonyou.jpg" class="img-fluid"
+						<img src="images/onyou.jpg" class="img-fluid"
 							alt="">
 						<div class="member-info">
 							<div class="member-info-content">
