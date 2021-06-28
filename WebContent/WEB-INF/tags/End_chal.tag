@@ -1,6 +1,10 @@
 <%@ tag language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<c:choose>
+
+<c:when test="${!empty end_chalList}">
+
 
 <c:forEach var="list1" items="${end_chalList}" varStatus="status">
 
@@ -16,7 +20,17 @@
 		</td>
 	</tr>
 </c:forEach>
+</c:when>
 
+<c:otherwise>
+<tr>
+<td colspan="2">
+
+	<h4 class="font-weight-bold">인증 정보가 아직 없습니다.</h4>
+<td>
+	</tr>
+</c:otherwise>
+</c:choose>
 
 
 <!--   <tr>
