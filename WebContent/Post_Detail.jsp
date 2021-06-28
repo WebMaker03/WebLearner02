@@ -43,7 +43,7 @@
 
 					</div>
 				</div>
-				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
+				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px; overflow:auto;">
 
 					<p class="comment-text" style="line-height: 1.5;">${post.p_text}</p>
 				</div>
