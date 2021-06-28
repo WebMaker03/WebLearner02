@@ -60,7 +60,7 @@
 									<div class="mt-4">
 										<div class="px-3">
 											<button type="button" class="btn btn-primary disabled btn-block"
-												style="font-size: 18px;">Change Info</button>
+												style="font-size: 18px;"></button><a = href = "InfoModify.jsp>Change Info</a></button>
 										</div>
 									</div>
 								</div>
