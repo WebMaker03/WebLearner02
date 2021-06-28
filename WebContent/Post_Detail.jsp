@@ -24,20 +24,20 @@
 			<div class="comment" style="margin-top: 200px">
 				<div
 					class="d-flex flex-row align-items-center text-left comment-top p-2 border-bottom px-4" id="po" >
-					<div class="profile-image">
-					 			<i class="fa fa-pencil-square fa-3x" aria-hidden="true" style="color:blue"></i>
-					</div>
 					<div class="d-flex flex-column ml-3">
 
 						<div class="d-flex flex-row post-title" id="post">
-							<div class="col" style="width: 700px;">
+					<div class="profile-image">
+					 			<i class="fa fa-pencil-square fa-3x" aria-hidden="true" style="color:blue; margin-top:5px;"></i>
+					</div>
+							<div class="col" style="width: 1000px;">
 							<span style="font-weight: bold; font-size:30px;">제목 :&nbsp</span>
 							<span style="font-weight: bold; font-size:30px;">${post.p_title}</span>
 							</div>
+					<a href="goBoard.bo?c_code=${post.c_code}"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전으로!</span></a>
 							
-					<a href="goBoard.bo?c_code=${post.c_code}"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
 						</div>
-							<div class="d-flex flex-row post-title" style="margin-top:20px;">
+							<div class="row" style="margin-top:10px;">
 							<span id="postname"> | 작성자 : ${writer.u_name}</span>
 							</div>
 

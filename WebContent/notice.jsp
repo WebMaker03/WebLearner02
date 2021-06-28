@@ -50,7 +50,7 @@
 							<div style="font-weight: bold; font-size: 20px;"> 회원정보 수정/확인/탈퇴</div><br>
 							   로그인  >> 마이페이지  >> 회원정보 수정/확인 버튼 클릭! <br><br>
 							 <i class="fa fa-hand-o-right mr-2 mt-0-20 pull-left">&nbsp;회원정보 확인</i><br>                          
-                                     ㄴ포인트 확인/내역 조회 가능합니다.
+                                     ㄴ 개인 정보 / 포인트 확인/내역 조회 가능합니다.
                                   <br><br>  <i class="fa fa-hand-o-right mr-2 mt-0-20 pull-left">&nbsp; 회원 탈퇴</i><br>
 ㄴ회원정보 수정 페이지에서 회원 탈퇴가 가능합니다.
 							    </div>
