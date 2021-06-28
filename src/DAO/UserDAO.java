@@ -231,4 +231,30 @@ public class UserDAO {
 	      return user;
 	 
 	 }
+	 // 회원탈퇴
+		public boolean delU(int u_code) {	// id, pw
+			conn = DBConnection.connect();
+			String sql = "delete from users"
+					+ " where u_code=?;";
+			try {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(2, u_code);
+				pstmt.executeUpdate();
+				return false;
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} finally {
+				try {
+					pstmt.close();
+					conn.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			return true;
+		}
+	 
+	 
 }
