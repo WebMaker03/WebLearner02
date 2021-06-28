@@ -56,19 +56,19 @@ select * from challenges;
 /* myC 테이블 */
 
 /* 진행중챌린지*/
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(1, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 50, '공부1.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(2, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 60, '공부5.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(3, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 70, '공부6.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(4, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 80, '공부2.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(5, 1, true, '2021-06-15 00:00:00','2021-06-30 00:00:00', 50, '공부3.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(1, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', '공부1.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(2, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', '공부5.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(3, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', '공부6.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(4, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', '공부2.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(5, 1, true, '2021-06-15 00:00:00','2021-06-30 00:00:00', '공부3.jpg');
 
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(2, 1, true , '2021-06-01 00:00:00', '2021-06-30 00:00:00', 60, '챌린지사진5');
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(3, 3, true ,'2021-06-15 00:00:00', '2021-06-30 00:00:00', 70, '챌린지사진6');
+insert into myC(c_code, u_code, state, startD, finishD, img) values(2, 1, true , '2021-06-01 00:00:00','2021-06-30 00:00:00','챌린지사진5');
+insert into myC(c_code, u_code, state, startD, finishD, img) values(3, 3, true ,'2021-06-15 00:00:00', '2021-06-30 00:00:00', '챌린지사진6');
 
 /* 끝난챌린지*/
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(1, 1, true, '2021-05-17 00:00:00','2021-05-31 00:00:00', 50, '챌린지사진1');
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(2, 2, true , '2021-05-01 00:00:00', '2021-05-31 00:00:00', 60, '챌린지사진2');
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(3, 3, true ,'2021-05-17 00:00:00', '2021-05-31 00:00:00', 70, '챌린지사진3');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(1, 1, true, '2021-05-17 00:00:00', '2021-05-31 00:00:00', '챌린지사진1');
+insert into myC(c_code, u_code, state, startD, finishD, img) values(2, 2, true , '2021-05-01 00:00:00', '2021-05-31 00:00:00' '챌린지사진2');
+insert into myC(c_code, u_code, state, startD, finishD, img) values(3, 3, true ,'2021-05-17 00:00:00', '2021-05-31 00:00:00', '챌린지사진3');
 
 
 select * from myC;

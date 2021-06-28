@@ -7,21 +7,18 @@ public class MyC {
 	private boolean state;
 	private String startD;
 	private String finishD;
-	private int achievementPercentage;
 	private String img;
 	
 	
 	public MyC() {;}
 	
-	public MyC(int mc_code, int c_code, int u_code, boolean state, String startD, String finishD,
-			int achievementPercentage, String img) {
+	public MyC(int mc_code, int c_code, int u_code, boolean state, String startD, String finishD, String img) {
 		this.mc_code = mc_code;
 		this.c_code = c_code;
 		this.u_code = u_code;
 		this.state = state;
 		this.startD = startD;
 		this.finishD = finishD;
-		this.achievementPercentage = achievementPercentage;
 		this.img = img;
 	}
 
@@ -62,13 +59,6 @@ public class MyC {
 	public void setFinishD(String finishD) {
 		this.finishD = finishD;
 	}
-	public int getAchievementPercentage() {
-		return achievementPercentage;
-	}
-	public void setAchievementPercentage(int achievementPercentage) {
-		this.achievementPercentage = achievementPercentage;
-	}
-
 	public String getImg() {
 		return img;
 	}
