@@ -143,6 +143,39 @@ public class UserDAO {
 
       return true;
    }
+   // 비밀번호 검사
+   public boolean checkPw(String userpw, String userid) {
+	      conn = DBConnection.connect();
+	      String sql = "select * from users where userpw=? and userid=?";
+
+	      try {
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, userpw);
+	         pstmt.setString(2, userid);
+	         ResultSet rs = pstmt.executeQuery();
+	         if (rs.next()) {
+	            if (rs.getInt(1) != 0) {
+
+	               return true;
+
+	            }
+	         }
+
+	      } catch (SQLException e) {
+	         // TODO Auto-generated catch block
+	         e.printStackTrace();
+	      }finally {
+				try {
+					pstmt.close();
+					conn.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+	      return false;
+	   }
    // 회원정보 수정
    public boolean updateUser(Users user) {		// name, email, age, id
 		conn = DBConnection.connect();
@@ -238,9 +271,9 @@ public class UserDAO {
 					+ " where u_code=?;";
 			try {
 				pstmt = conn.prepareStatement(sql);
-				pstmt.setInt(2, u_code);
+				pstmt.setInt(1, u_code);
 				pstmt.executeUpdate();
-				return false;
+				return true;
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -253,7 +286,7 @@ public class UserDAO {
 					e.printStackTrace();
 				}
 			}
-			return true;
+			return false;
 		}
 	 
 	 
