@@ -26,7 +26,7 @@
 <tr>
 <td colspan="2">
 
-	<h4 class="font-weight-bold">인증 정보가 아직 없습니다.</h4>
+	<h4 class="font-weight-bold">종료된 챌린지가 없습니다.</h4>
 <td>
 	</tr>
 </c:otherwise>
