@@ -27,7 +27,7 @@ insert into challenges(c_name, theme, fee ,period, img, info) values('하루 1�
 insert into challenges(c_name, theme, fee ,period, img, info) values('도서관 가기','독서', 1400 , 14, '독서3.jpg','2주간 도서관 출석체크하기!');
 insert into challenges(c_name, theme, fee ,period, img, info) values('자기 전 책읽기','독서', 1400 ,14, '독서4.jpg','자기 전 휴대폰은 그만! 독서를 하며 하루를 마무리 해봅시다.');
 insert into challenges(c_name, theme, fee ,period, img, info) values('오전 책읽기','독서', 3000 ,30, '독서5.jpg','상쾌한 아침, 책읽기로 하루를 시작해봅시다.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('신문 읽기','독서', 3000 ,30, '독서6.jpg','못 읽은채 쌓여가는 뉴스들! 밀리지 않고 읽기.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('신문 읽기','독서', 1000 ,10, '독서6.jpg','못 읽은채 쌓여가는 뉴스들! 밀리지 않고 읽기.');
 
 /* 운동 */
 insert into challenges(c_name, theme, fee ,period, img, info) values('헬스장 가기','운동', 1400, 14, '운동9.jpg', '규칙적으로 꾸준하게 헬스장을 나가봅시다!');
@@ -46,7 +46,7 @@ insert into challenges(c_name, theme, fee ,period, img, info) values('집밥 요
 insert into challenges(c_name, theme, fee ,period, img, info) values('책상 정리하기','생활습관', 1400, 14, '생활습관12.jpg','매일매일 책상 정리하고 기분 좋게 공부하기!');
 insert into challenges(c_name, theme, fee ,period, img, info) values('다이어리 쓰기','생활습관', 3000, 30, '생활습관10.jpg','하루 일과나 내가 느꼈던 감정들을 다이어리에 차곡차곡 정리해봐요!');
 insert into challenges(c_name, theme, fee ,period, img, info) values('아침 명상','생활습관', 1400, 14, '생활습관11.jpg','명상을 통해 스트레스를 풀고 자신을 돌아보는 시간을 가져봅시다.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('휴대폰 5시간 이하로 쓰기','생활습관', 3000, 30, '생활습관13.jpg','휴대폰 사용기록을 인증하고 스마트폰 의존성을 줄여봅시다!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('휴대폰 5시간 이하로 쓰기','생활습관', 1400, 14, '생활습관13.jpg','휴대폰 사용기록을 인증하고 스마트폰 의존성을 줄여봅시다!');
 insert into challenges(c_name, theme, fee ,period, img, info) values('과일/채소 먹기','생활습관', 1400, 14, '생활습관8.jpg','매일 신선한 야채나 과일을 먹고 영양소를 채워봐요!');
 
 select * from challenges;
@@ -67,8 +67,8 @@ insert into myC(c_code, u_code, state, startD, finishD, img) values(1, 3, true ,
 
 /* 끝난챌린지*/
 insert into myC(c_code, u_code, state ,startD, finishD, img) values(14, 1, false, '2021-05-02 00:00:00', '2021-05-11 00:00:00', '독서6.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, img) values(22, 1, false, '2021-05-17 00:00:00', '2021-05-31 00:00:00', '운동14.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, img) values(29, 1, false, '2021-05-02 00:00:00', '2021-05-31 00:00:00', '생활습관13.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(22, 1, false, '2021-05-02 00:00:00', '2021-05-11 00:00:00', '운동14.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(29, 1, false, '2021-05-02 00:00:00', '2021-05-15 00:00:00', '생활습관13.jpg');
 
 insert into myC(c_code, u_code, state, startD, finishD, img) values(27, 2, false , '2021-05-01 00:00:00', '2021-05-31 00:00:00' ,'생활습관10.jpg');
 insert into myC(c_code, u_code, state, startD, finishD, img) values(5, 3,false ,'2021-05-17 00:00:00', '2021-05-31 00:00:00', '공부3.jpg');
@@ -156,11 +156,31 @@ insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 4, '
 
 
 /* 끝난 챌린지 인증*/
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-02','5/02일 공부 인증 완료.', 3);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-03','5/03일 공부 인증 완료.', 1);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-04','5/04일 공부 인증 완료.', 2);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-05','5/05일 공부 인증 완료.', 5);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-06','5/06일 공부 인증 완료.', 4);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-02','5/02일 줄넘기.', 3);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-03','5/03일 줄넘기.', 1);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-04','5/04일 줄넘기.', 2);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-05','5/05일 줄넘기.', 5);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 9, '2021-05-06','5/06일 줄넘기.', 4);
+
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-02','5/02일자 신문 인증.', 3);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-03','5/03일자 신문 인증.', 1);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-04','5/04일자 신문 인증.', 2);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-05','5/05일자 신문 인증.', 5);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-06','5/06일자 신문 인증.', 4);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-07','5/07일자 신문 인증.', 3);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-08','5/08일자 신문 인증.', 1);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-09','5/09일자 신문 인증.', 2);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-10','5/10일자 신문 인증.', 5);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 10, '2021-05-11','5/11일자 신문 인증.', 4);
+
+
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 11, '2021-05-02','5/02일 휴대폰 사용 인증.', 3);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 11, '2021-05-03','5/03일 휴대폰 사용 인증.', 1);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 11, '2021-05-04','5/04일 휴대폰 사용 인증.', 2);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 11, '2021-05-05','5/05일 휴대폰 사용 인증.', 5);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 11, '2021-05-06','5/06일 휴대폰 사용 인증.', 4);
+
+
 
 select * from verification;
 
