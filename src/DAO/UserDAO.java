@@ -197,5 +197,38 @@ public class UserDAO {
 		}
 		return true;
 	}
+	
+	 public Users getUser(int ucode) {		// name, email, age, id
+		  Users user = new Users();
+	      conn = DBConnection.connect();
 
+	      try {
+	         String sql = "select * from users where u_code=?";
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setInt(1,ucode);
+	         ResultSet rs = pstmt.executeQuery();
+	         while (rs.next()) {
+	            user.setU_code(rs.getInt("u_code"));
+	            user.setUserid(rs.getString("userid"));
+	            user.setUserpw(rs.getString("userpw"));
+	            user.setU_name(rs.getString("u_name"));
+	            user.setAge(rs.getInt("age"));
+	            user.setEmail(rs.getString("email"));
+	            user.setPoint(rs.getInt("point"));
+	         }
+	      } catch (SQLException e) {
+	         // TODO Auto-generated catch block
+	         e.printStackTrace();
+	      }finally {
+				try {
+					pstmt.close();
+					conn.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+	      return user;
+	 
+	 }
 }

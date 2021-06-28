@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import DAO.BoardDAO;
+import DAO.UserDAO;
 import DTO.Comments;
 import DTO.Post;
 import DTO.Users;
@@ -27,8 +28,11 @@ public class PostDetailAction implements Action{
 		// 게시글 정보 받아오기
 		BoardDAO bdao = new BoardDAO();
 		Post p = bdao.getOneP(p_code);
+		UserDAO udao =  new UserDAO();
+		Users writer= udao.getUser(p.getU_code());
 		
 		request.setAttribute("post", p);
+		request.setAttribute("writer", writer);
  
 		// 게시글 별 댓글 정보 list로 받아오기
 		ArrayList<Comments> cList = bdao.getAllcomments(p_code);

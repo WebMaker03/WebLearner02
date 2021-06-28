@@ -32,7 +32,7 @@
 						<div class="d-flex flex-row post-title" id="post">
 							<h1 style="font-weight: bold;">제목 : &nbsp </h1>
 							<h1 style="font-weight: bold;">${post.p_title}</h1>
-							<span id="postname" class="ml-2">작성자이름</span>
+							<span id="postname" class="ml-2">${writer.u_name}</span>
 						</div>
 
 					</div>
@@ -40,7 +40,7 @@
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
 
-					<p class="comment-text">${post.p_title}</p>
+					<p class="comment-text">${post.p_text}</p>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4">
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">
