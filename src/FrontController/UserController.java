@@ -111,6 +111,12 @@ public class UserController extends HttpServlet {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+		} else if(action.equals("/delete.do")) {
+			try {
+				forward = new DeleteUserAction().execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 
 		else {
