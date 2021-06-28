@@ -9,7 +9,8 @@ body, html {
 .card-container.card {
 	border: #7BBBD6 solid 3px;
 	border-radius: 10px;
-    max-width: 350px;
+    width: 500px;
+    height: 530px;
     padding: 40px 40px;
     
 }
@@ -43,20 +44,25 @@ body, html {
 }
 
 .profile-img-card {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 10px;
+    width: 140px;
+    height: 140px;
+    
+    margin-top: 25px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
     display: block;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    border-radius: 50%;
+    border-radius: 50% ;
+    border: #7BBBD6 solid 3px;
 }
 
 /*
  * Form styles
  */
 .profile-name-card {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     margin: 10px 0 0;
@@ -90,7 +96,7 @@ body, html {
 .form-signin input[type=text],
 .form-signin button {
     width: 100%;
-    height : 40px;
+    height: 60px;
     display: block;
     margin-bottom: 10px;
     z-index: 1;
@@ -98,8 +104,9 @@ body, html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-     border: #7BBBD6 solid 3px;
-	border-radius: 10px;
+    border: #7BBBD6 solid 3px;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .form-signin .form-control:focus {
@@ -110,14 +117,12 @@ body, html {
 }
 
 .btn.btn-signin {
-    /*background-color: #4d90fe; */
     background-color:  #7BBBD6;
-    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
     padding: 0px;
-    margin-top: 10px;
+    margin-top: 35px;
     font-weight: 700;
     font-size: 14px;
-    height: 36px;
+    height: 60px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 10px;
@@ -126,6 +131,7 @@ body, html {
     -moz-transition: all 0.218s;
     -webkit-transition: all 0.218s;
     transition: all 0.218s;
+    font-size:23px;
 }
 
 .btn.btn-signin:hover,
@@ -142,4 +148,17 @@ body, html {
 .forgot-password:active,
 .forgot-password:focus{
     color: rgb(12, 97, 33);
+}
+
+#login_text{
+	color: blue;
+	font-size: 20px;
+	margin-bottom :20px;
+}
+#return{
+	margin-left:140px;
+}
+#gosignup{
+	margin-left:230px;
+	margin-bottom :20px;
 }

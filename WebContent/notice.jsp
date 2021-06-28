@@ -57,14 +57,13 @@
 							</div>
 							<div id="colp3" class="collapsable">로그인  >> 마이페이지  >> 챌린지 현황  >> 보고싶은 챌린지 인증 보러가기 클릭!<br><br>
 							진행중 챌린지 상세보기 페이지에서<br>
-인증 목록/현황 확인과 기록이 가능합니다.
+인증 목록/현황 확인과 기록이 가 합니다.
+
 							</div>
 						</div>
 
 
-
-						<button name="next" id="next1"
-							class="button"
+						<button onclick="location.href='main.etc'" name="next" id="next1"	class="button"
 							style="margin-top: 70px">home</button>
 					</div>
 				</div>
@@ -79,4 +78,5 @@
 </body>
 <jsp:include page="footer.jsp"></jsp:include>
 <script type="text/javascript" src="js/notice.js"></script>
+
 </html>

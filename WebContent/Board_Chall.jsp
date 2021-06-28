@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 <!-- bootstrap css -->
 
-<link rel="stylesheet" href="css/theme_detail_test.css">
+<link rel="stylesheet" type="text/css"  href="css/board.css">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/responsive.css">

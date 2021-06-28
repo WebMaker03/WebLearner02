@@ -30,10 +30,10 @@
 			<div class="row">
 
 				<div class="col-md-8">
-					<div class="card text-center">
+					<div class="card text-center" id="board">
 						<div class="row">
 							<div class="col-md-7 border-right no-gutters">
-								<div class="py-3">
+								<div class="py-3" style="margin-top:40px">
 									<img src="https://i.imgur.com/hczKIze.jpg" width="100"
 										class="rounded-circle">
 									<h4 class="text-secondary" id="uname">${session_user.u_name}</h4>
@@ -42,9 +42,7 @@
 									<div class="stats">
 										<div class="mt-4">
 										<span id="point">현재 포인트는 </span><span id="point_d">${session_user.point}</span><span id="point">P 입니다.</span>
-											<div class="px-3">
-												<button type="button" class="btn btn-primary disabled btn-block" id="but">Point recharge</button>
-											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -79,21 +77,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-
-					<div class="card"   id="myp"
-						style="width: 300px; height: 400px; margin-left: 100px;">
-						<div class="card-body">
-							<a href="#" class="btn btn-primary disabled"
-								id="butto"> 작성한 게시글 & 댓글</a><br>
-							<a href="#" class="btn btn-primary disabled"
-								id="butto"> 게시글 저장 목록 </a> <br>
-							<a href="#" class="btn btn-primary disabled"
-								id="butto"> 인증현황 보러가기 </a>
-						</div>
-					</div>
-
-				</div>
+				
 			</div>
 		</div>
 		<hr>

@@ -28,13 +28,15 @@
 					 			<i class="fa fa-pencil-square fa-3x" aria-hidden="true" style="color:blue"></i>
 					</div>
 					<div class="d-flex flex-column ml-3">
-						<div class="d-flex flex-row post-title">
+
+						<div class="d-flex flex-row post-title" id="post">
 							<h1 style="font-weight: bold;">제목 : &nbsp </h1>
 							<h1 style="font-weight: bold;">${post.p_title}</h1>
-							<span class="ml-2">작성자이름</span>
+							<span id="postname" class="ml-2">작성자이름</span>
 						</div>
+
 					</div>
-					<a href="javascript:history.back();"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
+					<a href="goBoard.bo?c_code=${post.c_code}"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
 
@@ -44,16 +46,18 @@
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">
 						<form method = "post" action="addCmt.bo" id="cmtForm" >
 						<input type = "hidden" name = "p_code" value ="${post.p_code}"> 
-						<input	type="text" class="search" name="cm_text" 
+						<input	type="text" class="search" name="cm_text" style="
+    font-size: 20px;
+"
 							placeholder="자신의 의견을 작성해보세요!">
-						<button type="submit" form="cmtForm" class="btn btn-link">완료!</button>
+						<button type="submit" form="cmtForm" class="btn btn-link" style="display: contents">완료!</button>
 						</form>
 					</div>
 					<div class="collapsable-comment">
 						<div
 							class="d-flex flex-row justify-content-between align-items-center action-collapse p-2"
 							data-toggle="collapse" aria-expanded="false"
-							aria-controls="collapse-1" href="#collapse-1" id="post">
+							aria-controls="collapse-1" href="#collapse-1" id="post" style=" font-size: 17px; font-weight: bold;">
 							<span>댓글 보기</span><i class="fa fa-chevron-down servicedrop"></i>
 						</div>
 

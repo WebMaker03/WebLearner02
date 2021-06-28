@@ -1,109 +1,111 @@
 
 use codelearner2;
 
-/* °¡»óµ¥ÀÌÅÍ insert */
 
-/*users Å×ÀÌºí*/
-insert into users(userid, userpw, u_name, age, email) values('kim', 'a1234567', '±èÀ¯Àú', 15, 'email3@gmail.com');
-insert into users(userid, userpw, u_name, age, email) values('hong', 'a1234567', 'È«±æµ¿', 20,'email1@gmail.com');
-insert into users(userid, userpw, u_name, age, email) values('lim', 'a1234567', 'ÀÓ²©Á¤', 30, 'email2@gmail.com');
+
+/* ê°€ìƒë°ì´í„° insert */
+
+/*users í…Œì´ë¸”*/
+insert into users(userid, userpw, u_name, age, email) values('kim', 'a1234567', 'ê¹€ìœ ì €', 15, 'email3@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('hong', 'a1234567', 'í™ê¸¸ë™', 20,'email1@gmail.com');
+insert into users(userid, userpw, u_name, age, email) values('lim', 'a1234567', 'ì„êº½ì •', 30, 'email2@gmail.com');
 
 select * from users;
 
-/* challenges Å×ÀÌºí */
-/* °øºÎ */
-insert into challenges(c_name, theme, fee, period, img, info) values('ÇÏ·ç 1½Ã°£ °øºÎ','°øºÎ', 3000 ,30,'°øºÎ1.jpg', 'ÇÏ·ç¿¡ 1½Ã°£¾¿¸¸ ÅõÀÚÇØ¼­ ºÎ´ã¾øÀÌ ²ÙÁØÇÏ°Ô °øºÎÇÏÀÚ!');
-insert into challenges(c_name, theme, fee, period, img, info) values('ÇÏ·ç 3½Ã°£ °øºÎ','°øºÎ', 3000 ,30,'°øºÎ5.jpg', 'ÇÑ ´Şµ¿¾È ²ÙÁØÈ÷ 3½Ã°£¾¿ ÅõÀÚÇØ¼­ °øºÎÇØ ºÒ ¼ö ÀÖ´Â ±âÈ¸');
-insert into challenges(c_name, theme, fee, period, img, info) values('ÇÏ·ç 6½Ã°£ °øºÎ','°øºÎ', 3000 ,30,'°øºÎ6.jpg', 'ÇÑ ´Şµ¿¾È ²ÙÁØÈ÷ 6½Ã°£¾¿ ÅõÀÚÇØ¼­ °øºÎÇØ ºÒ ¼ö ÀÖ´Â ±âÈ¸');
-insert into challenges(c_name, theme, fee, period, img, info) values('µµ¼­°ü Ãâ¼®Ã¼Å© 9:00AM','°øºÎ', 3000 ,30,'°øºÎ2.jpg', '¾ÆÄ§ 9½Ã±îÁö µµ¼­°ü °¡±â, ¿À´ÃºÎÅÍ ÇÔ²² ½ÃÀÛÇØº¼±î¿ä?');
-insert into challenges(c_name, theme, fee, period, img, info) values('ÇÏ·ç¿¡ ¿µ´Ü¾î 30°³¾¿ ¿Ü¿ì±â','°øºÎ', 1400 ,14,'°øºÎ3.jpg', 'ÇÏ·ç¿¡ 30°³¾¿ »õ·Î¿î ¿µ´Ü¾î¸¦ ¿Ü¿öºÁ¿ä.');
-insert into challenges(c_name, theme, fee, period, img, info) values('ÇĞ¿ø°¡±â','°øºÎ', 3000 ,30,'°øºÎ4.jpg', 'ÇÑ ´Şµ¿¾È ºüÁöÁö ¾Ê°í ÇĞ¿ø ¼º½ÇÈ÷ µî¿øÇÏ±â!');
-insert into challenges(c_name, theme, fee, period, img, info) values('ÀÎ°­µè±â','°øºÎ', 3000 ,30,'°øºÎ8.jpg', '½ÅÃ»¸¸ÇÏ°í ¾Èµè°Ô µÇ´Â ÀÎÅÍ³İ °­ÀÇ! Ã§¸°Áö·Î ÇÔ²² ²ÙÁØÈ÷ µé¾îºÁ¿ä.');
-insert into challenges(c_name, theme, fee, period, img, info) values('Ä«Æä¿¡¼­ °øºÎÇÏ±â','°øºÎ', 1400 , 14,'°øºÎ7.jpg', 'ÀÚÀ¯·Î¿î ºĞÀ§±âÀÇ Ä«Æä¿¡¼­ ÁıÁßÇÏ¸ç °øºÎÇØºÁ¿ä!');
+/* challenges í…Œì´ë¸” */
+/* ê³µë¶€ */
+insert into challenges(c_name, theme, fee, period, img, info) values('í•˜ë£¨ 1ì‹œê°„ ê³µë¶€','ê³µë¶€', 3000 ,30,'ê³µë¶€1.jpg', 'í•˜ë£¨ì— 1ì‹œê°„ì”©ë§Œ íˆ¬ìí•´ì„œ ë¶€ë‹´ì—†ì´ ê¾¸ì¤€í•˜ê²Œ ê³µë¶€í•˜ì!');
+insert into challenges(c_name, theme, fee, period, img, info) values('í•˜ë£¨ 3ì‹œê°„ ê³µë¶€','ê³µë¶€', 3000 ,30,'ê³µë¶€5.jpg', 'í•œ ë‹¬ë™ì•ˆ ê¾¸ì¤€íˆ 3ì‹œê°„ì”© íˆ¬ìí•´ì„œ ê³µë¶€í•´ ë¶ˆ ìˆ˜ ìˆëŠ” ê¸°íšŒ');
+insert into challenges(c_name, theme, fee, period, img, info) values('í•˜ë£¨ 6ì‹œê°„ ê³µë¶€','ê³µë¶€', 3000 ,30,'ê³µë¶€6.jpg', 'í•œ ë‹¬ë™ì•ˆ ê¾¸ì¤€íˆ 6ì‹œê°„ì”© íˆ¬ìí•´ì„œ ê³µë¶€í•´ ë¶ˆ ìˆ˜ ìˆëŠ” ê¸°íšŒ');
+insert into challenges(c_name, theme, fee, period, img, info) values('ë„ì„œê´€ ì¶œì„ì²´í¬ 9:00AM','ê³µë¶€', 3000 ,30,'ê³µë¶€2.jpg', 'ì•„ì¹¨ 9ì‹œê¹Œì§€ ë„ì„œê´€ ê°€ê¸°, ì˜¤ëŠ˜ë¶€í„° í•¨ê»˜ ì‹œì‘í•´ë³¼ê¹Œìš”?');
+insert into challenges(c_name, theme, fee, period, img, info) values('í•˜ë£¨ì— ì˜ë‹¨ì–´ 30ê°œì”© ì™¸ìš°ê¸°','ê³µë¶€', 1400 ,14,'ê³µë¶€3.jpg', 'í•˜ë£¨ì— 30ê°œì”© ìƒˆë¡œìš´ ì˜ë‹¨ì–´ë¥¼ ì™¸ì›Œë´ìš”.');
+insert into challenges(c_name, theme, fee, period, img, info) values('í•™ì›ê°€ê¸°','ê³µë¶€', 3000 ,30,'ê³µë¶€4.jpg', 'í•œ ë‹¬ë™ì•ˆ ë¹ ì§€ì§€ ì•Šê³  í•™ì› ì„±ì‹¤íˆ ë“±ì›í•˜ê¸°!');
+insert into challenges(c_name, theme, fee, period, img, info) values('ì¸ê°•ë“£ê¸°','ê³µë¶€', 3000 ,30,'ê³µë¶€8.jpg', 'ì‹ ì²­ë§Œí•˜ê³  ì•ˆë“£ê²Œ ë˜ëŠ” ì¸í„°ë„· ê°•ì˜! ì±Œë¦°ì§€ë¡œ í•¨ê»˜ ê¾¸ì¤€íˆ ë“¤ì–´ë´ìš”.');
+insert into challenges(c_name, theme, fee, period, img, info) values('ì¹´í˜ì—ì„œ ê³µë¶€í•˜ê¸°','ê³µë¶€', 1400 , 14,'ê³µë¶€7.jpg', 'ììœ ë¡œìš´ ë¶„ìœ„ê¸°ì˜ ì¹´í˜ì—ì„œ ì§‘ì¤‘í•˜ë©° ê³µë¶€í•´ë´ìš”!');
 
-/* µ¶¼­ */
-insert into challenges(c_name, theme, fee ,period, img, info) values('ÇÏ·ç 30ºĞ Ã¥ÀĞ±â','µ¶¼­', 3000 ,30, 'µ¶¼­1.jpg','ÇÏ·ç¿¡ 30ºĞ¾¿¸¸ ÅõÀÚÇØ¼­ µ¶¼­¸¦ ÇØº¾½Ã´Ù!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('ÇÏ·ç 1½Ã°£ Ã¥ÀĞ±â','µ¶¼­', 3000 ,30, 'µ¶¼­2.jpg','ÇÏ·ç¿¡ 1½Ã°£¾¿ µ¶¼­¸¦ ÇØº¾½Ã´Ù!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('µµ¼­°ü °¡±â','µ¶¼­', 1400 , 14, 'µ¶¼­3.jpg','2ÁÖ°£ µµ¼­°ü Ãâ¼®Ã¼Å©ÇÏ±â!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('ÀÚ±â Àü Ã¥ÀĞ±â','µ¶¼­', 1400 ,14, 'µ¶¼­4.jpg','ÀÚ±â Àü ÈŞ´ëÆùÀº ±×¸¸! µ¶¼­¸¦ ÇÏ¸ç ÇÏ·ç¸¦ ¸¶¹«¸® ÇØº¾½Ã´Ù.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('¿ÀÀü Ã¥ÀĞ±â','µ¶¼­', 3000 ,30, 'µ¶¼­5.jpg','»óÄèÇÑ ¾ÆÄ§, Ã¥ÀĞ±â·Î ÇÏ·ç¸¦ ½ÃÀÛÇØº¾½Ã´Ù.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('½Å¹® ÀĞ±â','µ¶¼­', 3000 ,30, 'µ¶¼­6.jpg','¸ø ÀĞÀºÃ¤ ½×¿©°¡´Â ´º½ºµé! ¹Ğ¸®Áö ¾Ê°í ÀĞ±â.');
+/* ë…ì„œ */
+insert into challenges(c_name, theme, fee ,period, img, info) values('í•˜ë£¨ 30ë¶„ ì±…ì½ê¸°','ë…ì„œ', 3000 ,30, 'ë…ì„œ1.jpg','í•˜ë£¨ì— 30ë¶„ì”©ë§Œ íˆ¬ìí•´ì„œ ë…ì„œë¥¼ í•´ë´…ì‹œë‹¤!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('í•˜ë£¨ 1ì‹œê°„ ì±…ì½ê¸°','ë…ì„œ', 3000 ,30, 'ë…ì„œ2.jpg','í•˜ë£¨ì— 1ì‹œê°„ì”© ë…ì„œë¥¼ í•´ë´…ì‹œë‹¤!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ë„ì„œê´€ ê°€ê¸°','ë…ì„œ', 1400 , 14, 'ë…ì„œ3.jpg','2ì£¼ê°„ ë„ì„œê´€ ì¶œì„ì²´í¬í•˜ê¸°!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ìê¸° ì „ ì±…ì½ê¸°','ë…ì„œ', 1400 ,14, 'ë…ì„œ4.jpg','ìê¸° ì „ íœ´ëŒ€í°ì€ ê·¸ë§Œ! ë…ì„œë¥¼ í•˜ë©° í•˜ë£¨ë¥¼ ë§ˆë¬´ë¦¬ í•´ë´…ì‹œë‹¤.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ì˜¤ì „ ì±…ì½ê¸°','ë…ì„œ', 3000 ,30, 'ë…ì„œ5.jpg','ìƒì¾Œí•œ ì•„ì¹¨, ì±…ì½ê¸°ë¡œ í•˜ë£¨ë¥¼ ì‹œì‘í•´ë´…ì‹œë‹¤.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ì‹ ë¬¸ ì½ê¸°','ë…ì„œ', 3000 ,30, 'ë…ì„œ6.jpg','ëª» ì½ì€ì±„ ìŒ“ì—¬ê°€ëŠ” ë‰´ìŠ¤ë“¤! ë°€ë¦¬ì§€ ì•Šê³  ì½ê¸°.');
 
-/* ¿îµ¿ */
-insert into challenges(c_name, theme, fee ,period, img, info) values('Çï½ºÀå °¡±â','¿îµ¿', 1400, 14, '¿îµ¿9.jpg', '±ÔÄ¢ÀûÀ¸·Î ²ÙÁØÇÏ°Ô Çï½ºÀåÀ» ³ª°¡º¾½Ã´Ù!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('ÇÏ·ç 30ºĞ °È±â/´Ş¸®±â','¿îµ¿', 1400, 14, '¿îµ¿1.jpg','¸ÅÀÏ¸ÅÀÏ »êÃ¥À» ³ª°¡º¸¾Æ¿ä.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('¾ÆÄ§¿îµ¿ ÇÏ±â','¿îµ¿', 1400, 14, '¿îµ¿4.jpg','»óÄèÇÑ ¾ÆÄ§ºÎÅÍ ¿îµ¿À» ³ª°¡º¼±î¿ä?');
-insert into challenges(c_name, theme, fee ,period, img, info) values('¸ÅÀÏ¸ÅÀÏ È¨Æ®·¹ÀÌ´×','¿îµ¿', 3000, 30, '¿îµ¿7.jpg','Áı¿¡¼­µµ ÇÒ ¼ö ÀÖ´Ù! ¿µ»óÀ» º¸¸ç ÇÔ²²ÇØ¿ä.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('ÀÚÀü°Å Å¸±â','¿îµ¿', 1400, 14, '¿îµ¿11.jpg','ÀÚÀü°Å·Î ÇÔ²² À¯»ê¼Ò ¿îµ¿À» ÇØº¾½Ã´Ù!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('¸ÅÀÏ ÇÃ·©Å© ÇÏ±â','¿îµ¿', 1400, 14, '¿îµ¿10.jpg','Á¤È®ÇÑ ÀÚ¼¼·Î ¸ÅÀÏ ÇÃ·©Å© ÇÏ°í ÄÚ¾î¸¦ Å°¿öºÁ¿ä!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('¸ÅÀÏ ½ºÄõÆ® ÇÏ±â','¿îµ¿', 1400, 14, '¿îµ¿14.jpg','¸ÅÀÏ¸ÅÀÏ ½ºÄõÆ®·Î ÇÏÃ¼ ±ÙÀ°À» Å°¿öºÁ¿ä!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('ÁÙ³Ñ±â ÇÏ±â','¿îµ¿', 3000, 30, '¿îµ¿12.jpg','Çï½ºÀåÀ» °¡Áö ¾Ê°íµµ ÁÙ³Ñ±â·Î ²ÙÁØÇÑ ¿îµ¿È¿°ú¸¦ º¼ ¼ö ÀÖ¾î¿ä.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('È¨ ¿ä°¡','¿îµ¿', 1400, 14, '¿îµ¿13.jpg','¹Ù¸¥ ÀÚ¼¼¿Í ¿¹»Û ¸ö¸Å¸¦ ¿øÇÑ´Ù¸é ¿ä°¡¸¦ ½ÃÀÛÇØº¾½Ã´Ù!');
+/* ìš´ë™ */
+insert into challenges(c_name, theme, fee ,period, img, info) values('í—¬ìŠ¤ì¥ ê°€ê¸°','ìš´ë™', 1400, 14, 'ìš´ë™9.jpg', 'ê·œì¹™ì ìœ¼ë¡œ ê¾¸ì¤€í•˜ê²Œ í—¬ìŠ¤ì¥ì„ ë‚˜ê°€ë´…ì‹œë‹¤!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('í•˜ë£¨ 30ë¶„ ê±·ê¸°/ë‹¬ë¦¬ê¸°','ìš´ë™', 1400, 14, 'ìš´ë™1.jpg','ë§¤ì¼ë§¤ì¼ ì‚°ì±…ì„ ë‚˜ê°€ë³´ì•„ìš”.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ì•„ì¹¨ìš´ë™ í•˜ê¸°','ìš´ë™', 1400, 14, 'ìš´ë™4.jpg','ìƒì¾Œí•œ ì•„ì¹¨ë¶€í„° ìš´ë™ì„ ë‚˜ê°€ë³¼ê¹Œìš”?');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ë§¤ì¼ë§¤ì¼ í™ˆíŠ¸ë ˆì´ë‹','ìš´ë™', 3000, 30, 'ìš´ë™7.jpg','ì§‘ì—ì„œë„ í•  ìˆ˜ ìˆë‹¤! ì˜ìƒì„ ë³´ë©° í•¨ê»˜í•´ìš”.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ìì „ê±° íƒ€ê¸°','ìš´ë™', 1400, 14, 'ìš´ë™11.jpg','ìì „ê±°ë¡œ í•¨ê»˜ ìœ ì‚°ì†Œ ìš´ë™ì„ í•´ë´…ì‹œë‹¤!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ë§¤ì¼ í”Œë­í¬ í•˜ê¸°','ìš´ë™', 1400, 14, 'ìš´ë™10.jpg','ì •í™•í•œ ìì„¸ë¡œ ë§¤ì¼ í”Œë­í¬ í•˜ê³  ì½”ì–´ë¥¼ í‚¤ì›Œë´ìš”!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ë§¤ì¼ ìŠ¤ì¿¼íŠ¸ í•˜ê¸°','ìš´ë™', 1400, 14, 'ìš´ë™14.jpg','ë§¤ì¼ë§¤ì¼ ìŠ¤ì¿¼íŠ¸ë¡œ í•˜ì²´ ê·¼ìœ¡ì„ í‚¤ì›Œë´ìš”!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ì¤„ë„˜ê¸° í•˜ê¸°','ìš´ë™', 3000, 30, 'ìš´ë™12.jpg','í—¬ìŠ¤ì¥ì„ ê°€ì§€ ì•Šê³ ë„ ì¤„ë„˜ê¸°ë¡œ ê¾¸ì¤€í•œ ìš´ë™íš¨ê³¼ë¥¼ ë³¼ ìˆ˜ ìˆì–´ìš”.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('í™ˆ ìš”ê°€','ìš´ë™', 1400, 14, 'ìš´ë™13.jpg','ë°”ë¥¸ ìì„¸ì™€ ì˜ˆìœ ëª¸ë§¤ë¥¼ ì›í•œë‹¤ë©´ ìš”ê°€ë¥¼ ì‹œì‘í•´ë´…ì‹œë‹¤!');
 
-/* »ıÈ°½À°ü */
-insert into challenges(c_name, theme, fee ,period, img, info) values('¹Ì¶óÅ¬¸ğ´×(¾ÆÄ§ 7½Ã ±â»ó)','»ıÈ°½À°ü', 3000, 30, '»ıÈ°½À°ü2.jpg','ÇÏ·çÀÇ ½ÃÀÛÀ» 7½Ã¿¡! ÇÑ ´Şµ¿¾È ±â»ó ½À°üÀ» µé¿©ºÁ¿ä.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('Áı¹ä ¿ä¸®ÇÏ±â','»ıÈ°½À°ü', 1400, 14, '»ıÈ°½À°ü9.jpg','ºÒÇÊ¿äÇÑ ¿Ü½Ä°ú ¹è´Ş À½½ÄÀ» ÁÙ¿©º¾½Ã´Ù.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('Ã¥»ó Á¤¸®ÇÏ±â','»ıÈ°½À°ü', 1400, 14, '»ıÈ°½À°ü12.jpg','¸ÅÀÏ¸ÅÀÏ Ã¥»ó Á¤¸®ÇÏ°í ±âºĞ ÁÁ°Ô °øºÎÇÏ±â!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('´ÙÀÌ¾î¸® ¾²±â','»ıÈ°½À°ü', 3000, 30, '»ıÈ°½À°ü10.jpg','ÇÏ·ç ÀÏ°ú³ª ³»°¡ ´À²¼´ø °¨Á¤µéÀ» ´ÙÀÌ¾î¸®¿¡ Â÷°îÂ÷°î Á¤¸®ÇØºÁ¿ä!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('¾ÆÄ§ ¸í»ó','»ıÈ°½À°ü', 1400, 14, '»ıÈ°½À°ü11.jpg','¸í»óÀ» ÅëÇØ ½ºÆ®·¹½º¸¦ Ç®°í ÀÚ½ÅÀ» µ¹¾Æº¸´Â ½Ã°£À» °¡Á®º¾½Ã´Ù.');
-insert into challenges(c_name, theme, fee ,period, img, info) values('ÈŞ´ëÆù 5½Ã°£ ÀÌÇÏ·Î ¾²±â','»ıÈ°½À°ü', 3000, 30, '»ıÈ°½À°ü13.jpg','ÈŞ´ëÆù »ç¿ë±â·ÏÀ» ÀÎÁõÇÏ°í ½º¸¶Æ®Æù ÀÇÁ¸¼ºÀ» ÁÙ¿©º¾½Ã´Ù!');
-insert into challenges(c_name, theme, fee ,period, img, info) values('°úÀÏ/Ã¤¼Ò ¸Ô±â','»ıÈ°½À°ü', 1400, 14, '»ıÈ°½À°ü8.jpg','¸ÅÀÏ ½Å¼±ÇÑ ¾ßÃ¤³ª °úÀÏÀ» ¸Ô°í ¿µ¾ç¼Ò¸¦ Ã¤¿öºÁ¿ä!');
+/* ìƒí™œìŠµê´€ */
+insert into challenges(c_name, theme, fee ,period, img, info) values('ë¯¸ë¼í´ëª¨ë‹(ì•„ì¹¨ 7ì‹œ ê¸°ìƒ)','ìƒí™œìŠµê´€', 3000, 30, 'ìƒí™œìŠµê´€2.jpg','í•˜ë£¨ì˜ ì‹œì‘ì„ 7ì‹œì—! í•œ ë‹¬ë™ì•ˆ ê¸°ìƒ ìŠµê´€ì„ ë“¤ì—¬ë´ìš”.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ì§‘ë°¥ ìš”ë¦¬í•˜ê¸°','ìƒí™œìŠµê´€', 1400, 14, 'ìƒí™œìŠµê´€9.jpg','ë¶ˆí•„ìš”í•œ ì™¸ì‹ê³¼ ë°°ë‹¬ ìŒì‹ì„ ì¤„ì—¬ë´…ì‹œë‹¤.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ì±…ìƒ ì •ë¦¬í•˜ê¸°','ìƒí™œìŠµê´€', 1400, 14, 'ìƒí™œìŠµê´€12.jpg','ë§¤ì¼ë§¤ì¼ ì±…ìƒ ì •ë¦¬í•˜ê³  ê¸°ë¶„ ì¢‹ê²Œ ê³µë¶€í•˜ê¸°!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ë‹¤ì´ì–´ë¦¬ ì“°ê¸°','ìƒí™œìŠµê´€', 3000, 30, 'ìƒí™œìŠµê´€10.jpg','í•˜ë£¨ ì¼ê³¼ë‚˜ ë‚´ê°€ ëŠê¼ˆë˜ ê°ì •ë“¤ì„ ë‹¤ì´ì–´ë¦¬ì— ì°¨ê³¡ì°¨ê³¡ ì •ë¦¬í•´ë´ìš”!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ì•„ì¹¨ ëª…ìƒ','ìƒí™œìŠµê´€', 1400, 14, 'ìƒí™œìŠµê´€11.jpg','ëª…ìƒì„ í†µí•´ ìŠ¤íŠ¸ë ˆìŠ¤ë¥¼ í’€ê³  ìì‹ ì„ ëŒì•„ë³´ëŠ” ì‹œê°„ì„ ê°€ì ¸ë´…ì‹œë‹¤.');
+insert into challenges(c_name, theme, fee ,period, img, info) values('íœ´ëŒ€í° 5ì‹œê°„ ì´í•˜ë¡œ ì“°ê¸°','ìƒí™œìŠµê´€', 3000, 30, 'ìƒí™œìŠµê´€13.jpg','íœ´ëŒ€í° ì‚¬ìš©ê¸°ë¡ì„ ì¸ì¦í•˜ê³  ìŠ¤ë§ˆíŠ¸í° ì˜ì¡´ì„±ì„ ì¤„ì—¬ë´…ì‹œë‹¤!');
+insert into challenges(c_name, theme, fee ,period, img, info) values('ê³¼ì¼/ì±„ì†Œ ë¨¹ê¸°','ìƒí™œìŠµê´€', 1400, 14, 'ìƒí™œìŠµê´€8.jpg','ë§¤ì¼ ì‹ ì„ í•œ ì•¼ì±„ë‚˜ ê³¼ì¼ì„ ë¨¹ê³  ì˜ì–‘ì†Œë¥¼ ì±„ì›Œë´ìš”!');
 
 select * from challenges;
 
-/* myC Å×ÀÌºí */
+/* myC í…Œì´ë¸” */
 
-/* ÁøÇàÁßÃ§¸°Áö*/
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(1, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 50, '°øºÎ1.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(2, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 60, '°øºÎ5.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(3, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 70, '°øºÎ6.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(4, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 80, '°øºÎ2.jpg');
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(5, 1, true, '2021-06-15 00:00:00','2021-06-30 00:00:00', 50, '°øºÎ3.jpg');
+/* ì§„í–‰ì¤‘ì±Œë¦°ì§€*/
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(1, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 'ê³µë¶€1.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(2, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 'ê³µë¶€5.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(3, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 'ê³µë¶€6.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(4, 1, true, '2021-06-01 00:00:00','2021-06-30 00:00:00', 'ê³µë¶€2.jpg');
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(5, 1, true, '2021-06-15 00:00:00','2021-06-30 00:00:00', 'ê³µë¶€3.jpg');
 
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(2, 1, true , '2021-06-01 00:00:00', '2021-06-30 00:00:00', 60, 'Ã§¸°Áö»çÁø5');
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(3, 3, true ,'2021-06-15 00:00:00', '2021-06-30 00:00:00', 70, 'Ã§¸°Áö»çÁø6');
+insert into myC(c_code, u_code, state, startD, finishD, img) values(2, 1, true , '2021-06-01 00:00:00','2021-06-30 00:00:00','ì±Œë¦°ì§€ì‚¬ì§„5');
+insert into myC(c_code, u_code, state, startD, finishD, img) values(3, 3, true ,'2021-06-15 00:00:00', '2021-06-30 00:00:00', 'ì±Œë¦°ì§€ì‚¬ì§„6');
 
-/* ³¡³­Ã§¸°Áö*/
-insert into myC(c_code, u_code, state ,startD, finishD, achievementPercentage, img) values(1, 1, true, '2021-05-17 00:00:00','2021-05-31 00:00:00', 50, 'Ã§¸°Áö»çÁø1');
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(2, 2, true , '2021-05-01 00:00:00', '2021-05-31 00:00:00', 60, 'Ã§¸°Áö»çÁø2');
-insert into myC(c_code, u_code, state, startD, finishD, achievementPercentage, img) values(3, 3, true ,'2021-05-17 00:00:00', '2021-05-31 00:00:00', 70, 'Ã§¸°Áö»çÁø3');
+/* ëë‚œì±Œë¦°ì§€*/
+insert into myC(c_code, u_code, state ,startD, finishD, img) values(1, 1, true, '2021-05-17 00:00:00', '2021-05-31 00:00:00', 'ì±Œë¦°ì§€ì‚¬ì§„1');
+insert into myC(c_code, u_code, state, startD, finishD, img) values(2, 2, true , '2021-05-01 00:00:00', '2021-05-31 00:00:00' 'ì±Œë¦°ì§€ì‚¬ì§„2');
+insert into myC(c_code, u_code, state, startD, finishD, img) values(3, 3, true ,'2021-05-17 00:00:00', '2021-05-31 00:00:00', 'ì±Œë¦°ì§€ì‚¬ì§„3');
 
 
 select * from myC;
 
-/* verification Å×ÀÌºí*/
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 1, '2021-06-17','ÀÎÁõÅØ½ºÆ®1', 4);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 1, '2021-06-18','ÀÎÁõÅØ½ºÆ®2', 1);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 2, '2021-06-23','ÀÎÁõÅØ½ºÆ®3', 5);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 3, '2021-06-22','ÀÎÁõÅØ½ºÆ®4', 2);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 4, '2021-06-21','ÀÎÁõÅØ½ºÆ®5', 3);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 5, '2021-06-20','ÀÎÁõÅØ½ºÆ®6', 2);
+/* verification í…Œì´ë¸”*/
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 1, '2021-06-17','ì¸ì¦í…ìŠ¤íŠ¸1', 4);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 1, '2021-06-18','ì¸ì¦í…ìŠ¤íŠ¸2', 1);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 2, '2021-06-23','ì¸ì¦í…ìŠ¤íŠ¸3', 5);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 3, '2021-06-22','ì¸ì¦í…ìŠ¤íŠ¸4', 2);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 4, '2021-06-21','ì¸ì¦í…ìŠ¤íŠ¸5', 3);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(1, 5, '2021-06-20','ì¸ì¦í…ìŠ¤íŠ¸6', 2);
 
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(2, 2, '2021-06-17','ÀÎÁõÅØ½ºÆ®', 1);
-insert into verification(u_code, mc_code, v_date ,v_text, rating) values(3, 3, '2021-06-17','ÀÎÁõÅØ½ºÆ®', 5);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(2, 2, '2021-06-17','ì¸ì¦í…ìŠ¤íŠ¸', 1);
+insert into verification(u_code, mc_code, v_date ,v_text, rating) values(3, 3, '2021-06-17','ì¸ì¦í…ìŠ¤íŠ¸', 5);
 select * from verification;
 
 
 /* post, comments*/
 
-insert into post (u_code, c_code, p_title,p_text) values(1,1,'°Ô½Ã¹°1','Æ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ë');
-insert into post (u_code, c_code, p_title,p_text) values(1,1,'°Ô½Ã¹°2','Æ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ë');
-insert into post (u_code, c_code, p_title,p_text) values(1,1,'°Ô½Ã¹°3','Æ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ë');
-insert into post (u_code, c_code, p_title,p_text) values(1,1,'°Ô½Ã¹°4','Æ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ë');
-insert into post (u_code, c_code, p_title,p_text) values(1,1,'°Ô½Ã¹°5','Æ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ë');
-insert into post (u_code, c_code, p_title,p_text) values(1,1,'°Ô½Ã¹°6','Æ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ë');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'ê²Œì‹œë¬¼1','í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'ê²Œì‹œë¬¼2','í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'ê²Œì‹œë¬¼3','í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'ê²Œì‹œë¬¼4','í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'ê²Œì‹œë¬¼5','í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©');
+insert into post (u_code, c_code, p_title,p_text) values(1,1,'ê²Œì‹œë¬¼6','í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©');
 
-insert into post (u_code, c_code, p_title,p_text) values(2,1,'°Ô½Ã¹°Á¦¸ñ7','Æ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ëÆ÷½ºÆ®³»¿ë');
-insert into post (u_code, c_code, p_title,p_text) values(3,3,'°Ô½Ã¹°Á¦¸ñ3','°Ô½Ã¹°3');
+insert into post (u_code, c_code, p_title,p_text) values(2,1,'ê²Œì‹œë¬¼ì œëª©7','í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©í¬ìŠ¤íŠ¸ë‚´ìš©');
+insert into post (u_code, c_code, p_title,p_text) values(3,3,'ê²Œì‹œë¬¼ì œëª©3','ê²Œì‹œë¬¼3');
 select* from post;
 
-insert into comments (u_code,p_code,cm_text) values(1,1,'1¹ø Æ÷½ºÆ® À¯Àú1 ´ñ±Û1');
-insert into comments (u_code,p_code,cm_text) values(2,1,'1¹ø Æ÷½ºÆ® À¯Àú2 ´ñ±Û2');
-insert into comments (u_code,p_code,cm_text) values(2,1,'1¹ø Æ÷½ºÆ® À¯Àú2 ´ñ±Û3');
-insert into comments (u_code,p_code,cm_text) values(1,1,'1¹ø Æ÷½ºÆ® À¯Àú1 ´ñ±Û4');
+insert into comments (u_code,p_code,cm_text) values(1,1,'1ë²ˆ í¬ìŠ¤íŠ¸ ìœ ì €1 ëŒ“ê¸€1');
+insert into comments (u_code,p_code,cm_text) values(2,1,'1ë²ˆ í¬ìŠ¤íŠ¸ ìœ ì €2 ëŒ“ê¸€2');
+insert into comments (u_code,p_code,cm_text) values(2,1,'1ë²ˆ í¬ìŠ¤íŠ¸ ìœ ì €2 ëŒ“ê¸€3');
+insert into comments (u_code,p_code,cm_text) values(1,1,'1ë²ˆ í¬ìŠ¤íŠ¸ ìœ ì €1 ëŒ“ê¸€4');
 
-insert into comments (u_code,p_code,cm_text) values(1,2,'2¹ø Æ÷½ºÆ® À¯Àú1 ´ñ±Û1');
-insert into comments (u_code,p_code,cm_text) values(1,2,'2¹ø Æ÷½ºÆ® À¯Àú1 ´ñ±Û2');
+insert into comments (u_code,p_code,cm_text) values(1,2,'2ë²ˆ í¬ìŠ¤íŠ¸ ìœ ì €1 ëŒ“ê¸€1');
+insert into comments (u_code,p_code,cm_text) values(1,2,'2ë²ˆ í¬ìŠ¤íŠ¸ ìœ ì €1 ëŒ“ê¸€2');
 
-insert into comments (u_code,p_code,cm_text) values(3,3,'´ñ±Û3');
+insert into comments (u_code,p_code,cm_text) values(3,3,'ëŒ“ê¸€3');
 select* from comments;

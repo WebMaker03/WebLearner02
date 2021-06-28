@@ -6,7 +6,8 @@
 		<td>${v.v_date}</td>
 		<td>${v.rating}</td>
 
-		<td><button type="button" class="badge badge-danger"
+		<td><button href="" type="button" class="badge badge-success"
 				id="ca2_btn1">상세보기</button></td>
+
 	</tr>
 </c:forEach>

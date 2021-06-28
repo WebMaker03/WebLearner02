@@ -73,7 +73,7 @@
 						onclick="button1_click();">
 					<!-- onclick이랑 frm.submit() 부분 필요 -->
 					<button type="button" class="signupbtn" id="signup_btn"
-						onclick="location.href='history.go(-1)'">EXIT</button>
+						onclick="location.href='mypage.etc'">EXIT</button>
 					<!-- onclick이랑 frm.submit() 부분 필요 -->
 				</div>
 				

@@ -15,9 +15,9 @@ import DTO.Users;
 
 public class goBoardAction implements Action{
 
-	@Override
-	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		ActionForward forward= new ActionForward(); 
+   @Override
+   public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+      ActionForward forward= new ActionForward(); 
         
         int c_code = Integer.parseInt(request.getParameter("c_code"));
         System.out.println("c_Code"+ c_code);
@@ -32,15 +32,15 @@ public class goBoardAction implements Action{
         request.setAttribute("c_code",c_code);
         request.setAttribute("chal",chal);
         
-    	HttpSession session = request.getSession();
-    	Users user= (Users)session.getAttribute("session_user");
-    			
+       HttpSession session = request.getSession();
+       Users user= (Users)session.getAttribute("session_user");
+             
         MyC myc= cdao.callMyC(user.getU_code(),c_code);
         request.setAttribute("mychal",myc);
         
         forward.setRedirect(false); 
         forward.setPath("Board_Chall.jsp");
         return forward;
-	}
+   }
 
 }

@@ -82,7 +82,6 @@ public class EtcController extends HttpServlet {
          }
       }else if(action.equals("/mypage.etc")) {
     	  try {
-
               forward = new ShowMyPageAction().execute(request, response);
            } catch (Exception e) {
               e.printStackTrace();

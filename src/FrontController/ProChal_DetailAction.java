@@ -16,10 +16,10 @@ import DTO.Verification;
 
 public class ProChal_DetailAction implements Action{
 
-	@Override
-	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		
-		ActionForward forward= new ActionForward(); 
+   @Override
+   public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+      
+      ActionForward forward= new ActionForward(); 
          
          int c_code = Integer.parseInt( request.getParameter("c_code"));
          int mc_code = Integer.parseInt(request.getParameter("mc_code"));
@@ -32,8 +32,8 @@ public class ProChal_DetailAction implements Action{
          request.setAttribute("pro_chal_m", myC);
          
          HttpSession session = request.getSession();
- 		 Users user = (Users)session.getAttribute("session_user");
- 	
+        Users user = (Users)session.getAttribute("session_user");
+    
          VerificationDAO vdao = new VerificationDAO();
          ArrayList<Verification> vlist = vdao.showV(user.getU_code(),mc_code); 
          request.setAttribute("vlist", vlist);
@@ -50,8 +50,8 @@ public class ProChal_DetailAction implements Action{
          forward.setRedirect(false); 
          forward.setPath("Prochal_detail.jsp");
          return forward;
-		
-		
-	}
+      
+      
+   }
 
 }
