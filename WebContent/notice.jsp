@@ -33,13 +33,26 @@
 
 						<div class="center">
 							<div class="sec" id="section1">
-								<span class="section">회원정보 수정/확인 방법</span> <i
+								<span class="section">회원가입&회원정보 수정/확인/탈퇴 방법</span> <i
 									class="fa fa-plus right" style="font-size: larger"></i>
 							</div>
 							<div id="colp1" class="collapsable" >
+							<div style="font-weight: bold; font-size: 20px;"> 회원가입</div><br>
+		
+<i class="fa fa-hand-o-right mr-2 mt-0-20 pull-left">&nbsp;사이트 상단에 sign up 페이지에서 개인 정보 입력 후 회원가입이 가능합니다.</i>  
+  <br><br>
+<i class="fa fa-hand-o-right mr-2 mt-0-20 pull-left">&nbsp;PASSWORD는 영문&숫자 4~12 자리로 입력할 수 있습니다.</i><br>
+    ㄴ잘못 입력 시 입력칸 아래 경고 메세지가 뜹니다.  <br><br>
+<i class="fa fa-hand-o-right mr-2 mt-0-20 pull-left"> 이름은 한글, 이메일은 이메일 형식에 맞게, 나이는 숫자로만 입력할 수 있습니다.</i><br>
+     ㄴ이 외 모든 경우 예외 처리됩니다.
+     <br><br>
+							<hr>
+							<div style="font-weight: bold; font-size: 20px;"> 회원정보 수정/확인/탈퇴</div><br>
 							   로그인  >> 마이페이지  >> 회원정보 수정/확인 버튼 클릭! <br><br>
-							  회원정보 확인 페이지<br>                          
+							 <i class="fa fa-hand-o-right mr-2 mt-0-20 pull-left">&nbsp;회원정보 확인</i><br>                          
                                      ㄴ포인트 확인/내역 조회 가능합니다.
+                                  <br><br>  <i class="fa fa-hand-o-right mr-2 mt-0-20 pull-left">&nbsp; 회원 탈퇴</i><br>
+ㄴ회원정보 수정 페이지에서 회원 탈퇴가 가능합니다.
 							    </div>
 							<div class="sec" id="section2">
 								<span class="section">챌린지 이용 방법</span> <i
