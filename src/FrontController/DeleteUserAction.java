@@ -25,11 +25,14 @@ public class DeleteUserAction implements Action {
 		int u_code = originUser.getU_code();
 		newUser.setUserpw(request.getParameter("pw1"));
 		newUser.setU_code(originUser.getU_code());
-		if(udao.delU(u_code)) {			
+		if(udao.delU(u_code)) {		
+			response.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html; charset=UTF-8");
+			session.invalidate();
 			out.println("<script>alert('회원탈퇴완료!!');location.href='index.jsp';</script>");
 			out.flush();
 		}else {
+			response.setCharacterEncoding("UTF-8");
 			response.setContentType("text/html; charset=UTF-8");
 			out.println("<script>alert('회원탈퇴실패');location.href='history.go(-1)';</script>");
 			out.flush();

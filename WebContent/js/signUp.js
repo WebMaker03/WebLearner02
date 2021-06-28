@@ -168,6 +168,91 @@ $("input[name=userAge]").blur(function() {
 		}
 	});	
 
+// PW검사
+$("input[name=pw]").blur(function(){
+	var checkpw = $("input[name=pw]").val();
+	var userId = $("input[name=userId]").val();
+	// var uid = '<%=(String)session.getAttribute("uid")%>';
+	$.ajax({
+		url : 'checkpw.do?userPw='+checkpw+'&userId='+userId,
+		type : 'GET',
+		dataType: 'JSON',
+		
+		success : function(response) {
+			if(response.result=="0"){
+				$("#pwCheck").text("비밀번호가 일치합니다 :p");
+				$("#pwCheck").css("color", "red");
+				$("#delete").attr("disabled", false);
+				$("#submit").attr("disabled", false);
+			} else{
+				$("#pwCheck").text("비밀번호가 일치하지않습니다 :<");
+				$("#pwCheck").css("color", "red");
+				$("#delete").attr("disabled", true);
+				$("#submit").attr("disabled", true);
+				
+			}
+		}, error : function() {
+			console.log("실패");
+		}
+	});
+});
 
-
+// 비밀번호 변경 버튼 체크
+	var inval_Arr = new Array(2).fill(false);
+	$('#submit').click(function(){
+		// 비밀번호가 같은 경우 && 비밀번호 정규식
+		if (($("input[name=pw1]").val() == ($('input[name=pw2]').val()))
+				&& pwJ.test($("input[name=pw1]").val())) {
+			inval_Arr[0] = true;
+		} else {
+			inval_Arr[0] = false;
+		}
+		// 비밀번호 일치
+		if ($("#pwCheck").val() == "비밀번호가 일치합니다 :p") {
+			inval_Arr[1] = true;	
+		} else {
+			inval_Arr[1] = false;
+		}
+		
+		var validAll = true;
+		for(var i = 0; i < inval_Arr.length; i++){
+			
+			if(inval_Arr[i] == false){
+				validAll = false;
+			}
+		}
+		
+		if(validAll){ // 유효성 모두 통과
+			console.log('o');
+		} else{
+			console.log('x');
+			
+		}
+	});	
+	
+	// 회원탈퇴 버튼 체크
+	var inval_Arr = new Array(1).fill(false);
+	$('#submit').click(function(){
+		// 비밀번호 일치
+		if ($("#pwCheck").val() == "비밀번호가 일치합니다 :p") {
+			inval_Arr[0] = true;	
+		} else {
+			inval_Arr[0] = false;
+		}
+		
+		var validAll = true;
+		for(var i = 0; i < inval_Arr.length; i++){
+			
+			if(inval_Arr[i] == false){
+				validAll = false;
+			}
+		}
+		
+		if(validAll){ // 유효성 모두 통과
+			console.log('o');
+		} else{
+			console.log('x');
+			
+		}
+	});	
 
