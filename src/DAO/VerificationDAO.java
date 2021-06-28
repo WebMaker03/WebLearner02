@@ -241,6 +241,36 @@ public class VerificationDAO {
 	   
 	   return vstar;
    }
+   public Verification showV(int v_code){
+	   Verification v = new Verification();
+	      
+	      try {
+	         conn=DBConnection.connect();
+	         String sql="select * from verification where v_code=?";
+	         pstmt=conn.prepareStatement(sql);
+	         pstmt.setInt(1, v_code);
+	         
+	         ResultSet rs = pstmt.executeQuery();
+	         while(rs.next()) {
+	             v.setV_code(rs.getInt("v_code"));
+	             v.setV_text(rs.getString("v_text"));
+	             v.setRating(rs.getInt("rating"));
+	             }
+	         } catch (SQLException e) {
+	             // TODO Auto-generated catch block
+	             e.printStackTrace();
+	          }
+	          finally {
+	             try {
+	                pstmt.close();
+	                conn.close();
+	             } catch (SQLException e) {
+	                
+	                e.printStackTrace();
+	             }
+	          }
+	return v;
+	      }
    
 
 }
