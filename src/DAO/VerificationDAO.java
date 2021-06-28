@@ -253,6 +253,9 @@ public class VerificationDAO {
 	         ResultSet rs = pstmt.executeQuery();
 	         while(rs.next()) {
 	             v.setV_code(rs.getInt("v_code"));
+	             v.setMc_code(rs.getInt("mc_code"));
+	             v.setU_code(rs.getInt("u_code"));
+	             v.setV_date(rs.getString("v_date"));
 	             v.setV_text(rs.getString("v_text"));
 	             v.setRating(rs.getInt("rating"));
 	             }
