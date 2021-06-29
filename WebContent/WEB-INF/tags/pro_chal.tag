@@ -13,7 +13,7 @@
 						<ul class="pager">
 							<li><a
 								href="prochal_detail.ch?c_code=${v.c_code}&&mc_code=${pro_chalList[status.index].mc_code}"
-								style="border: #7BBBD6 solid 3px; border-radius: 10px; background-color: #E1F2F9; color: black;">인증보러가기</a></li>
+								style="border: #7BBBD6 solid 3px; border-radius: 8px; background-color: #E1F2F9; color: black;">인증하기</a></li>
 						</ul>
 					</nav>
 				</td>
