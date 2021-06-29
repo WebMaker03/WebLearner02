@@ -287,3 +287,27 @@ div#signupbtn{
  .modal-title {
      color: #0d440d
  }
+ 
+ .pwbtn{
+ width:100px;
+	height:40px;
+	background: #E1F2F9;
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+ 
+ }
+ .exitbtn{
+ width:100px;
+	height:40px;
+	background: #E1F2F9;
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+	margin-left: 200px;
+ }
+.delbtn{
+	width:100px;
+	height:40px;
+	background: #E1F2F9;
+	border: #7BBBD6 solid 3px;
+	border-radius: 10px;
+}

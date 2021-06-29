@@ -18,7 +18,8 @@
 		<div class="d-flex justify-content-center">
 			<form class="sign-up" method="post" action="updatepw.do">
 				<h2 class="heading mb-6" id="signupTitle">비밀번호 변경</h2>
-				<!--  ORIGINALPW -->
+				<br>
+				<h6 style="color: blue;"> ** 회원 탈퇴 시 이전 비밀번호란만 입력 후 회원탈퇴 버튼을 눌러주세요! **</h3>
 				<div class="form-group fone mt-4">
 					<div class="input-group is-invalid">
 						<div class="input-group-prepend">
@@ -65,17 +66,15 @@
 					</div>
 				</div>
 				 <br> <br>
-				<div id="signupbtn">
 				<!--  비밀번호수정 -->
-					<input type="submit" class="signupbtn" id="submit" value="수정완료"
+					<input type="submit" class="pwbtn" id="submit" value="수정완료"
 						onclick="button1_click();">
-				<!--  뒤로가기 -->
-					<button type="button" class="signupbtn" id="cancel"
-						onclick="location.href='mypage.etc'">EXIT</button>
 				<!--  회원탈퇴버튼 -->
-					<button type="button" class="signupbtn" id="delete"
+					<button type="button" class="delbtn" id="delete"
 						onclick="location.href='delete.do'">회원탈퇴</button>
-				</div>
+				<!--  뒤로가기 -->
+					<button type="button" class="exitbtn" id="cancel"
+						onclick="location.href='mypage.etc'">EXIT</button>
 			</form>
 
 
