@@ -30,17 +30,22 @@
 					<div class="d-flex flex-column ml-3">
 
 						<div class="d-flex flex-row post-title" id="post">
-							<h1 style="font-weight: bold;">제목 : &nbsp </h1>
-							<h1 style="font-weight: bold;">${post.p_title}</h1>
-							<span id="postname" class="ml-2">${writer.u_name}</span>
+							<div class="col" style="width: 700px;">
+							<span style="font-weight: bold; font-size:30px;">제목 :&nbsp</span>
+							<span style="font-weight: bold; font-size:30px;">${post.p_title}</span>
+							</div>
+							
+					<a href="goBoard.bo?c_code=${post.c_code}"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
 						</div>
+							<div class="d-flex flex-row post-title" style="margin-top:20px;">
+							<span id="postname"> | 작성자 : ${writer.u_name}</span>
+							</div>
 
 					</div>
-					<a href="goBoard.bo?c_code=${post.c_code}"><i class="fa fa-arrow-circle-left fa-2x" id="backicon" aria-hidden="true"></i><span id="back">이전 화면으로!</span></a>
 				</div>
-				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px;">
+				<div class="coment-bottom bg-white p-2 px-4" style="height: 200px; overflow:auto;">
 
-					<p class="comment-text">${post.p_text}</p>
+					<p class="comment-text" style="line-height: 1.5;">${post.p_text}</p>
 				</div>
 				<div class="coment-bottom bg-white p-2 px-4">
 					<div class="d-flex flex-row add-comment-section mt-4 mb-4">

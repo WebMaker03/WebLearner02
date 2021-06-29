@@ -352,7 +352,9 @@ public class ChallengesDAO {
 				e.printStackTrace();
 			}
 		}
-
+		if(Clist.size()==0) {
+			return null;
+		}
 		return Clist;
 	}
 
@@ -500,7 +502,7 @@ public class ChallengesDAO {
 
 	}
 	
-	public ArrayList<Integer> endPercentage( ArrayList<MyC> myc){
+	public ArrayList<Integer>endPercentage( ArrayList<MyC> myc){
 
 		   ArrayList<Integer> endPercent =new ArrayList<Integer>();
 		   int period = 0;
@@ -542,7 +544,6 @@ public class ChallengesDAO {
 		}finally {
 			try {
 				pstmt.close();
-				pstmt2.close();
 				conn.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

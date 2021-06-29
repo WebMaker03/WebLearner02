@@ -91,6 +91,8 @@ body {
 }
 #postname{
 	color: black;
+	font-weight:bold;
+	font-size:20px;
 	margin-top: 11px;
 	margin-left: 20px;
 }
@@ -103,7 +105,8 @@ body {
 }
 #backicon{
 	color:blue;
-	margin-left:700px;
+	margin-left:300px;
+	margin-top:10px;
 }
 
 #comment {
