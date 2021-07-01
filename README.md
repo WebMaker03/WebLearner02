@@ -12,6 +12,7 @@
 - 유애림[📑](https://github.com/Yuaerim)
 - 장수현[📑](https://github.com/Xoohyun)
 - 현석호 [📑](https://github.com/bigtig-h)
+- 윤수정 [📑](https://github.com/sujeong)
 
 ## Project✨
 - 여러 사람들과 함께 다양한 챌린지에 도전하는 자기게발 웹사이트 !
