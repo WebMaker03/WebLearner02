@@ -15,7 +15,7 @@
 - 윤수정 [📑](https://github.com/sujeong)
 
 ## Project✨
-- 여러 사람들과 함께 다양한 챌린지에 도전하는 자기게발 웹사이트 !
+- 여러 사람들과 함께 다양한 챌린지에 도전하는 자기계발 웹사이트 !
 
 ## Development Environment⚙
 - IDE : Eclipse /  JDK Ver 1.8
